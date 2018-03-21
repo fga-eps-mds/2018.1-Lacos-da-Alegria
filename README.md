@@ -89,5 +89,3 @@ Este projeto existe graças aos contribuidores abaixo. [Seja um deles!](/docs/co
 |Renan Schadt                   |renanschadt@gmail.com           |[renan601](https://github.com/renan601)             |
 |Rômulo Vinícius de Souza       |romulovinicius10@gmail.com      |[RomuloSouza](https://github.com/RomuloSouza)       |
 |Sara Silva                     |saracsas2@gmail.com             |[silvasara](https://github.com/silvasara)           |
-
-
