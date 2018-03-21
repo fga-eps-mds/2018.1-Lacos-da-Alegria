@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+
+  ionic-app:
+    image: pam79/ionic-3-framework
+    container_name: ionic-app
+    privileged: true
+    volumes:
+      - ./:/myApp:z
+      - ~/.gradle:/root/.gradle
+      - /dev/bus/usb:/dev/bus/usb
+    tty: true
+    stdin_open: true
