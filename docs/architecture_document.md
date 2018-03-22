@@ -1,8 +1,8 @@
-##2. Representação da Arquitetura
-###2.1. Arquitetura django REST
+## 2. Representação da Arquitetura
+### 2.1. Arquitetura django REST
 O django REST é um framework muito utilizado para a construção de APIs em plataforma Web. Praticamente todos os arquivos dessa arquitetura são em python e esses arquivos representam as classes do projeto. Por exemplo, um arquivo views.py contém tudo que uma pasta views teria no modelo arquitetural MVC.
 
-###2.2. Arquitetura Ionic Framework
+### 2.2. Arquitetura Ionic Framework
 O Ionic é um framework front-end e open-source para desenvolvimento de aplicativos móveis híbridos escritos em html, css e JavaScript. Com ele é possível escrever o código da aplicação apenas uma vez para rodar no iPhone, Android e Windows Phone. i
 
 O Ionic, através do Apache Cordova, ajuda na comunicação com as APIs (Application Program Interface) de cada Sistema Operacional Móvel  que, por sua vez, comunicam-se com um componente chamado Web View, usado por aplicativos nativos para visualização de páginas web dentro do contexto dos aplicativos móveis). O aplicativo Ionic funciona de forma embarcada dentro dessa Web View, que interpreta e renderiza nosso código html, css e JavaScript. 
@@ -14,11 +14,18 @@ O Ionic estiliza nossos componentes html para se parecer com os componentes nati
 
 A aplicação é empacotada em arquivos instaláveis para cada plataforma móvel que então passa a ficar disponível nas principais lojas de aplicativos móveis e ser distribuída para o público-alvo. 
 
-##5. Visão de Implementação
+## 3. Metas e Restrições de Arquitetura
+<p>O desenvolvimento do projeto será com o Ionic Framework 3.x.x junto com o Django Rest 3.7.7 e para utilização das ferramentas são necessários alguns requerimentos como Python 3.6.4, Django 2.0.3 e Nodejs 6.9.4. </p>
+<p>O desenvolvimento deverá estar de acordo as boas práticas de programação e requisitos não funcionais para que facilite a manutenção por outras equipes.</p>
+<p> Laços da Alegria será um aplicativo nativo que deverá rodar apenas em versões superiores a 4.1 do Android e 7.0 do IOS, essa restrição é baseada nos requerimentos das tecnologias usadas para o desenvolvimento do projeto. Além disso, para que o aplicativo funcione será necessário conexão com a internet.</p>
+
+
+## 5. Visão de Implementação
 A proposta da arquitetura MVC( Model, View, Controller) é fazer uma divisão em 3 camadas sobrepostas, de uma forma que o usuário só irá interagir com uma delas, no caso a View. Cada parte tem um valor diferente:
 
 * Modelos (models) - Armazenamento de dados, definição dos estados das camadas e interpretação de requisições, que será controlada pelo Django Rest.
 * Visão (views) - Controle de layout e definição de design, que será controlada pelo Ionic.
 * Controles (controllers) - Tráfego de informações entre todas as camadas, entre o Django Rest e o Ionic Framework.
+
 
 
