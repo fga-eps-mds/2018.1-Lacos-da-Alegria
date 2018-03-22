@@ -61,3 +61,7 @@ A proposta da arquitetura MVC( Model, View, Controller) é fazer uma divisão em
 * Modelos (models) - Armazenamento de dados, definição dos estados das camadas e interpretação de requisições, que será controlada pelo Django Rest.
 * Visão (views) - Controle de layout e definição de design, que será controlada pelo Ionic.
 * Controles (controllers) - Tráfego de informações entre todas as camadas, entre o Django Rest e o Ionic Framework.
+
+##6. Qualidade
+
+O aplicativo seguirá o padrão de desenvolvimento definido nos frameworks utilizados que irá organizar as diversas camadas da aplicação sendo que cada camada tem sua função específica dentro do software. Onde será mantida uma boa organização do código facilitando a visualização, entendimento e implementação do código.
