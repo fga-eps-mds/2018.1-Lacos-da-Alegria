@@ -10,7 +10,7 @@ A seguir são especificados os papéis, eventos e artefatos.
 
 ## 2.1. Papéis
 
-![](../images/roles_methodology.png)
+![](images/roles_methodology.png)
 
 ## 2.2 Eventos
 
