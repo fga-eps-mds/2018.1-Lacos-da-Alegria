@@ -147,12 +147,3 @@ Errado:
 <li>Nomes de constantes devem ser todas as letras maiúsculas com ‘\_’ separando as palavras.</li>
 </ul>
 
-### 3.3 Comentários
-
-<ul><li>Soft Tab (dois espaços).</li>
-<li>Evitar linhas com mais de 80 caracteres.</li>
-<li>Utilizar blocos de comentários.
-<li>Evitar comentários na mesma linha de código, a não ser que seja extremamente necessário.
-<li>A primeira letra do comentário deve ser maiúscula.
-
-</ul>
