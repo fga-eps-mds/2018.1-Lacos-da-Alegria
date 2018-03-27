@@ -34,7 +34,7 @@
 * [4.6 Directives](#46-directives)
 * [4.7 Services](#47-services)
 
-[5. Referências](#5-referências)	
+[5. Referências](#5-referências)
 
 # Guia de Estilo
 ## 1. Objetivo
@@ -504,7 +504,5 @@ export class HeroService {
 ```
 ## 5. Referências
 
-<ul>
-<li>Python Style Guide - https://www.python.org/dev/peps/pep-0008/
-<li>Angular Style Guide - https://angular.io/guide/styleguide
-</ul>
+* [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
+* [Angular Style Guide](https://angular.io/guide/styleguide)
