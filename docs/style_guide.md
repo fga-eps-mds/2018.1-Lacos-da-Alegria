@@ -119,11 +119,11 @@ Errado:
 <ul><li>Imports devem ser sempre feitos em linhas separadas.</ul>
 
     Exemplo:
-    		Correto:
-    import os
-         import sys
+    	Correto:
+    		import os
+        	import sys
     	Errado:
-    import sys, os
+    		import sys, os
 
 <ul>
 <li>Porém, também está correto: </ul>
@@ -145,10 +145,10 @@ Errado:
 </ul>
 
     Exemplo:
-  		Correto:
-  			spam(ham[1], {eggs: 2})
-  		Errado:
-  			spam( ham[ 1 ], { eggs: 2 } )
+  	Correto:
+  		spam(ham[1], {eggs: 2})
+  	Errado:
+  		spam( ham[ 1 ], { eggs: 2 } )
 
 ### 3.8 Comentários
 
