@@ -59,7 +59,6 @@ Use 4 espaços por nível de indentação.
 </ul>
 
 ```python
-
 Exemplo:
 
 Correto:
@@ -256,7 +255,6 @@ export class ValidateDirective {}
 </ul>
 
 ```typescript
-
 //Correto:
 import { Injectable } from '@angular/core';
 import { Http }       from '@angular/http';
@@ -287,6 +285,7 @@ import { Hero } from './hero.model';
 <ul><li>Especifique as URLs relativas aos componentes com o prefixo <b>./</b>.</ul>
 
 ```typescript
+//Correto:
 @Component({
   selector: 'toh-heroes',
   templateUrl: './heroes.component.html',
@@ -303,11 +302,69 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroService.getHeroes();
   }
 }
+
+//Errado:
+@Component({
+  selector: 'toh-heroes',
+  template: `
+    <div>
+      <h2>My Heroes</h2>
+      <ul class="heroes">
+        <li *ngFor="let hero of heroes | async" (click)="selectedHero=hero">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+      </ul>
+      <div *ngIf="selectedHero">
+        <h2>{{selectedHero.name | uppercase}} is my hero</h2>
+      </div>
+    </div>
+  `,
+  styles: [`
+    .heroes {
+      margin: 0 0 2em 0; list-style-type: none; padding: 0; width: 15em;
+    }
+    .heroes li {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      background-color: #EEE;
+      margin: .5em;
+      padding: .3em 0;
+      height: 1.6em;
+      border-radius: 4px;
+    }
+    .heroes .badge {
+      display: inline-block;
+      font-size: small;
+      color: white;
+      padding: 0.8em 0.7em 0 0.7em;
+      background-color: #607D8B;
+      line-height: 1em;
+      position: relative;
+      left: -1px;
+      top: -4px;
+      height: 1.8em;
+      margin-right: .8em;
+      border-radius: 4px 0 0 4px;
+    }
+  `]
+})
+export class HeroesComponent implements OnInit {
+  heroes: Observable<Hero[]>;
+  selectedHero: Hero;
+
+ constructor(private heroService: HeroService) { }
+
+  ngOnInit() {
+    this.heroes = this.heroService.getHeroes();
+  }
+}
 ```
 
 <ul><li>Use <b>@Input()</b< e <b>@Output()</b> para referenciar a propriedade da classe. Escreva na mesma linha.</ul>
 
 ```typescript
+//Correto:
 @Component({
   selector: 'toh-hero-button',
   template: `<button>{{label}}</button>`
@@ -317,11 +374,28 @@ export class HeroButtonComponent {
   @Output() change = new EventEmitter<any>();
   @Input() label: string;
 }
+
+//Errado:
+@Component({
+  selector: 'toh-hero-button',
+  template: `<button></button>`,
+  inputs: [
+    'label'
+  ],
+  outputs: [
+    'change'
+  ]
+})
+export class HeroButtonComponent {
+  change = new EventEmitter<any>();
+  label: string;
+}
 ```
 
 <ul><li>Atributos e métodos devem ser instanciados em ordem alfabética, sendo que, em ambos os casos, os membros privados deverão vir antes dos públicos.</ul>
 
 ```typescript
+//Correto:
 export class ToastComponent implements OnInit {
   // public properties
   message: string;
@@ -355,6 +429,42 @@ export class ToastComponent implements OnInit {
     console.log(this.message);
     this.toastElement.style.opacity = 1;
     this.toastElement.style.zIndex = 9999;
+    window.setTimeout(() => this.hide(), 2500);
+  }
+}
+
+//Errado
+export class ToastComponent implements OnInit {
+
+  private defaults = {
+    title: '',
+    message: 'May the Force be with you'
+  };
+  message: string;
+  title: string;
+  private toastElement: any;
+
+  ngOnInit() {
+    this.toastElement = document.getElementById('toh-toast');
+  }
+
+  // private methods
+  private hide() {
+    this.toastElement.style.opacity = 0;
+    window.setTimeout(() => this.toastElement.style.zIndex = 0, 400);
+  }
+
+  activate(message = this.defaults.message, title = this.defaults.title) {
+    this.title = title;
+    this.message = message;
+    this.show();
+  }
+
+  private show() {
+    console.log(this.message);
+    this.toastElement.style.opacity = 1;
+    this.toastElement.style.zIndex = 9999;
+
     window.setTimeout(() => this.hide(), 2500);
   }
 }
