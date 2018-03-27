@@ -7,33 +7,34 @@
 
 # Sumário
 
-<ol><li> Objetivo</li>
-<li> Organização do documento</li>
-<li> Guia de Estilo Geral</li>
-	<ol>
-	<li>Layout do Código</li>
-	<li>Tabs ou espaços?</li>
-	<li>Tamanho máximo da linha</li>
-	<li>Linhas em branco</li>
-	<li>Codificação do arquivo de origem</li>
-	<li>Imports</li>
-	<li>Espaços em branco</li>
-	<li>Comentários</li>
-	<li>Comentários em linha</li>
-	<li>Nomenclatura</li>
-		</ol>
-<li> Guia de estilo Angular</li>
-	<ol>
-	<li>Nomenclatura</li>
-	<li>Formatação</li>
-	<li>Imports</li>
-	<li>Estrutura de aplicação</li>
-	<li>Components</li>
-	<li>Directives</li>
-	<li>Services</li>
-	</ol>
-<li> Referências</li>
+[1. Objetivo](#1-objetivo)
 
+[2. Organização do Documento](#2-organização-do-documento)
+
+[3. Guia de Estilo Geral](#3-guia-de-estilo-geral)
+
+* [3.1 Layout do Código](#31-layout-do-código)
+* [3.2 Tabs ou espaços?](#32-tabs-ou-espaços)
+* [3.3 Tamanho máximo da linha](#33-tamanho-máximo-da-linha)
+* [3.4 Linhas em branco](#34-linhas-em-branco)
+* [3.5 Codificação do Arquivo de Origem](#35-codificação-do-arquivo-de-origem)
+* [3.6 Imports](#36-imports)
+* [3.7 Espaços em branco](#37-espaços-em-branco)
+* [3.8 Comentários](#38-comentários)
+* [3.9 Comentários em linha](#39-comentários-em-linha)
+* [3.10 Nomenclatura](#310-nomenclatura)
+
+[4. Guia de Estilo Angular](#4-guia-de-estilo-angular)
+
+* [4.1 Nomenclatura](#41-nomenclatura)
+* [4.2 Formatação](#42-formatação)
+* [4.3 Imports](#43-imports)
+* [4.4 Estrutura da aplicação](#44-estrutura-da-aplicação)
+* [4.5 Components](#45-components)
+* [4.6 Directives](#46-directives)
+* [4.7 Services](#47-services)
+
+[5. Referências](#5-referências)	
 
 # Guia de Estilo
 ## 1. Objetivo
@@ -501,7 +502,7 @@ export class HeroService {
   }
 }
 ```
-## 5.0 Referências
+## 5. Referências
 
 <ul>
 <li>Python Style Guide - https://www.python.org/dev/peps/pep-0008/
