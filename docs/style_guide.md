@@ -5,6 +5,36 @@
 |25/03/2018                 |1.1                             |Adição da guia de estilo do Angular e do Python   |Rômulo e João Vítor  |
 
 
+# Sumário
+
+<ol><li> Objetivo</li>
+<li> Organização do documento</li>
+<li> Guia de Estilo Geral</li>
+	<ol>
+	<li>Layout do Código</li>
+	<li>Tabs ou espaços?</li>
+	<li>Tamanho máximo da linha</li>
+	<li>Linhas em branco</li>
+	<li>Codificação do arquivo de origem</li>
+	<li>Imports</li>
+	<li>Espaços em branco</li>
+	<li>Comentários</li>
+	<li>Comentários em linha</li>
+	<li>Nomenclatura</li>
+		</ol>
+<li> Guia de estilo Angular</li>
+	<ol>
+	<li>Nomenclatura</li>
+	<li>Formatação</li>
+	<li>Imports</li>
+	<li>Estrutura de aplicação</li>
+	<li>Components</li>
+	<li>Directives</li>
+	<li>Services</li>
+	</ol>
+<li> Referências</li>
+
+
 # Guia de Estilo
 ## 1. Objetivo
 Este documento tem por finalidade esclarecer as formas de implementação
@@ -18,7 +48,7 @@ destas duas folhas são especificados na segunda e terceira parte do
 documento, na primeira parte são utilizados padrões que ambos seguem ou
 alguma convenção feita pelo grupo.
 
-## 3. Guia de Estilo Geral do Código (Python)
+## 3. Guia de Estilo Geral
 
 ### 3.1 Layout do código
 
@@ -46,14 +76,14 @@ Correto:
     def long_function_name(
     		var_one, var_two, var_three,
     		var_four):
-		  print(var_one)
+		 	 print(var_one)
 
 
 Errado:
 	def long_function_name(
     		var_one, var_two, var_three,
     		var_four):
-		  print(var_one)
+		print(var_one)
 ```
 
 ### 3.2 Tabs ou espaços?
