@@ -20,9 +20,10 @@
 * [3.5 Codificação do Arquivo de Origem](#35-codificação-do-arquivo-de-origem)
 * [3.6 Imports](#36-imports)
 * [3.7 Espaços em branco](#37-espaços-em-branco)
-* [3.8 Comentários](#38-comentários)
-* [3.9 Comentários em linha](#39-comentários-em-linha)
-* [3.10 Nomenclatura](#310-nomenclatura)
+* [3.8 Métodos](#38-métodos)
+* [3.9 Comentários](#39-comentários)
+* [3.10 Comentários em linha](#310-comentários-em-linha)
+* [3.11 Nomenclatura](#311-nomenclatura)
 
 [4. Guia de Estilo Angular](#4-guia-de-estilo-angular)
 
@@ -150,7 +151,13 @@ Errado:
   	Errado:
   		spam( ham[ 1 ], { eggs: 2 } )
 
-### 3.8 Comentários
+### 3.8 Métodos
+
+<ul align = "justify">
+<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método.
+</ul>
+
+### 3.9 Comentários
 
 <ul align = "justify">
 <li>Comentários que contradizem o código são piores do que não comentar.
@@ -159,14 +166,14 @@ Errado:
 <li>Comentários devem ser escritos sempre em inglês.
 </ul>
 
-### 3.9 Comentários na linha
+### 3.10 Comentários em linha
 
 <ul align = "justify">
 <li>Não escreva nada óbvio nos comentários na linha, pois eles podem ser desnecessários.
 <li>Comece com # e um espaço em branco.
 </ul>
 
-### 3.10 Nomenclatura
+### 3.11 Nomenclatura
 
 <ul align = "justify">
 <li>Nunca use L minúsculo, ‘o’ maiúsculo ou ‘i’ maiúsculo como variáveis, pois podem ser confundidas em algumas fontes com 0 e 1.</li>
