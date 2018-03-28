@@ -90,8 +90,8 @@ Errado:
 ### 3.2 Tabs ou espaços?
 
 <ul>
-<li align = "justify">O método de indentação mais recomendado é a utilização de espaços.
-<li align = "justify">Tabs só devem ser usados para manter a consistência com um código já que começou a ser indentado com tabs.
+<li align = "justify">O método de indentação mais recomendado é a utilização de espaços, e é a que utilizaremos nesse projeto.
+<li align = "justify">Tabs só devem ser usados para manter a consistência com um código já que começou a ser indentado com tabs, mas como esse código está sendo pela mesma equipe desde o início, não há motivo para utilizar este método.
 </ul>
 
 ### 3.3 Tamanho máximo da linha
@@ -178,10 +178,10 @@ Errado:
 <ul align = "justify">
 <li>Nunca use L minúsculo, ‘o’ maiúsculo ou ‘i’ maiúsculo como variáveis, pois podem ser confundidas em algumas fontes com 0 e 1.</li>
 <li>Nomes de classes, variáveis de tipo e excessões normalmente usam a convenção CapWords.</li>
-<li>Nomes de funções, de variáveis globais e de métodos devem ser escritas em minúsculo, com palavras separadas por ‘\_’.</li>
+<li>Nomes de funções, de variáveis globais e de métodos devem ser escritas em minúsculo, com palavras separadas por ‘_’.</li>
 <li>Sempre use ‘self’ como primeiro argumento para instanciar métodos e ‘cls’ como primeiro argumento para métodos de classes.</li>
-<li>Utilize um ‘\_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
-<li>Nomes de constantes devem ser todas as letras maiúsculas com ‘\_’ separando as palavras.</li>
+<li>Utilize um ‘_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
+<li>Nomes de constantes devem ser todas as letras maiúsculas com ‘_’ separando as palavras.</li>
 </ul>
 
 ## 4. Guia de Estilo Angular
