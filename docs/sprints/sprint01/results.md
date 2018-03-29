@@ -36,7 +36,7 @@ No gráfico é possível perceber um longo período em que pontos não foram ent
 
 ![](../images/velocity_sprint1.png)
 
-Como as histórias da _Sprint_ 0 não foram pontuadas, o primeiro _Velocity_ da equipe é este, com 7,5 pontos.
+Como as histórias da _Sprint_ 0 não foram pontuadas, o primeiro _Velocity_ da equipe é este, com 14 pontos.
 
 ### 1.5 Quadro de Horas
 ![](../images/timetable_sprint1.png)
