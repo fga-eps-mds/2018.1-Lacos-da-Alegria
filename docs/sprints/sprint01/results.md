@@ -3,12 +3,14 @@
 [1. Indicadores de Qualidade do Processo](#1-indicadores-de-qualidade-do-processo)
 
 * [1.1 Fechamento da _Sprint_](#11-fechamento-da-sprint)
-* [1.2 _Burndown_](#13-burndown)
-* [1.3 Gráfico de _commits_](#14-grafico-de-commits)
-* [1.4 _Velocity_](#15-velocity)
-* [1.5 Melhorias em relação a _Sprint_ 0](#17-melhorias-em-relação-a-sprint-0)
-* [1.6 Revisão](#16-revisao-da-sprint)
-* [1.7 Retrospectiva](#17-retrospectiva)
+* [1.2 _Burndown_](#12-burndown)
+* [1.3 Gráfico de _commits_](#13-grafico-de-commits)
+* [1.4 _Velocity_](#14-velocity)
+* [1.5 Quadro de Horas](#15-quadro-de-horas)
+* [1.6 Quadro de Conhecimento](#16-quadro-de-conhecimento)
+* [1.7 Melhorias em relação a _Sprint_ 0](#17-melhorias-em-relação-a-sprint-0)
+* [1.8 Revisão](#18-revisao-da-sprint)
+* [1.9 Retrospectiva](#19-retrospectiva)
 
 [2. Análise do _Scrum Master_](#2-análise-do-scrum-master)  
 
@@ -36,11 +38,20 @@ No gráfico é possível perceber um longo período em que pontos não foram ent
 
 Como as histórias da _Sprint_ 0 não foram pontuadas, o primeiro _Velocity_ da equipe é este, com 7,5 pontos.
 
-### 1.5 Melhorias em relação a _Sprint_ 0
+### 1.5 Quadro de Horas
+![](../images/timetable_sprint1.png)
+
+### 1.6 Quadro de Conhecimento
+![](../images/knowledge_framework_sprint1.png)
+
+Em relação à _Sprint_ anterior é possível perceber uma melhoria nos conhecimentos de documentação, Github, HTML e CSS. Essas melhorias
+ocorreram, pois essa _Sprint_ foi focada em documentação e por causa do treinamento de _frontend_ que ocorreu.
+
+### 1.6 Melhorias em relação a _Sprint_ 0
 
 Em relação a _Sprint_ 0, nessa _Sprint_ a organização do time melhorou, apesar de ainda não estar no ideal. O uso da ferramenta TopTracker para gerenciar o tempo e dos canais do Slack ajudaram bastante na melhora dessa organização.
 
-### 1.6 Revisão da _Sprint_
+### 1.7 Revisão da _Sprint_
 
 Durante a Revisão da _Sprint_ foram levantados os seguintes problemas que ocorreram na mesma:  
 * Os desenvolvedores se sentiram "perdidos" na arquitetura da solução proposta. Para resolver esse problema foi feita uma reunião com o cliente e a arquiteta.
@@ -48,7 +59,7 @@ Durante a Revisão da _Sprint_ foram levantados os seguintes problemas que ocorr
 * Os membros de desenvolvimento não tiveram informações suficientes para elaborar o Guia de Estilo e por isso este não foi entregue nesta _Sprint_.
 * Alguns membros tiveram dificuldades para elaborar os documentos no formato _markdown_ e também para fazer o upload no Github.
 
-### 1.7 Retrospectiva
+### 1.8 Retrospectiva
 
 ![](../images/retrospective_sprint1.png)
 
