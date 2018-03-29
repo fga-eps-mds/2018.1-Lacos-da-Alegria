@@ -76,10 +76,10 @@ A interface do software será desenvolvida com base em HTML/CSS e JavaScript.
 A comunicação com o usuário será feita através de notificações.
 
 ## 10. Requisitos de Licenciamento
-É utilizado a Licença MIT, que concede permissões para usar,copiar, modificar, mesclar, publicar, distribuir, sublicenciar e vender.
+A licença é um documento que define algumas ações autorizadas ou proibidas. Dentro do projeto é utilizado a Licença MIT, que é uma licença permissiva, ou seja que concede permissões para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e vender.
 
 ## 11.  Observações Legais, de Direitos Autorais etc
-Os usuários do software  não estarão sujeitos a nenhuma lei de direitos autorais, somente a um termo de aceitação da ONG Laços da Alegria.
+Os usuários do software deverão concordar com a licença MIT que concede uma série de permissões sobre o aplicativo para uso de terceiros. Além de concorda com o termo de aceitação da ONG Laços da Alegria para utilizar o serviço do aplicativo.
 
 ## 12. Padrões Aplicáveis
 Os padrões utilizados no projeto serão um guia de estilo para a padronização e qualidade, arquitetura do Django Rest e Ionic para modularização e o UML para Modelagem.
