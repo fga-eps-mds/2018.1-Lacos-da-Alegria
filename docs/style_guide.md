@@ -141,8 +141,8 @@ Errado:
 <ul><li align = "justify">Imports devem ser sempre feitos em linhas separadas.</ul>
 
     Exemplo:
-    	Correto:
-    		import os
+    	Correto
+        import os
         import sys
     	Errado:
     		import sys, os
@@ -175,13 +175,16 @@ Errado:
 ### 3.8 Métodos
 
 <ul align = "justify">
-<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método, tudo em uma linha só.
+<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método, cada coisa em uma linha, conforme o exemplo.
 </ul>
 
 ```python
 Exemplo:
 
-	""" This method will display the desired phrase on the screen. It does not receive any parameters, nor does it return anything. """
+	""" Objective: this method will display the desired phrase on the screen.
+      Parameters: it does not receive any parameters.
+      Returns: it does not return anything. """
+      
        def printar():
           print("Desired phrase.")
 ```
