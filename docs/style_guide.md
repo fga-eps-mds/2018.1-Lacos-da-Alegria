@@ -3,7 +3,7 @@
 | ----------------------------| --------------------------- | ------------------------------------  | ----------------------|
 |21/03/2018                 |1.0                             |Inserção da folha de estilo    |Renan e Rafael   |
 |25/03/2018                 |1.1                             |Adição da guia de estilo do Angular e do Python   |Rômulo e João Vítor  |
-
+|31/03/2018                 |1.2                             |Correção de erros                                 |João Vítor           |
 
 # Sumário
 
@@ -90,8 +90,7 @@ Errado:
 ### 3.2 Tabs ou espaços?
 
 <ul>
-<li align = "justify">O método de indentação mais recomendado é a utilização de espaços, e é a que utilizaremos nesse projeto.
-<li align = "justify">Tabs só devem ser usados para manter a consistência com um código já que começou a ser indentado com tabs, mas como esse código está sendo pela mesma equipe desde o início, não há motivo para utilizar este método.
+<li align = "justify">O método de identação que utilizaremos nesse projeto é a utilização de espaços, sem nenhuma utilização de tabs.
 </ul>
 
 ### 3.3 Tamanho máximo da linha
@@ -108,6 +107,28 @@ Errado:
 <li align = "justify">Linhas em branco são usadas em funções para indicar seções lógicas.
 </ul>
 
+```python
+Exemplo:
+
+Correto:
+	class Exemp:
+  
+  
+      def meth():
+          print("Método")
+      
+      def meth2():
+          print("Método 2")
+
+Errado:
+	class Exemp:
+      def meth():
+          print("Método")
+      def meth2():
+          print("Método 2")
+	
+```
+
 ### 3.5 Codificação do Arquivo de Origem
 
 <ul>
@@ -122,7 +143,7 @@ Errado:
     Exemplo:
     	Correto:
     		import os
-        	import sys
+        import sys
     	Errado:
     		import sys, os
 
@@ -154,8 +175,16 @@ Errado:
 ### 3.8 Métodos
 
 <ul align = "justify">
-<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método.
+<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método, tudo em uma linha só.
 </ul>
+
+```python
+Exemplo:
+
+	""" This method will display the desired phrase on the screen. It does not receive any parameters, nor does it return anything. """
+       def printar():
+          print("Desired phrase.")
+```
 
 ### 3.9 Comentários
 
@@ -166,12 +195,41 @@ Errado:
 <li>Comentários devem ser escritos sempre em inglês.
 </ul>
 
+```python
+Exemplo:
+
+Correto:
+   """ This method will display the desired phrase on the screen. It does not receive any parameters, nor does it return anything. """
+        def printar():
+          print("Desired phrase.")
+Errado:
+	  """ Esse método vai mostrar uma frase na tela. """
+          def printar():
+            print("Desired phrase.")
+   
+Errado:
+	  """ this method will display the desired phrase on the screen. it does not receive any parameters, nor does it return anything """
+          def printar():
+            print("Desired phrase")
+```
+
 ### 3.10 Comentários em linha
 
 <ul align = "justify">
 <li>Não escreva nada óbvio nos comentários na linha, pois eles podem ser desnecessários.
 <li>Comece com # e um espaço em branco.
 </ul>
+
+```python
+Exemplo:
+
+Correto:
+	  x = x + 1  # Compensate for border 
+
+Errado:
+	  x = x + 1  # Increment x
+	
+```
 
 ### 3.11 Nomenclatura
 
@@ -183,6 +241,15 @@ Errado:
 <li>Utilize um ‘_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
 <li>Nomes de constantes devem ser todas as letras maiúsculas com ‘_’ separando as palavras.</li>
 </ul>
+
+```python
+Exemplo:
+
+  Classes, variáveis de tipo e excessões: MyClass
+  Funções, variáveis globais e métodos: my_function
+  Constantes: MY_CONSTANT
+
+```
 
 ## 4. Guia de Estilo Angular
 ### 4.1 Nomenclatura
