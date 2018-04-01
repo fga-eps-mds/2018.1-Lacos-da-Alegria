@@ -7,8 +7,11 @@ import { NavController } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navController: NavController) {
 
+  }
+  BtnSend(){
+    
   }
 
 }
