@@ -30,7 +30,7 @@ Todas as histórias que foram planejadas para a _Sprint_ 01 foram concluídas, c
 No gráfico é possível perceber um longo período em que pontos não foram entregues. Este fato não reflete a realidade, pois os membros estavam produzindo durante esse período. Isto acontece, por que uma história só é considerada pronta depois de entregue completamente.
 
 ### 1.3 Gráfico de _commits_
-
+![](../images/commits_sprint1.png)
 
 ### 1.4 _Velocity_
 
