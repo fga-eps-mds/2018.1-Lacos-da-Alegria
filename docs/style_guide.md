@@ -4,6 +4,7 @@
 |21/03/2018                 |1.0                             |Inserção da folha de estilo    |Renan e Rafael   |
 |25/03/2018                 |1.1                             |Adição da guia de estilo do Angular e do Python   |Rômulo e João Vítor  |
 |31/03/2018                 |1.2                             |Correção de erros                                 |João Vítor           |
+|01/04/2018                 |1.3                             |Nova revisão para correção de erros                                 |João Vítor           |
 
 # Sumário
 
@@ -154,10 +155,10 @@ Errado:
 
 <ul>
   <li align = "justify">Imports são sempre colocados no começo do arquivo, logo após qualquer comentário de módulo e docstrings e antes de globais de módulo e constantes.
-  <li>Imports devem ser agrupados na ordem:
-  <li>imports da biblioteca padrão.
-  <li>imports de terceiros relacionados.
-  <li>imports de aplicativos e bibliotecas locais.
+  <li>Imports devem ser agrupados na ordem: <br>
+  -Imports da biblioteca padrão. <br>
+  -Imports de terceiros relacionados. <br>
+  -Imports de aplicativos e bibliotecas locais. <br>
 </ul>
 
 ### 3.7 Espaços em branco
@@ -202,11 +203,15 @@ Exemplo:
 Exemplo:
 
 Correto:
-   """ This method will display the desired phrase on the screen. It does not receive any parameters, nor does it return anything. """
+   """ Objective: this method will display the desired phrase on the screen.
+       Parameters: it does not receive any parameters.
+       Returns: it does not return anything. """
+       
         def printar():
           print("Desired phrase.")
 Errado:
 	  """ Esse método vai mostrar uma frase na tela. """
+    
           def printar():
             print("Desired phrase.")
    
@@ -238,7 +243,7 @@ Errado:
 
 <ul align = "justify">
 <li>Nunca use L minúsculo, ‘o’ maiúsculo ou ‘i’ maiúsculo como variáveis, pois podem ser confundidas em algumas fontes com 0 e 1.</li>
-<li>Nomes de classes, variáveis de tipo e excessões normalmente usam a convenção CapWords.</li>
+<li>Nomes de classes, variáveis de tipo e exceções usam a convenção CapWords.</li>
 <li>Nomes de funções, de variáveis globais e de métodos devem ser escritas em minúsculo, com palavras separadas por ‘_’.</li>
 <li>Sempre use ‘self’ como primeiro argumento para instanciar métodos e ‘cls’ como primeiro argumento para métodos de classes.</li>
 <li>Utilize um ‘_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
