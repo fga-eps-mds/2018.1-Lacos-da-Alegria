@@ -1,10 +1,17 @@
-<ion-header>
-     
-  </ion-header>
+<ion-header>     
+</ion-header>
   
-  <ion-content padding class="body">
-      <ion-img class="Im" width="80" height="80" src="https://discuss-cdn.designer.io/original/2X/e/e5c522d667c53fbfb0ada5f535969c16f9748c84.png"></ion-img>
-    <p id="paragraph">Bem-vindo ao Laços da Alegria.</p>
-    <p id="paragraph">Clique em entrar para começar.</p>
-    <button ion-button secondary (click)="BtnLogin()">Entrar</button>
-  </ion-content>
+<ion-content padding class="body">
+  <div class="div-logo">
+    <ion-img class="logo" width="80" height="80" src='../../assets/imgs/laços.ico'></ion-img>
+  </div>
+  <div class="div-paragrpah">
+    <p id="paragraph">Bem-vindo ao Laços da Alegria.<br>Clique em entrar para começar.</p>
+  </div>
+  <div class="div-icon">
+    <ion-icon name="ios-more" class="icon"></ion-icon>
+  </div>
+  <div class="div-btn">
+    <button ion-button class="btn" (click)="BtnLogin()">Entrar</button>
+  </div>
+</ion-content>
