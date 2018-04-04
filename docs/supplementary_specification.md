@@ -12,6 +12,28 @@
 | 28/03 | 0.7 | Revisão tópicos 5 e 7   | Sara Silva |
 | 28/03 | 1.0 | Revisão final | Renan Schadt |
 
+# Sumário
+[1. Introdução](#1-objetivo)
+
+* [1.1 Finalidade](#31-layout-do-código)
+* [1.2 Escopo](#32-tabs-ou-espaços)
+* [1.3 Definições, Acrônimos e Abreviações](#33-tamanho-máximo-da-linha)
+
+[2. Usabilidade](#2-organização-do-documento)
+
+[3. Confiabilidade](#3-guia-de-estilo-geral)
+
+[4. Desempenho](#4-guia-de-estilo-angular)
+
+[5. Suportabilidade](#4-guia-de-estilo-angular)
+
+[6. Restrições de Design](#4-guia-de-estilo-angular)
+
+[7. Desempenho](#4-guia-de-estilo-angular)
+
+[8. Desempenho](#4-guia-de-estilo-angular)
+
+[9. Referências](#5-referências)
 
 ## 1. Introdução
 ### 1.1 Finalidade
@@ -33,14 +55,36 @@ Este artefato abrange requisitos de usabilidade, confiabilidade, desempenho e su
 | JavaScript | Linguagem de programação interpretada baseada em ECMAScript | Fundamental para a criação da interface de interação com o usuário |
 
 ## 2. Usabilidade
-O sistema irá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguem os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.
+
+### 2.1 Requisitos de Usabilidade
+**[RU01] Interface simples e minimalista**
+O sistema deverá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguirão os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.
+**Importância:** Essencial.
+
+**[RU02] Pequena curva de aprendizado**
+Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação
+**Importância:** Relevante.
 
 ## 3.Confiabilidade
-O aplicativo deverá funcionar 24 horas por dia, 7 dias por semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
+**[RC01] Disponibilidade ampla**
+O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
+**Importância:** Relevante.
 
-Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros.
+**[RC02] Informações pessoais seguras**
+Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros. Somente o nome, "nome de palhaço" e o telefone do usuário serão exibidos, para comunicação entre os participantes.
+**Importância:** Essencial.
 
+**[RC03] Confiabilidade das informações**
 Os dados providos pelo aplicativo (como notificações e posição na fila) devem ser confiáveis e corretos.
+**Importância:** Essencial.
+
+**[RC04] Tempo Médio Entre Falhas (MTBF)**
+O tempo médio entre falhas, é um cálculo realizado utilizando o tempo total do funcionamento, o tempo total sem funcionamento e o número de falhas. Só é possível ter valores exatos quando a aplicação já está quase lançada. Atualizaremos com os dados no pré-lançamento.
+**Importância:** Relevante.
+
+**[RC05] Tempo Médio Para Reparo (MTTR)**
+O tempo médio para reparo se assemelha ao MTBF, porém o intuito é entender quanto tempo será necessário para reparar os erros encontrados no sistema. O cálculo utiliza o total de horas do sistema sem funcionamento e o número de falhas encontradas. Atualizaremos com os dados no pré-lançamento.
+**Importância:** Relevante.
 
 ## 4. Desempenho
 O desempenho da aplicação tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado.
