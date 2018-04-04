@@ -2,9 +2,9 @@ version: '2.1'
 
 services:
 
-  ionic-app:
-    image: pam79/ionic-3-framework
-    container_name: ionic-app
+  new-ionic-image:
+    build: .
+    container_name: new-ionic-image
     privileged: true
     volumes:
       - ./:/myApp:z
