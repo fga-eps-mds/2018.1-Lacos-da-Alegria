@@ -13,27 +13,43 @@
 | 28/03 | 1.0 | Revisão final | Renan Schadt |
 
 # Sumário
-[1. Introdução](#1-objetivo)
+[1. Introdução](#1-introdução)
 
-* [1.1 Finalidade](#31-layout-do-código)
-* [1.2 Escopo](#32-tabs-ou-espaços)
-* [1.3 Definições, Acrônimos e Abreviações](#33-tamanho-máximo-da-linha)
+* [1.1 Finalidade](#11-finalidade)
+* [1.2 Escopo](#12-escopo)
+* [1.3 Definições, Acrônimos e Abreviações](#13-definições-acrônimos-e-abreviações)
 
-[2. Usabilidade](#2-organização-do-documento)
+[2. Usabilidade](#2-usabilidade)
 
-[3. Confiabilidade](#3-guia-de-estilo-geral)
+* [2.1 Requisitos de Usabilidade](#21-requisitos-de-usabilidade)
 
-[4. Desempenho](#4-guia-de-estilo-angular)
+[3. Confiabilidade](#3-confiabilidade)
 
-[5. Suportabilidade](#4-guia-de-estilo-angular)
+[4. Desempenho](#4-desempenho)
 
-[6. Restrições de Design](#4-guia-de-estilo-angular)
+[5. Suportabilidade](#5-suportabilidade)
 
-[7. Desempenho](#4-guia-de-estilo-angular)
+[6. Restrições de Design](#6-restrições-de-design)
 
-[8. Desempenho](#4-guia-de-estilo-angular)
+[7. Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line](#7-requisitos-de-sistema-de-ajuda-e-de-documentação-de-usuário-on-line)
 
-[9. Referências](#5-referências)
+[8. Componentes Comprados](#8-componentes-comprados)
+
+[9. Interfaces](#9-interfaces)
+
+* [9.1 Interfaces com o Usuário](#91-interfaces-com-o-usuário)
+* [9.2 Interfaces de Hardware](#92-interfaces-de-hardware)
+* [9.3 Interface de Software](#93-interface-de-software)
+* [9.4 Interfaces de Comunicação](#94-interfaces-de-comunicação)
+
+
+[10. Requisitos de Licenciamento](#10-requisitos-de-licenciamento)
+
+[11. Observações Legais, de Direitos Autorais etc](#11-observações-legais-de-direitos-autorais-etc)
+
+[12. Padrões Apicáveis](#12-padrões-aplicáveis)
+
+[13. Referências](#13-referências)
 
 ## 1. Introdução
 ### 1.1 Finalidade
@@ -65,7 +81,7 @@ O sistema deverá prover uma interface simples e minimalista, com design intuiti
 Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação
 **Importância:** Relevante.
 
-## 3.Confiabilidade
+## 3. Confiabilidade
 **[RC01] Disponibilidade ampla**
 O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
 **Importância:** Relevante.
@@ -122,7 +138,7 @@ A comunicação com o usuário será feita através de notificações.
 ## 10. Requisitos de Licenciamento
 A licença é um documento que define algumas ações autorizadas ou proibidas. Dentro do projeto é utilizado a Licença MIT, que é uma licença permissiva, ou seja que concede permissões para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e vender.
 
-## 11.  Observações Legais, de Direitos Autorais etc
+## 11. Observações Legais, de Direitos Autorais etc
 Os usuários do software deverão concordar com a licença MIT que concede uma série de permissões sobre o aplicativo para uso de terceiros. Além de concorda com o termo de aceitação da ONG Laços da Alegria para utilizar o serviço do aplicativo.
 
 ## 12. Padrões Aplicáveis
