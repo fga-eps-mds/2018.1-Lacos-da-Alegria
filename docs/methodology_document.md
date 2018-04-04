@@ -44,13 +44,21 @@ O papel de PO é responsabilidade de todos os membros da gerência, cuja tarefas
 
 ## 2.3 Time de Desenvolvimento
 
-- [ ]  Elaborar documentos de visão, arquitetura, especificação suplementar e guia de estilo;
+O Time de Desenvolvimento é composto pelos membros Renan Schadt, João Vítor Morandi, Luciano dos Santos Silva	,
+Rafael Makaha Gomes, Rômulo Vinícius e Sara Silva. Esses membros possuem a responsabilidade de:
+
+- [ ]  Elaborar documento de visão;
+- [ ]  Elaborar documento de arquitetura;
+- [ ]  Elaborar documento de especificação suplementar;
+- [ ]  Elaborar documento de guia de estilo;
 - [ ]  Elaborar protótipos;
 - [ ]  Entregar incrementos do produto;
-- [ ] Montar o Backlog da Sprint e;
-- [ ] Testar funcionalidades desenvolvidas.
+- [ ]  Montar o Backlog da Sprint e;
+- [ ]  Testar funcionalidades desenvolvidas.
 
 ## 2.4 Arquiteto
+
+O papel de arquitetura é assumido pela Julliana do Couto, que deverá:
 
 - [ ] Garantir que o time de desenvolvimento siga a arquitetura definida;
 - [ ] Treinar time de desenvolvimento;
@@ -61,6 +69,8 @@ O papel de PO é responsabilidade de todos os membros da gerência, cuja tarefas
 - [ ]  Prever possíveis mudanças arquiteturais.
 
 ## 2.5 DevOps
+
+Os DevOps serão os membros Cauê Mateus e Luiz Guilherme. Estes terão as seguites responsabilidades:
 
 - [ ] Instalar e configurar o ambiente;
 - [ ] Auxiliar a equipe de desenvolvimento;
