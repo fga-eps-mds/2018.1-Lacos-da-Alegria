@@ -4,51 +4,51 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="register-box">
   <ion-content #signup>
       <p *ngIf="submitAttempt" style="color: blue">Preencha todos dados precisamente</p>
 
-  <ion-list no-lines>
+  <ion-list no-lines class="credential-box">
     <form [formGroup]="signupOne">
-        <ion-item>
+        <ion-item class="item">
             <ion-label floating>Nome Completo</ion-label>
-            <ion-input formControlName="nameFull" type="text"></ion-input>
+            <ion-input class="input" formControlName="nameFull" type="text"></ion-input>
         </ion-item>
-        <ion-item *ngIf="!signupOne.controls.nameFull.valid  && (signupOne.controls.nameFull.dirty || submitAttempt)">
+        <ion-item class="item" *ngIf="!signupOne.controls.nameFull.valid  && (signupOne.controls.nameFull.dirty || submitAttempt)">
           <p>
             Por favor insira um nome valido.
           </p>
         </ion-item>
-        <ion-item>
+        <ion-item class="item">
             <ion-label floating>Email</ion-label>
-            <ion-input formControlName="email" type="text"></ion-input>
+            <ion-input class="input" formControlName="email" type="text"></ion-input>
         </ion-item>
-        <ion-item *ngIf="!signupOne.controls.email.valid  && (signupOne.controls.email.dirty || submitAttempt)">
+        <ion-item class="item" *ngIf="!signupOne.controls.email.valid  && (signupOne.controls.email.dirty || submitAttempt)">
             <p>
               Por favor insira um email valido.
             </p>
           </ion-item>
-        <ion-item>
+        <ion-item class="item">
             <ion-label floating>Senha</ion-label>
-            <ion-input formControlName="password" type="password"></ion-input>
-        </ion-item>
+            <ion-input class="input" formControlName="password" type="password"></ion-input>
+        </ion-item class="item">
         <ion-item *ngIf="!signupOne.controls.nameFull.valid  && (signupOne.controls.nameFull.dirty || submitAttempt)">
             <p>
               Por favor insira uma senha valida.
             </p>
           </ion-item>
-          <ion-item *ngIf="signupOne.controls.password.hasError('required') && signupOne.controls.password.touched">
+          <ion-item class="item" *ngIf="signupOne.controls.password.hasError('required') && signupOne.controls.password.touched">
               <p>Sorry, field password is required!</p>
           </ion-item>
-          <ion-item *ngIf="signupOne.controls.password.hasError('minlength') && signupOne.controls.password.touched">
+          <ion-item class="item" *ngIf="signupOne.controls.password.hasError('minlength') && signupOne.controls.password.touched">
               <p>Sorry, minimum password length is 6!</p>
           </ion-item>
-        <ion-item>
+        <ion-item class="item">
             <ion-label floating>Confirmar Senha</ion-label>
-            <ion-input type="password" [(ngModel)]="confirmPassword" formControlName="confirmPassword" required show-password></ion-input>
+            <ion-input class="input" type="password" [(ngModel)]="confirmPassword" formControlName="confirmPassword" required show-password></ion-input>
         </ion-item>
     
-        <ion-item *ngIf="signupOne.controls.confirmPassword.touched && signupOne.controls.confirmPassword.hasError('mismatchedPasswords') && signupOne.controls.password.valid">
+        <ion-item class="item" *ngIf="signupOne.controls.confirmPassword.touched && signupOne.controls.confirmPassword.hasError('mismatchedPasswords') && signupOne.controls.password.valid">
             <p>Passwords do not match</p>
         </ion-item>
         
@@ -58,6 +58,7 @@
       
   </ion-list>
   </ion-content>
-
-  <button ion-button (click)="BtnSend()">Enviar</button>
+  <div class="div-btn">
+    <button id="send-btn" ion-button (click)="BtnSend()">Enviar</button>
+  </div>
 </ion-content>
