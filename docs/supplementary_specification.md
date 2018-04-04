@@ -80,10 +80,12 @@ Este artefato abrange requisitos de usabilidade, confiabilidade, desempenho e su
 ### 2.1 Requisitos de Usabilidade
 **[RU01] Interface simples e minimalista**
 O sistema deverá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguirão os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.
+
 **Importância:** Essencial.
 
 **[RU02] Pequena curva de aprendizado**
-Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação
+Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação.
+
 **Importância:** Relevante.
 
 ## 3. Confiabilidade
@@ -91,26 +93,32 @@ Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando d
 ### 3.1 Requisitos de Confiabilidade
 **[RC01] Disponibilidade ampla**
 O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
+
 **Importância:** Relevante.
 
 **[RC02] Informações pessoais seguras**
 Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros. Somente o nome, "nome de palhaço" e o telefone do usuário serão exibidos, para comunicação entre os participantes.
+
 **Importância:** Essencial.
 
 **[RC03] Confiabilidade das informações**
 Os dados providos pelo aplicativo (como notificações e posição na fila) devem ser confiáveis e corretos.
+
 **Importância:** Essencial.
 
 **[RC04] Tempo Médio Entre Falhas (MTBF)**
 O tempo médio entre falhas, é um cálculo realizado utilizando o tempo total do funcionamento, o tempo total sem funcionamento e o número de falhas. Só é possível ter valores exatos quando a aplicação já está quase lançada. Atualizaremos com os dados no pré-lançamento.
+
 **Importância:** Relevante.
 
 **[RC05] Tempo Médio Para Reparo (MTTR)**
 O tempo médio para reparo se assemelha ao MTBF, porém o intuito é entender quanto tempo será necessário para reparar os erros encontrados no sistema. O cálculo utiliza o total de horas do sistema sem funcionamento e o número de falhas encontradas. Atualizaremos com os dados no pré-lançamento.
+
 **Importância:** Relevante.
 
 **[RC06] Taxa máxima de erros ou defeitos**
 Todo o processo de desenvolvimento é testado para evitar qualquer falha e exterminar erros fatais para o maior número de aparelhos compatíveis com o sistema, apesar dos esforços para combatê-los, erros existem. A taxa máxima de erros no nosso projeto é de 5%, com uma margem de erro de 2%, possuindo assim, uma taxa máxima de 7% do tempo total de execução indisponível.
+
 **Importância:** Relevante.
 
 ## 4. Desempenho
@@ -118,14 +126,17 @@ Todo o processo de desenvolvimento é testado para evitar qualquer falha e exter
 ### 4.1 Requisitos de Desempenho
 **[RD01] Acesso constante a internet**
 O aplicativo precisa de acesso constante a internet, suportando apenas quedas rápidas, pois a autenticação é feita a cada requisição do usuário.
+
 **Importância:** Essencial.
 
 **[RD02] Armazenamento interno disponível**
 O usuário precisa de armazenamento na memória interna do celular e conexão com a internet para poder baixar o aplicativo.
+
 **Importância:** Essencial.
 
 **[RD03] Tempo de resposta de uma transação**
 O tempo de resposta a uma transição tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado. Outra influência é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta. Devido à variabilidade das influências acima, não é possível estipular uma janela de tempo curta para as transações, o ideal é que o tempo de resposta fique abaixo de 2 segundos.
+
 **Importância:** Relevante.
 
 ## 5. Suportabilidade
