@@ -11,6 +11,7 @@
 | 27/03 | 0.6 | Complemento dos tópicos 10 e 11  | Luciano Dos Santos |
 | 28/03 | 0.7 | Revisão tópicos 5 e 7   | Sara Silva |
 | 28/03 | 1.0 | Revisão final | Renan Schadt |
+| 04/04 | 1.1 | Adicionados requisitos tópicos 2, 3 e 4 | Renan Schadt |
 
 # Sumário
 [1. Introdução](#1-introdução)
@@ -25,7 +26,11 @@
 
 [3. Confiabilidade](#3-confiabilidade)
 
+* [3.1 Requisitos de Confiabilidade](#31-requisitos-de-confiabilidade)
+
 [4. Desempenho](#4-desempenho)
+
+* [4.1 Requisitos de Desempenho](#41-requisitos-de-desempenho)
 
 [5. Suportabilidade](#5-suportabilidade)
 
@@ -82,6 +87,8 @@ Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando d
 **Importância:** Relevante.
 
 ## 3. Confiabilidade
+
+### 3.1 Requisitos de Confiabilidade
 **[RC01] Disponibilidade ampla**
 O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
 **Importância:** Relevante.
@@ -102,12 +109,24 @@ O tempo médio entre falhas, é um cálculo realizado utilizando o tempo total d
 O tempo médio para reparo se assemelha ao MTBF, porém o intuito é entender quanto tempo será necessário para reparar os erros encontrados no sistema. O cálculo utiliza o total de horas do sistema sem funcionamento e o número de falhas encontradas. Atualizaremos com os dados no pré-lançamento.
 **Importância:** Relevante.
 
+**[RC06] Taxa máxima de erros ou defeitos**
+Todo o processo de desenvolvimento é testado para evitar qualquer falha e exterminar erros fatais para o maior número de aparelhos compatíveis com o sistema, apesar dos esforços para combatê-los, erros existem. A taxa máxima de erros no nosso projeto é de 5%, com uma margem de erro de 2%, possuindo assim, uma taxa máxima de 7% do tempo total de execução indisponível.
+**Importância:** Relevante.
+
 ## 4. Desempenho
-O desempenho da aplicação tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado.
 
-Outra influência no desempenho é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta.
+### 4.1 Requisitos de Desempenho
+**[RD01] Acesso constante a internet**
+O aplicativo precisa de acesso constante a internet, suportando apenas quedas rápidas, pois a autenticação é feita a cada requisição do usuário.
+**Importância:** Essencial.
 
-Devido à variabilidade das influências acima, não é possível estipular tempo de resposta e desempenho mínimos da aplicação.
+**[RD02] Armazenamento interno disponível**
+O usuário precisa de armazenamento na memória interna do celular e conexão com a internet para poder baixar o aplicativo.
+**Importância:** Essencial.
+
+**[RD03] Tempo de resposta de uma transação**
+O tempo de resposta a uma transição tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado. Outra influência é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta. Devido à variabilidade das influências acima, não é possível estipular uma janela de tempo curta para as transações, o ideal é que o tempo de resposta fique abaixo de 2 segundos.
+**Importância:** Relevante.
 
 ## 5. Suportabilidade
 O Laços da Alegria terá suporte apenas em dispositivos com versões superiores a 5.0 do Android ou 9.0 do IOS e que tenham acesso à internet, essa restrição é baseada nos requerimentos das tecnologias usadas para o desenvolvimento do projeto.
