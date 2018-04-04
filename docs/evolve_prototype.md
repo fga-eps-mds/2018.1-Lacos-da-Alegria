@@ -1,8 +1,8 @@
 # Histórico de revisões
 |Data			|Versão		|Descrição			|Autor                   |
 | ----------------------------| --------------------------- | ------------------------------------  | ----------------------|
-|??/03/2018                 |0.1                             |Criação do Protótipo    |Rafael   |
-|04/04/2018                 |0.2                             |Adição de parágrafos explicativos  |Renan  |
+|27/03/2018                 |0.1                             |Criação do Protótipo    |Rafael Makaha   |
+|04/04/2018                 |0.2                             |Adição de parágrafos explicativos  |Renan Schadt |
 |04/04/2018                 |1.0                             |Formatação do documento e adição de imagens                |João Vítor  |
 
 # Sumário
