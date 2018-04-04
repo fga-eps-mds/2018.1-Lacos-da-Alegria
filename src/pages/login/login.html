@@ -1,17 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Entre no Laços da Alegria</ion-title>
-  </ion-navbar>
+    <ion-navbar >
+      <ion-title>Entre no Laços da Alegria</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
+<ion-content padding class="login-box">
+  <ion-list class="credential-box">
+      <ion-item class="item">
+        <ion-input class="input" type="text"placeholder="Nome de usuário ou E-mail"></ion-input>
+      </ion-item>
       <ion-item>
-        <ion-input placeholder="Nome de usuário ou E-mail"></ion-input>
-        <p></p>
-        <ion-input placeholder="Senha"></ion-input>
+        <ion-input type="password" placeholder="Senha"></ion-input>
       </ion-item>
   </ion-list>
-  <button ion-button (click)="BtnLogIn()">Entrar</button>
-  <button ion-button (click)="BtnRegister()">Cadastrar</button>
+  <div class="div-btn">
+    <button id="login-btn" ion-button full (click)="BtnLogIn()">Entrar</button>
+    <p>ou</p>
+    <button id="register-btn" ion-button full (click)="BtnRegister()">Cadastrar</button>
+  </div>
 </ion-content>
