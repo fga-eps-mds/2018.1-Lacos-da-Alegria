@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 #BASIC STUFF
 RUN apt-get update \
-    && apt-get install -y python-software-properties software-properties-common build-essential git wget curl unzip ruby autogen autoconf libtool chromium \
+    && apt-get install -y python-software-properties software-properties-common build-essential git wget curl unzip ruby autogen autoconf libtool \
     && git config --global user.email "email@email.com" \
     && git config --global user.name "Insert Your Name" \
     && curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh \
