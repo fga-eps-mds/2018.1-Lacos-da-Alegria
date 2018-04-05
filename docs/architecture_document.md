@@ -1,3 +1,34 @@
+# Histórico de versões
+|Data			|Versão		|Descrição			|Autor                   |
+| ----------------------------| --------------------------- | ------------------------------------  | ----------------------|
+|21/03/2018                 |1.0                             |Criação do documento de arquitetura   |João Vítor, Luciano, Rômulo e Sara  |
+
+
+# Sumário
+
+[1. Introdução](#1-introdução)
+
+* [1.1 Finalidade](#11-finalidade)
+* [1.2 Escopo](#12-escopo)
+* [1.3 Referências](#13-referências)
+* [1.4 Visão Geral](#14-visão-geral)
+
+
+[2. Representação da Arquitetura](#2-representação-da-arquitetura)
+
+* [2.1 Arquitetura django REST](#21-arquitetura-django-rest)
+* [2.2 Arquitetura Ionic Framework](#22-arquitetura-ionic-framework)
+
+[3. Metas e Restrições de Arquitetura](#3-metas-e-restrições-de-arquitetura)
+
+[4. Visão Lógica](#4-visão-lógica)
+
+* [4.1 Diagrama de Classes](#41-diagrama-de-classes)
+
+[5. Visão de Implementação](#5-visão-de-implementação)
+
+[6. Qualidade](#6-qualidade)
+
 # Documento de Arquitetura
 ## 1. Introdução
 

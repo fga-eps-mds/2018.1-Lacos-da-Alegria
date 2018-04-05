@@ -3,7 +3,8 @@
 | ----------------------------| --------------------------- | ------------------------------------  | ----------------------|
 |21/03/2018                 |1.0                             |Inserção da folha de estilo    |Renan e Rafael   |
 |25/03/2018                 |1.1                             |Adição da guia de estilo do Angular e do Python   |Rômulo e João Vítor  |
-
+|31/03/2018                 |1.2                             |Correção de erros                                 |João Vítor           |
+|01/04/2018                 |1.3                             |Nova revisão para correção de erros                                 |João Vítor           |
 
 # Sumário
 
@@ -90,8 +91,7 @@ Errado:
 ### 3.2 Tabs ou espaços?
 
 <ul>
-<li align = "justify">O método de indentação mais recomendado é a utilização de espaços, e é a que utilizaremos nesse projeto.
-<li align = "justify">Tabs só devem ser usados para manter a consistência com um código já que começou a ser indentado com tabs, mas como esse código está sendo pela mesma equipe desde o início, não há motivo para utilizar este método.
+<li align = "justify">O método de identação que utilizaremos nesse projeto é a utilização de espaços, sem nenhuma utilização de tabs.
 </ul>
 
 ### 3.3 Tamanho máximo da linha
@@ -108,6 +108,28 @@ Errado:
 <li align = "justify">Linhas em branco são usadas em funções para indicar seções lógicas.
 </ul>
 
+```python
+Exemplo:
+
+Correto:
+	class Exemp:
+  
+  
+      def meth():
+          print("Método")
+      
+      def meth2():
+          print("Método 2")
+
+Errado:
+	class Exemp:
+      def meth():
+          print("Método")
+      def meth2():
+          print("Método 2")
+	
+```
+
 ### 3.5 Codificação do Arquivo de Origem
 
 <ul>
@@ -120,9 +142,9 @@ Errado:
 <ul><li align = "justify">Imports devem ser sempre feitos em linhas separadas.</ul>
 
     Exemplo:
-    	Correto:
-    		import os
-        	import sys
+    	Correto
+        import os
+        import sys
     	Errado:
     		import sys, os
 
@@ -133,10 +155,10 @@ Errado:
 
 <ul>
   <li align = "justify">Imports são sempre colocados no começo do arquivo, logo após qualquer comentário de módulo e docstrings e antes de globais de módulo e constantes.
-  <li>Imports devem ser agrupados na ordem:
-  <li>imports da biblioteca padrão.
-  <li>imports de terceiros relacionados.
-  <li>imports de aplicativos e bibliotecas locais.
+  <li>Imports devem ser agrupados na ordem: <br>
+  -Imports da biblioteca padrão. <br>
+  -Imports de terceiros relacionados. <br>
+  -Imports de aplicativos e bibliotecas locais. <br>
 </ul>
 
 ### 3.7 Espaços em branco
@@ -154,8 +176,19 @@ Errado:
 ### 3.8 Métodos
 
 <ul align = "justify">
-<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método.
+<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método, cada coisa em uma linha, conforme o exemplo.
 </ul>
+
+```python
+Exemplo:
+
+	""" Objective: this method will display the desired phrase on the screen.
+      Parameters: it does not receive any parameters.
+      Returns: it does not return anything. """
+      
+       def printar():
+          print("Desired phrase.")
+```
 
 ### 3.9 Comentários
 
@@ -166,6 +199,28 @@ Errado:
 <li>Comentários devem ser escritos sempre em inglês.
 </ul>
 
+```python
+Exemplo:
+
+Correto:
+   """ Objective: this method will display the desired phrase on the screen.
+       Parameters: it does not receive any parameters.
+       Returns: it does not return anything. """
+       
+        def printar():
+          print("Desired phrase.")
+Errado:
+	  """ Esse método vai mostrar uma frase na tela. """
+    
+          def printar():
+            print("Desired phrase.")
+   
+Errado:
+	  """ this method will display the desired phrase on the screen. it does not receive any parameters, nor does it return anything """
+          def printar():
+            print("Desired phrase")
+```
+
 ### 3.10 Comentários em linha
 
 <ul align = "justify">
@@ -173,16 +228,36 @@ Errado:
 <li>Comece com # e um espaço em branco.
 </ul>
 
+```python
+Exemplo:
+
+Correto:
+	  x = x + 1  # Compensate for border 
+
+Errado:
+	  x = x + 1  # Increment x
+	
+```
+
 ### 3.11 Nomenclatura
 
 <ul align = "justify">
 <li>Nunca use L minúsculo, ‘o’ maiúsculo ou ‘i’ maiúsculo como variáveis, pois podem ser confundidas em algumas fontes com 0 e 1.</li>
-<li>Nomes de classes, variáveis de tipo e excessões normalmente usam a convenção CapWords.</li>
+<li>Nomes de classes, variáveis de tipo e exceções usam a convenção CapWords.</li>
 <li>Nomes de funções, de variáveis globais e de métodos devem ser escritas em minúsculo, com palavras separadas por ‘_’.</li>
 <li>Sempre use ‘self’ como primeiro argumento para instanciar métodos e ‘cls’ como primeiro argumento para métodos de classes.</li>
 <li>Utilize um ‘_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
 <li>Nomes de constantes devem ser todas as letras maiúsculas com ‘_’ separando as palavras.</li>
 </ul>
+
+```python
+Exemplo:
+
+  Classes, variáveis de tipo e excessões: MyClass
+  Funções, variáveis globais e métodos: my_function
+  Constantes: MY_CONSTANT
+
+```
 
 ## 4. Guia de Estilo Angular
 ### 4.1 Nomenclatura
