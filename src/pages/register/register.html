@@ -31,8 +31,8 @@
         <ion-item class="item">
             <ion-label floating>Senha</ion-label>
             <ion-input class="input" formControlName="password" type="password"></ion-input>
-        </ion-item class="item">
-        <ion-item *ngIf="!signupOne.controls.nameFull.valid  && (signupOne.controls.nameFull.dirty || submitAttempt)">
+        </ion-item >
+        <ion-item *ngIf="!signupOne.controls.password.valid  && (signupOne.controls.password.dirty || submitAttempt)">
             <p>
               Por favor insira uma senha valida.
             </p>
@@ -52,10 +52,7 @@
             <p>Passwords do not match</p>
         </ion-item>
         
-    </form>
-     
-    
-      
+    </form>      
   </ion-list>
   </ion-content>
   <div class="div-btn">

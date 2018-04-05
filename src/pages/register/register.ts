@@ -17,7 +17,7 @@ export class RegisterPage {
       nameFull: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')])],
-      confirmPassword: ['', Validators.required, Validators],
+      confirmPassword: ['', Validators.required],
     }, { validator: this.matchingPasswords('password', 'confirmPassword')})
   }
   matchingPasswords(passwordKey: string, confirmPasswordKey: string){
