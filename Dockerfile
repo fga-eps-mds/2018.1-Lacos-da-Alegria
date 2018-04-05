@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 #BASIC STUFF
 RUN apt-get update \
-    && apt-get install -y python-software-properties software-properties-common build-essential git wget curl unzip ruby autogen autoconf libtool \
+    && apt-get install -y python-software-properties software-properties-common build-essential git wget curl unzip ruby autogen autoconf libtool chromium \
     && git config --global user.email "email@email.com" \
     && git config --global user.name "Insert Your Name" \
     && curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh \
@@ -19,6 +19,7 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && npm install -g npm@"$NPM_VERSION" \
     && npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" \
+    && npm install -g karma \
     #&& gem install sass \
     #&& ionic start myApp sidemenu \
 
