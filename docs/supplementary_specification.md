@@ -11,7 +11,50 @@
 | 27/03 | 0.6 | Complemento dos tópicos 10 e 11  | Luciano Dos Santos |
 | 28/03 | 0.7 | Revisão tópicos 5 e 7   | Sara Silva |
 | 28/03 | 1.0 | Revisão final | Renan Schadt |
+| 04/04 | 1.1 | Adicionados requisitos tópicos 2, 3 e 4 | Renan Schadt |
 
+# Sumário
+[1. Introdução](#1-introdução)
+
+* [1.1 Finalidade](#11-finalidade)
+* [1.2 Escopo](#12-escopo)
+* [1.3 Definições, Acrônimos e Abreviações](#13-definições-acrônimos-e-abreviações)
+
+[2. Usabilidade](#2-usabilidade)
+
+* [2.1 Requisitos de Usabilidade](#21-requisitos-de-usabilidade)
+
+[3. Confiabilidade](#3-confiabilidade)
+
+* [3.1 Requisitos de Confiabilidade](#31-requisitos-de-confiabilidade)
+
+[4. Desempenho](#4-desempenho)
+
+* [4.1 Requisitos de Desempenho](#41-requisitos-de-desempenho)
+
+[5. Suportabilidade](#5-suportabilidade)
+
+[6. Restrições de Design](#6-restrições-de-design)
+
+[7. Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line](#7-requisitos-de-sistema-de-ajuda-e-de-documentação-de-usuário-on-line)
+
+[8. Componentes Comprados](#8-componentes-comprados)
+
+[9. Interfaces](#9-interfaces)
+
+* [9.1 Interfaces com o Usuário](#91-interfaces-com-o-usuário)
+* [9.2 Interfaces de Hardware](#92-interfaces-de-hardware)
+* [9.3 Interface de Software](#93-interface-de-software)
+* [9.4 Interfaces de Comunicação](#94-interfaces-de-comunicação)
+
+
+[10. Requisitos de Licenciamento](#10-requisitos-de-licenciamento)
+
+[11. Observações Legais, de Direitos Autorais etc](#11-observações-legais-de-direitos-autorais-etc)
+
+[12. Padrões Apicáveis](#12-padrões-aplicáveis)
+
+[13. Referências](#13-referências)
 
 ## 1. Introdução
 ### 1.1 Finalidade
@@ -33,21 +76,68 @@ Este artefato abrange requisitos de usabilidade, confiabilidade, desempenho e su
 | JavaScript | Linguagem de programação interpretada baseada em ECMAScript | Fundamental para a criação da interface de interação com o usuário |
 
 ## 2. Usabilidade
-O sistema irá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguem os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.
 
-## 3.Confiabilidade
-O aplicativo deverá funcionar 24 horas por dia, 7 dias por semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
+### 2.1 Requisitos de Usabilidade
+**[RU01] Interface simples e minimalista**
+O sistema deverá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguirão os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.
 
-Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros.
+**Importância:** Essencial.
 
+**[RU02] Pequena curva de aprendizado**
+Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação.
+
+**Importância:** Relevante.
+
+## 3. Confiabilidade
+
+### 3.1 Requisitos de Confiabilidade
+**[RC01] Disponibilidade ampla**
+O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.
+
+**Importância:** Relevante.
+
+**[RC02] Informações pessoais seguras**
+Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros. Somente o nome, "nome de palhaço" e o telefone do usuário serão exibidos, para comunicação entre os participantes.
+
+**Importância:** Essencial.
+
+**[RC03] Confiabilidade das informações**
 Os dados providos pelo aplicativo (como notificações e posição na fila) devem ser confiáveis e corretos.
 
+**Importância:** Essencial.
+
+**[RC04] Tempo Médio Entre Falhas (MTBF)**
+O tempo médio entre falhas, é um cálculo realizado utilizando o tempo total do funcionamento, o tempo total sem funcionamento e o número de falhas. Só é possível ter valores exatos quando a aplicação já está quase lançada. Atualizaremos com os dados no pré-lançamento.
+
+**Importância:** Relevante.
+
+**[RC05] Tempo Médio Para Reparo (MTTR)**
+O tempo médio para reparo se assemelha ao MTBF, porém o intuito é entender quanto tempo será necessário para reparar os erros encontrados no sistema. O cálculo utiliza o total de horas do sistema sem funcionamento e o número de falhas encontradas. Atualizaremos com os dados no pré-lançamento.
+
+**Importância:** Relevante.
+
+**[RC06] Taxa máxima de erros ou defeitos**
+Todo o processo de desenvolvimento é testado para evitar qualquer falha e exterminar erros fatais para o maior número de aparelhos compatíveis com o sistema, apesar dos esforços para combatê-los, erros existem. A taxa máxima de erros no nosso projeto é de 5%, com uma margem de erro de 2%, possuindo assim, uma taxa máxima de 7% do tempo total de execução indisponível.
+
+**Importância:** Relevante.
+
 ## 4. Desempenho
-O desempenho da aplicação tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado.
 
-Outra influência no desempenho é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta.
+### 4.1 Requisitos de Desempenho
+**[RD01] Acesso constante a internet**
+O aplicativo precisa de acesso constante a internet, suportando apenas quedas rápidas, pois a autenticação é feita a cada requisição do usuário.
 
-Devido à variabilidade das influências acima, não é possível estipular tempo de resposta e desempenho mínimos da aplicação.
+**Importância:** Essencial.
+
+**[RD02] Armazenamento interno disponível**
+O usuário precisa de armazenamento na memória interna do celular e conexão com a internet para poder baixar o aplicativo.
+
+**Importância:** Essencial.
+
+**[RD03] Tempo de resposta de uma transação**
+O tempo de resposta a uma transição tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado. Outra influência é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta. Devido à variabilidade das influências acima, não é possível estipular uma janela de tempo curta para as transações, o ideal é que o tempo de resposta fique abaixo de 2 segundos.
+
+**Importância:** Relevante.
 
 ## 5. Suportabilidade
 O Laços da Alegria terá suporte apenas em dispositivos com versões superiores a 5.0 do Android ou 9.0 do IOS e que tenham acesso à internet, essa restrição é baseada nos requerimentos das tecnologias usadas para o desenvolvimento do projeto.
@@ -78,7 +168,7 @@ A comunicação com o usuário será feita através de notificações.
 ## 10. Requisitos de Licenciamento
 A licença é um documento que define algumas ações autorizadas ou proibidas. Dentro do projeto é utilizado a Licença MIT, que é uma licença permissiva, ou seja que concede permissões para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e vender.
 
-## 11.  Observações Legais, de Direitos Autorais etc
+## 11. Observações Legais, de Direitos Autorais etc
 Os usuários do software deverão concordar com a licença MIT que concede uma série de permissões sobre o aplicativo para uso de terceiros. Além de concorda com o termo de aceitação da ONG Laços da Alegria para utilizar o serviço do aplicativo.
 
 ## 12. Padrões Aplicáveis
