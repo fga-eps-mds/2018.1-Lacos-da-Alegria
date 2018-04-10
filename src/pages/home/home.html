@@ -8,11 +8,15 @@
 </ion-header>
 
 <ion-content padding>
+  <button ion-button block>
+    Adicionar Usuário
+  </button>
+
   <ion-list inset>
     <ion-item *ngFor="let user of users">
       <h2>{{user.name}}</h2>
-      <p>{{user.website}}</p>
       <p>{{user.email}}</p>
+      <p>{{user.address}}</p>
     </ion-item>
   </ion-list>
 </ion-content>

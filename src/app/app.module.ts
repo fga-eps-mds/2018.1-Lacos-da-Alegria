@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 
 import { MyApp } from './app.component';
+import { AddUserPage } from '../pages/adduser/adduser';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
@@ -21,10 +22,12 @@ import { RestProvider } from '../providers/rest/rest';
   declarations: [
     MyApp,
     HomePage,
+    AddUserPage,
     ListPage,
     WelcomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    AddUserPage
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { RestProvider } from '../providers/rest/rest';
   entryComponents: [
     MyApp,
     HomePage,
+    AddUserPage,
     ListPage,
     WelcomePage,
     LoginPage,

@@ -8,17 +8,18 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class HomePage {
   users: any;
+  usersLocal: any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
-    this.getUsers();
+    this.getProfiles();
   }
 
-  getUsers() {
-    this.restProvider.getUsers()
+  getProfiles() {
+    this.restProvider.getProfiles()
     .then(data => {
       this.users = data;
       console.log(this.users);
     });
   }
-
+  
 }
