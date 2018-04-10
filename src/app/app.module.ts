@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 
+import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -21,25 +22,32 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     WelcomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ActivitiesListPage
   ],
+
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
+
   bootstrap: [IonicApp],
+
   entryComponents: [
     MyApp,
     HomePage,
     ListPage,
     WelcomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ActivitiesListPage
   ],
+
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}
