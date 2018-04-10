@@ -66,8 +66,10 @@ Durante a reunião foi levantado quais melhorias aplicadas nessa _Sprint_ foram 
 
 ### 2. Análise do _Scrum Master_
 
-Essa foi uma _Sprint_ um pouco contubarda por causa do pouco monitoramento de EPS. A produção de documentos
-no Google Drive foi um grande problema para a Sprint, pois foram entregues poucos pontos por causa do retrabalho de passar tudo que foi escrito
-para o _markdown_.
+Essa foi uma _Sprint_ muito positiva em relação às anteriores. Houve uma melhora significativa do Time de Desenvolvimento, que está amadurecendo a cada semana e se tornando mais independente.
 
-Apesar disso foi possível perceber uma maturidade maior com relação ao Time de Desenvolvimento que tomou decisões sem precisar do apoio dos gerentes.
+O time está se tornando mais produtivo, como pode ser visto pelo aumento gradual do _Velocity_ e também pelo Quadro de Horas em que cada membro está diminuindo a quantidade de horas necessárias para produzir artefatos (ficando em torno de 10 horas, que é o ideal a ser investido em cada _Sprint_).
+
+Também é possível perceber uma melhoria no que diz respeito  ao conhecimento, que também vem crescendo a cada semana. Essa melhora se dá, principalmente, à disponibilidade do membro Luiz, que está sempre ajudando o Time de Desenvolvimento, além do próprio esforço e interesse do Time.
+
+As melhorias aplicadas foram importantes, pois ajudaram a aumentar a transparência do que está sendo produzido e esperado que essas práticas continuem sendo aplicadas continuamente.
