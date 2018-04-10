@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
+import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WelcomePage,
     LoginPage,
     RegisterPage,
-    ActivitiesListPage
+    ActivitiesListPage,
+    CreateActivityPage
   ],
 
   imports: [
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WelcomePage,
     LoginPage,
     RegisterPage,
-    ActivitiesListPage
+    ActivitiesListPage,
+    CreateActivityPage
   ],
 
   providers: [
