@@ -7,5 +7,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>  
+<ion-content padding>
+  <ion-item *ngFor="let activitie of activities">
+    <h2>{{activitie.name}}</h2>
+    <p>{{activitie.body}}</p>
+  </ion-item>
 </ion-content>
