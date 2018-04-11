@@ -98,8 +98,6 @@
             <ion-input class="input" formControlName="endereco" type="text"></ion-input>
         </ion-item>
 
-
-
         <ion-item class="item">
             <ion-label>Como conheceu o Laços?</ion-label>
             <ion-select formControlName ="comoConheceu" [(ngModel)]="conheceu">
@@ -112,26 +110,29 @@
         </ion-item>
 
         <ion-item class="item">
-            <ion-label floating>Deseja visitar instituições de caridade?</ion-label>
+            <ion-label>Deseja visitar instituições de caridade?</ion-label>
+        </ion-item>
+        
+        <ion-item class="item">
             <ion-label>Sim</ion-label>
             <ion-checkbox color="dark" formControlName="participar" checked="false"></ion-checkbox>
         </ion-item>
 
         <ion-list radio-group formControlName="sexo">
-                <ion-list-header>
-                  Sexo
-                </ion-list-header>
-              
-                <ion-item>
-                  <ion-label>Palhaçinho</ion-label>
-                  <ion-radio checked="true" value="M"></ion-radio>
-                </ion-item>
-              
-                <ion-item>
-                  <ion-label>Palhaçinha</ion-label>
-                  <ion-radio value="F"></ion-radio>
-                </ion-item>
-            </ion-list>
+            <ion-list-header>
+                Sexo
+            </ion-list-header>
+            
+            <ion-item>
+                <ion-label>Palhaçinho</ion-label>
+                <ion-radio checked="true" value="M"></ion-radio>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Palhaçinha</ion-label>
+                <ion-radio value="F"></ion-radio>
+            </ion-item>
+        </ion-list>
     </form>
   </ion-list>
   </ion-content>
