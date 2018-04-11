@@ -21,6 +21,7 @@ export class RegisterPage {
       cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('([0-9]).{11,11}$')])],
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       birth: ['', Validators.compose([Validators.required, Validators.pattern('^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$')])],
+      cities:[''],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')])],
       confirmPassword: ['', Validators.required],
     }, { validator: this.matchingPasswords('password', 'confirmPassword')})

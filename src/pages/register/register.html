@@ -58,10 +58,20 @@
               Por favor insira um email valido.
             </p>
           </ion-item>
-          <ion-item class="item">
-              <ion-label floating>Data de Nascimento</ion-label>
-              <ion-input class="input" formControlName="birth" type="text"></ion-input>
-          </ion-item>
+        <ion-item class="item">
+            <ion-label floating>Data de Nascimento</ion-label>
+            <ion-input class="input" formControlName="birth" type="text"></ion-input>
+        </ion-item>
+        
+        <ion-item class="item">
+            <ion-label>Cidade Satélite</ion-label>
+            <ion-select formControlName ="cities" [(ngModel)]="region">
+                <ion-option value="aguas">Águas Claras</ion-option>
+                <ion-option value="asan">Asa Norte</ion-option>
+                <ion-option value="asas">Asa Sul</ion-option>
+                <ion-option value="gama">Gama</ion-option>
+            </ion-select>
+        </ion-item>
   
 
     </form>
