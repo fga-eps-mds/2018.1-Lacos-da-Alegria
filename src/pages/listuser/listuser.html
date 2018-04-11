@@ -1,0 +1,18 @@
+ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>List</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list inset>
+        <ion-item *ngFor='let user of users'>
+          <p>{{user.name}}</p>
+        </ion-item>
+    </ion-list>
+    
+     
+  </ion-content>
