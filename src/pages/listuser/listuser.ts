@@ -36,4 +36,8 @@ export class ListUserPage {
     });
   }
 
+  BtnGoToRegister(){
+    this.navCtrl.push(RegisterPage);
+  } 
+
 }
