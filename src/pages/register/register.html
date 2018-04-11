@@ -80,7 +80,7 @@
 
         <ion-item class="item">
             <ion-label>Preferência de Atividade</ion-label>
-            <ion-select formControlName ="hospitais" [(ngModel)]="region">
+            <ion-select formControlName ="hospitais" [(ngModel)]="hospital">
                 <ion-option value="gama">Hospital do Gama</ion-option>
                 <ion-option value="taguatinga">Hospital de Taguatinga</ion-option>
                 <ion-option value="brasília">Hospital de Brasília</ion-option>
@@ -94,6 +94,19 @@
         <ion-item class="item">
             <ion-label floating>Endereço</ion-label>
             <ion-input class="input" formControlName="endereco" type="text"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item class="item">
+            <ion-label>Como conheceu o Laços?</ion-label>
+            <ion-select formControlName ="comoConheceu" [(ngModel)]="conheceu">
+                <ion-option value="indicacao">Indicação de um amigo</ion-option>
+                <ion-option value="redeSocial">Através de uma rede social do Laços</ion-option>
+                <ion-option value="palestr">Através de uma palestra</ion-option>
+                <ion-option value="reportagem">Em uma reportagem na televisão</ion-option>
+                <ion-option value="outro">Outros</ion-option>                
+            </ion-select>
         </ion-item>
 
     </form>
