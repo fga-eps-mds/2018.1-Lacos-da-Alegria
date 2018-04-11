@@ -72,7 +72,21 @@
                 <ion-option value="gama">Gama</ion-option>
             </ion-select>
         </ion-item>
-  
+
+        <ion-item class="item">
+            <ion-label floating>DDD</ion-label>
+            <ion-input class="input" formControlName="ddd" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label>Preferência de Atividade</ion-label>
+            <ion-select formControlName ="hospitais" [(ngModel)]="region">
+                <ion-option value="gama">Hospital do Gama</ion-option>
+                <ion-option value="taguatinga">Hospital de Taguatinga</ion-option>
+                <ion-option value="brasília">Hospital de Brasília</ion-option>
+                <ion-option value="asan">Hospital da Asa Norte</ion-option>
+            </ion-select>
+        </ion-item>
 
     </form>
   </ion-list>
