@@ -24,6 +24,8 @@ export class RegisterPage {
       cities:[''],
       ddd: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(3), Validators.pattern('([0-9]).{3,3}$')])],
       hospitais:[''],
+      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('([0-9]).{9,9}$')]) ],
+      endereco: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required]) ],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')])],
       confirmPassword: ['', Validators.required],
     }, { validator: this.matchingPasswords('password', 'confirmPassword')})
