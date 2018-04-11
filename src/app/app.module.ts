@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { ListUserPage } from '../pages/listuser/listuser'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +25,8 @@ import { RestProvider } from '../providers/rest/rest';
     ListPage,
     WelcomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ListUserPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { RestProvider } from '../providers/rest/rest';
     ListPage,
     WelcomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ListUserPage
   ],
   providers: [
     StatusBar,
