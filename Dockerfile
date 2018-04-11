@@ -19,6 +19,7 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && npm install -g npm@"$NPM_VERSION" \
     && npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" \
+    && npm install -g karma \
     #&& gem install sass \
     #&& ionic start myApp sidemenu \
 

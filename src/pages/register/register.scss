@@ -1,0 +1,23 @@
+page-register {
+    .register-box{
+        background-color: #E3ECF5;
+    }
+    .credential-box{
+        background-color: transparent;
+    }
+    .item{
+        background-color: transparent;
+    }
+    .input{
+        background-color: transparent;
+    }
+    .div-btn{
+        position: absolute;
+        text-align: center;
+        top: 29%;
+        left: 35%;
+        .send-btn{
+            background-color: #0D68A3;
+        }
+    }
+}
