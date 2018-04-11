@@ -9,6 +9,7 @@
 | 25/03 | 1.1 | Revisão Markdown, referências na ABNT e imagens adicionadas | Renan Schadt |
 | 10/04 | 1.2 | Tópico 5 refatorado, sumário adicionado | Renan Schadt |
 
+## Sumário
 [1. Introdução](#1-introdução)
 
 * [1.1 Sobre a Organização](#11-sobre-a-organização)
@@ -84,19 +85,19 @@ O aplicativo será desenvolvido para aumentar a comodidade dos usuários e notif
 Nesta seção são descritos competidores ou alternativas ao aplicativo que está sendo criado.
 
 #### 2.4.1 Doutores da Alegria
-Figura 1 - Home page do site da Doutores da Alegria ![Tela_Doutores_da_Alegria](images/doutores.png) <br>
+![Tela_Doutores_da_Alegria](images/doutores.png) Figura 1 - Home page do site da Doutores da Alegria <br>
 
 Uma fundação cujo objetivo é visitar crianças e adolescentes internados, a equipe é composta por cerca de 40 artistas profissionais que se vestem de palhaços para entreter seu público e realizam atividades semanais em 12 hospitais de Recife e São Paulo.
 
 A fundação sobrevive e paga os artistas através de doações de empresas ou qualquer outro interessado, apesar de ser gratuito para os hospitais e pacientes, o trabalho não é voluntário.
 
 #### 2.4.2 Hospitalhaços
-Figura 2 - Home page da Hospitalhaços ![Tela_Hospitalhaços](images/hospitalhacos.png) <br>
+![Tela_Hospitalhaços](images/hospitalhacos.png) Figura 2 - Home page da Hospitalhaços <br>
 
 Uma ONG criada em 1999 que utiliza a figura de palhaços para levar sorrisos ao ambiente hospitalar. Conta com mais de 600 voluntários ativos atuando nos estados de São Paulo e Pernambuco. Antes de se tornar um voluntário é preciso passar por um processo seletivo e um treinamento. Conta com uma página web em funcionamento e um aplicativo em estágio de desenvolvimento.
 
 #### 2.4.3 Site da Laços da Alegria
-Figura 3 - Página exibida aos novatos no site Laços da Alegria ![Tela_Laços](images/site_lacos.png) <br>
+![Tela_Laços](images/site_lacos.png) Figura 3 - Página exibida aos novatos no site Laços da Alegria <br>
 
 É o meio pela qual as visitas relacionadas a Laços da Alegria são agendadas atualmente. Permite cadastro/login, entrar na fila de espera dos hospitais, visualizar posição na fila de espera e confirmar/recusar presença. O site não envia nenhuma espécie de notificação ou email para lhe avisar de sua posição ou data de visita, é necessário ficar logando com frequência para não perdê-la.
 
