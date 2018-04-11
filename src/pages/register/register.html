@@ -11,6 +11,10 @@
   <ion-list no-lines class="credential-box">
     <form [formGroup]="signupOne" (ngSubmit)="saveUser()">
         <ion-item class="item">
+            <ion-label floating>Login</ion-label>
+            <ion-input class="input" formControlName="login" type="text"></ion-input>
+        </ion-item >
+        <ion-item class="item">
             <ion-label floating>Nome Completo</ion-label>
             <ion-input class="input" formControlName="nameFull" type="text"></ion-input>
         </ion-item>
@@ -19,15 +23,6 @@
             Por favor insira um nome valido.
           </p>
         </ion-item>
-        <ion-item class="item">
-            <ion-label floating>Email</ion-label>
-            <ion-input class="input" formControlName="email" type="text"></ion-input>
-        </ion-item>
-        <ion-item class="item" *ngIf="!signupOne.controls.email.valid  && (signupOne.controls.email.dirty || submitAttempt)">
-            <p>
-              Por favor insira um email valido.
-            </p>
-          </ion-item>
         <ion-item class="item">
             <ion-label floating>Senha</ion-label>
             <ion-input class="input" formControlName="password" type="password"></ion-input>
@@ -47,10 +42,27 @@
             <ion-label floating>Confirmar Senha</ion-label>
             <ion-input class="input" type="password" [(ngModel)]="confirmPassword" formControlName="confirmPassword" required show-password></ion-input>
         </ion-item>
-
         <ion-item class="item" *ngIf="signupOne.controls.confirmPassword.touched && signupOne.controls.confirmPassword.hasError('mismatchedPasswords') && signupOne.controls.password.valid">
             <p>Passwords do not match</p>
         </ion-item>
+        <ion-item class="item">
+            <ion-label floating>CPF</ion-label>
+            <ion-input class="input" formControlName="cpf" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+            <ion-label floating>Email</ion-label>
+            <ion-input class="input" formControlName="email" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="item" *ngIf="!signupOne.controls.email.valid  && (signupOne.controls.email.dirty || submitAttempt)">
+            <p>
+              Por favor insira um email valido.
+            </p>
+          </ion-item>
+          <ion-item class="item">
+              <ion-label floating>Data de Nascimento</ion-label>
+              <ion-input class="input" formControlName="birth" type="text"></ion-input>
+          </ion-item>
+  
 
     </form>
   </ion-list>
