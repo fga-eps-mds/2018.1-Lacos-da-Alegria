@@ -85,19 +85,19 @@ O aplicativo será desenvolvido para aumentar a comodidade dos usuários e notif
 Nesta seção são descritos competidores ou alternativas ao aplicativo que está sendo criado.
 
 #### 2.4.1 Doutores da Alegria
-![Tela_Doutores_da_Alegria](images/doutores.png) Figura 1 - Home page do site da Doutores da Alegria <br>
+![Tela_Doutores_da_Alegria](images/doutores.png) **Figura 1 -** Home page do site da Doutores da Alegria <br>
 
 Uma fundação cujo objetivo é visitar crianças e adolescentes internados, a equipe é composta por cerca de 40 artistas profissionais que se vestem de palhaços para entreter seu público e realizam atividades semanais em 12 hospitais de Recife e São Paulo.
 
 A fundação sobrevive e paga os artistas através de doações de empresas ou qualquer outro interessado, apesar de ser gratuito para os hospitais e pacientes, o trabalho não é voluntário.
 
 #### 2.4.2 Hospitalhaços
-![Tela_Hospitalhaços](images/hospitalhacos.png) Figura 2 - Home page da Hospitalhaços <br>
+![Tela_Hospitalhaços](images/hospitalhacos.png) **Figura 2 -** Home page da Hospitalhaços <br>
 
 Uma ONG criada em 1999 que utiliza a figura de palhaços para levar sorrisos ao ambiente hospitalar. Conta com mais de 600 voluntários ativos atuando nos estados de São Paulo e Pernambuco. Antes de se tornar um voluntário é preciso passar por um processo seletivo e um treinamento. Conta com uma página web em funcionamento e um aplicativo em estágio de desenvolvimento.
 
 #### 2.4.3 Site da Laços da Alegria
-![Tela_Laços](images/site_lacos.png) Figura 3 - Página exibida aos novatos no site Laços da Alegria <br>
+![Tela_Laços](images/site_lacos.png) **Figura 3 -** Página exibida aos novatos no site Laços da Alegria <br>
 
 É o meio pela qual as visitas relacionadas a Laços da Alegria são agendadas atualmente. Permite cadastro/login, entrar na fila de espera dos hospitais, visualizar posição na fila de espera e confirmar/recusar presença. O site não envia nenhuma espécie de notificação ou email para lhe avisar de sua posição ou data de visita, é necessário ficar logando com frequência para não perdê-la.
 
@@ -139,28 +139,28 @@ O aplicativo também tem a intenção de diminuir o número de faltas em visitas
 
 ## 5. Recursos do Produto
 O aplicativo Laços da Alegria fornece as seguintes funcionalidades a todos usuários:
-* Cadastrar Usuário - Permite que o usuário insira suas informações pessoais e realize um cadastro.
-* Login e Logout - Permite que usuário execute o login e o logout na aplicação.
-* Splash Screen / Tutorial - Permite que o usuário visualize uma splash screen listando as principais funcionalidades do aplicativo.
+* **Cadastrar Usuário -** Permite que o usuário insira suas informações pessoais e realize um cadastro.
+* **Login e Logout -** Permite que usuário execute o login e o logout na aplicação.
+* **Splash Screen / Tutorial -** Permite que o usuário visualize uma splash screen listando as principais funcionalidades do aplicativo.
 
 
 O aplicativo Laços da Alegria fornece as seguintes funcionalidades a usuários logados:
-* Visualizar Hospitais da Semana - Permite que o usuário visualize os hospitais que receberão visitas na semana.
-* Visualizar Informações Sobre a Atividade - Permite que o usuário visualize informações sobre a atividade, como hora, local, entre outros.
-* Participar de Atividade (Hospital) - Permite que o usuário se inscreva para uma atividade em um hospital, veja o status de sua inscrição e sua posição na fila de espera caso necessário.
-* Cancelar Participação na Atividade - Permite que o usuário cancele sua participação em uma atividade na qual está inscrito.
-* Visualizar Página de Novidades - Permite que o usuário veja uma aba com o histórico das notificações enviadas pelo aplicativo.
-* Visualizar Perfil de Usuário - Permite que o usuário veja suas informações pessoais e conquistas obtidas.
-* Gerenciar Perfil de Usuário - Permite que o usuário modifique suas informações pessoais.
-* Visualizar Abas de Ajuda - Permite que o usuário veja tutoriais úteis a visita.
-* Entrar em Contato - Permite que o usuário entre em contato com uma ouvidoria da Laços, para sugestões, dúvidas ou reclamações.
-* Alterar Configurações - Permite que o usuário altere algumas preferências do aplicativo.
+* **Visualizar Informações Sobre a Atividade -** Permite que o usuário visualize informações sobre a atividade, como hora, local, entre outros.
+* **Participar de Atividade (Hospital) -** Permite que o usuário se inscreva para uma atividade em um hospital, veja o status de sua inscrição e sua posição na fila de espera caso necessário.
+* **Cancelar Participação na Atividade -** Permite que o usuário cancele sua participação em uma atividade na qual está inscrito.
+* **Visualizar Página de Novidades -** Permite que o usuário veja uma aba com o histórico das notificações enviadas pelo aplicativo.
+* **Visualizar Perfil de Usuário -** Permite que o usuário veja suas informações pessoais e conquistas obtidas.
+* **Gerenciar Perfil de Usuário -** Permite que o usuário modifique suas informações pessoais.
+* **Visualizar Abas de Ajuda -** Permite que o usuário veja tutoriais úteis a visita.
+* **Entrar em Contato -** Permite que o usuário entre em contato com uma ouvidoria da Laços, para sugestões, dúvidas ou reclamações.
+* **Alterar Configurações -** Permite que o usuário altere algumas preferências do aplicativo.
 
 
 Funcionalidades adicionais disponíveis a quem já fez sua primeira visita (voluntário/apoio):
-* Visualizar Lista de Atividade - Permite que o usuário veja a lista de inscritos em uma determinada atividade.
-* Visualizar ONGs - Permite que o usuário visualize as ONGs que estão abertas a visitas.
-* Participar de Atividade (ONG) - Permite que o usuário se inscreva para uma atividade em uma ONG, veja o status de sua inscrição e sua posição na fila de espera caso necessário.
+* **Visualizar Hospitais da Semana -** Permite que o usuário visualize os hospitais que receberão visitas na semana.
+* **Visualizar Lista de Atividade -** Permite que o usuário veja a lista de inscritos em uma determinada atividade.
+* **Visualizar ONGs -** Permite que o usuário visualize as ONGs que estão abertas a visitas.
+* **Participar de Atividade (ONG) -** Permite que o usuário se inscreva para uma atividade em uma ONG, veja o status de sua inscrição e sua posição na fila de espera caso necessário.
 
 ## 6. Referências
 PÁGINA DO FACEBOOK LAÇOS DA ALEGRIA. Disponível em: https://www.facebook.com/LacosDaAlegria/. Acesso em: 17 mar. 2018.
