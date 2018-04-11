@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 /*
@@ -26,6 +26,20 @@ export class RestProvider {
       });
     });
   }
+  saveUser(data) {
+      return new Promise((resolve, reject) => {
+        this.http.post(this.apiUrl+'/profile/', JSON.stringify(data), {
+            headers: new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8'),
+          })
+          .subscribe(res => {
+            console.log('Saving user'),
+            resolve(res);
+          }, (err) => {
+            console.log('Error on saving user'),
+            reject(err);
+          });
+      });
+    }
 
   getListUsers(){
     return new Promise(resolve => {

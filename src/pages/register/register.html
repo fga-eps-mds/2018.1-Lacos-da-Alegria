@@ -6,10 +6,10 @@
 
 <ion-content padding class="register-box">
   <ion-content #signup>
-      <p *ngIf="submitAttempt" style="color: blue">Preencha todos dados precisamente</p>
+      <!--<p *ngIf="submitAttempt" style="color: blue">Preencha todos dados precisamente</p>-->
 
   <ion-list no-lines class="credential-box">
-    <form [formGroup]="signupOne">
+    <form [formGroup]="signupOne" (ngSubmit)="saveUser()">
         <ion-item class="item">
             <ion-label floating>Nome Completo</ion-label>
             <ion-input class="input" formControlName="nameFull" type="text"></ion-input>
@@ -47,15 +47,15 @@
             <ion-label floating>Confirmar Senha</ion-label>
             <ion-input class="input" type="password" [(ngModel)]="confirmPassword" formControlName="confirmPassword" required show-password></ion-input>
         </ion-item>
-    
+
         <ion-item class="item" *ngIf="signupOne.controls.confirmPassword.touched && signupOne.controls.confirmPassword.hasError('mismatchedPasswords') && signupOne.controls.password.valid">
             <p>Passwords do not match</p>
         </ion-item>
-        
-    </form>      
+
+    </form>
   </ion-list>
   </ion-content>
   <div class="div-btn">
-    <button id="send-btn" ion-button (click)="BtnSend()">Enviar</button>
+    <button id="send-btn" ion-button type="submit">Enviar</button>
   </div>
 </ion-content>

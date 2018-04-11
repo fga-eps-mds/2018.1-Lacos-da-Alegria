@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginPage } from '../login/login';
 import { EmailValidator } from '../../validators/email';
+import { RestProvider } from '../../providers/rest/rest'
 
 @Component({
   selector: 'page-register',
@@ -12,7 +13,8 @@ export class RegisterPage {
   @ViewChild('signup') signup: any;
   signupOne: FormGroup;
   submitAttemp: boolean = false;
-  constructor(public navController: NavController,  public formBuilder: FormBuilder) {
+  user = { name: '', address: '', email: '', password: ''};
+  constructor(public navController: NavController,  public formBuilder: FormBuilder, public restProvider: RestProvider) {
     this.signupOne = formBuilder.group({
       nameFull: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
@@ -32,7 +34,14 @@ export class RegisterPage {
       }
     }
   }
-  BtnSend(){
+  saveUser() {
+    this.restProvider.saveUser(this.user).then((result) => {
+      console.log(result);
+    }, (err) => {
+      console.log(err);
+    });
+  }
+  /*BtnSend(){
     this.submitAttemp = true;
 
     if(!this.signupOne.valid){
@@ -42,6 +51,6 @@ export class RegisterPage {
       console.log("Success!");
       console.log(this.signupOne.value);
     }
-  }
+  }*/
 
 }
