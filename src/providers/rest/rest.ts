@@ -9,8 +9,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class RestProvider {
-  apiUrl = 'https://jsonplaceholder.typicode.com';
-  localApiUrl = 'http://localhost:8000/api';
+  apiUrl = 'http://localhost:8000/api';
   fakeUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(public http: HttpClient) {
@@ -29,7 +28,7 @@ export class RestProvider {
   saveUser(data) {
       return new Promise((resolve, reject) => {
         this.http.post(this.apiUrl+'/profile/', JSON.stringify(data), {
-            headers: new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8'),
+            headers: new HttpHeaders().set('Content-Type', 'application/json'),
           })
           .subscribe(res => {
             console.log('Saving user'),
@@ -43,7 +42,7 @@ export class RestProvider {
 
   getListUsers(){
     return new Promise(resolve => {
-      this.http.get(this.fakeUrl+'/users').subscribe(data => {
+      this.http.get(this.apiUrl+'/profile').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
