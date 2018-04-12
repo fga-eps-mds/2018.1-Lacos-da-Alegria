@@ -4,10 +4,38 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="register-box">
-  <ion-content #signup>
-      <!--<p *ngIf="submitAttempt" style="color: blue">Preencha todos dados precisamente</p>-->
+<ion-content>
+    <form (ngSubmit)="saveUser()">
 
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Nome Completo</ion-label>
+            <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Endereço</ion-label>
+            <ion-input [(ngModel)]="user.address" type="text" name="address"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
+        </ion-item >
+    </ion-list>
+
+    <div class="div-btn">
+        <button id="send-btn" ion-button type="submit">Enviar</button>
+    </div>
+
+    </form>
+</ion-content>
+<!-- <ion-content padding class="register-box">
   <ion-list no-lines class="credential-box">
     <form [formGroup]="signupOne" (ngSubmit)="saveUser()">
         <ion-item class="item">
@@ -135,8 +163,8 @@
         </ion-list>
     </form>
   </ion-list>
-  </ion-content>
+
   <div class="div-btn">
     <button id="send-btn" ion-button type="submit">Enviar</button>
   </div>
-</ion-content>
+</ion-content> -->
