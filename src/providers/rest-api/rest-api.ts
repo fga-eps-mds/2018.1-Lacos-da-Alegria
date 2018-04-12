@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class RestApiProvider {
-  private apiUrl = 'http://localhost:8000/';
+  private apiUrl = 'http://localhost:8000/api/';
 
 
   constructor(public http: HttpClient) {
