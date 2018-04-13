@@ -43,6 +43,38 @@
             <ion-label floating>Senha</ion-label>
             <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
         </ion-item >
+
+        <ion-item class="item">
+            <ion-label>Cidade Satélite</ion-label>
+            <ion-select [(ngModel)]="user.region" name="region">
+                <ion-option value="Águas Claras">Águas Claras</ion-option>
+                <ion-option value="Asa Norte">Asa Norte</ion-option>
+                <ion-option value="Asa Sul">Asa Sul</ion-option>
+                <ion-option value="Gama">Gama</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label>Preferência de Atividade</ion-label>
+            <ion-select [(ngModel)]="user.preference" name="preference">
+                <ion-option value="Gama">Hospital do Gama</ion-option>
+                <ion-option value="Taguatinga">Hospital de Taguatinga</ion-option>
+                <ion-option value="Brasília">Hospital de Brasília</ion-option>
+                <ion-option value="Asa Norte">Hospital da Asa Norte</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label>Como conheceu o Laços?</ion-label>
+            <ion-select [(ngModel)]="user.howDidYouKnow" name="howDidYouKnow">
+                <ion-option value="indicacao">Indicação de um amigo</ion-option>
+                <ion-option value="redeSocial">Através de uma rede social do Laços</ion-option>
+                <ion-option value="palestra">Através de uma palestra</ion-option>
+                <ion-option value="reportagem">Em uma reportagem na televisão</ion-option>
+                <ion-option value="outro">Outros</ion-option>                
+            </ion-select>
+        </ion-item>
+
     </ion-list>
 
     <div class="div-btn">
