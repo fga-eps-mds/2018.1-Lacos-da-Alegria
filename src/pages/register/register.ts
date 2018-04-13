@@ -12,7 +12,7 @@ import { RestProvider } from '../../providers/rest/rest'
 export class RegisterPage {
   @ViewChild('signup') signup: any;
   submitAttemp: boolean = false;
-  user = { login: '', name: '', email: '', address: '', password: ''};
+  user = { login: '', name: '', cpf:'', email: '', birth: '', address: '', password: ''};
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
   

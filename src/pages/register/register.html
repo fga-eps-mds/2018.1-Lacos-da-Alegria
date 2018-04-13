@@ -19,9 +19,19 @@
             <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
         </ion-item>
 
+        <ion-item class="item">
+            <ion-label floating>CPF</ion-label>
+            <ion-input [(ngModel)]="user.cpf" type="text" name ="cpf"></ion-input>
+        </ion-item>
+
         <ion-item>
             <ion-label floating>Email</ion-label>
             <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label floating>Data de Nascimento</ion-label>
+            <ion-input [(ngModel)]="user.birth" type="text" name="birth"></ion-input>
         </ion-item>
 
         <ion-item>
