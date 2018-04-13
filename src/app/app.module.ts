@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { MyApp } from './app.component';
@@ -28,9 +29,10 @@ import { RestProvider } from '../providers/rest/rest';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    ListUserPage,
     ActivitiesListPage,
     CreateActivityPage,
-    ListUserPage
+    ActivityDetailsPage
   ],
 
   imports: [
@@ -48,8 +50,10 @@ import { RestProvider } from '../providers/rest/rest';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    ListUserPage,
     ActivitiesListPage,
-    CreateActivityPage
+    CreateActivityPage,
+    ActivityDetailsPage
   ],
 
   providers: [
