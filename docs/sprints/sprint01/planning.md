@@ -22,7 +22,7 @@
 
 [3. Priorização](#3-priorizacao)
 
-[4. Features da Sprint](#3-priorização)
+[4. Features da Sprint](#4-priorização)
 
 -------
 ## 1. Pareamento

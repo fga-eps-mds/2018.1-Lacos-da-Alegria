@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Criar Atividade</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="register-box">
+  <ion-content #signup>
+      <p *ngIf="submitAttempt" style="color: blue">Preencha todos dados precisamente</p>
+
+  <ion-list no-lines class="credential-box">
+    <form [formGroup]="signupOne">
+        <ion-item class="item">
+            <ion-label floating>Nome do Hospital</ion-label>
+            <ion-input class="input" formControlName="nameHospital" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="item" *ngIf="!signupOne.controls.nameHospital.valid  && (signupOne.controls.nameHospital.dirty || submitAttempt)">
+          <p>
+            Por favor insira um nome valido.
+          </p>
+        </ion-item>
+        <ion-item class="item">
+            <ion-label floating>Descrição da Atividade</ion-label>
+            <ion-input class="input" formControlName="description" type="text"></ion-input>
+        </ion-item>
+    </form>
+  </ion-list>
+  </ion-content>
+  <div class="div-btn">
+    <button id="send-btn" ion-button (click)="BtnSend()">Enviar</button>
+  </div>
+</ion-content>
