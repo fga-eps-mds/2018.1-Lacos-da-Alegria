@@ -22,36 +22,16 @@
 
 <ion-content padding>
 <ion-list>
-<ion-card card card-ios *ngFor="let activity of activities">
-    <ion-card-content card-content card-content-ios>
-      <ion-img class="logo"></ion-img>
-      <ion-card-title>
-        {{activity.title}}
-      </ion-card-title>
+<ion-card class="card" *ngFor="let activity of activities">
+    <ion-card-content class="card-content">
+      <h2 class="activity-title">{{activity.title}}</h2>
     </ion-card-content>
 
-    <ion-item item item-block item-ios>
-      <button ion-button disable-hover item-button button button-ios button-clear button-clear-ios>
-        <span class="button-inner">
-          Like
-        </span>
-        <div class="button-effect"></div>
+    <div class="button-participate">
+      <button ion-button full default>
+        Participar
       </button>
-
-      <div class="item-inner">
-        <div class="input-wrapper">
-          <ion-label label label-ios></ion-label>
-        </div>
-        <button ion-button disable-hover item-button button button-ios button-clear button-clear-ios>
-          <span class="button-inner">
-            Comment
-          </span>
-          <div class="button-effect"></div>
-        </button>
-      </div>
-
-      <div class="button-effect"></div>
-    </ion-item>
-  </ion-card>
+    </div>
+</ion-card>
 </ion-list>
 </ion-content>
