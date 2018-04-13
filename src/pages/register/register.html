@@ -8,6 +8,12 @@
     <form (ngSubmit)="saveUser()">
 
     <ion-list>
+
+        <ion-item class="item">
+            <ion-label floating>Login</ion-label>
+            <ion-input [(ngModel)]="user.login" type="text" name = "login"></ion-input>
+        </ion-item >
+
         <ion-item>
             <ion-label floating>Nome Completo</ion-label>
             <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
