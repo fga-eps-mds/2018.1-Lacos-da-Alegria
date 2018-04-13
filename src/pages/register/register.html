@@ -75,11 +75,48 @@
             </ion-select>
         </ion-item>
 
+        <ion-item class="item">
+            <ion-label floating>DDD</ion-label>
+            <ion-input class="input" [(ngModel)]="user.ddd" type="text" name="ddd"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label floating>Whatsapp</ion-label>
+            <ion-input [(ngModel)]="user.whatsapp" type="text" name="whatsapp"></ion-input>
+        </ion-item>
+        
+        <ion-list radio-group [(ngModel)]="user.sex" name="sex">
+            <ion-list-header>
+                Sexo
+            </ion-list-header>
+            
+            <ion-item>
+                <ion-label>Palhaçinho</ion-label>
+                <ion-radio checked="true" value="Masculino"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label>Palhaçinha</ion-label>
+                <ion-radio value="Feminino"></ion-radio>
+            </ion-item>
+        </ion-list>
+
+        <ion-item class="item">
+            <ion-label>Desejo visitar instituições de caridade</ion-label>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label>Sim</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="user.participate" checked="true" value="verdadeiro"  name="participate"></ion-checkbox>
+        </ion-item>
+
+
     </ion-list>
 
     <div class="div-btn">
         <button id="send-btn" ion-button type="submit">Enviar</button>
     </div>
+    
 
     </form>
 </ion-content>
