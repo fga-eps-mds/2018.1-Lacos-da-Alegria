@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalhe da Atividade</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let activitie of activities">
+    <h2>{{activitie.name}}</h2>
+    <p>{{activitie.body}}</p>
+  </ion-item>
+  
+  <button ion-button class="btnGoRegister" (click)="BtnBackToList()">Voltar</button>
+</ion-content>
