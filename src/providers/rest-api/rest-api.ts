@@ -9,7 +9,8 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class RestApiProvider {
-  private apiUrl = 'http://localhost:8000/api/';
+  //private apiUrl = 'http://localhost:8000/api/';
+  private apiUrl = 'https://jsonplaceholder.typicode.com';
 
 
   constructor(public http: HttpClient) {
@@ -19,7 +20,7 @@ export class RestApiProvider {
 
   getActivities(){
     return new Promise(resolve=>{
-      this.http.get(this.apiUrl+'/activities').subscribe(data => {
+      this.http.get(this.apiUrl+'/posts').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);

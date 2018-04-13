@@ -1,3 +1,24 @@
 page-activities-list {
 
+    .box-activity{
+        width: auto;
+        height: auto;
+    }
+
+    .logo{
+        position: relative;
+        width: 100%;
+        height: 85%;
+        background-image: url("https://www.eta.co.uk/wp-content/uploads/2012/09/Cycling-by-water-resized-min.jpg");
+    }
+
+    .activity-title{
+      position: absolute;
+      bottom: 50px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 6px;
+      }
+
 }
