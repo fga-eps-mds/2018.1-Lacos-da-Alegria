@@ -33,7 +33,7 @@ export class MyApp {
       { title: 'Bem-Vindo', component: WelcomePage },
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
-      { title: 'Listar Usuários', component: ListUserPage }
+      { title: 'Listar Usuários', component: ListUserPage },
       { title: 'Lista de Atividades', component: ActivitiesListPage },
       { title: 'Criar Atividades', component: CreateActivityPage },
       { title: 'Detalhes da Atividade', component: ActivityDetailsPage }

@@ -17,7 +17,7 @@ export class ActivitiesListPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivitiesListPage');
   }
-  
+
   getActivities() {
     this.restApiProvider.getActivities()
     .then(data => {
@@ -28,5 +28,5 @@ export class ActivitiesListPage {
 
   BtnGoToCreateActivity(){
     this.navCtrl.push(CreateActivityPage);
-  } 
+  }
 }

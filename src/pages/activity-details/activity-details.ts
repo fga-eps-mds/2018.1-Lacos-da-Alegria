@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
 
-import { ActivitiesListPage } from '../activity-details/activity-details';
+import { ActivitiesListPage } from '../activities-list/activities-list';
 
 @Component({
   selector: 'page-activity-details',
@@ -18,9 +18,9 @@ export class ActivityDetailsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivityListPage');
   }
-  
+
   getActivity() {
-    this.restApiProvider.getActivity()
+    this.restApiProvider.getActivities()
     .then(data => {
       this.activity = data;
       console.log(this.activity);
@@ -29,5 +29,5 @@ export class ActivityDetailsPage {
 
   BtnBackToList(){
     this.navCtrl.push(ActivitiesListPage);
-  } 
+  }
 }
