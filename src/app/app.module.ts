@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -31,7 +30,6 @@ import { RestProvider } from '../providers/rest/rest';
     RegisterPage,
     ListUserPage,
     ActivitiesListPage,
-    CreateActivityPage,
     ActivityDetailsPage
   ],
 
@@ -52,7 +50,6 @@ import { RestProvider } from '../providers/rest/rest';
     RegisterPage,
     ListUserPage,
     ActivitiesListPage,
-    CreateActivityPage,
     ActivityDetailsPage
   ],
 
@@ -61,7 +58,7 @@ import { RestProvider } from '../providers/rest/rest';
     RestApiProvider,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider    
   ]
 })
 

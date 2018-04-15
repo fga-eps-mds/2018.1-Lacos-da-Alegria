@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
@@ -35,23 +34,18 @@ export class MyApp {
       { title: 'Registro', component: RegisterPage },
       { title: 'Listar Usuários', component: ListUserPage },
       { title: 'Lista de Atividades', component: ActivitiesListPage },
-      { title: 'Criar Atividades', component: CreateActivityPage },
       { title: 'Detalhes da Atividade', component: ActivityDetailsPage }
     ];
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
+  openPage(page) {    
     this.nav.setRoot(page.component);
   }
 }
