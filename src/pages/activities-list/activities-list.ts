@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
-import { CreateActivityPage } from '../create-activity/create-activity';
 
 @Component({
   selector: 'page-activities-list',
@@ -10,23 +9,19 @@ import { CreateActivityPage } from '../create-activity/create-activity';
 export class ActivitiesListPage {
   activities: any;
 
-  constructor(public navCtrl: NavController, public restApiProvider: RestApiProvider) {
-    this.getActivities();
+  constructor(public navCtrl: NavController, public restProvider: RestApiProvider) {
+    this.getActivitiesList();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ActivitiesListPage');
+    console.log('ionViewDidLoad ListUserPage');
   }
 
-  getActivities() {
-    this.restApiProvider.getActivities()
+  getActivitiesList(){
+    this.restProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
       console.log(this.activities);
     });
-  }
-
-  BtnGoToCreateActivity(){
-    this.navCtrl.push(CreateActivityPage);
   }
 }
