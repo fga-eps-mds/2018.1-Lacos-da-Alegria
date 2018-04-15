@@ -7,10 +7,10 @@ Este documento visa apresentar roadmaps do projeto, metodologia, arquitetura e D
 
 ## 2. Roadmap do Projeto
 
-![Imgur](https://i.imgur.com/hWR1Xbn.png)
+![Imgur](https://i.imgur.com/BNziBIw.png)
 
 ## 3. Roadmap de metodologia
 
-![roadmap metodologia](#)
+![Imgur](https://i.imgur.com/BNziBIw.png)
 
 ## 4. Roadmap DevOps
