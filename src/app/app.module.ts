@@ -10,6 +10,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
 
@@ -27,7 +28,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     LoginPage,
     RegisterPage,
     ActivitiesListPage,
-    CreateActivityPage
+    CreateActivityPage,
+    ProfilePage
   ],
 
   imports: [
@@ -46,7 +48,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     LoginPage,
     RegisterPage,
     ActivitiesListPage,
-    CreateActivityPage
+    CreateActivityPage,
+    ProfilePage
   ],
 
   providers: [

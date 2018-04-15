@@ -8,6 +8,7 @@ import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
 
@@ -32,7 +33,8 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
       { title: 'Lista de Atividades', component: ActivitiesListPage },
-      { title: 'Criar Atividades', component: CreateActivityPage }
+      { title: 'Criar Atividades', component: CreateActivityPage },
+      { title: 'Perfil', component: ProfilePage }
     ];
   }
 
