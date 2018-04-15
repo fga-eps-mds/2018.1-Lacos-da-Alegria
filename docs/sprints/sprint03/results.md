@@ -32,7 +32,8 @@ Dos 79 pontos planejados, apenas 34 foram entregues. Isso ocorreu, pois as hist�
 
 
 ### 1.3 Gráfico de _commits_
-
+Os commits abaixo são referentes ao repositório do _frontend_.
+![](../images/commits_frontend_sprint3.png)
 
 ### 1.4 _Velocity_
 
