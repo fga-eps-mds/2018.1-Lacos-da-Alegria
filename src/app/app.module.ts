@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
+import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 
@@ -30,7 +31,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     ActivitiesListPage,
     CreateActivityPage,
     ProfilePage,
-    AboutPage
+    AboutPage,
+    SettingsPage
   ],
 
   imports: [
@@ -51,7 +53,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     ActivitiesListPage,
     CreateActivityPage,
     ProfilePage,
-    AboutPage
+    AboutPage,
+    SettingsPage
   ],
 
   providers: [

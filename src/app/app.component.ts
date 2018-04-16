@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { AboutPage } from '../pages/about/about'
+import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { HomePage } from '../pages/home/home';
@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
+import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 
@@ -36,7 +37,8 @@ export class MyApp {
       { title: 'Lista de Atividades', component: ActivitiesListPage },
       { title: 'Criar Atividades', component: CreateActivityPage },
       { title: 'Perfil', component: ProfilePage },
-      { title: 'Sobre', component: AboutPage }
+      { title: 'Sobre', component: AboutPage },
+      { title: 'Configurações', component: SettingsPage }
     ];
   }
 
