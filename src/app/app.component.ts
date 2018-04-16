@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AboutPage } from '../pages/about/about'
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { HomePage } from '../pages/home/home';
@@ -19,7 +20,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ActivitiesListPage;
+  rootPage: any = AboutPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -34,7 +35,8 @@ export class MyApp {
       { title: 'Registro', component: RegisterPage },
       { title: 'Lista de Atividades', component: ActivitiesListPage },
       { title: 'Criar Atividades', component: CreateActivityPage },
-      { title: 'Perfil', component: ProfilePage }
+      { title: 'Perfil', component: ProfilePage },
+      { title: 'Sobre', component: AboutPage }
     ];
   }
 

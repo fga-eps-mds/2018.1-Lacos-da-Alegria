@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 
-
+import { AboutPage } from '../pages/about/about'
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { MyApp } from './app.component';
@@ -29,7 +29,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     RegisterPage,
     ActivitiesListPage,
     CreateActivityPage,
-    ProfilePage
+    ProfilePage,
+    AboutPage
   ],
 
   imports: [
@@ -49,7 +50,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     RegisterPage,
     ActivitiesListPage,
     CreateActivityPage,
-    ProfilePage
+    ProfilePage,
+    AboutPage
   ],
 
   providers: [
