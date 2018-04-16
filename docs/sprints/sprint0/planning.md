@@ -8,15 +8,17 @@
 
 **Duração:** Uma Semana
 
-**Pontos Planejados**: As features não foram pontuadas para essa _Sprint_.
+**Pontos Planejados**: 24
 
-**Pontos Adicionados**: --
+**Pontos Adicionados**: 0
 
-**Pontos Totais**: --
+**Pontos Totais**: 24
 
 -------
 ## 1. Features da _Sprint_
-* Realizar treinamentos de metodologia, git e frontend (HTML e CSS) para a equipe de desenvolvimento.
+* Realizar treinamento de metodologia.
+* Realizar treinamento _git_.
+* Realizar treinamento frontend (HTML e CSS).
 * Elaborar plano de gamificação.
 * Elaborar plano de metodologia.
 * Configurar plataformas de comunicação.
