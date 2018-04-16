@@ -78,8 +78,8 @@ lacosdaalegria@gmail.com
 
 ## 10. Licença e atribuição
 
-Este Código de Conduta é distribuído sob uma licença [Creative Commons Attribution-ShareAlike] (http://creativecommons.org/licenses/by-sa/3.0/).
+Este Código de Conduta é distribuído sob uma licença [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/).
 
-Partes do texto derivadas do [Código de Conduta do Django] (https://www.djangoproject.com/conduct/) e da [Política de Anti-Assédio do Geek Feminism] (http://geekfeminism.wikia.com/wiki/Conference_anti - assédio / política).
+Partes do texto derivadas do [Código de Conduta do Django](https://www.djangoproject.com/conduct/) e da [Política de Anti-Assédio do Geek Feminism](http://geekfeminism.wikia.com/wiki/Conference_anti-assédio/política).
 
 Obtido em 22 de novembro de 2016 de [http://citizencodeofconduct.org/](http://citizencodeofconduct.org/)
