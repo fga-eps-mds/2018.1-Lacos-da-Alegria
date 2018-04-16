@@ -16,18 +16,35 @@ page-activities-list {
   padding: 0px;
   height: 28vh;
   background-image: url("https://t1.uc.ltmcdn.com/pt/images/1/7/1/img_como_colocar_fundo_preto_nas_fotos_16171_orig.jpg");
-
 }
 
 .activity-title{
-  color: black;
+  text-align: center;
+  background-color: white;
   position: relative;
   top: 21vh;
 }
 
 
+.button-col{
+  padding: 0vh;
+}
+
+.div-button{
+  padding: 0vh;
+}
+
 .button-participate{
+  padding: 0vh;
   height: 7vh;
+  width: 40vh;
+  background-color: orangered;
+}
+
+.button-info{
+  padding: 0vh;
+  height: 7vh;
+  background-color: orangered;
 }
 
 .button-ios{
