@@ -21,31 +21,31 @@
 ## 1. Indicadores de Qualidade do Processo
 
 ### 1.1 Fechamento da _Sprint_
-![](../images/results_sprint3.png)
+![](images/results_sprint3.png)
 
 Dos 79 pontos planejados, apenas 34 foram entregues. Isso ocorreu, pois as histórias com mais pontos não foram entregues e, principalmente, porque foi a primeira _Sprint_ em que histórias de usuário foi priorizada para o Time de Desenvolvimento.
 
 
 ### 1.2 _Burndown_
 
-![](../images/burndown_sprint3.png)
+![](images/burndown_sprint3.png)
 
 
 ### 1.3 Gráfico de _commits_
 Os commits abaixo são referentes ao repositório do _frontend_.
-![](../images/commits_frontend_sprint3.png)
+![](images/commits_frontend_sprint3.png)
 
 ### 1.4 _Velocity_
 
-![](../images/velocity_sprint3.png)
+![](images/velocity_sprint3.png)
 
 Apesar da pouca entrega de pontos o velocity subiu de 16 para 20,5 pontos.
 
 ### 1.5 Quadro de Horas
-![](../images/timetable_sprint3.png)
+![](images/timetable_sprint3.png)
 
 ### 1.6 Quadro de Conhecimento
-![](../images/knowledge_framework_sprint3.png)
+![](images/knowledge_framework_sprint3.png)
 
 Em relação à _Sprint_ anterior é possível houve uma melhoria significativa nos conhecimentos de linguagem. Essas melhorias
 ocorreram porque nessa _Sprint_ houve um treinamento de Django/Django Rest e por ter histórias que envolvem programação.
@@ -63,7 +63,7 @@ Durante a reunião foi levantado quais melhorias aplicadas nessa _Sprint_ foram 
 
 ### 1.8 Retrospectiva
 
-![](../images/retrospective_sprint3.png)
+![](images/retrospective_sprint3.png)
 
 ### 2. Análise do _Scrum Master_
 

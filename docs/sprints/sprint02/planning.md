@@ -21,13 +21,13 @@
 
 [4. Burndown de Riscos](#4-burndown-de-riscos)
 
-[5. Histórias da _Sprint_](#5-features-da-sprint)
+[5. Features da _Sprint_](#5-features-da-sprint)
 
 -------
 
 ## 1. Pareamento
 
-![](../images/pairing_table_sprint02.png)
+![](images/pairing_table_sprint02.png)
 
 ## 2. Priorização
 
@@ -60,7 +60,7 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 
 Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele foi levantado.
 
-![](../images/burndown_risk_sprint2.png)
+![](images/burndown_risk_sprint2.png)
 
 ## 5. Features da _Sprint_
 
@@ -68,8 +68,8 @@ Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele fo
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/31">[#31]Treinamento de Javascript/Typescript</a>
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/32">[#32]Treinamento de Docker e Docker Compose</a>
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/33">[#33]Treinamento de AngularJS e Ionic</a>
-* <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/34">[#34]Evolução do Protótipot</a>
-* <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/35">[#35]Especificação Suplementart</a>
+* <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/34">[#34]Evolução do Protótipo</a>
+* <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/35">[#35]Especificação Suplementar</a>
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/36">[#36]Definir e configurar métricas</a>
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/37">[#37]Burndown de Risco</a>
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/38">[#38]EVM</a>

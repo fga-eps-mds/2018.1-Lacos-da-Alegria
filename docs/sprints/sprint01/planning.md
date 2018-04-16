@@ -24,7 +24,7 @@
 
 -------
 ## 1. Pareamento
-![](../images/pairing_table_sprint01.png)
+![](images/pairing_table_sprint01.png)
 
 ## 2. Mudanças
 Algumas mudanças foram feitas para melhorar a interação dos membros e ajudar no gerenciamento de horas. As mudanças realizadas foram:

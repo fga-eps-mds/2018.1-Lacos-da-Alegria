@@ -21,29 +21,30 @@
 ## 1. Indicadores de Qualidade do Processo
 
 ### 1.1 Fechamento da _Sprint_
-![](../images/results_sprint1.png)
+![](images/results_sprint1.png)
+
 Todas as histórias que foram planejadas para a _Sprint_ 01 foram concluídas, com excessão do Guia de Estilo e do Diagrama de Fishbone.
 
 ### 1.2 _Burndown_
 
-![](../images/burndown_sprint1.png)
+![](images/burndown_sprint1.png)
 
 No gráfico é possível perceber um longo período em que pontos não foram entregues. Este fato não reflete a realidade, pois os membros estavam produzindo durante esse período. Isto acontece, por que uma história só é considerada pronta depois de entregue completamente.
 
 ### 1.3 Gráfico de _commits_
-![](../images/commits_sprint1.png)
+![](images/commits_sprint1.png)
 
 ### 1.4 _Velocity_
 
-![](../images/velocity_sprint1.png)
+![](images/velocity_sprint1.png)
 
 O primeiro _Velocity_ da equipe é este, com 14 pontos.
 
 ### 1.5 Quadro de Horas
-![](../images/timetable_sprint1.png)
+![](images/timetable_sprint1.png)
 
 ### 1.6 Quadro de Conhecimento
-![](../images/knowledge_framework_sprint1.png)
+![](images/knowledge_framework_sprint1.png)
 
 Em relação à _Sprint_ anterior é possível perceber uma melhoria nos conhecimentos de documentação, Github, HTML e CSS. Essas melhorias
 ocorreram, pois essa _Sprint_ foi focada em documentação e por causa do treinamento de _frontend_ que ocorreu.
@@ -62,7 +63,7 @@ Durante a Revisão da _Sprint_ foram levantados os seguintes problemas que ocorr
 
 ### 1.8 Retrospectiva
 
-![](../images/retrospective_sprint1.png)
+![](images/retrospective_sprint1.png)
 
 ### 2. Análise do _Scrum Master_
 

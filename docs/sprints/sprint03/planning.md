@@ -22,11 +22,11 @@
 
 [4. Burndown de Riscos](#4-burndown-de-riscos)
 
-[5. Histórias da _Sprint_](#5-histórias-da-sprint)
+[5. Features da _Sprint_](#5-features-da-sprint)
 
 -------
 ## 1. Pareamento
-![](../images/pairing_table_sprint03.png)
+![](images/pairing_table_sprint03.png)
 
 ## 2. Mudanças
 As _dailies_ de segunda, terça, quinta e sexta-feiras, agora, ocorrerão em uma reunião remota às 22 horas. Nos demais dias ocorrerão usando um _bot_ integrado ao Slack. Essa mudança está sendo feita porque as dailies feitas usando o _bot_ não estavam sendo efetivas.
@@ -55,7 +55,7 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 
 Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele foi levantado.
 
-![](../images/burndown_risk_sprint3.png)
+![](images/burndown_risk_sprint3.png)
 
 ## 5. Features da _Sprint_
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/22">[#22]Elaborar o guia de estilo</a>

@@ -16,13 +16,13 @@
 
 A tabela a seguir mostra o resultado da _Sprint_.
 
-![](../images/results_sprint0.png)
+![](images/results_sprint0.png)
 
 <p align="justify"> Todas as histórias planejadas para a _sprint_ foram concluídas, exceto o Plano de Metodologia, que ficou com pendências.</p>
 
 ### 1.2 Quadro de Conhecimento
 
-![](../images/knowledge_framework_sprint0.png)
+![](images/knowledge_framework_sprint0.png)
 
 <p align="justify">O quadro acima mostra nível de conhecimento inicial dos membros em relação às tecnologias que serão utilizadas no projeto.</p>
 

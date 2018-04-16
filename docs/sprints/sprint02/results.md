@@ -21,31 +21,31 @@
 ## 1. Indicadores de Qualidade do Processo
 
 ### 1.1 Fechamento da _Sprint_
-![](../images/results_sprint2.png)
+![](images/results_sprint2.png)
 
 Dos 54 pontos planejados, apenas 19 foram entregues. Isso ocorreu, pois muitos membros não abriram _Pull Request_ para entregarem
 os documentos entregues, não seguindo a definição de "pronto".
 
 ### 1.2 _Burndown_
 
-![](../images/burndown_sprint2.png)
+![](images/burndown_sprint2.png)
 
 No gráfico é possível perceber um longo período em que pontos não foram entregues que aconteceu porque, apesar das _issues_ estarem prontas muito antes, elas foram só foram fechadas no último dia da _Sprint_.
 
 ### 1.3 Gráfico de _commits_
-![](../images/commits_sprint2.png)
+![](images/commits_sprint2.png)
 
 ### 1.4 _Velocity_
 
-![](../images/velocity_sprint2.png)
+![](images/velocity_sprint2.png)
 
 Apesar da pouca entrega de pontos o velocity subiu de 14 para 16 pontos.
 
 ### 1.5 Quadro de Horas
-![](../images/timetable_sprint2.png)
+![](images/timetable_sprint2.png)
 
 ### 1.6 Quadro de Conhecimento
-![](../images/knowledge_framework_sprint2.png)
+![](images/knowledge_framework_sprint2.png)
 
 Em relação à _Sprint_ anterior é possível houve uma melhoria nos conhecimentos de documentação, Github, e nas linguagens. Essas melhorias
 ocorreram,principalmente, por causa da contínua entrega de documentos e por causa dos treinamentos que ocorreram.
@@ -61,7 +61,7 @@ feitas reuniões para resolver esse problema.
 
 ### 1.8 Retrospectiva
 
-![](../images/retrospective_sprint2.png)
+![](images/retrospective_sprint2.png)
 
 ### 2. Análise do _Scrum Master_
 
