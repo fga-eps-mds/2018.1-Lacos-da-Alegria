@@ -68,6 +68,8 @@ Durante a Revisão da _Sprint_ foram levantados os seguintes problemas que ocorr
 
 Durante a iteração o time se mostrou mais maduro e houve uma melhora em relação a interação do time que se mostrou disposto a sanar dúvidas e a ajudar um ao outro.
 
+A produtividade do time está baixa, pois foram gastas muitas horas para entregar poucos pontos.
+
 A falta de estimativas de algumas histórias foi um erro cometido no planejamento dessa _Sprint_, pois pode prejudicar o planejamento das próximas. Mas, com esse risco identificado, o time se comprometerá a estimas todas as histórias futuras.
 
 O uso de ferramentas para o gerenciamento de tempo se torna um importante aliado para as futuras _Sprints_, pois com ela é possível perceber onde estão os gargalos do projeto e atacá-los.

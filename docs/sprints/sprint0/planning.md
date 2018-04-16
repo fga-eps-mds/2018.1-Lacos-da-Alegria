@@ -1,7 +1,5 @@
 # Planejamento da Sprint 0  
 
-**Número da _Sprint_:** 0  
-
 **Data de Início:** 07/03/2018  
 
 **Data de Término:** 14/03/2018

@@ -1,4 +1,4 @@
-# Sprint 02
+# Resultados da Sprint 02
 ------
 
 [1. Indicadores de Qualidade do Processo](#1-indicadores-de-qualidade-do-processo)
@@ -23,14 +23,14 @@
 ### 1.1 Fechamento da _Sprint_
 ![](../images/results_sprint2.png)
 
-Dos 52 pontos planejados, apenas 19 foram entregues. Isso ocorreu, pois muitos membros não abriram Pull Request para entregarem
+Dos 54 pontos planejados, apenas 19 foram entregues. Isso ocorreu, pois muitos membros não abriram _Pull Request_ para entregarem
 os documentos entregues, não seguindo a definição de "pronto".
 
 ### 1.2 _Burndown_
 
 ![](../images/burndown_sprint2.png)
 
-No gráfico é possível perceber um longo período em que pontos não foram entregues que aconteceu porque, apesar de as issues estarem prontas muito antes, elas foram só foram fechadas no último dia da _Sprint_.
+No gráfico é possível perceber um longo período em que pontos não foram entregues que aconteceu porque, apesar das _issues_ estarem prontas muito antes, elas foram só foram fechadas no último dia da _Sprint_.
 
 ### 1.3 Gráfico de _commits_
 ![](../images/commits_sprint2.png)
@@ -70,3 +70,5 @@ no Google Drive foi um grande problema para a Sprint, pois foram entregues pouco
 para o _markdown_.
 
 Apesar disso foi possível perceber uma maturidade maior com relação ao Time de Desenvolvimento que tomou decisões sem precisar do apoio dos gerentes.
+
+Também é possível perceber que a produtidade do time está crescendo e isto pode ser observado com o aumento do _velocity_ e com as quantidade de horas trabalhadas em torno de 10hrs.
