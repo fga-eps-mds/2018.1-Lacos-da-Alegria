@@ -1,4 +1,4 @@
-# Sprint 03
+# Resultados da Sprint 03
 ------
 
 [1. Indicadores de Qualidade do Processo](#1-indicadores-de-qualidade-do-processo)

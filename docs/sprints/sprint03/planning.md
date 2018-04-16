@@ -1,16 +1,14 @@
 # Planejamento da Sprint 3  
 
-**Número da _Sprint_:** 3
-
 **Data de Início:** 28/03/2018  
 
 **Data de Término:** 04/04/2018
 
 **Duração:** Uma Semana
 
-**Pontos Planejados**: 79
+**Pontos Planejados**: 53
 
-**Pontos Adicionados**: 0
+**Pontos Adicionados**: 26
 
 **Pontos Totais**: 79
 
@@ -31,7 +29,7 @@
 ![](../images/pairing_table_sprint03.png)
 
 ## 2. Mudanças
-As dailies de segunda, terça, quinta e sexta-feiras, agora, ocorrerão em uma reunião remota às 22 horas. Nos demais dias ocorrerão usando um _bot_ integrado ao Slack. Essa mudança está sendo feita porque as dailies feitas usando o _bot_ não estavam sendo efetivas.
+As _dailies_ de segunda, terça, quinta e sexta-feiras, agora, ocorrerão em uma reunião remota às 22 horas. Nos demais dias ocorrerão usando um _bot_ integrado ao Slack. Essa mudança está sendo feita porque as dailies feitas usando o _bot_ não estavam sendo efetivas.
 
 ## 3. Priorização
 A priorização das features foi feita na necessidade de refatorar os documentos e entender qual o nível de conhecimento do Time de Desenvolvimento com relação às linguagens e ferramentas que serão utilizadas.
@@ -49,10 +47,11 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 | 05 | Dificuldades com a tecnologia de desenvolvimento  | 70%  | 3  | 2,1  |
 | 06 | Erros na implementação de Features  | 50%  | 7  |  3,5 |
 | 07 | Quebra ou furto de equipamentos da equipe   | 15%   | 7 | 1.05  |
-| 08 |  Desistência de algum membro       | 15%    | 7 | 1.05|
-| 09 | Problemas na configuração do ambiente de desenvolvimento  | 50%  |  2 | 1  |
-| 10 | Dificuldade de se reunir com o cliente   | 30%  | 1  | 0,3  |
-|   |   |   | Exposição:  | 21,6  |
+| 08 | Features mal documentadas   | 15%  | 7  | 1,05  |
+| 09 |  Desistência de algum membro       | 15%    | 7 | 1.05|
+| 10 | Problemas na configuração do ambiente de desenvolvimento  | 50%  |  2 | 1  |
+| 11 | Dificuldade de se reunir com o cliente   | 30%  | 1  | 0,3  |
+|   |   |   | Exposição:  | 22,65  |
 
 Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele foi levantado.
 
