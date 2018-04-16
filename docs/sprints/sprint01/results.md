@@ -1,3 +1,4 @@
+# Resultados da Sprint 1  
 ------
 
 [1. Indicadores de Qualidade do Processo](#1-indicadores-de-qualidade-do-processo)
@@ -21,7 +22,7 @@
 
 ### 1.1 Fechamento da _Sprint_
 ![](../images/results_sprint1.png)
-Todas as histórias que foram planejadas para a _Sprint_ 01 foram concluídas, com excessão do Guia de Estilo, que ficará como dívida técnica para a próxima _Sprint_.
+Todas as histórias que foram planejadas para a _Sprint_ 01 foram concluídas, com excessão do Guia de Estilo e do Diagrama de Fishbone.
 
 ### 1.2 _Burndown_
 
@@ -36,7 +37,7 @@ No gráfico é possível perceber um longo período em que pontos não foram ent
 
 ![](../images/velocity_sprint1.png)
 
-Como as histórias da _Sprint_ 0 não foram pontuadas, o primeiro _Velocity_ da equipe é este, com 14 pontos.
+O primeiro _Velocity_ da equipe é este, com 14 pontos.
 
 ### 1.5 Quadro de Horas
 ![](../images/timetable_sprint1.png)
@@ -57,7 +58,7 @@ Durante a Revisão da _Sprint_ foram levantados os seguintes problemas que ocorr
 * Os desenvolvedores se sentiram "perdidos" na arquitetura da solução proposta. Para resolver esse problema foi feita uma reunião com o cliente e a arquiteta.
 * Houveram desencontros de algumas informações, isso ocorreu por causa diferentes opiniões entre os gerentes. Para resolver esse problema foi feita uma reunião para criar uma visão comum entre os membros.
 * Os membros de desenvolvimento não tiveram informações suficientes para elaborar o Guia de Estilo e por isso este não foi entregue nesta _Sprint_.
-* Alguns membros tiveram dificuldades para elaborar os documentos no formato _markdown_ e também para fazer o upload no Github.
+* Alguns membros tiveram dificuldades para elaborar os documentos no formato _markdown_ e também para fazer o _upload_ no Github.
 
 ### 1.8 Retrospectiva
 
