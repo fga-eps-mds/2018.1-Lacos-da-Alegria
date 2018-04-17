@@ -16,7 +16,7 @@ export class ActivityDetailsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ActivityListPage');
+    console.log('ionViewDidLoad ListUserPage');
   }
 
   getActivity() {
