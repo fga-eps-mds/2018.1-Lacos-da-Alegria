@@ -49,7 +49,8 @@ import { RestProvider } from '../providers/rest/rest';
     LoginPage,
     RegisterPage,
     ActivitiesListPage,
-    CreateActivityPage
+    CreateActivityPage,
+    ListUserPage
   ],
 
   providers: [
