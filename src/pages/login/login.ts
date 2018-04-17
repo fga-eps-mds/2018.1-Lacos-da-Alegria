@@ -1,21 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
 export class LoginPage {
-
-  constructor(public navController: NavController) {
+  user = { username:'', password:''}
+  constructor(public navController: NavController,  public restProvider: RestProvider) {
 
   }
   BtnRegister(){
     this.navController.push(RegisterPage);
   }
-  BtnLogIn(){
-    
+  userLogin(){
+    this.restProvider.userLogin(this.user).then((result) => {
+      console.log(result);
+    }, (err) => {
+      console.log(err);
+    });
   }
-
+  
 }
