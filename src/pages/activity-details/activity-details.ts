@@ -20,7 +20,7 @@ export class ActivityDetailsPage {
   }
 
   getActivity() {
-    this.restApiProvider.getActivities()
+    this.restApiProvider.getActivitiesList()
     .then(data => {
       this.activity = data;
       console.log(this.activity);

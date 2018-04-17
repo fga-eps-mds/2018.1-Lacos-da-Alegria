@@ -11,7 +11,7 @@ export class RestApiProvider {
 
   getActivitiesList(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/activities').subscribe(data => {
+      this.http.get(this.apiUrl+'activities').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
