@@ -16,15 +16,6 @@ export class RestProvider {
     console.log('Hello RestProvider Provider');
   }
 
-  getUsers() {
-    return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/users').subscribe(data => {
-        resolve(data);
-      }, err => {
-        console.log(err);
-      });
-    });
-  }
   saveUser(data) {
       return new Promise((resolve, reject) => {
         this.http.post(this.apiUrl+'/profile/', JSON.stringify(data), {
@@ -50,12 +41,16 @@ export class RestProvider {
     });
   }
 
-  addUser(data) {
+  userLogin(data) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.apiUrl+'/users', JSON.stringify(data))
+      this.http.post(this.apiUrl+'/login/', JSON.stringify(data), {
+          headers: new HttpHeaders().set('Content-Type', 'application/json'),
+        })
         .subscribe(res => {
+          console.log('Logged in'),
           resolve(res);
         }, (err) => {
+          console.log('Error on login user'),
           reject(err);
         });
     });
