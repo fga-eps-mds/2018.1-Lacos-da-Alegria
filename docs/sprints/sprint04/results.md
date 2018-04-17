@@ -1,4 +1,4 @@
-# Sprint 04
+# Resultados da Sprint 04
 ------
 
 [1. Indicadores de Qualidade do Processo](#1-indicadores-de-qualidade-do-processo)
@@ -21,31 +21,31 @@
 ## 1. Indicadores de Qualidade do Processo
 
 ### 1.1 Fechamento da _Sprint_
-![](../images/results_sprint4.png)
+![](images/results_sprint4.png)
 
 Dos 71 pontos planejados, 37 foram entregues. Isso ocorreu porque as histórias de usuário ainda não foram testadas e por alguns problemas que aconteceram na _Sprint_ (esses problemas são apresentados [aqui](#18-revisao-da-sprint)).
 
 ### 1.2 _Burndown_
 
-![](../images/burndown_sprint4.png)
+![](images/burndown_sprint4.png)
 
 No gráfico é possível perceber um longo período em que pontos não foram entregues que aconteceu porque ocorreram muitos problemas durante a _Sprint_.
 
 ### 1.3 Gráfico de _commits_
 Os _commits_ abaixo são referentes ao repositório do _frontend_.
-![](../images/commits_frontend_sprint4.png)
+![](images/commits_frontend_sprint4.png)
 
 ### 1.4 _Velocity_
 
-![](../images/velocity_sprint4.png)
+![](images/velocity_sprint4.png)
 
 Apesar da pouca entrega de pontos o velocity subiu de 20,5 para 22 pontos.
 
 ### 1.5 Quadro de Horas
-![](../images/timetable_sprint4.png)
+![](images/timetable_sprint4.png)
 
 ### 1.6 Quadro de Conhecimento
-![](../images/knowledge_framework_sprint4.png)
+![](images/knowledge_framework_sprint4.png)
 
 Em relação à _Sprint_ anterior é possível houve uma melhoria nos conhecimentos de documentação, Github, e nas linguagens. Essas melhorias
 ocorreram,principalmente, por causa da contínua entrega de documentos e por causa dos treinamentos que ocorreram.
@@ -62,10 +62,12 @@ Também durante essa reunião foi acordado que a remoção da gamificação foi 
 
 ### 1.8 Retrospectiva
 
-![](../images/retrospective_sprint4.png)
+![](images/retrospective_sprint4.png)
 
 ### 2. Análise do _Scrum Master_
 
 O time soube trabalhar bem com os problemas que ocorreram durante a _Sprint_ contornando-os. O Time de Desenvolvimento está conseguindo trabalhar bem com as linguagens, porém com dificuldade com testes e por isso as histórias de usuário não foram entregues. Essa dificuldade será atacada pelo DevOps na próxima _Sprint_ ajudando os desenvolvedores a entender melhor os testes.
 
 Os membros não sentiram impactos com a remoção da gamificação, o que reforça o fato de esta não estar alcançando seu objetivo (motivar os membros). A falta de entrega contínua está sendo um ponto negativo corrente e isso se dá pelo início da _Sprint_ ser no meio da semana e muitas vezes durante o fim de semana não haver muita produção (como pode ser visto no quadro de horas) e por isso foi sugerido a mudança do dia de término e início da _Sprint_.
+
+E, por último, é possível perceber um aumento da produtividade observando a melhora do _Velocity_ e, apesar de alguns membros extrapolarem as 10hrs semanais, a média de horas está próxima de 10.
