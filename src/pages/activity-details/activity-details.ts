@@ -11,7 +11,7 @@ import { ActivitiesListPage } from '../activities-list/activities-list';
 export class ActivityDetailsPage {
   activity: any;
 
-  constructor(public navCtrl: NavController, public restApiProvider: RestApiProvider) {
+  constructor(public navCtrl: NavController, public restProvider: RestApiProvider) {
     this.getActivity();
   }
 
@@ -20,9 +20,9 @@ export class ActivityDetailsPage {
   }
 
   getActivity() {
-    this.restApiProvider.getActivitiesList()
+    this.restProvider.getActivity()
     .then(data => {
-      this.activity = data;
+      this.activity = [data];
       console.log(this.activity);
     });
   }

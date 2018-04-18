@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
 
+import { ActivityDetailsPage } from '../activity-details/activity-details';
+
 @Component({
   selector: 'page-activities-list',
   templateUrl: 'activities-list.html'
@@ -23,5 +25,9 @@ export class ActivitiesListPage {
       this.activities = data;
       console.log(this.activities);
     });
+  }
+
+  BtnGoToDetails(){
+    this.navCtrl.push(ActivityDetailsPage);
   }
 }

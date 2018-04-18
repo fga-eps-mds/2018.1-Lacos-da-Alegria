@@ -18,4 +18,14 @@ export class RestApiProvider {
       });
     });
   }
+
+  getActivity(){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl+'activities/2/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
 }

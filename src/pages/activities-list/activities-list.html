@@ -10,7 +10,9 @@
 <ion-content>
   <ion-list inset>
       <ion-item *ngFor='let activity of activities'>
-        <p>{{activity.name}}</p>
+        <button ion-button class="btnGoRegister" (click)="BtnGoToDetails()">
+          <p>{{activity.name}}</p>
+        </button>
       </ion-item>
   </ion-list>
 </ion-content>
