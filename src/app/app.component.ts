@@ -3,12 +3,15 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
+import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ListUserPage } from '../pages/listuser/listuser';
 
@@ -19,7 +22,7 @@ import { ListUserPage } from '../pages/listuser/listuser';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = AboutPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -32,8 +35,11 @@ export class MyApp {
       { title: 'Bem-Vindo', component: WelcomePage },
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
+      { title: 'Lista de Atividades', component: ActivitiesListPage },
       { title: 'Criar Atividades', component: CreateActivityPage },
-      { title: 'Listar Usuários', component: ListUserPage }
+      { title: 'Perfil', component: ProfilePage },
+      { title: 'Sobre', component: AboutPage },
+      { title: 'Configurações', component: SettingsPage }
     ];
   }
 

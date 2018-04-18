@@ -12,8 +12,11 @@ export class CreateActivityPage {
   submitAttemp: boolean = false;
   constructor(public navController: NavController,  public formBuilder: FormBuilder) {
     this.signupOne = formBuilder.group({
+      idActivity: ['', Validators.compose([Validators.pattern("[0-3][0-9]"), Validators.required])],
       nameHospital: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
-      description: ['', Validators.compose([Validators.maxLength(90), Validators.required])],
+      volunteers: ['', Validators.compose([Validators.pattern("[0-3][0-9]"), Validators.required])],
+      date: ['', Validators.compose([Validators.pattern('[0-3][0-9]/[0-1][0-9]*'), Validators.required])],
+      duration: ['', Validators.compose([Validators.pattern('[0-3]:[0-5][0-9]*'), Validators.required])],
     })
   }
 
