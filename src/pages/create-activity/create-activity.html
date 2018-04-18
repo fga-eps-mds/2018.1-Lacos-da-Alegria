@@ -13,19 +13,57 @@
 
   <ion-list no-lines class="credential-box">
     <form [formGroup]="signupOne">
-        <ion-item class="item">
+
+      <ion-item class="item">
+          <ion-label floating>Id da Atividade</ion-label>
+          <ion-input class="input" formControlName="idActivity" type="int"></ion-input>
+      </ion-item>
+      <ion-item class="item" *ngIf="!signupOne.controls.idActivity.valid  && (signupOne.controls.idActivity.dirty || submitAttempt)">
+        <p>
+          Por favor insira um número válido.
+        </p>
+      </ion-item>
+
+      <ion-item class="item">
             <ion-label floating>Nome do Hospital</ion-label>
             <ion-input class="input" formControlName="nameHospital" type="text"></ion-input>
         </ion-item>
         <ion-item class="item" *ngIf="!signupOne.controls.nameHospital.valid  && (signupOne.controls.nameHospital.dirty || submitAttempt)">
           <p>
-            Por favor insira um nome valido.
+            Por favor insira um nome válido.
           </p>
         </ion-item>
+
         <ion-item class="item">
-            <ion-label floating>Descrição da Atividade</ion-label>
-            <ion-input class="input" formControlName="description" type="text"></ion-input>
+            <ion-label floating>Número de Visitantes</ion-label>
+            <ion-input class="input" formControlName="volunteers" type="int"></ion-input>
         </ion-item>
+        <ion-item class="item" *ngIf="!signupOne.controls.volunteers.valid  && (signupOne.controls.volunteers.dirty || submitAttempt)">
+          <p>
+            Por favor insira um número válido.
+          </p>
+        </ion-item>
+
+        <ion-item class="item">
+            <ion-label floating>Data da Visita</ion-label>
+            <ion-input class="input" formControlName="date" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="item" *ngIf="!signupOne.controls.date.valid  && (signupOne.controls.date.dirty || submitAttempt)">
+          <p>
+            Por favor insira uma data válida.
+          </p>
+        </ion-item>
+
+          <ion-item class="item">
+              <ion-label floating>Duração da Visita em Horas</ion-label>
+              <ion-input class="input" formControlName="duration" type="text"></ion-input>
+          </ion-item>
+          <ion-item class="item" *ngIf="!signupOne.controls.duration.valid  && (signupOne.controls.duration.dirty || submitAttempt)">
+            <p>
+              Por favor insira uma duração válida.
+            </p>
+          </ion-item>
+
     </form>
   </ion-list>
   </ion-content>

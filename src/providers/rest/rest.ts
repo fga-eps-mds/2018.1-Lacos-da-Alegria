@@ -42,7 +42,7 @@ export class RestProvider {
 
   getListUsers(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/profile').subscribe(data => {
+      this.http.get(this.apiUrl+'/profile/').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
