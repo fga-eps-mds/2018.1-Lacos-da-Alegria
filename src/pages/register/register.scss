@@ -7,12 +7,17 @@ page-register {
     }
     .item{
         background-color: transparent;
+        // text-decoration-color: black;
+        color: black;
     }
+    
+
+    
     .input{
         background-color: transparent;
     }
     .div-btn{
-        position: absolute;
+        position: relative;
         text-align: center;
         top: 29%;
         left: 35%;

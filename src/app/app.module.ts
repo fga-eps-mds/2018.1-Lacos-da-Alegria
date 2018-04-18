@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AboutPage } from '../pages/about/about'
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
@@ -14,11 +13,14 @@ import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
-
+import { ListUserPage } from '../pages/listuser/listuser'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestApiProvider } from '../providers/rest-api/rest-api';
+
+import { HttpClientModule } from '@angular/common/http'
+import { RestProvider } from '../providers/rest/rest';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     CreateActivityPage,
     ProfilePage,
     AboutPage,
-    SettingsPage
+    SettingsPage,
+    ListUserPage
   ],
 
   imports: [
@@ -54,14 +57,16 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     CreateActivityPage,
     ProfilePage,
     AboutPage,
-    SettingsPage
+    SettingsPage,
+    ListUserPage
   ],
 
   providers: [
     StatusBar,
     RestApiProvider,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestProvider
   ]
 })
 

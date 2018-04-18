@@ -5,7 +5,7 @@ MAINTAINER Luiz Guilherme Silva <do.guilherme@hotmail.com>
 ENV DEBIAN_FRONTEND=noninteractive \
     ANDROID_HOME=/opt/android-sdk-linux \
     NODE_VERSION=latest \
-    NPM_VERSION=latest \
+    NPM_VERSION=5.6.0 \
     IONIC_VERSION=latest \
     CORDOVA_VERSION=latest
 

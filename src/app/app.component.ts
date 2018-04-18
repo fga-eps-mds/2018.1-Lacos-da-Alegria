@@ -13,6 +13,7 @@ import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { ListUserPage } from '../pages/listuser/listuser';
 
 
 @Component({
