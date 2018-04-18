@@ -5,7 +5,7 @@ MAINTAINER Luiz Guilherme Silva <do.guilherme@hotmail.com>
 ENV DEBIAN_FRONTEND=noninteractive \
     ANDROID_HOME=/opt/android-sdk-linux \
     NODE_VERSION=latest \
-    NPM_VERSION=latest \
+    NPM_VERSION=5.6.0 \
     IONIC_VERSION=latest \
     CORDOVA_VERSION=latest
 
@@ -19,6 +19,7 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && npm install -g npm@"$NPM_VERSION" \
     && npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" \
+    && npm install -g karma \
     #&& gem install sass \
     #&& ionic start myApp sidemenu \
 
