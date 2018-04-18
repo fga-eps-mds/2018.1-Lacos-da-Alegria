@@ -7,40 +7,29 @@
   </ion-navbar>
 </ion-header>
 
-<!--<ion-content padding>
-  <ion-list>
-    <h2>Inscrito</h2>
-    <ion-item *ngFor="let activity of activities">
-      <div class="box-activity">
-        <ion-img class="logo"></ion-img>
-        <h3 class="activity-title">{{activity.title}}</h3>
-        <button ion-button block>Participar</button>
-      </div>
-    </ion-item>
-  </ion-list>
-</ion-content>-->
-
 <ion-content padding>
-<ion-list>
-<ion-card class="card" *ngFor="let activity of activities">
-    <ion-card-content class="card-content">
-      <h2 class="activity-title" style="color:black;">{{activity.title}}</h2>
-    </ion-card-content>
+  <ion-list>
+    <ion-card class="card" *ngFor='let activity of activities'>
+      <ion-card-content class="card-content">
+        <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
+      </ion-card-content>
 
-    <div class="div-button">
-      <ion-row>
-      <ion-col class="button-col" col-10>
-        <button class="button-participate" ion-button default>
-          Participar
-        </button>
-      </ion-col>
-      <ion-col class="button-col" col-2>
-        <button class="button-info" full ion-button default>
-          <ion-icon name="ios-information-circle"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-    </div>
-</ion-card>
-</ion-list>
+      <div class="div-button">
+        <ion-row>
+          <ion-col class="button-col" col-10>
+            <button class="button-participate" ion-button default>
+              Participar
+            </button>
+          </ion-col>
+          <ion-col class="button-col" col-2>
+            <a href="http://localhost:8000/api/">
+            <button class="button-info" full ion-button default>
+              <ion-icon name="ios-information-circle"></ion-icon>
+            </button>
+          </a>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-card>
+  </ion-list>
 </ion-content>

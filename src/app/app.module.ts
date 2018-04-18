@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { AboutPage } from '../pages/about/about'
+import { AboutPage } from '../pages/about/about';
+import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -29,7 +30,7 @@ import { RestProvider } from '../providers/rest/rest';
     RegisterPage,
     ListUserPage,
     ActivitiesListPage,
-    ActivityDetailsPage
+    ActivityDetailsPage,
     ProfilePage,
     AboutPage,
     SettingsPage,
@@ -52,7 +53,7 @@ import { RestProvider } from '../providers/rest/rest';
     RegisterPage,
     ListUserPage,
     ActivitiesListPage,
-    ActivityDetailsPage
+    ActivityDetailsPage,
     ProfilePage,
     AboutPage,
     SettingsPage,
@@ -64,7 +65,7 @@ import { RestProvider } from '../providers/rest/rest';
     RestApiProvider,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider    
+    RestProvider
   ]
 })
 

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+import { ModalPage } from './modal-page';
+
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
 
 import { ActivityDetailsPage } from '../activity-details/activity-details';
@@ -8,6 +11,7 @@ import { ActivityDetailsPage } from '../activity-details/activity-details';
   selector: 'page-activities-list',
   templateUrl: 'activities-list.html'
 })
+
 export class ActivitiesListPage {
   activities: any;
 
@@ -29,5 +33,15 @@ export class ActivitiesListPage {
 
   BtnGoToDetails(){
     this.navCtrl.push(ActivityDetailsPage);
+  }
+}
+
+export class MyPage {
+  constructor(public modalCtrl: ModalController) {
+  }
+
+  presentModal() {
+    let modal = this.modalCtrl.create(ModalPage);
+    modal.present();
   }
 }

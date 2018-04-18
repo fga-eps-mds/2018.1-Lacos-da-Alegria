@@ -29,7 +29,6 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Início', component: HomePage },
-      { title: 'Lista', component: ListPage },
       { title: 'Bem-Vindo', component: WelcomePage },
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
@@ -47,7 +46,7 @@ export class MyApp {
     });
   }
 
-  openPage(page) {    
+  openPage(page) {
     this.nav.setRoot(page.component);
   }
 }
