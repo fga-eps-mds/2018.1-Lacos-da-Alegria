@@ -24,11 +24,11 @@
 
 [4. Burndown de Riscos](#4-burndown-de-riscos)
 
-[5. Histórias da _Sprint_](#5-histórias-da-sprint)
+[5. Features da _Sprint_](#5-features-da-sprint)
 
 -------
 ## 1. Pareamento
-![](../images/pairing_table_sprint05.png)
+![](images/pairing_table_sprint05.png)
 
 ## 2. Mudanças
 Essa _Sprint_ está com uma duração que as demais, que tiveram uma semana de duração, pois nas _Sprints_ passadas estava ocorrendo um problema com a entrega constante, em que o time começava a produzir efetivamente às segundas (nos dias anteriores essa produção era muito baixa).
@@ -58,7 +58,7 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 
 Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele foi levantado.
 
-![](../images/burndown_risk_sprint5.png)
+![](images/burndown_risk_sprint5.png)
 
 ## 5. Features da _Sprint_
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/36">[#36]Definir e configurar métricas</a>

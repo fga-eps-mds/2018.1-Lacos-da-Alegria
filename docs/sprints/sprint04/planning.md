@@ -1,7 +1,5 @@
 # Planejamento da Sprint 4  
 
-**Número da _Sprint_:** 4
-
 **Data de Início:** 05/04/2018  
 
 **Data de Término:** 11/04/2018
@@ -24,11 +22,11 @@
 
 [4. Burndown de Riscos](#4-burndown-de-riscos)
 
-[5. Histórias da _Sprint_](#5-histórias-da-sprint)
+[5. Features da _Sprint_](#5-features-da-sprint)
 
 -------
 ## 1. Pareamento
-![](../images/pairing_table_sprint04.png)
+![](images/pairing_table_sprint04.png)
 
 ## 2. Mudanças
 A gamificação foi retirada nessa _Sprint_, pois não estava sendo usada adequadamente e estava apenas causando um overhead para controlar a quantidade de experiência e ouro de cada membro ao final da iteração.
@@ -43,21 +41,21 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 | # | Descrição | Probabilidade do Risco |Tamanho da Perda (dias)|Exposição ao Risco
 | :--- | :------------- | :------------- | :------------- | :------------- |
 | 01 | Incompatibilidade de horários para reuniões  | 30%  | 7  | 2,1  |
-| 02 | Features má pontuadas  | 50%  | 7 | 3,5  |
+| 02 | Features má pontuadas  | 30%  | 7 | 2,1  |
 | 03 | Baixa produtividade  | 30%  | 7  | 2,1  |
 | 04 | Mais pontos planejados do que o time é capaz de entregar  | 70%  | 7  | 4,9  |
-| 05 | Dificuldades com a tecnologia de desenvolvimento  | 70%  | 3  | 2,1  |
+| 05 | Dificuldades com a tecnologia de desenvolvimento  | 50%  | 3  | 1,5  |
 | 06 | Erros na implementação de Features  | 70%  | 7  |  4,9 |
 | 07 | Quebra ou furto de equipamentos da equipe   | 15%   | 7 | 1.05  |
-| 08 |  Desistência de algum membro       | 15%    | 7 | 1.05|
-| 09 | Problemas na configuração do ambiente de desenvolvimento  | 30%  |  2 | 1  |
-| 10 | Dificuldade de se reunir com o cliente   | 30%  | 1  | 0,6  |
-| 11 | Dificuldade de se reunir com o cliente   | 30%  | 1  | 0,3  |
-|   |   |   | Exposição:  | 23,6  |
+| 08 | Features mal documentadas   | 15%  | 7  | 1,05  |
+| 09 |  Desistência de algum membro       | 15%    | 7 | 1.05|
+| 10 | Problemas na configuração do ambiente de desenvolvimento  | 30%  |  2 | 1  |
+| 11 | Dificuldade de se reunir com o cliente   | 30%  | 1  | 0,6  |
+|   |   |   | Exposição:  | 22,35  |
 
 Abaixo é mostrado o _Burndown_ de riscos das _Sprints_ em que foi em que ele foi levantado.
 
-![](../images/burndown_risk_sprint4.png)
+![](images/burndown_risk_sprint4.png)
 
 ## 5. Features da _Sprint_
 * <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/36">[#36]Definir e configurar métricas</a>
