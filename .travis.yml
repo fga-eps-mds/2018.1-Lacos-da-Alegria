@@ -1,6 +1,7 @@
 version: '2'
 sudo: true
-language: node
+language: node_js
+  - "lts/*"
 
 env:
   global:
