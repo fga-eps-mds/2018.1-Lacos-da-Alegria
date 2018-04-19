@@ -1,15 +1,16 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-icon name="power" (click)="userLogout()" ></ion-icon>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list inset>
-    <ion-item *ngFor="let user of users">
+    <!-- <ion-item *ngFor="let user of users">
       <h2>{{user.name}}</h2>
       <p>{{user.website}}</p>
       <p>{{user.email}}</p>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
 </ion-content>
