@@ -2,12 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { AboutPage } from '../pages/about/about'
+import { AboutPage } from '../pages/about/about';
+import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
@@ -26,12 +25,12 @@ import { RestProvider } from '../providers/rest/rest';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     WelcomePage,
     LoginPage,
     RegisterPage,
+    ListUserPage,
     ActivitiesListPage,
-    CreateActivityPage,
+    ActivityDetailsPage,
     ProfilePage,
     AboutPage,
     SettingsPage,
@@ -49,12 +48,12 @@ import { RestProvider } from '../providers/rest/rest';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     WelcomePage,
     LoginPage,
     RegisterPage,
+    ListUserPage,
     ActivitiesListPage,
-    CreateActivityPage,
+    ActivityDetailsPage,
     ProfilePage,
     AboutPage,
     SettingsPage,

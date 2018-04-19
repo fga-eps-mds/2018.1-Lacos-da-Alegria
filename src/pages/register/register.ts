@@ -15,7 +15,7 @@ export class RegisterPage {
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
-  
+
   }
   // constructor(public navController: NavController,  public formBuilder: FormBuilder, public restProvider: RestProvider) {
   //   this.signupOne = formBuilder.group({
