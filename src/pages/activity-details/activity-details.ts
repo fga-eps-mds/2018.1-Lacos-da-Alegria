@@ -12,18 +12,18 @@ export class ActivityDetailsPage {
   activity: any;
 
   constructor(public navCtrl: NavController, public params: NavParams, public restProvider: RestApiProvider) {
-    this.getActivity();
-    this.activity = activity[this.params.get('charNum')];
+    let id = this.params.get('id');
+    this.getActivity(id);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
   }
 
-  getActivity() {
-    this.restProvider.getActivity()
+  getActivity(id) {
+    this.restProvider.getActivity(id)
     .then(data => {
-      this.activity = data;
+      this.activity = [data];
       console.log(this.activity);
     });
   }
