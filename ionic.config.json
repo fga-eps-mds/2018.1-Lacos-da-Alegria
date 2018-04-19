@@ -2,5 +2,7 @@
   "name": "new-ionic-image",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
