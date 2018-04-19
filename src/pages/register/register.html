@@ -110,11 +110,17 @@
             <ion-label>Desejo visitar instituições de caridade</ion-label>
         </ion-item>
 
-        <ion-item class="item">
-            <ion-label>Sim</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="user.want_ongs" name="want_ongs"></ion-checkbox>
-        </ion-item>
+        <ion-list radio-group [(ngModel)]="user.want_ongs" name="want_ongs">
+            <ion-item class="item">
+                <ion-label>Sim</ion-label>
+                <ion-radio checked="true" value="true"></ion-radio>
+            </ion-item>
 
+            <ion-item class="item">
+                <ion-label>Não</ion-label>
+                <ion-radio value="false"></ion-radio>
+            </ion-item>
+        </ion-list>
 
     </ion-list>
 
