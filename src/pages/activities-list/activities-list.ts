@@ -14,14 +14,14 @@ import { ActivityDetailsPage } from '../activity-details/activity-details';
 
 export class ActivitiesListPage {
   activities: any;
+  indexes: any;
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restProvider: RestApiProvider) {
     this.getActivitiesList();
   }
 
-  openModal(characterNum) {
-
-      let modal = this.modalCtrl.create(ActivityDetailsPage, characterNum);
+  openModal(index) {
+      let modal = this.modalCtrl.create(ActivityDetailsPage, index);
       modal.present();
     }
 
@@ -30,14 +30,10 @@ export class ActivitiesListPage {
   }
 
   getActivitiesList(){
-    this.restProvider.getActivitiesList()
+    return this.restProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
       console.log(this.activities);
     });
-  }
-
-  BtnGoToDetails(){
-    this.navCtrl.push(ActivityDetailsPage);
   }
 }

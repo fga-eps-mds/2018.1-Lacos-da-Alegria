@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-card class="card" *ngFor='let activity of activities'>
+    <ion-card class="card" *ngFor="let activity of activities">
       <ion-card-content class="card-content">
         <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
 
@@ -23,11 +23,11 @@
             </button>
           </ion-col>
           <ion-col class="button-col" col-2>
-            <a ion-item (click)="openModal({charNum: 0})">
-            <button class="button-info" full ion-button default>
-              <ion-icon name="ios-information-circle"></ion-icon>
-            </button>
-          </a>
+            <a ion-item (click)="openModal({id: activity.id})">
+              <button class="button-info" full ion-button default>
+                <ion-icon name="ios-information-circle"></ion-icon>
+              </button>
+            </a>
           </ion-col>
         </ion-row>
       </div>
