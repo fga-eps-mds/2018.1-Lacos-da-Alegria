@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { LoginPage } from '../login/login';
+
 
 @Component({
   selector: 'page-home',
@@ -13,5 +15,8 @@ export class HomePage {
     //this.getUsers();
   }
 
-
+  userLogout(){
+    this.navCtrl.push(LoginPage);
+  }
+  
 }

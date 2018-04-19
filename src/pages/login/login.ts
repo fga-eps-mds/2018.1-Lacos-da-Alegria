@@ -16,6 +16,7 @@ export class LoginPage {
   BtnRegister(){
     this.navController.push(RegisterPage);
   }
+
   userLogin(){
     this.restProvider.userLogin(this.user).then((result) => {
       console.log(result);
