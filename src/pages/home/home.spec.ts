@@ -29,7 +29,7 @@ describe('Home', () => {
     de = fixture.debugElement.query(By.css('h3'));
   });
 
-  it('should create component', () => expect(comp).toBeDefined());
+// it('should create component', () => expect(comp).toBeDefined());
 
 //   it('should have expected <h3> text', () => {
 //     fixture.detectChanges();

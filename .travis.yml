@@ -1,13 +1,22 @@
-sudo: required
-
+sudo: true
 language: node
 
-services:
-  - docker
-
-before_install:
-  - docker-compose build
-
-script:
-  - sudo docker-compose run --rm new-ionic-image npm run lint
-  - sudo docker-compose run --rm new-ionic-image npm run test-ci
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f33410c64bfc2b21fb9c1040286a389153b54447650c056ab51df66abb40a11d
+  services:
+    - docker
+  before_install:
+    - sudo apt-get update
+    - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-ce
+    - docker-compose --version
+  before_script:
+    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - chmod +x ./cc-test-reporter
+    - ./cc-test-reporter before-build
+    - docker-compose up --build -d
+  script:
+    - docker-compose run --rm new-ionic-image npm run lint
+    - docker-compose run --rm new-ionic-image npm run test-ci
+  after_script:
+    - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
