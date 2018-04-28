@@ -6,11 +6,11 @@
 
 **Duração:** Uma semana
 
-**Pontos Planejados**: 31
+**Pontos Planejados**: 18
 
 **Pontos Adicionados**: 16
 
-**Pontos Totais**: 47
+**Pontos Totais**: 34
 
 -------
 
