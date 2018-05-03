@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
 @Component({
@@ -8,11 +8,15 @@ import { LoginPage } from '../login/login';
 })
 export class WelcomePage {
 
-  constructor(private navController: NavController) {
+  constructor(private navController: NavController, private menu: MenuController) {
 
   }
   BtnLogin(){
     this.navController.push(LoginPage);
   }
-
+  
+  ionViewDidEnter() {
+    this.menu.swipeEnable(false);
+  }
+  
 }

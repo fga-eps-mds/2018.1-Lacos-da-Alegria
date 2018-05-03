@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController} from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { RestProvider } from '../../providers/rest/rest';
 import { HomePage } from '../home/home';
@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public navController: NavController,  public restProvider: RestProvider) {
+  constructor(public navController: NavController,  public restProvider: RestProvider, private menu: MenuController ) {
 
   }
   BtnRegister(){
@@ -24,6 +24,10 @@ export class LoginPage {
     }, (err) => {
       console.log(err);
     });
+  }
+
+  ionViewDidEnter() {
+    this.menu.swipeEnable(false);
   }
   
 }

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController , MenuController} from 'ionic-angular';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { LoginPage } from '../login/login';
 // import { EmailValidator } from '../../validators/email';
@@ -14,7 +14,7 @@ export class RegisterPage {
   submitAttemp: boolean = false;
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider, private menu: MenuController) {
 
   }
   // constructor(public navController: NavController,  public formBuilder: FormBuilder, public restProvider: RestProvider) {
@@ -66,5 +66,8 @@ export class RegisterPage {
       console.log(this.signupOne.value);
     }
   }*/
+  ionViewDidEnter() {
+    this.menu.swipeEnable(false);
+  }
 
 }
