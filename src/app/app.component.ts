@@ -20,7 +20,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any = ActivitiesListPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -28,11 +28,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Início', component: HomePage },
-      { title: 'Bem-Vindo', component: WelcomePage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Registro', component: RegisterPage },
-      { title: 'Lista de Atividades', component: ActivitiesListPage },
+      { title: 'Atividades', component: ActivitiesListPage },
       { title: 'Perfil', component: ProfilePage },
       { title: 'Sobre', component: AboutPage },
       { title: 'Configurações', component: SettingsPage }
