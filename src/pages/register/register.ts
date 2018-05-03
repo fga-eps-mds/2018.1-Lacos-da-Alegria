@@ -4,6 +4,8 @@ import { NavController , MenuController} from 'ionic-angular';
 // import { LoginPage } from '../login/login';
 // import { EmailValidator } from '../../validators/email';
 import { RestProvider } from '../../providers/rest/rest'
+//import { ListUserPage } from '../listuser/listuser';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-register',
@@ -51,6 +53,7 @@ export class RegisterPage {
   saveUser() {
     this.restProvider.saveUser(this.user).then((result) => {
       console.log(result);
+      this.navCtrl.push(LoginPage);
     }, (err) => {
       console.log(err);
     });
