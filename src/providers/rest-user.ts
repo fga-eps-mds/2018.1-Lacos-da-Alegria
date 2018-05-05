@@ -10,7 +10,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RestUserProvider {
   apiUrl = 'http://localhost:8000/api';
-  fakeUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestUserProvider Provider');
@@ -56,4 +55,13 @@ export class RestUserProvider {
     });
   }
 
+  getUser(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + 'profile/' + id + '/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
 }

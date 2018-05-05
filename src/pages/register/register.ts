@@ -14,7 +14,7 @@ export class RegisterPage {
   submitAttemp: boolean = false;
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
-  constructor(public navCtrl: NavController, public RestUserProvider: RestUserProvider) {
+  constructor(public navCtrl: NavController, public RestProvider: RestUserProvider) {
 
   }
   // constructor(public navController: NavController,  public formBuilder: FormBuilder, public RestUserProvider: RestUserProvider) {
@@ -49,7 +49,7 @@ export class RegisterPage {
   //   }
   // }
   saveUser() {
-    this.RestUserProvider.saveUser(this.user).then((result) => {
+    this.RestProvider.saveUser(this.user).then((result) => {
       console.log(result);
     }, (err) => {
       console.log(err);

@@ -16,7 +16,7 @@ export class ActivitiesListPage {
   activities: any;
   indexes: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestUserProvider: RestActivityProvider) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
     this.getActivitiesList();
   }
 
@@ -30,7 +30,7 @@ export class ActivitiesListPage {
   }
 
   getActivitiesList(){
-    return this.RestUserProvider.getActivitiesList()
+    return this.RestProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
       console.log(this.activities);

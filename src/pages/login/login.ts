@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public navController: NavController,  public RestUserProvider: RestUserProvider) {
+  constructor(public navController: NavController,  public RestProvider: RestUserProvider) {
 
   }
   BtnRegister(){
@@ -18,12 +18,12 @@ export class LoginPage {
   }
 
   userLogin(){
-    this.RestUserProvider.userLogin(this.user).then((result) => {
+    this.RestProvider.userLogin(this.user).then((result) => {
       console.log(result);
       this.navController.push(HomePage);
     }, (err) => {
       console.log(err);
     });
   }
-  
+
 }

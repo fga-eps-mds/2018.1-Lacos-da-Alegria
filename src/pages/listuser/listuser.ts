@@ -20,7 +20,7 @@ export class ListUserPage {
   // user = { name: '', address: '', email: '', password: ''};
   users: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public RestUserProvider: RestUserProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public RestProvider: RestUserProvider) {
     this.getListUsers();
   }
 
@@ -29,7 +29,7 @@ export class ListUserPage {
   }
 
   getListUsers(){
-    this.RestUserProvider.getListUsers()
+    this.RestProvider.getListUsers()
     .then(data => {
       this.users = data;
       console.log(this.users);
@@ -38,6 +38,6 @@ export class ListUserPage {
 
   BtnGoToRegister(){
     this.navCtrl.push(RegisterPage);
-  } 
+  }
 
 }
