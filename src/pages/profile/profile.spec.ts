@@ -13,7 +13,9 @@ describe('Profile', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+
       declarations: [ProfilePage],
+      
       imports: [
         IonicModule.forRoot(ProfilePage)
       ],
@@ -26,7 +28,6 @@ describe('Profile', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfilePage);
     comp = fixture.componentInstance;
-    de = fixture.debugElement.query(By.css('h3'));
   });
   it('should be created', () => {
     expect(comp instanceof ProfilePage).toBe(true);
