@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { HomePage } from '../home/home';
 
 @Component({
@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public navController: NavController,  public restProvider: RestProvider) {
+  constructor(public navController: NavController,  public RestUserProvider: RestUserProvider) {
 
   }
   BtnRegister(){
@@ -18,7 +18,7 @@ export class LoginPage {
   }
 
   userLogin(){
-    this.restProvider.userLogin(this.user).then((result) => {
+    this.RestUserProvider.userLogin(this.user).then((result) => {
       console.log(result);
       this.navController.push(HomePage);
     }, (err) => {

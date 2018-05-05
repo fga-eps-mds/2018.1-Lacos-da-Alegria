@@ -2,18 +2,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 /*
-  Generated class for the RestProvider provider.
+  Generated class for the RestUserProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class RestProvider {
+export class RestUserProvider {
   apiUrl = 'http://localhost:8000/api';
   fakeUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(public http: HttpClient) {
-    console.log('Hello RestProvider Provider');
+    console.log('Hello RestUserProvider Provider');
   }
 
   saveUser(data) {

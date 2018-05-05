@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { LoginPage } from '../login/login';
 
 
@@ -11,7 +11,7 @@ import { LoginPage } from '../login/login';
 export class HomePage {
   users: any;
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+  constructor(public navCtrl: NavController, public RestUserProvider: RestUserProvider) {
     //this.getUsers();
   }
 
