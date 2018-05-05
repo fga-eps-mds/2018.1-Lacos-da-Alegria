@@ -11,8 +11,7 @@ export class ProfilePage {
 	user: any;
 
 	constructor(public navCtrl: NavController, public params: NavParams, public RestProvider: RestUserProvider) {
-    let id = this.params.get('id');
-    this.getUser(id);
+    this.getUser(1);
   }
 
   ionViewDidLoad() {
