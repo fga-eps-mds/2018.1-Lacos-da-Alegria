@@ -13,9 +13,7 @@ describe('Profile', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-
       declarations: [ProfilePage],
-      
       imports: [
         IonicModule.forRoot(ProfilePage)
       ],

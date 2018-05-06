@@ -28,3 +28,4 @@ describe('Login', () => {
     comp = fixture.componentInstance;
     de = fixture.debugElement.query(By.css('h3'));
   });
+});
