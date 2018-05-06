@@ -4,6 +4,7 @@
 |27/03/2018                 |0.1                             |Criação do Protótipo    |Rafael Makaha   |
 |04/04/2018                 |0.2                             |Adição de parágrafos explicativos  |Renan Schadt |
 |04/04/2018                 |1.0                             |Formatação do documento e adição de imagens                |João Vítor  |
+|04/05/2018                 |2.0                             |Protótipo remodelado                |Luciano e Renan  |
 
 # Sumário
 
@@ -15,11 +16,14 @@
 * [1.5 Tela de Menu](#15-tela-de-menu)
 * [1.6 Tela de Perfil](#16-tela-de-perfil)
 * [1.7 Tela de Lista da Atividade](#17-tela-de-lista-da-atividade)
+* [1.8 Tela de Cadastro](#17-tela-de-cadastro)
 
 # 1. Documentação do Protótipo
 Este documento tem por função apresentar as telas do protótipo desenvolvido pelo grupo e as funções de cada uma delas, simulando em partes o que seria a aplicação final da Laços da Alegria. O protótipo feito contém 7 das principais telas da aplicação, este foi apresentado ao cliente e aprovado pelo mesmo, mas nada impede futuras mudanças.
 
 O cliente permitiu que a palheta de cores e o conteúdo de cada tela fosse decidido pelo grupo, com o objetivo de fazer um aplicativo minimalista e claro, que reflete os princípios da Laços da Alegria.
+
+O aplicativo conta com 4 botões fixos na parte inferior, o primeiro deles redireciona para a tela de atividades, o segundo para a tela de novidades, o terceiro para o perfil e o quarto para o menu.
 
 ## 1.1 Tela Inicial
 ![Tela Inicial](images/tela_inicial.png)
@@ -47,14 +51,12 @@ Esta tela mostra um histórico ordenado das notificações enviadas ao usuário,
 ## 1.5 Tela de Menu
 ![Tela_de_Menu](images/tela_de_menu.png) <br>
 
-Esta não é uma tela propriamente dita, é um menu ativado por swipe, ou através de um toque no ícone de menu no topo do aplicativo. Assim que é aberto ele ocupa uma parte da tela, ficando sobre parte da aba que está ativa no momento.
-
-Este menu exibe como opções todas as abas do aplicativo (lista de atividades, lista de novidades, perfil, configurações, ajuda, entre outros), podendo acessá-las com um toque, e foi o meio de navegação escolhido pelo grupo.
+Este menu exibe como opções abas secundárias do aplicativo que não estão nos botões fixos, como, lista de atividades, configurações, ajuda, sobre e sair.
 
 ## 1.6 Tela de Perfil
 ![Tela_de_Perfil](images/tela_de_perfil.png) <br>
 
-Tela de perfil do usuário, é acessada através do menu, mostra dados do usuário, como sua localização, categoria atual(novato, voluntário, apoio), conquistas pessoais no aplicativo e um botão para alterar informações pessoais.
+Tela de perfil do usuário, mostra dados do usuário, como sua localização, categoria atual(novato, voluntário, apoio), conquistas pessoais no aplicativo e um botão para alterar informações pessoais.
 
 ## 1.7 Tela de Lista da Atividade
 ![Tela_de_Lista_da_Atividade](images/tela_de_lista.png) <br>
@@ -62,3 +64,8 @@ Tela de perfil do usuário, é acessada através do menu, mostra dados do usuár
 Tela acessível a voluntários e apoio, exibe a lista de usuários inscritos em uma determinada atividade na semana. Contém uma barra de seleção para escolher a atividade, divide os usuários entre novatos, voluntários e apoio.
 
 Informações do usuário que são exibidas: nome, "nome de palhaço" e número do celular.
+
+## 1.8 Tela de Lista da Atividade
+![Tela_de_Cadastro](images/tela_de_cadastro.png) <br>
+
+Tela para realização do cadastro, é dividida em passos, devido a grande quantidade de campos a serem preenchidos.
