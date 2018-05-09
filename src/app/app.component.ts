@@ -1,11 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
@@ -20,15 +19,14 @@ import { WelcomePage } from '../pages/welcome/welcome';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AboutPage;
+  rootPage: any = WelcomePage;
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menu: MenuController) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Início', component: HomePage },
       { title: 'Bem-Vindo', component: WelcomePage },
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
@@ -43,10 +41,12 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.menu.enable(false);
     });
   }
 
   openPage(page) {
     this.nav.setRoot(page.component);
   }
+
 }
