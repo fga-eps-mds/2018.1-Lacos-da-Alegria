@@ -6,7 +6,6 @@ import { AboutPage } from '../pages/about/about';
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
@@ -24,7 +23,6 @@ import { RestProvider } from '../providers/rest/rest';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     WelcomePage,
     LoginPage,
     RegisterPage,
@@ -47,7 +45,6 @@ import { RestProvider } from '../providers/rest/rest';
 
   entryComponents: [
     MyApp,
-    HomePage,
     WelcomePage,
     LoginPage,
     RegisterPage,

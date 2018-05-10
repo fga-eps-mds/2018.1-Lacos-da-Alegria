@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { RestProvider } from '../../providers/rest/rest';
-import { HomePage } from '../home/home';
+import { ActivitiesListPage } from '../activities-list/activities-list';
 
 @Component({
   selector: 'page-login',
@@ -20,10 +20,10 @@ export class LoginPage {
   userLogin(){
     this.restProvider.userLogin(this.user).then((result) => {
       console.log(result);
-      this.navController.push(HomePage);
+      this.navController.push(ActivitiesListPage);
     }, (err) => {
       console.log(err);
     });
   }
-  
+
 }

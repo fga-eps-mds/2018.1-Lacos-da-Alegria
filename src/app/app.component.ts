@@ -16,6 +16,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
@@ -37,6 +38,7 @@ export class MyApp {
     ];
   }
 
+
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
@@ -44,6 +46,11 @@ export class MyApp {
       this.menu.enable(false);
     });
   }
+
+/* Tabs() {
+    activitiesRoot = ActivitiesListPage;
+    profileRoot = ProfilePage;
+  }*/
 
   openPage(page) {
     this.nav.setRoot(page.component);

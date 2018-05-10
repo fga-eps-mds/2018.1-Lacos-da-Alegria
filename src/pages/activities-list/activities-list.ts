@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
-
-
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
-
 import { ActivityDetailsPage } from '../activity-details/activity-details';
 
 @Component({
