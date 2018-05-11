@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { RestProvider } from '../../providers/rest/rest';
 import { ActivitiesListPage } from '../activities-list/activities-list';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-login',
@@ -18,12 +19,16 @@ export class LoginPage {
   }
 
   userLogin(){
-    this.restProvider.userLogin(this.user).then((result) => {
-      console.log(result);
-      this.navController.push(ActivitiesListPage);
-    }, (err) => {
-      console.log(err);
-    });
+    this.navController.push(TabsPage);
+    //this.navController.setRoot(TabsPage);
+    
+    // this.restProvider.userLogin(this.user).then((result) => {
+    //   console.log(result);
+    //   this.navController.push(ActivitiesListPage);
+    //   this.navController.setRoot(TabsPage);
+    // }, (err) => {
+    //   console.log(err);
+    // });
   }
 
 }
