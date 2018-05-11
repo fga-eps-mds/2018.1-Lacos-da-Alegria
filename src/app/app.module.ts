@@ -11,8 +11,9 @@ import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { ListUserPage } from '../pages/listuser/listuser'
-import { TabsPage } from '../pages/tabs/tabs'
+import { ListUserPage } from '../pages/listuser/listuser';
+import { TabsPage } from '../pages/tabs/tabs';
+import { NewsPage } from '../pages/news/news';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,7 +35,8 @@ import { RestProvider } from '../providers/rest/rest';
     AboutPage,
     SettingsPage,
     ListUserPage,
-    TabsPage
+    TabsPage,
+    NewsPage
   ],
 
   imports: [
@@ -57,7 +59,8 @@ import { RestProvider } from '../providers/rest/rest';
     AboutPage,
     SettingsPage,
     ListUserPage,
-    TabsPage
+    TabsPage,
+    NewsPage
   ],
 
   providers: [
