@@ -20,7 +20,10 @@ export class RestProvider {
 
   saveUser(data) {
       return new Promise((resolve, reject) => {
-        this.http.post(this.apiUrl+'/profile/', JSON.stringify(data), {
+        this.http.post(
+          this.apiUrl+'/profile/', 
+          JSON.stringify(data), 
+          {
             headers: new HttpHeaders().set('Content-Type', 'application/json'),
           })
           .subscribe(res => {
@@ -54,6 +57,24 @@ export class RestProvider {
     );
   }
 
+  userLogout() {
+    this.storage.clearLocalUser();
+    console.log('teste');
+    // console.log('qqqqqqqqq', this.storage.getLocalUser());
+  }
+
+  refreshToken(token){
+    return this.http.post(
+      this.apiUrl+'/token/refresh/',
+      token,
+      {
+        //headers: new HttpHeaders().set('Content-Type', 'application/json'),
+        
+        observe: 'response', // Capturar o HEADER
+        responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
+      }
+    );
+  }
   // successfulLogin(authorizationValue: string) {
   //   let token = authorizationValue.substring(7);
   //   let localUser: LocalUser = {
