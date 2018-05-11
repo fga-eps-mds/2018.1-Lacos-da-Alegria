@@ -1,0 +1,40 @@
+page-menuApp{
+    ion-navbar{
+        height: 30vh;
+        //color: rebeccapurple;
+    }
+    .main{
+        background:#084887;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        width: 100%;
+    }
+    #list_activities-btn{
+        margin-top: 4vh;
+        background: #0565c0;
+        width: 100%;
+    }
+    #help-btn{
+        margin-top: 4vh;
+        background: #0565c0;
+        width: 100%;
+    }
+    #about-btn{
+        margin-top: 0.5vh;
+        background: #0565c0;
+        width: 100%;
+    }
+    #settings-btn{
+        margin-top: 0.5vh;
+        background: #0565c0;
+        width: 100%;
+    }
+    #exit-btn{
+        margin-top: 0.5vh;
+        background: #0565c0;
+        width: 100%;
+    }
+
+    
+}

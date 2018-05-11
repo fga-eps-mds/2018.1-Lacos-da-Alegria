@@ -14,6 +14,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { ListUserPage } from '../pages/listuser/listuser';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NewsPage } from '../pages/news/news';
+import { MenuAppPage } from '../pages/menuApp/menuApp';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,6 +22,7 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
 
 import { HttpClientModule } from '@angular/common/http'
 import { RestProvider } from '../providers/rest/rest';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { RestProvider } from '../providers/rest/rest';
     SettingsPage,
     ListUserPage,
     TabsPage,
-    NewsPage
+    NewsPage,
+    MenuAppPage
+    
   ],
 
   imports: [
@@ -60,7 +64,8 @@ import { RestProvider } from '../providers/rest/rest';
     SettingsPage,
     ListUserPage,
     TabsPage,
-    NewsPage
+    NewsPage,
+    MenuAppPage
   ],
 
   providers: [

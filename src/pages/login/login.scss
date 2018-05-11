@@ -1,4 +1,8 @@
 page-login {
+    
+    .main{
+        background-color: #084887;
+    }
     .login-box{
         background-color: #E3ECF5;
     }
@@ -8,7 +12,10 @@ page-login {
         top: 6%;
     }
     .item{
-        background-color: transparent;
+        background-color: gray;
+        border-radius: 15px;
+        border-color: black;
+       // display: none;
     }
     .input{
         background-color: transparent;
