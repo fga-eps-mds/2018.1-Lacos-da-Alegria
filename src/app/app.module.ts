@@ -64,8 +64,8 @@ import { RestProvider } from '../providers/rest/rest';
     StatusBar,
     RestApiProvider,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 
