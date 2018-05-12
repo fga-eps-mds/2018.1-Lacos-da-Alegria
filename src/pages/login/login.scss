@@ -1,14 +1,22 @@
 page-login {
-    
+
     .main{
         background-color: #084887;
-        
-        
+    }
+
+    .imgcont{
+      height: 30vh;
+      width: 100%;
+
+      .logo{
+        width: 30vh;
+        height: 30vh;
+        display: block;
+        margin: auto;
+      }
     }
     .field_login{
-        //position: absolute;
-        margin-top: 10h;
-        margin-left: 10vh;
+        margin: 0vh 10vh;
         text-align: center;
         text-decoration-color: #084887;
         #item{
@@ -17,10 +25,9 @@ page-login {
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             border-color: black;
-            max-width: 34vh;
             max-height: 2vh;
-            
-            
+
+
            // display: none;
         }
         #item2{
@@ -28,58 +35,54 @@ page-login {
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             border-color: black;
-            max-width: 34vh;
             max-height: 2vh;;
-            
+
            // display: none;
         }
+
     }
-    
+
     .input{
         background-color: transparent;
     }
     .div-btn{
-        //position: static;
         text-align: center;
-        top: 29%;
-        margin-left: 10vh;
-        max-width: 34vh;
+        top: 30%;
         margin-top: 5vh;
-        //border-color: antiquewhite;
+        margin-left: 10vh;
+        margin-right: 10vh;
 
         #login-btn{
-            background-color:#084887;
-            // background-color: #FF4605;
-            //border-color: antiquewhite;
-            border-radius: 5px;
-            border-width: 1vh;
-            //border-right-width: 1vh;
-            
-        }
-        #register-btn{
-            background-color:#0D68A3;
+          padding: 2vh 14vh;
+          background-color:#084887;
+          border: 1px groove #0565c0;
+          border-radius: 6px;
+
         }
     }
+
     .remenber{
-        
-        margin-left: 11.8vh;
+      margin-left: 21vh;
+      font-size: 14px;
     }
-    #signup-btn{
-        margin-left: 10vh;
-        max-width: 34vh;
+
+    .registercont{
+      height: 20vh;
+
+      #signup-btn{
+        background-color: #084887;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 5vh;
-        font-size: 12px;
-        border-radius: 5px;
-    }
+        border: 1px groove #0565c0;
+        padding: 0vh 1.75vh;
+        border-radius: 6px;
+      }
+   }
     .remenber_pass{
-        margin-left: 20.5vh;
+        margin-left: 24vh;
         color: white;
-    }
-    .logo{
-        width: 30vh;
-        height: 30vh;
-        margin-left: 10vh;
-        margin-top: 5vh;
     }
 
 }

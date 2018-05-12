@@ -1,48 +1,35 @@
 page-welcome{
-    .body{
-        background-color: #0D68A3;
-        font-family: "Open Sans";
-    }
 
-    .div-logo{
-        top: 20%;
-        .logo{
-            position: absolute;
-            display: block;
-            margin: 0 auto;
-            top: 20%;
-            left: 35.5%
-        }
-    }
-    
-    #paragraph{
-        position: absolute;
-        color: white;
-        font-family: "Open Sans";
-        text-justify: auto;
-        top: 35%;
-        left: 20%
-    }
+  .body .scroll-content{
+    overflow: hidden;
+  }
 
-    .div-icon{
-        text-align: center;
-        .icon{
-            color: white;
-            position: absolute;
-            top: 40%;
-            left: 40%;
-            font-size: 600%;
-        }
-    }
+  .body{
+    background-color: #084887;
+    opacity: 10%;
+  }
 
-    .div-btn{
-        text-align: center;
+  .imagem{
+    max-height: 55vh;
+    border: 3px solid #e3ecf5;
+  }
 
-        .btn{
-            position: absolute;
-            top: 52%;
-            left: 34.5%;
-            background-color: #FF4605;
-        }
-    }
+  .titulo{
+    color: white;
+  }
+
+  .texto{
+    color: white;
+    text-align: center;
+    margin: 1vh;
+  }
+
+  .hidden{
+    bottom: 4vh;
+    align-content: center;
+  }
+
+  .button{
+    background-color: #ff6605;
+  }
 }

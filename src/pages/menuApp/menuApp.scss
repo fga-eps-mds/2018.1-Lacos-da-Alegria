@@ -1,8 +1,13 @@
 page-menuApp{
-    ion-navbar{
-        height: 30vh;
-        //color: rebeccapurple;
+    .topo{
+      height: 30vh;
+      background-color: #0565c0;
     }
+
+    .main .scroll-content{
+      overflow: hidden;
+    }
+
     .main{
         background:#084887;
         margin: 0px;
@@ -10,6 +15,7 @@ page-menuApp{
         border: 0px;
         width: 100%;
     }
+
     #list_activities-btn{
         margin-top: 4vh;
         background: #0565c0;
@@ -36,5 +42,5 @@ page-menuApp{
         width: 100%;
     }
 
-    
+
 }
