@@ -5,7 +5,7 @@ Esse documento visa esclarecer a visão geral do projeto Laços da Alegria.
 ![Imgur](https://i.imgur.com/0M6bXUj.png)
 
 # 5W2H
-
+![Imgur](https://i.imgur.com/5E2O75G.png)
 
 # Protótipo
 Para ter uma visualização do projeto em questão, clique no link a seguir e veja o
