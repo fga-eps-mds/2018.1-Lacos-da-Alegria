@@ -30,5 +30,8 @@ export class LoginPage {
     //   console.log(err);
     // });
   }
+  register(){
+    this.navController.push(RegisterPage);
+  }
 
 }

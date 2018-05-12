@@ -1,127 +1,130 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Cadastro</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content>
+
+<ion-content class="register-box">
+    <img src="../../assets/imgs/jon.jpg" class="perfil_img">
     <form (ngSubmit)="saveUser()">
+    <div class="register">
+            <ion-list>
 
-    <ion-list>
-
-        <ion-item class="item">
-            <ion-label floating>Nome de usuário</ion-label>
-            <ion-input [(ngModel)]="user.username" type="text" name = "username"></ion-input>
-        </ion-item >
-
-        <ion-item>
-            <ion-label floating>Nome Completo</ion-label>
-            <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>CPF</ion-label>
-            <ion-input [(ngModel)]="user.cpf" type="text" name ="cpf"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Data de Nascimento</ion-label>
-            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="user.birth" name="birth"></ion-datetime>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>Endereço</ion-label>
-            <ion-input [(ngModel)]="user.address" type="text" name="address"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>Senha</ion-label>
-            <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
-        </ion-item >
-
-        <ion-item class="item">
-            <ion-label>Cidade Satélite</ion-label>
-            <ion-select [(ngModel)]="user.region" name="region">
-                <ion-option value="Águas Claras">Águas Claras</ion-option>
-                <ion-option value="Asa Norte">Asa Norte</ion-option>
-                <ion-option value="Asa Sul">Asa Sul</ion-option>
-                <ion-option value="Gama">Gama</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Preferência de Atividade</ion-label>
-            <ion-select [(ngModel)]="user.preference" name="preference">
-                <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
-                <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
-                <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
-                <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Como conheceu o Laços?</ion-label>
-            <ion-select [(ngModel)]="user.howDidYouKnow" name="howDidYouKnow">
-                <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
-                <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
-                <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
-                <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
-                <ion-option value="Outros">Outros</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>DDD</ion-label>
-            <ion-input class="input" [(ngModel)]="user.ddd" type="text" name="ddd"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>Whatsapp</ion-label>
-            <ion-input [(ngModel)]="user.whatsapp" type="text" name="whatsapp"></ion-input>
-        </ion-item>
-
-        <ion-list radio-group [(ngModel)]="user.genre" name="genre">
-            <ion-list-header>
-                Sexo
-            </ion-list-header>
-
-            <ion-item>
-                <ion-label>Palhaçinho</ion-label>
-                <ion-radio checked="true" value="Masculino"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>Palhaçinha</ion-label>
-                <ion-radio value="Feminino"></ion-radio>
-            </ion-item>
-        </ion-list>
-
-        <ion-item class="item">
-            <ion-label>Desejo visitar instituições de caridade</ion-label>
-        </ion-item>
-
-        <ion-list radio-group [(ngModel)]="user.want_ongs" name="want_ongs">
-            <ion-item class="item">
-                <ion-label>Sim</ion-label>
-                <ion-radio checked="true" value="true"></ion-radio>
-            </ion-item>
-
-            <ion-item class="item">
-                <ion-label>Não</ion-label>
-                <ion-radio value="false"></ion-radio>
-            </ion-item>
-        </ion-list>
-
-    </ion-list>
-
-    <div class="div-btn">
-        <button id="send-btn" ion-button type="submit">Enviar</button>
-    </div>
+                    <ion-item class="item1">
+                        <ion-label floating>Nome de usuário</ion-label>
+                        <ion-input [(ngModel)]="user.username" type="text" name = "username"></ion-input>
+                    </ion-item >
+            
+                    <ion-item class="item2">
+                            <ion-label floating>Senha</ion-label>
+                            <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
+                        </ion-item >
+            
+                    <!-- <ion-item>
+                        <ion-label floating>Nome Completo</ion-label>
+                        <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
+                    </ion-item> -->
+            
+                    <!-- <ion-item class="item">
+                        <ion-label floating>CPF</ion-label>
+                        <ion-input [(ngModel)]="user.cpf" type="text" name ="cpf"></ion-input>
+                    </ion-item> -->
+            
+                    <ion-item class="item3">
+                        <ion-label floating>Email</ion-label>
+                        <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
+                    </ion-item>
+            
+                    <ion-item class="item4">
+                            <ion-label floating>Whatsapp</ion-label>
+                            <ion-input [(ngModel)]="user.whatsapp" type="text" name="whatsapp"></ion-input>
+                        </ion-item>
+            
+                    <!-- <ion-item>
+                        <ion-label>Data de Nascimento</ion-label>
+                        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="user.birth" name="birth"></ion-datetime>
+                    </ion-item> -->
+            
+                    <!-- <ion-item>
+                        <ion-label floating>Endereço</ion-label>
+                        <ion-input [(ngModel)]="user.address" type="text" name="address"></ion-input>
+                    </ion-item> -->
+            
+            
+            
+                    <!-- <ion-item class="item">
+                        <ion-label>Cidade Satélite</ion-label>
+                        <ion-select [(ngModel)]="user.region" name="region">
+                            <ion-option value="Águas Claras">Águas Claras</ion-option>
+                            <ion-option value="Asa Norte">Asa Norte</ion-option>
+                            <ion-option value="Asa Sul">Asa Sul</ion-option>
+                            <ion-option value="Gama">Gama</ion-option>
+                        </ion-select>
+                    </ion-item>
+            
+                    <ion-item class="item">
+                        <ion-label>Preferência de Atividade</ion-label>
+                        <ion-select [(ngModel)]="user.preference" name="preference">
+                            <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
+                            <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
+                            <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
+                            <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
+                        </ion-select>
+                    </ion-item>
+            
+                    <ion-item class="item">
+                        <ion-label>Como conheceu o Laços?</ion-label>
+                        <ion-select [(ngModel)]="user.howDidYouKnow" name="howDidYouKnow">
+                            <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
+                            <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
+                            <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
+                            <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
+                            <ion-option value="Outros">Outros</ion-option>
+                        </ion-select>
+                    </ion-item>
+            
+                    <ion-item class="item">
+                        <ion-label floating>DDD</ion-label>
+                        <ion-input class="input" [(ngModel)]="user.ddd" type="text" name="ddd"></ion-input>
+                    </ion-item> -->
+            
+                    
+            
+                    <!-- <ion-list radio-group [(ngModel)]="user.genre" name="genre">
+                        <ion-list-header>
+                            Sexo
+                        </ion-list-header>
+            
+                        <ion-item>
+                            <ion-label>Palhaçinho</ion-label>
+                            <ion-radio checked="true" value="Masculino"></ion-radio>
+                        </ion-item>
+            
+                        <ion-item>
+                            <ion-label>Palhaçinha</ion-label>
+                            <ion-radio value="Feminino"></ion-radio>
+                        </ion-item>
+                    </ion-list>
+            
+                    <ion-item class="item">
+                        <ion-label>Desejo visitar instituições de caridade</ion-label>
+                    </ion-item>
+            
+                    <ion-list radio-group [(ngModel)]="user.want_ongs" name="want_ongs">
+                        <ion-item class="item">
+                            <ion-label>Sim</ion-label>
+                            <ion-radio checked="true" value="true"></ion-radio>
+                        </ion-item>
+            
+                        <ion-item class="item">
+                            <ion-label>Não</ion-label>
+                            <ion-radio value="false"></ion-radio>
+                        </ion-item>
+                    </ion-list>
+            
+                </ion-list> -->
+                </ion-list>
+            
+                <div class="div-btn">
+                    <button id="send-btn" ion-button type="submit">Cadastrar</button>
+                </div>
+            </div>
 
 
     </form>
