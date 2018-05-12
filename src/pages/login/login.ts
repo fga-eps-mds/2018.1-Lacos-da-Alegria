@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, MenuController} from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { RestProvider } from '../../providers/rest/rest';
-import { ActivitiesListPage } from '../activities-list/activities-list';
+//import { ActivitiesListPage } from '../activities-list/activities-list';
 
 @Component({
   selector: 'page-login',
@@ -19,12 +19,12 @@ export class LoginPage {
 
   userLogin(){
     //Esperando Função login ser implementada.
-    this.restProvider.userLogin(this.user).then((result) => {
-      console.log(result);
-      this.navController.push(ActivitiesListPage);
-    }, (err) => {
-       console.log(err);
-    });
+    // this.restProvider.userLogin(this.user).then((result) => {
+    //   console.log(result);
+    //   this.navController.push(ActivitiesListPage);
+    // }, (err) => {
+    //    console.log(err);
+    // });
   }
 
   ionViewDidEnter() {
