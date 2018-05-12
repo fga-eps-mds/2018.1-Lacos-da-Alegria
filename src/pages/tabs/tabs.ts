@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfilePage } from '../profile/profile';
-import { ActivitiesListPage } from '../activities-list/activities-list';
+import {  ListActivityPage } from '../list-activity/list-activity';
 import { NewsPage } from '../news/news';
 import { MenuAppPage } from '../menuApp/menuApp';
 
@@ -12,7 +12,7 @@ import { MenuAppPage } from '../menuApp/menuApp';
 
 export class TabsPage {
     ProfileRoot = ProfilePage;
-    ActivitiesRoot = ActivitiesListPage;
+    ActivitiesRoot =  ListActivityPage;
     NewsRoot = NewsPage;
     MenuRoot = MenuAppPage;
 }

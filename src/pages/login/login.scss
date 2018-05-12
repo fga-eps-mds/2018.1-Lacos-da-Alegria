@@ -2,36 +2,84 @@ page-login {
     
     .main{
         background-color: #084887;
+        
+        
     }
-    .login-box{
-        background-color: #E3ECF5;
+    .field_login{
+        //position: absolute;
+        margin-top: 10h;
+        margin-left: 10vh;
+        text-align: center;
+        text-decoration-color: #084887;
+        #item{
+
+            //background-color: rgb(73, 66, 66);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border-color: black;
+            max-width: 34vh;
+            max-height: 2vh;
+            
+            
+           // display: none;
+        }
+        #item2{
+            margin-top: 1.5vh;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border-color: black;
+            max-width: 34vh;
+            max-height: 2vh;;
+            
+           // display: none;
+        }
     }
-    .credential-box{
-        background-color: transparent;
-        position: absolute;
-        top: 6%;
-    }
-    .item{
-        background-color: gray;
-        border-radius: 15px;
-        border-color: black;
-       // display: none;
-    }
+    
     .input{
         background-color: transparent;
     }
     .div-btn{
-        position: absolute;
+        //position: static;
         text-align: center;
         top: 29%;
-        left: 35%;
+        margin-left: 10vh;
+        max-width: 34vh;
+        margin-top: 5vh;
+        //border-color: antiquewhite;
 
         #login-btn{
-            background-color: #FF4605;
+            background-color:#084887;
+            // background-color: #FF4605;
+            //border-color: antiquewhite;
+            border-radius: 5px;
+            border-width: 1vh;
+            //border-right-width: 1vh;
+            
         }
         #register-btn{
             background-color:#0D68A3;
         }
+    }
+    .remenber{
+        
+        margin-left: 11.8vh;
+    }
+    #signup-btn{
+        margin-left: 10vh;
+        max-width: 34vh;
+        margin-top: 5vh;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    .remenber_pass{
+        margin-left: 20.5vh;
+        color: white;
+    }
+    .logo{
+        width: 30vh;
+        height: 30vh;
+        margin-left: 10vh;
+        margin-top: 5vh;
     }
 
 }
