@@ -1,3 +1,4 @@
+import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { LocalUser } from '../../models/local-user';
 import { NavController } from 'ionic-angular';
@@ -12,7 +13,7 @@ import { StorageService } from '../../providers/storage.service';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public navController: NavController,  public restProvider: RestProvider, public storage: StorageService) {
+  constructor(public alertCtrl: AlertController, public navController: NavController,  public restProvider: RestProvider, public storage: StorageService) {
 
   }
   BtnRegister(){
@@ -50,10 +51,16 @@ export class LoginPage {
         // let data2 = this.storage.getLocalUser();
         // console.log('data2 = ', data2);
         this.navController.push(HomePage);
-        
+
       },
       error => {
-        console.log(error);
+        let alert = this.alertCtrl.create({
+          title: 'Ops!',
+          subTitle: 'Nome de usuário ou senha incorretos!'+
+          ' Por favor, verifique seus dados e tente novamente.',
+          buttons: ['OK']
+        });
+        alert.present();
       });
   }
 
