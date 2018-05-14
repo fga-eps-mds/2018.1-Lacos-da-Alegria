@@ -16,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { NewsPage } from '../pages/news/news';
 import { MenuAppPage } from '../pages/menuApp/menuApp';
 import { ListActivityPage } from '../pages/list-activity/list-activity';
+import { HelpPage } from '../pages/help/help';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,7 +42,8 @@ import { RestProvider } from '../providers/rest/rest';
     TabsPage,
     NewsPage,
     MenuAppPage,
-    ListActivityPage
+    ListActivityPage,
+    HelpPage
     
   ],
 
@@ -68,7 +70,8 @@ import { RestProvider } from '../providers/rest/rest';
     TabsPage,
     NewsPage,
     MenuAppPage,
-    ListActivityPage
+    ListActivityPage,
+    HelpPage
   ],
 
   providers: [

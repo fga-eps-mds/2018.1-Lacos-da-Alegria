@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-news',
-  templateUrl: 'news.html',
+  selector: 'page-help',
+  templateUrl: 'help.html',
 })
 
-export class NewsPage {
+export class HelpPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
+    console.log('ionViewDidLoad HelpPage');
   }
 
 }

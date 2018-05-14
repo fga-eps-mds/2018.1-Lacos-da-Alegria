@@ -48,6 +48,9 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$radio-ios-color-on: secondary;
+
+
 
 
 
@@ -60,6 +63,8 @@ $toolbar-ios-background:#084887;
 $toolbar-md-background: #084887;
 $toolbar-wp-background: #084887;
 $tabs-wp-background   : #084887;
+$radio-md-color-off: primary;
+//$radio-md-color-on: dark;
 
 $background-color:  #e3ecf5;
 

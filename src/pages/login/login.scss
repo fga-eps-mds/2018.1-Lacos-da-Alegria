@@ -1,5 +1,9 @@
 page-login {
-
+    
+    .main .scroll-content{
+        overflow: hidden;
+    }
+    
     .main{
         background-color: #084887;
     }
@@ -15,29 +19,24 @@ page-login {
         margin: auto;
       }
     }
+    
     .field_login{
         margin: 0vh 10vh;
         text-align: center;
         text-decoration-color: #084887;
         #item{
-
-            //background-color: rgb(73, 66, 66);
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             border-color: black;
             max-height: 2vh;
-
-
-           // display: none;
         }
+        
         #item2{
             margin-top: 1.5vh;
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             border-color: black;
             max-height: 2vh;;
-
-           // display: none;
         }
 
     }
@@ -45,6 +44,7 @@ page-login {
     .input{
         background-color: transparent;
     }
+    
     .div-btn{
         text-align: center;
         top: 30%;

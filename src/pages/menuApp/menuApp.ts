@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+
+import { AboutPage } from '../about/about';
+import { SettingsPage } from '../settings/settings';
+import { ListActivityPage } from '../list-activity/list-activity';
+import { HelpPage } from '../help/help';
+
 
 @Component({
   selector: 'page-menuApp',
@@ -15,4 +21,22 @@ export class MenuAppPage {
     console.log('ionViewDidLoad NewsPage');
   }
 
+  listActivitiesBtn() {
+    this.navCtrl.push(ListActivityPage)
+  }
+  
+  helpBtn() {
+    this.navCtrl.push(HelpPage)
+  }
+
+  aboutBtn() {
+    this.navCtrl.push(AboutPage)
+  }
+
+  settingsBtn() {
+    this.navCtrl.push(SettingsPage)
+  }
+
+  signOutBtn() {
+  }
 }

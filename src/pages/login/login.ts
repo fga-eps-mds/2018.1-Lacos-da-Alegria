@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { RestProvider } from '../../providers/rest/rest';
-import { ActivitiesListPage } from '../activities-list/activities-list';
 import { TabsPage } from '../tabs/tabs';
 
 @Component({

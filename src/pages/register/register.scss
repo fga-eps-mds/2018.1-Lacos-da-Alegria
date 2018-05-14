@@ -1,6 +1,13 @@
 page-register {
+   .register-box .scroll-content{
+     overflow: hidden;
+   }
     .register-box{
-        background-color:  #084887;
+        background-color: #084887;
+    }
+
+    #imgtopo{
+      font-size: 15vh;
     }
     .credential-box{
         background-color: transparent;
@@ -9,92 +16,78 @@ page-register {
         background-color: transparent;
         color: black;
     }
+    
     .register{
-        
-        margin-left: 12vh;
-        max-width: 34vh;
-        margin-top: 5vh;
-        text-align: center;
-        // max-height: 2vh;
-        // min-height: 7.2vh;
-        .item1{
-            //background-color: #0D68A3;
-            border-radius: 5px;
-            max-width: 34vh;
-            max-height: 2vh;
-            border: 2px solid #fff;
-            
+        width: 100%;
+        margin-top: 2vh;
 
-            //margin-left: 10vh;
-            
+        ion-item{
+            margin-top: 5vh;
+            border-radius: 5px;
+            border: 2px solid #0565c0;
         }
-        .item2{
-            //background-color: #0D68A3;
-            border-radius: 5px;
-            max-width: 34vh;
-            max-height: 2vh;
-            margin-top: 2vh;
-            border: 2px solid #fff;
-            
 
-            //margin-left: 10vh;
-            
-        }
-        .item3{
-            //background-color: #0D68A3;
-            border-radius: 5px;
-            max-width: 34vh;
-            max-height: 2vh;
-            margin-top: 2vh;
-            border: 2px solid #fff;
-            
-
-            //margin-left: 10vh;
-            
-        }
-        .item4{
-            //background-color: #0D68A3;
-            border-radius: 5px;
-            max-width: 34vh;
-            max-height: 2vh;
-            margin-top: 2vh;
-            border: 2px solid #fff;
-            
-
-            //margin-left: 10vh;
-            
+        .item-inner, ion-input {
+          border-bottom-color: transparent !important;
+          box-shadow: none !important;
         }
 
     }
 
     
-
-
-
-    .input{
-        //background-color: green;
+    
+    #btnProx{
+      margin-top: 5vh;
+      background-color:transparent;
+      border-radius: 5px;
+      border: 2px solid #0565c0;
+      width: 25vh;
     }
-    .div-btn{
-        position: relative;
-        text-align: center;
-        top: 29%;
-        //left: 35%;
-        //margin-left: vh;
-        
-        
-        #send-btn{
-            
-            background-color:transparent;
-            border-radius: 5px;
-            border: 2px solid #fff;
-            width: 25vh;
-            
-        }
+
+    #btnAnt{
+      margin-top: 5vh;
+      background-color:transparent;
+      border-radius: 5px;
+      border: 2px solid #0565c0;
+      width: 25vh;
     }
-    .perfil_img{
-        margin-top: 5vh;
-        border-radius: 160px;
-        margin-left: 12vh;
+
+    #btnEnviar{
+      margin-top: 5vh;
+      background-color:transparent;
+      border-radius: 5px;
+      border: 2px solid #0565c0;
+      width: 25vh;
+    }
+
+    .lastItem{
+      height: 20vh;
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid #0565c0;
+
+    .iradio{
+      float: left;
+      width: 20vh;
+    }
+
+    .eradio{
+      float: right;
+      width: 20vh;
+    }
+    }
+
+
+
+    .lastItem{
+      
+      border-radius: 5px;
+      border: 2px solid #0565c0;
+    }
+
+    ion-radio{
+        border-radius: 5px;
+        border: 2px solid #0565c0;
     }
 
 }

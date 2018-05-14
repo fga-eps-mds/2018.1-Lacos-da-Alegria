@@ -10,7 +10,7 @@ import { ProfilePage} from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';*/
 import { WelcomePage } from '../pages/welcome/welcome';
-import { TabsPage } from '../pages/tabs/tabs';
+//import { TabsPage } from '../pages/tabs/tabs';
 
 
 @Component({
