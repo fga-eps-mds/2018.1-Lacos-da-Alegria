@@ -12,7 +12,8 @@ export class ActivityDetailsPage {
   activity: any;
 
   constructor(public navCtrl: NavController, public params: NavParams, public restProvider: RestApiProvider) {
-    let id = this.params.get('id');
+    //let id = this.params.get('id');
+    let id = 1;
     this.getActivity(id);
   }
 
