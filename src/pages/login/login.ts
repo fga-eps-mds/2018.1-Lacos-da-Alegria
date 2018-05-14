@@ -7,6 +7,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { HomePage } from '../home/home';
 import { StorageService } from '../../providers/storage.service';
 
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'

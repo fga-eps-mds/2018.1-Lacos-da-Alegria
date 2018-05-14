@@ -1,8 +1,11 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Cadastro</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Sobre</ion-title>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content>
     <form (ngSubmit)="saveUser()">
@@ -76,7 +79,7 @@
                 <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
                 <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
                 <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
-                <ion-option value="Outros">Outros</ion-option>                
+                <ion-option value="Outros">Outros</ion-option>
             </ion-select>
         </ion-item>
 
@@ -89,17 +92,17 @@
             <ion-label floating>Whatsapp</ion-label>
             <ion-input [(ngModel)]="user.whatsapp" type="text" name="whatsapp"></ion-input>
         </ion-item>
-        
+
         <ion-list radio-group [(ngModel)]="user.genre" name="genre">
             <ion-list-header>
                 Sexo
             </ion-list-header>
-            
+
             <ion-item>
                 <ion-label>Palhaçinho</ion-label>
                 <ion-radio checked="true" value="Masculino"></ion-radio>
             </ion-item>
-    
+
             <ion-item>
                 <ion-label>Palhaçinha</ion-label>
                 <ion-radio value="Feminino"></ion-radio>
@@ -127,7 +130,7 @@
     <div class="div-btn">
         <button id="send-btn" ion-button type="submit">Enviar</button>
     </div>
-    
+
 
     </form>
 </ion-content>
@@ -186,7 +189,7 @@
             <ion-label floating>Data de Nascimento</ion-label>
             <ion-input class="input" formControlName="birth" type="text"></ion-input>
         </ion-item>
-        
+
         <ion-item class="item">
             <ion-label>Cidade Satélite</ion-label>
             <ion-select formControlName ="cities" [(ngModel)]="region">
@@ -229,14 +232,14 @@
                 <ion-option value="redeSocial">Através de uma rede social do Laços</ion-option>
                 <ion-option value="palestr">Através de uma palestra</ion-option>
                 <ion-option value="reportagem">Em uma reportagem na televisão</ion-option>
-                <ion-option value="outro">Outros</ion-option>                
+                <ion-option value="outro">Outros</ion-option>
             </ion-select>
         </ion-item>
 
         <ion-item class="item">
             <ion-label>Deseja visitar instituições de caridade?</ion-label>
         </ion-item>
-        
+
         <ion-item class="item">
             <ion-label>Sim</ion-label>
             <ion-checkbox color="dark" formControlName="participar" checked="false"></ion-checkbox>
@@ -246,12 +249,12 @@
             <ion-list-header>
                 Sexo
             </ion-list-header>
-            
+
             <ion-item>
                 <ion-label>Palhaçinho</ion-label>
                 <ion-radio checked="true" value="M"></ion-radio>
             </ion-item>
-            
+
             <ion-item>
                 <ion-label>Palhaçinha</ion-label>
                 <ion-radio value="F"></ion-radio>
