@@ -11,12 +11,12 @@ import { LoginPage } from '../login/login';
 export class HomePage {
   users: any;
 
-  constructor(public navCtrl: NavController, public RestUserProvider: RestUserProvider) {
+  constructor(public navCtrl: NavController, public RestProvider: RestUserProvider) {
     //this.getUsers();
   }
 
   userLogout(){
     this.navCtrl.push(LoginPage);
   }
-  
+
 }
