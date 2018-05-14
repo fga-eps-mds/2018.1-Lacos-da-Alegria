@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AboutPage } from '../pages/about/about';
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
@@ -20,6 +21,7 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
 
 import { HttpClientModule } from '@angular/common/http'
 import { RestProvider } from '../providers/rest/rest';
+import { StorageService } from '../providers/storage.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { RestProvider } from '../providers/rest/rest';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
   ],
 
   bootstrap: [IonicApp],
@@ -65,7 +68,8 @@ import { RestProvider } from '../providers/rest/rest';
     RestApiProvider,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    StorageService,
   ]
 })
 
