@@ -1,44 +1,52 @@
 page-menuApp{
+
+    $lightblue-color: #0565c0;
+    $blue-color: #084887;
+
     .topo{
-      height: 30vh;
-      background-color: #0565c0;
+        height: 30vh;
+        background-color: $lightblue-color;
     }
 
     .main .scroll-content{
-      overflow: hidden;
+        overflow: hidden;
     }
 
     .main{
-        background:#084887;
+        background: $blue-color;
+        border: 0px;
         margin: 0px;
         padding: 0px;
-        border: 0px;
         width: 100%;
     }
 
     #list_activities-btn{
+        background: $lightblue-color;
         margin-top: 4vh;
-        background: #0565c0;
         width: 100%;
     }
+
     #help-btn{
+        background: $lightblue-color;
         margin-top: 4vh;
-        background: #0565c0;
         width: 100%;
     }
+
     #about-btn{
+        background: $lightblue-color;
         margin-top: 0.5vh;
-        background: #0565c0;
         width: 100%;
     }
+
     #settings-btn{
+        background: $lightblue-color;
         margin-top: 0.5vh;
-        background: #0565c0;
         width: 100%;
     }
+    
     #exit-btn{
+        background: $lightblue-color;
         margin-top: 0.5vh;
-        background: #0565c0;
         width: 100%;
     }
 

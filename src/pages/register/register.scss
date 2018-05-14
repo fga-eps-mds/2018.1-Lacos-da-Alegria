@@ -1,20 +1,26 @@
 page-register {
-   .register-box .scroll-content{
-     overflow: hidden;
-   }
+    $blue-color: #084887;
+    $lightblue-color: #0565c0;
+    
+    .register-box .scroll-content{
+      overflow: hidden;
+    }
+
     .register-box{
-        background-color: #084887;
+      background-color: $blue-color;
     }
 
     #imgtopo{
       font-size: 15vh;
     }
+
     .credential-box{
-        background-color: transparent;
+      background-color: transparent;
     }
+
     .item{
-        background-color: transparent;
-        color: black;
+      background-color: transparent;
+      color: black;
     }
     
     .register{
@@ -22,9 +28,9 @@ page-register {
         margin-top: 2vh;
 
         ion-item{
-            margin-top: 5vh;
-            border-radius: 5px;
-            border: 2px solid #0565c0;
+          border: 2px solid $lightblue-color;
+          border-radius: 5px;
+          margin-top: 5vh;
         }
 
         .item-inner, ion-input {
@@ -34,60 +40,54 @@ page-register {
 
     }
 
-    
-    
     #btnProx{
-      margin-top: 5vh;
       background-color:transparent;
+      border: 2px solid $lightblue-color;
       border-radius: 5px;
-      border: 2px solid #0565c0;
+      margin-top: 5vh;
       width: 25vh;
     }
 
     #btnAnt{
-      margin-top: 5vh;
       background-color:transparent;
+      border: 2px solid $lightblue-color;
       border-radius: 5px;
-      border: 2px solid #0565c0;
+      margin-top: 5vh;
       width: 25vh;
     }
 
     #btnEnviar{
-      margin-top: 5vh;
       background-color:transparent;
+      border: 2px solid $lightblue-color;
       border-radius: 5px;
-      border: 2px solid #0565c0;
+      margin-top: 5vh;
       width: 25vh;
     }
 
     .lastItem{
+      border: 2px solid $lightblue-color;
+      border-radius: 5px;
       height: 20vh;
       width: 100%;
-      border-radius: 5px;
-      border: 2px solid #0565c0;
 
-    .iradio{
-      float: left;
-      width: 20vh;
+      .iradio{
+        float: left;
+        width: 20vh;
+      }
+
+      .eradio{
+        float: right;
+        width: 20vh;
+      }
     }
-
-    .eradio{
-      float: right;
-      width: 20vh;
-    }
-    }
-
-
 
     .lastItem{
-      
+      border: 2px solid $lightblue-color;
       border-radius: 5px;
-      border: 2px solid #0565c0;
     }
 
     ion-radio{
-        border-radius: 5px;
-        border: 2px solid #0565c0;
+      border: 2px solid $lightblue-color;
+      border-radius: 5px;
     }
-
 }
