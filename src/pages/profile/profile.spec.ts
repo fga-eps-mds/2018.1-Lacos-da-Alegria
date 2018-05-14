@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { LoginPage } from './login';
+import { ProfilePage } from './profile';
 import { IonicModule, Platform, NavController} from 'ionic-angular/index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-describe('Login', () => {
+describe('Profile', () => {
   let de: DebugElement;
-  let comp: LoginPage;
-  let fixture: ComponentFixture<LoginPage>;
+  let comp: ProfilePage;
+  let fixture: ComponentFixture<ProfilePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginPage],
+      declarations: [ProfilePage],
       imports: [
-        IonicModule.forRoot(LoginPage)
+        IonicModule.forRoot(ProfilePage)
       ],
       providers: [
         NavController
@@ -24,8 +24,10 @@ describe('Login', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginPage);
+    fixture = TestBed.createComponent(ProfilePage);
     comp = fixture.componentInstance;
-    de = fixture.debugElement.query(By.css('h3'));
+  });
+  it('should be created', () => {
+    expect(comp instanceof ProfilePage).toBe(true);
   });
 });
