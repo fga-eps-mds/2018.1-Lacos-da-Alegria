@@ -30,7 +30,7 @@
                 </ion-item>
 
                 <div class="btnNextStep">
-                    <button id="btnProx" ion-button (click)="btnNext()">Próximo Passo</button>
+                    <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
                 </div>
 
               </ion-list>
@@ -60,8 +60,8 @@
               </ion-item>
 
               <div class="btnNextStep">
-                  <button id="btnAnt" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btnProx" ion-button (click)="btnNext()">Próximo Passo</button>
+                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
               </div>
 
 
@@ -102,15 +102,15 @@
                       <ion-option value="Outros">Outros</ion-option>
                   </ion-select>
               </ion-item>
-              
+
               <ion-item>
                   <ion-icon name="person" item-left></ion-icon>
                   <ion-input class="input" [(ngModel)]="user.ddd" type="text" name="ddd" placeholder="DDD"></ion-input>
               </ion-item>
 
               <div class="btnNextStep">
-                  <button id="btnAnt" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btnProx" ion-button (click)="btnNext()">Próximo Passo</button>
+                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
               </div>
 
             </ion-list>
@@ -118,7 +118,7 @@
 
           <ion-slide>
               <ion-list>
-                <div class=lastItem2>
+                <div class=last-item2>
                   <ion-list radio-group [(ngModel)]="user.genre" name="genre">
                       <div class="iradio">
                           <ion-label>Sexo Masculino</ion-label>
@@ -131,13 +131,13 @@
                       </div>
                   </ion-list>
                 </div>
-                
-                <div class=lastItem>
+
+                <div class=last-item>
                     <p text-center>Desejo visitar instituições de caridade</p>
-                
+
 
                 <ion-list radio-group [(ngModel)]="user.want_ongs" name="want_ongs">
-                    
+
                     <div class="iradio">
                         <ion-label>Sim</ion-label>
                         <ion-radio checked="true" value="true"></ion-radio>
@@ -147,14 +147,14 @@
                         <ion-label>Não</ion-label>
                         <ion-radio value="false"></ion-radio>
                     </div>
-                
+
                 </ion-list>
 
                 </div>
 
                 <div class="btnNextStep">
-                  <button id="btnAnt" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btnEnviar" ion-button type="submit">Cadastrar</button>
+                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button id="btn-enviar" ion-button type="submit">Cadastrar</button>
                 </div>
               </ion-list>
             </ion-slide>

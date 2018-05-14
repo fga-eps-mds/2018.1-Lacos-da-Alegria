@@ -1,93 +1,88 @@
 page-register {
-    $blue-color: #084887;
-    $lightblue-color: #0565c0;
-    
-    .register-box .scroll-content{
-      overflow: hidden;
-    }
+  $blue-color: #084887;
+  $lightblue-color: #0565c0;
+  $black-color: #000000;
 
-    .register-box{
-      background-color: $blue-color;
-    }
+  .register-box .scroll-content {
+    overflow: hidden;
+  }
 
-    #imgtopo{
-      font-size: 15vh;
-    }
+  .register-box {
+    background-color: $blue-color;
+  }
 
-    .credential-box{
-      background-color: transparent;
-    }
+  #imgtopo {
+    font-size: 15vh;
+  }
 
-    .item{
-      background-color: transparent;
-      color: black;
-    }
-    
-    .register{
-        width: 100%;
-        margin-top: 2vh;
+  .credential-box {
+    background-color: transparent;
+  }
 
-        ion-item{
-          border: 2px solid $lightblue-color;
-          border-radius: 5px;
-          margin-top: 5vh;
-        }
+  .item {
+    background-color: transparent;
+    color: black;
+  }
 
-        .item-inner, ion-input {
-          border-bottom-color: transparent !important;
-          box-shadow: none !important;
-        }
+  .register {
+    margin-top: 2vh;
+    width: 100%;
 
-    }
-
-    #btnProx{
-      background-color:transparent;
+    ion-item {
       border: 2px solid $lightblue-color;
       border-radius: 5px;
       margin-top: 5vh;
-      width: 25vh;
+    }
+  }
+
+  #btn-prox {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 5vh;
+    width: 25vh;
+  }
+
+  #btn-ant {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 5vh;
+    width: 25vh;
+  }
+
+  #btn-enviar {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 5vh;
+    width: 25vh;
+  }
+
+  .last-item {
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    height: 20vh;
+    width: 100%;
+
+    .iradio {
+      float: left;
+      width: 20vh;
     }
 
-    #btnAnt{
-      background-color:transparent;
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-      margin-top: 5vh;
-      width: 25vh;
+    .eradio {
+      float: right;
+      width: 20vh;
     }
+  }
 
-    #btnEnviar{
-      background-color:transparent;
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-      margin-top: 5vh;
-      width: 25vh;
-    }
+  .last-item2 {
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+  }
 
-    .lastItem{
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-      height: 20vh;
-      width: 100%;
-
-      .iradio{
-        float: left;
-        width: 20vh;
-      }
-
-      .eradio{
-        float: right;
-        width: 20vh;
-      }
-    }
-
-    .lastItem{
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-    }
-
-    ion-radio{
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-    }
+  ion-radio {
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+  }
 }
