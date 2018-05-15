@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { LocalUser } from '../../models/local-user';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { TabsPage } from '../tabs/tabs';
 import { RestUserProvider } from '../../providers/rest-user';
-import { HomePage } from '../home/home';
 import { StorageService } from '../../providers/storage.service';
 
 
@@ -17,10 +17,10 @@ export class LoginPage {
   constructor(public alertCtrl: AlertController, public navController: NavController,  public restProvider: RestUserProvider, public storage: StorageService) {
 
   }
-  BtnRegister(){
+
+  register(){
     this.navController.push(RegisterPage);
   }
-
   // userLogin(){
   //   this.restProvider.userLogin(this.user).then((result) => {
   //     console.log(result);
@@ -51,7 +51,9 @@ export class LoginPage {
         // this.storage.setLocalUser(null);
         // let data2 = this.storage.getLocalUser();
         // console.log('data2 = ', data2);
-        this.navController.push(HomePage);
+        // this.navController.push(HomePage);
+        this.navController.push(TabsPage);
+        
 
       },
       error => {

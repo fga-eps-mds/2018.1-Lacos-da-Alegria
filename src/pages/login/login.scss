@@ -1,30 +1,93 @@
 page-login {
-    .login-box{
-        background-color: #E3ECF5;
+
+  $blue-color: #084887;
+  $lightblue-color: #0565c0;
+  $black-color: #000;
+  $white-color: #fff;
+
+  .scroll-content{
+    overflow: hidden;
+  }
+
+  .main{
+    background-color: $blue-color;
+  }
+
+  .imgcont{
+    height: 30vh;
+    width: 100%;
+
+    .logo{
+      display: block;
+      height: 30vh;
+      margin: auto;
+      width: 30vh;
     }
-    .credential-box{
-        background-color: transparent;
-        position: absolute;
-        top: 6%;
-    }
+  }
+
+  .field-login{
+    margin: 0 10vh;
+    text-align: center;
+    text-decoration-color: $blue-color;
+
     .item{
-        background-color: transparent;
-    }
-    .input{
-        background-color: transparent;
-    }
-    .div-btn{
-        position: absolute;
-        text-align: center;
-        top: 29%;
-        left: 35%;
-
-        #login-btn{
-            background-color: #FF4605;
-        }
-        #register-btn{
-            background-color:#0D68A3;
-        }
+      background-color: $white-color;
+      border-color: $black-color;
+      border-radius: 5px;
+      max-height: 2vh;
     }
 
+    .item2{
+      background-color: $white-color;
+      border-color: $black-color;
+      border-radius: 5px;
+      margin-top: 1.5vh;
+      max-height: 2vh;
+    }
+
+  }
+
+  .input{
+    background-color: transparent;
+  }
+
+  .div-btn{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 5vh;
+    text-align: center;
+    top: 30%;
+
+    .login-btn{
+      background-color: $blue-color;
+      border: 1px groove $lightblue-color;
+      border-radius: 6px;
+      padding: 2vh 14vh;
+    }
+  }
+
+  .remenber{
+    font-size: 14px;
+    margin-left: 21vh;
+  }
+
+  .registercont{
+    height: 20vh;
+
+    .signup-btn{
+      background-color: $blue-color;
+      border: 1px groove $lightblue-color;
+      border-radius: 6px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5vh;
+      padding: 0 1.75vh;
+    }
+  }
+
+  .remenber-pass{
+    color: $white-color;
+    margin-left: 24vh;
+  }
 }
