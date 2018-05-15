@@ -5,13 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
+//import { HomePage } from '../pages/home/home';
+//import { LoginPage } from '../pages/login/login';
 import { ProfilePage} from '../pages/profile/profile';
-import { RegisterPage } from '../pages/register/register';
+//import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
-// import { ListUserPage } from '../pages/listuser/listuser';
+//import { ListUserPage } from '../pages/listuser/listuser';
+//import { ListUserPage } from '../pages/listuser/listuser';
 
 
 @Component({
@@ -20,7 +21,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AboutPage;
+  rootPage: any = WelcomePage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -28,11 +29,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Início', component: HomePage },
-      { title: 'Bem-Vindo', component: WelcomePage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Registro', component: RegisterPage },
-      { title: 'Lista de Atividades', component: ActivitiesListPage },
+      { title: 'Atividades', component: ActivitiesListPage },
       { title: 'Perfil', component: ProfilePage },
       { title: 'Sobre', component: AboutPage },
       { title: 'Configurações', component: SettingsPage }
