@@ -4,7 +4,7 @@ import { DebugElement } from '@angular/core';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { LoginPage } from './login';
 import { IonicModule, Platform, NavController} from 'ionic-angular/index';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StorageService } from '../../providers/storage.service';
@@ -21,7 +21,7 @@ describe('Login', () => {
         IonicModule.forRoot(LoginPage)
       ],
       providers: [
-        RestProvider,
+        RestUserProvider,
         NavController,
         HttpClient,
         HttpHandler,

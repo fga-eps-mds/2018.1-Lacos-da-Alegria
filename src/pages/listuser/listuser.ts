@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { RegisterPage } from '../register/register';
 
 /**
@@ -20,7 +20,7 @@ export class ListUserPage {
   // user = { name: '', address: '', email: '', password: ''};
   users: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public RestProvider: RestUserProvider) {
     this.getListUsers();
   }
 
@@ -29,7 +29,7 @@ export class ListUserPage {
   }
 
   getListUsers(){
-    this.restProvider.getListUsers()
+    this.RestProvider.getListUsers()
     .then(data => {
       this.users = data;
       console.log(this.users);
@@ -38,6 +38,6 @@ export class ListUserPage {
 
   BtnGoToRegister(){
     this.navCtrl.push(RegisterPage);
-  } 
+  }
 
 }

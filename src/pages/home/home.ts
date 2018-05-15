@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { LoginPage } from '../login/login';
 import { StorageService } from '../../providers/storage.service';
 
@@ -14,7 +14,7 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController, 
-    public restProvider: RestProvider,
+    public restProvider: RestUserProvider,
     ) {
   }
 
@@ -23,5 +23,5 @@ export class HomePage {
     console.log('EOQ' );
     this.navCtrl.push(LoginPage);
   }
-  
+
 }

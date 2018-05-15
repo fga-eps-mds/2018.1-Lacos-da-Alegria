@@ -5,7 +5,7 @@ import { RegisterPage } from './register';
 import { IonicModule, Platform, NavController} from 'ionic-angular/index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 
 
 describe('Register', () => {
@@ -40,7 +40,7 @@ describe('Register', () => {
       providers: [
         NavController,
         {
-          provide: RestProvider
+          provide: RestUserProvider
         }
       ]
     });

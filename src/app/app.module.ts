@@ -17,10 +17,10 @@ import { ListUserPage } from '../pages/listuser/listuser'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { RestApiProvider } from '../providers/rest-api/rest-api';
+import { RestActivityProvider } from '../providers/rest-activity';
 
 import { HttpClientModule } from '@angular/common/http'
-import { RestProvider } from '../providers/rest/rest';
+import { RestUserProvider } from '../providers/rest-user';
 import { StorageService } from '../providers/storage.service';
 
 @NgModule({
@@ -65,10 +65,10 @@ import { StorageService } from '../providers/storage.service';
 
   providers: [
     StatusBar,
-    RestApiProvider,
+    RestActivityProvider,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider,
+    RestUserProvider,
     StorageService,
   ]
 })

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { LocalUser } from '../../models/local-user';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestUserProvider } from '../../providers/rest-user';
 import { HomePage } from '../home/home';
 import { StorageService } from '../../providers/storage.service';
 
@@ -14,7 +14,7 @@ import { StorageService } from '../../providers/storage.service';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public alertCtrl: AlertController, public navController: NavController,  public restProvider: RestProvider, public storage: StorageService) {
+  constructor(public alertCtrl: AlertController, public navController: NavController,  public restProvider: RestUserProvider, public storage: StorageService) {
 
   }
   BtnRegister(){

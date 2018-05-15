@@ -3,7 +3,7 @@ import { NavController , MenuController} from 'ionic-angular';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { LoginPage } from '../login/login';
 // import { EmailValidator } from '../../validators/email';
-import { RestProvider } from '../../providers/rest/rest'
+import { RestUserProvider } from '../../providers/rest-user';
 //import { ListUserPage } from '../listuser/listuser';
 import { LoginPage } from '../login/login';
 
@@ -16,10 +16,10 @@ export class RegisterPage {
   submitAttemp: boolean = false;
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider, private menu: MenuController) {
+  constructor(public navCtrl: NavController, public restProvider: RestUserProvider, private menu: MenuController) {
 
   }
-  // constructor(public navController: NavController,  public formBuilder: FormBuilder, public restProvider: RestProvider) {
+  // constructor(public navController: NavController,  public formBuilder: FormBuilder, public RestUserProvider: RestUserProvider) {
   //   this.signupOne = formBuilder.group({
   //     login: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
   //     nameFull: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],

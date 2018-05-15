@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { RestProvider } from '../../providers/rest/rest'
+import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
 import { RefreshToken } from '../../models/refresh-token'
 @Component({
@@ -9,7 +9,7 @@ import { RefreshToken } from '../../models/refresh-token'
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-  constructor(private navController: NavController, public restProvider: RestProvider, public storage: StorageService) {
+  constructor(private navController: NavController, public restProvider: RestUserProvider, public storage: StorageService) {
   }
   BtnLogin(){
     // let data = this.storage.getLocalRefreshToken();

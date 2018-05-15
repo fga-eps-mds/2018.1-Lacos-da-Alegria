@@ -1,16 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StorageService } from '../storage.service';
-import { LocalUser } from '../../models/local-user';
+import { StorageService } from './storage.service';
+import { LocalUser } from '../models/local-user';
 
 /*
-  Generated class for the RestProvider provider.
+  Generated class for the RestUserProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class RestProvider {
+export class RestUserProvider {
   apiUrl = 'http://localhost:8000/api';
   fakeUrl = 'https://jsonplaceholder.typicode.com';
   // localUser = {token:'', usename:''}
@@ -99,5 +99,13 @@ export class RestProvider {
   //   });
   // }
 
-  
+  getUser(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/profile/' + id + '/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
 }
