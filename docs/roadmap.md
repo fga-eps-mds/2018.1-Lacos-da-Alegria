@@ -15,3 +15,6 @@ Este documento visa apresentar roadmaps do projeto, metodologia, arquitetura e D
 
 ## 4. Roadmap DevOps
 ![Imgur](https://i.imgur.com/YGHGKLy.png)
+
+## 5. Roadmap REALESE 2
+![Imgur](https://i.imgur.com/Btu8byY.png)
