@@ -4,7 +4,9 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { SettingsPage } from '../settings/settings';
 import { ListActivityPage } from '../list-activity/list-activity';
+import { LoginPage } from '../login/login';
 import { HelpPage } from '../help/help';
+import { RestUserProvider } from '../../providers/rest-user';
 
 
 @Component({
@@ -14,7 +16,7 @@ import { HelpPage } from '../help/help';
 
 export class MenuAppPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestUserProvider) {
   }
 
   ionViewDidLoad() {
@@ -38,5 +40,8 @@ export class MenuAppPage {
   }
 
   signOutBtn() {
+    this.restProvider.userLogout();
+    this.navCtrl.push(LoginPage);
+    console.log('EOQ' );         
   }
 }

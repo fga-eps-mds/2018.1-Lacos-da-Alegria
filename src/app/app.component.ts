@@ -32,6 +32,7 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Registro', component: RegisterPage },
       { title: 'Lista de Atividades', component: ActivitiesListPage },
+      { title: 'Atividades', component: ActivitiesListPage },
       { title: 'Perfil', component: ProfilePage },
       { title: 'Sobre', component: AboutPage },
       { title: 'Configurações', component: SettingsPage }
