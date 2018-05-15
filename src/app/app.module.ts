@@ -81,9 +81,9 @@ import { StorageService } from '../providers/storage.service';
     StatusBar,
     RestActivityProvider,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestUserProvider,
     StorageService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 
