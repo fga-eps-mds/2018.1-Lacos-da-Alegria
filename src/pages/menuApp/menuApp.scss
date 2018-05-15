@@ -1,4 +1,4 @@
-page-menuApp{
+page-menuApp {
 
   $lightblue-color: #0565c0;
   $blue-color: #084887;
@@ -8,7 +8,7 @@ page-menuApp{
     height: 30vh;
   }
 
-  .main .scroll-content {
+  .scroll-content {
     overflow: hidden;
   }
 
@@ -20,31 +20,31 @@ page-menuApp{
     width: 100%;
   }
 
-  #list-activities-btn {
+  .list-activities-btn {
     background: $lightblue-color;
     margin-top: 4vh;
     width: 100%;
   }
 
-  #help-btn {
+  .help-btn {
     background: $lightblue-color;
     margin-top: 4vh;
     width: 100%;
   }
 
-  #about-btn {
+  .about-btn {
     background: $lightblue-color;
     margin-top: .5vh;
     width: 100%;
   }
 
-  #settings-btn {
+  .settings-btn {
     background: $lightblue-color;
     margin-top: .5vh;
     width: 100%;
   }
 
-  #exit-btn {
+  .exit-btn {
     background: $lightblue-color;
     margin-top: .5vh;
     width: 100%;

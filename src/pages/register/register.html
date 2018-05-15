@@ -1,6 +1,6 @@
 <ion-content class="register-box">
    <h1 text-center>
-     <ion-icon id="imgtopo" name="person-add"></ion-icon>
+     <ion-icon class="img-topo" name="person-add"></ion-icon>
    </h1>
    <form (ngSubmit)="saveUser()">
       <div class="register">
@@ -30,7 +30,7 @@
                 </ion-item>
 
                 <div class="btnNextStep">
-                    <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+                    <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
                 </div>
 
               </ion-list>
@@ -60,8 +60,8 @@
               </ion-item>
 
               <div class="btnNextStep">
-                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
               </div>
 
 
@@ -109,8 +109,8 @@
               </ion-item>
 
               <div class="btnNextStep">
-                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
               </div>
 
             </ion-list>
@@ -153,8 +153,8 @@
                 </div>
 
                 <div class="btnNextStep">
-                  <button id="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button id="btn-enviar" ion-button type="submit">Cadastrar</button>
+                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                  <button class="btn-enviar" ion-button type="submit">Cadastrar</button>
                 </div>
               </ion-list>
             </ion-slide>

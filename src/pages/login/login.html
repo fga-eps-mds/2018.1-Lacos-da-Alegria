@@ -8,12 +8,12 @@
 
     <ion-list>
       <div class="field-login">
-        <ion-item id="item">
+        <ion-item class="item">
           <ion-label floating>Nome de usuário</ion-label>
           <ion-input [(ngModel)]="user.username" type="text" name="username"></ion-input>
         </ion-item >
 
-        <ion-item id="item2">
+        <ion-item class="item2">
             <ion-label floating>Senha</ion-label>
             <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
         </ion-item >
@@ -22,7 +22,7 @@
 
 
       <div class="div-btn">
-        <button id="login-btn" ion-button type="submit">Entrar</button>
+        <button class="login-btn" ion-button type="submit">Entrar</button>
         <!-- <p>ou</p>
         <button id="register-btn" ion-button full (click)="BtnRegister()">Cadastrar</button> -->
       </div>
@@ -35,6 +35,6 @@
 
   </form>
   <div class="registercont">
-    <button id="signup-btn" ion-button (click)="register()">Não tem conta? Cadastre-se</button>
+    <button class="signup-btn" ion-button (click)="register()">Não tem conta? Cadastre-se</button>
   </div>
 </ion-content>

@@ -3,7 +3,7 @@ page-register {
   $lightblue-color: #0565c0;
   $black-color: #000000;
 
-  .register-box .scroll-content {
+  .scroll-content {
     overflow: hidden;
   }
 
@@ -11,7 +11,7 @@ page-register {
     background-color: $blue-color;
   }
 
-  #imgtopo {
+  .img-topo {
     font-size: 15vh;
   }
 
@@ -35,7 +35,7 @@ page-register {
     }
   }
 
-  #btn-prox {
+  .btn-prox {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
@@ -43,7 +43,7 @@ page-register {
     width: 25vh;
   }
 
-  #btn-ant {
+  .btn-ant {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
@@ -51,7 +51,7 @@ page-register {
     width: 25vh;
   }
 
-  #btn-enviar {
+  .btn-enviar {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
