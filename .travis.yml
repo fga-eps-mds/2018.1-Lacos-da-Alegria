@@ -6,7 +6,7 @@ node_js:
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=f33410c64bfc2b21fb9c1040286a389153b54447650c056ab51df66abb40a11d
+    - CC_TEST_REPORTER_ID=4f8697b539a94d441afd3d8864d6102b23690278450e5bbf642d69b9bea71df9
 services:
   - docker
 before_install:
