@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { RestApiProvider } from '../../providers/rest-api/rest-api';
 
+import { RestActivityProvider } from '../../providers/rest-activity';
 import { ActivitiesListPage } from '../activities-list/activities-list';
 
 @Component({
@@ -12,7 +12,8 @@ export class ActivityDetailsPage {
   activity: any;
 
   constructor(public navCtrl: NavController, public params: NavParams, public restProvider: RestApiProvider) {
-    let id = this.params.get('id');
+    //let id = this.params.get('id');
+    let id = 1;
     this.getActivity(id);
   }
 
@@ -21,7 +22,7 @@ export class ActivityDetailsPage {
   }
 
   getActivity(id) {
-    this.restProvider.getActivity(id)
+    this.RestProvider.getActivity(id)
     .then(data => {
       this.activity = [data];
       console.log(this.activity);
