@@ -1,6 +1,5 @@
 import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { LocalUser } from '../../models/local-user';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';

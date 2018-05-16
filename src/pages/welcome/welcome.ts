@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { RestUserProvider } from '../../providers/rest-user';
-import { StorageService } from '../../providers/storage.service';
-import { RefreshToken } from '../../models/refresh-token'
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
