@@ -1,9 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { LoginPage } from '../login/login';
 // import { EmailValidator } from '../../validators/email';
-import { RestProvider } from '../../providers/rest/rest'
+import { RestUserProvider } from '../../providers/rest-user';
+//import { ListUserPage } from '../listuser/listuser';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-register',
@@ -11,13 +14,15 @@ import { RestProvider } from '../../providers/rest/rest'
 })
 export class RegisterPage {
   @ViewChild('signup') signup: any;
+  @ViewChild(Slides) slides: Slides;
+
   submitAttemp: boolean = false;
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+  constructor(public navCtrl: NavController, public restProvider: RestUserProvider) {
 
   }
-  // constructor(public navController: NavController,  public formBuilder: FormBuilder, public restProvider: RestProvider) {
+  // constructor(public navController: NavController,  public formBuilder: FormBuilder, public RestUserProvider: RestUserProvider) {
   //   this.signupOne = formBuilder.group({
   //     login: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
   //     nameFull: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
@@ -41,30 +46,41 @@ export class RegisterPage {
   //     let password = group.controls[passwordKey];
   //     let confirmPassword = group.controls[confirmPasswordKey];
 
-  //     if(password.value !== confirmPassword.value){
-  //       return {
-  //         mismatchedPasswords: true
-  //       };
-  //     }
-  //   }
-  // }
   saveUser() {
     this.restProvider.saveUser(this.user).then((result) => {
       console.log(result);
+      this.navCtrl.push(LoginPage);
     }, (err) => {
       console.log(err);
     });
   }
-  /*BtnSend(){
-    this.submitAttemp = true;
 
-    if(!this.signupOne.valid){
-      this.navController.push(LoginPage);
-    }
-    else{
-      console.log("Success!");
-      console.log(this.signupOne.value);
-    }
-  }*/
+  ionViewDidLoad(){
+    this.slides.lockSwipes(true);
+  }
+
+  btnNext(){
+    this.slides.lockSwipes(false);
+    this.slides.slideNext(500);
+    this.slides.lockSwipes(true);
+
+  }
+
+  btnBack(){
+    this.slides.lockSwipes(false);
+    this.slides.slidePrev(500);
+    this.slides.lockSwipes(true);
+
+  //   if(!this.signupOne.valid){
+  //     this.navController.push(LoginPage);
+  //   }
+  //   else{
+  //     console.log("Success!");
+  //     console.log(this.signupOne.value);
+  //   }
+  // }*/
+  // ionViewDidEnter() {
+  //   this.menu.swipeEnable(false);
+  }
 
 }
