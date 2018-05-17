@@ -9,6 +9,8 @@ import { RestUserProvider } from '../../providers/rest-user';
 //import { ListUserPage } from '../listuser/listuser';
 import { LoginPage } from '../login/login';
 
+import { AlertController } from 'ionic-angular';
+
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html'
@@ -21,7 +23,7 @@ export class RegisterPage {
   //user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
   signupForm: FormGroup;
 
-  constructor(public formBuilder: FormBuilder, public navCtrl: NavController, public restProvider: RestUserProvider) {
+  constructor(public alertCtrl: AlertController,       public formBuilder: FormBuilder, public navCtrl: NavController, public restProvider: RestUserProvider) {
     // Validators.pattern('([0-9]).{9,9}$')
     // Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')
     this.signupForm = this.formBuilder.group({
@@ -61,15 +63,44 @@ export class RegisterPage {
     });
   }
 
-  // ionViewDidLoad(){
-  //   this.slides.lockSwipes(true);
-  // }
+  showError(data){
+    console.log("chegou");
+    // console.log(this.signupForm.value.username);
+    // if(!this.signupForm.controls.username.valid){
+    var x = document.getElementById("us")
+    
+    if (!data){
+
+      x.hidden = false;
+      // let alert = this.alertCtrl.create({
+      //   title: 'New Friend!',
+      //   subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      //   buttons: ['OK']
+      // });
+      // alert.present();
+    } else {
+      x.hidden = true;
+    }
+  }
+
+  ionViewDidLoad(){
+    this.slides.lockSwipes(true);
+  }
 
   btnNext(){
-    this.slides.lockSwipes(false);
-    this.slides.slideNext(500);
-    this.slides.lockSwipes(true);
-
+    // if(!this.signupForm.valid){
+    //   let alert = this.alertCtrl.create({
+    //     title: 'New Friend!',
+    //     subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+    //     buttons: ['OK']
+    //   });
+    //   alert.present();
+    // } else{
+      this.slides.lockSwipes(false);
+      this.slides.slideNext(500);
+      this.slides.lockSwipes(true);
+    
+    
   }
 
   btnBack(){

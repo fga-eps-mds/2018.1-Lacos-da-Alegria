@@ -10,8 +10,15 @@
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="username" type="text" placeholder="Usuário"></ion-input>
+                        <ion-input formControlName="username" type="text" placeholder="Usuário" (focusout)="showError(signupForm.controls.username.valid)"></ion-input>
+                        <!-- <span *ngIf="signupForm.value.username.invalid" class="form-control alert-danger"> Nome inválido! </span> -->
                     </ion-item >
+
+                    <div hidden="true" id="us">
+                            <p>
+                                Usuário Inválido!
+                            </p>
+                    </div>
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
