@@ -46,7 +46,7 @@ A  tabela a seguir lista todos os riscos que foram identificados para essa _Spri
 | 01 | Incompatibilidade de horários para reuniões  | 15%  | 3  | 0,45  |
 | 02 | Features má pontuadas  | 30%  | 7 | 2,1  |
 | 03 | Baixa produtividade  | 50%  | 7  | 3,5  |
-| 04 | Mais pontos planejados do que o time é capaz de entregar  | 50%  | 7  | 4,9  |
+| 04 | Mais pontos planejados do que o time é capaz de entregar  | 50%  | 7  | 3,5  |
 | 05 | Dificuldades com a tecnologia de desenvolvimento  | 50%  | 3  | 1,5  |
 | 06 | Erros na implementação de Features  | 30%  | 7  |  2,1 |
 | 07 | Features mal documentadas   | 15%  | 7  | 1,05  |
