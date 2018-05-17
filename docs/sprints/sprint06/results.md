@@ -59,7 +59,7 @@ Quanto às melhorias foi levantado o seguinte:
 * Focar no _backend_: não foi bom, pois adia riscos que podem acontecer no _frontend_.
 * Testar as histórias: foi bom, pois melhora a qualidade do produto.
 * Mudar arquitetura para microsserviços: não foi bom, pois gera muito retrabalho e por isso não será feito.
-* Aproveitar melhor os couchs: não ocorreu nessa _Sprint_, mas o time tentará aplicar na próxima.
+* Aproveitar melhor os coaches: não ocorreu nessa _Sprint_, mas o time tentará aplicar na próxima.
 * Acrescentar mais code reviews: não houve uma melhora, pois a análise dos _pull requests_ atrasou. Na próxima _sprint_ o time tentará aproveitar melhor essa mudança.
 
 
