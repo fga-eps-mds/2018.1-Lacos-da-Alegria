@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { LoginPage } from '../login/login';
-// import { EmailValidator } from '../../validators/email';
+import { EmailValidator } from '../../validators/email';
 import { RestUserProvider } from '../../providers/rest-user';
 //import { ListUserPage } from '../listuser/listuser';
 import { LoginPage } from '../login/login';
@@ -21,20 +21,21 @@ export class RegisterPage {
   signupForm: FormGroup;
 
   constructor(public formBuilder: FormBuilder, public navCtrl: NavController, public restProvider: RestUserProvider) {
-   
+    // Validators.pattern('([0-9]).{9,9}$')
+    // Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')
     this.signupForm = this.formBuilder.group({
       username: ['', Validators.compose([Validators.maxLength(5), Validators.pattern('[a-zA-Z]*'), Validators.required])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')])],
-      email: ['', Validators.compose([Validators.required])],
-      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('([0-9]).{9,9}$')]) ],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12)])],
+      email: ['', Validators.compose([Validators.required,EmailValidator.isValid])],
+      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(9), Validators.maxLength(9)]) ],
       name: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
-      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('([0-9]).{11,11}$')])],
-      birth: ['', Validators.compose([Validators.required, Validators.pattern('^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$')])],
+      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11)])],
+      birth: ['', Validators.compose([Validators.required])],
       address: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required]) ],
       region:['', Validators.required],
       preference:['', Validators.required],
       howDidYouKnow: ['', Validators.required],
-      ddd: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(3), Validators.pattern('([0-9]).{3,3}$')])],
+      ddd: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(3)])],
       genre:['', Validators.required],
       want_ongs:['', Validators.required],
       // confirmPassword: ['', Validators.required]
@@ -51,12 +52,12 @@ export class RegisterPage {
   //     let confirmPassword = group.controls[confirmPasswordKey];
 
   saveUser() {
-    // this.restProvider.saveUser(this.signupForm).then((result) => {
+    this.restProvider.saveUser(this.signupForm.value).then((result) => {
        console.log("oieeee");
-    //   this.navCtrl.push(LoginPage);
-    // }, (err) => {
-    //   console.log(err);
-    // });
+      this.navCtrl.push(LoginPage);
+    }, (err) => {
+      console.log(err);
+    });
   }
 
   // ionViewDidLoad(){
@@ -67,7 +68,7 @@ export class RegisterPage {
     this.slides.lockSwipes(false);
     this.slides.slideNext(500);
     this.slides.lockSwipes(true);
-
+    
   }
 
   btnBack(){
