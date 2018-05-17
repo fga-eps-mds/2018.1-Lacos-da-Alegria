@@ -3,37 +3,37 @@
      <ion-icon class="img-topo" name="person-add"></ion-icon>
    </h1>
    <form [formGroup]="signupForm">
-       <!-- <div class="register"> -->
         <ion-slides pager="true">
             <ion-slide>
                 <ion-list>
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="username" type="text" placeholder="Usuário" (focusout)="showError(signupForm.controls.username.valid)"></ion-input>
-                        <!-- <span *ngIf="signupForm.value.username.invalid" class="form-control alert-danger"> Nome inválido! </span> -->
+                        <ion-input formControlName="username" type="text" placeholder="Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
                     </ion-item >
 
-                    <div hidden="true" id="us">
-                            <p>
-                                Usuário Inválido!
-                            </p>
-                    </div>
-
+                    <span *ngIf="errorUsername" class="warning"> Usuário inválidoooo! </span>   
+                    
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="password" type="password" placeholder="Senha"></ion-input>
+                        <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw')"></ion-input>
                     </ion-item >
+
+                    <span *ngIf="errorPassword" class="warning"> Password inválidoooo! </span>
 
                     <ion-item >
                         <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="email" type="email" placeholder="E-mail"></ion-input>
+                        <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
                     </ion-item>
+
+                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>                       
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"></ion-input>
+                        <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
                     </ion-item>
+
+                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>                                           
 
                     <div class="btnNextStep">
                         <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
@@ -42,267 +42,135 @@
                 </ion-list>
             </ion-slide> 
 
-          <ion-slide>
-            <ion-list>
+            <ion-slide>
+                <ion-list>
 
-              <ion-item>
-                  <ion-icon name="person" item-left></ion-icon>
-                  <ion-input formControlName="name" type="text" placeholder="Nome Completo"></ion-input>
-              </ion-item>
+                    <ion-item>
+                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
+                    </ion-item>
 
-              <ion-item>
-                  <ion-icon name="person" item-left></ion-icon>
-                  <ion-input formControlName="cpf" type="text" placeholder="CPF" ui-mask="999.999.999-99"></ion-input>
-              </ion-item>
+                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>                                                         
 
-              <ion-item>
-                  <ion-icon name="person" item-left></ion-icon>
-                  <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
-              </ion-item>
+                    <ion-item>
+                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-input formControlName="cpf" type="text" placeholder="CPF" ui-mask="999.999.999-99" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
+                    </ion-item>
 
-              <ion-item>
-                  <ion-icon name="person" item-left></ion-icon>
-                  <ion-input formControlName="address" type="text" placeholder="Endereço"></ion-input>
-              </ion-item>
+                    <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>                                                         
+                    
+                    <ion-item>
+                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+                    </ion-item>
 
-              <div class="btnNextStep">
-                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-              </div>
+                    <ion-item>
+                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-input formControlName="address" type="text" placeholder="Endereço" (focusout)="showError(signupForm.controls.address.valid, 'ad')"></ion-input>
+                    </ion-item>
 
+                    <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>                                                                       
 
-
-            </ion-list>
-          </ion-slide>
-
-          <ion-slide>
-            <ion-list>
-
-              <ion-item>
-                  <ion-label>Cidade Satélite</ion-label>
-                  <ion-select formControlName="region" name="region">
-                      <ion-option value="Águas Claras">Águas Claras</ion-option>
-                      <ion-option value="Asa Norte">Asa Norte</ion-option>
-                      <ion-option value="Asa Sul">Asa Sul</ion-option>
-                      <ion-option value="Gama">Gama</ion-option>
-                  </ion-select>
-              </ion-item>
-
-              <ion-item>
-                  <ion-label>Preferência de Atividade</ion-label>
-                  <ion-select formControlName="preference" name="preference">
-                      <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
-                      <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
-                      <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
-                      <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
-                  </ion-select>
-              </ion-item>
-
-              <ion-item>
-                  <ion-label>Como conheceu a Laços?</ion-label>
-                  <ion-select formControlName="howDidYouKnow" name="howDidYouKnow">
-                      <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
-                      <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
-                      <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
-                      <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
-                      <ion-option value="Outros">Outros</ion-option>
-                  </ion-select>
-              </ion-item>
-
-              <ion-item>
-                  <ion-icon name="person" item-left></ion-icon>
-                  <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD"></ion-input>
-              </ion-item>
-
-              <div class="btnNextStep">
-                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-              </div>
-
-            </ion-list>
-          </ion-slide>
-
-          <ion-slide>
-              <ion-list>
-                <div class=last-item2>
-                  <ion-list radio-group formControlName="genre" name="genre">
-                      <div class="iradio">
-                          <ion-label>Sexo Masculino</ion-label>
-                          <ion-radio checked="true" value="Masculino" item-left></ion-radio>
-                      </div>
-
-                      <div class="eradio">
-                          <ion-label>Sexo Feminino</ion-label>
-                          <ion-radio value="Feminino" item-right></ion-radio>
-                      </div>
-                  </ion-list>
-                </div>
-
-                <div class=last-item>
-                    <p text-center>Desejo visitar instituições de caridade</p>
-
-
-                <ion-list radio-group formControlName="want_ongs" name="want_ongs">
-
-                    <div class="iradio">
-                        <ion-label>Sim</ion-label>
-                        <ion-radio checked="true" value="true"></ion-radio>
-                    </div>
-
-                    <div class="eradio">
-                        <ion-label>Não</ion-label>
-                        <ion-radio value="false"></ion-radio>
+                    <div class="btnNextStep">
+                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                        <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
                     </div>
 
                 </ion-list>
-
-                </div>
-
-                <div class="btnNextStep">
-                  <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                  <button class="btn-enviar" ion-button (click)="saveUser()">Cadastrar</button>
-                </div>
-              </ion-list>
             </ion-slide>
-          </ion-slides>
 
-        <!-- </div>  -->
+            <ion-slide>
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label>Cidade Satélite</ion-label>
+                        <ion-select formControlName="region" name="region">
+                            <ion-option value="Águas Claras">Águas Claras</ion-option>
+                            <ion-option value="Asa Norte">Asa Norte</ion-option>
+                            <ion-option value="Asa Sul">Asa Sul</ion-option>
+                            <ion-option value="Gama">Gama</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Preferência de Atividade</ion-label>
+                        <ion-select formControlName="preference" name="preference">
+                            <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
+                            <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
+                            <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
+                            <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Como conheceu a Laços?</ion-label>
+                        <ion-select formControlName="howDidYouKnow" name="howDidYouKnow">
+                            <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
+                            <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
+                            <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
+                            <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
+                            <ion-option value="Outros">Outros</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
+                    </ion-item>
+
+                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>                                                                                     
+
+                    <div class="btnNextStep">
+                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                        <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+                    </div>
+
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list>
+                    <div class=last-item2>
+                        <ion-list radio-group formControlName="genre" name="genre">
+                            <div class="iradio">
+                                <ion-label>Sexo Masculino</ion-label>
+                                <ion-radio checked="true" value="Masculino" item-left></ion-radio>
+                            </div>
+
+                            <div class="eradio">
+                                <ion-label>Sexo Feminino</ion-label>
+                                <ion-radio value="Feminino" item-right></ion-radio>
+                            </div>
+                        </ion-list>
+                    </div>
+
+                    <div class=last-item>
+                        <p text-center>Desejo visitar instituições de caridade</p>
+
+
+                        <ion-list radio-group formControlName="want_ongs" name="want_ongs">
+
+                            <div class="iradio">
+                                <ion-label>Sim</ion-label>
+                                <ion-radio checked="true" value="true"></ion-radio>
+                            </div>
+
+                            <div class="eradio">
+                                <ion-label>Não</ion-label>
+                                <ion-radio value="false"></ion-radio>
+                            </div>
+
+                        </ion-list>
+
+                    </div>
+
+                    <div class="btnNextStep">
+                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                        <button class="btn-enviar" ion-button (click)="saveUser()">Cadastrar</button>
+                    </div>
+
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
     </form>
 </ion-content>
-
-<!-- <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Sobre</ion-title>
-    </ion-navbar>
-  </ion-header>
-
-<ion-content>
-    <form (ngSubmit)="saveUser()">
-
-    <ion-list>
-
-        <ion-item class="item">
-            <ion-label floating>Nome de usuário</ion-label>
-            <ion-input formControlName="username" type="text" name = "username"></ion-input>
-        </ion-item >
-
-        <ion-item>
-            <ion-label floating>Nome Completo</ion-label>
-            <ion-input formControlName="name" type="text" name="name"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>CPF</ion-label>
-            <ion-input formControlName="cpf" type="text" name ="cpf"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input formControlName="email" type="text" name="email"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Data de Nascimento</ion-label>
-            <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" name="birth"></ion-datetime>
-        </ion-item>
-
-        <!-- <ion-item class="item">
-            <ion-label floating>Data de Nascimento</ion-label>
-            <ion-input formControlName="birth" type="text" name="birth"></ion-input>
-        </ion-item> -->
-
-        <!-- <ion-item>
-            <ion-label floating>Endereço</ion-label>
-            <ion-input formControlName="address" type="text" name="address"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>Senha</ion-label>
-            <ion-input formControlName="password" type="password" name="password"></ion-input>
-        </ion-item >
-
-        <ion-item class="item">
-            <ion-label>Cidade Satélite</ion-label>
-            <ion-select formControlName="region" name="region">
-                <ion-option value="Águas Claras">Águas Claras</ion-option>
-                <ion-option value="Asa Norte">Asa Norte</ion-option>
-                <ion-option value="Asa Sul">Asa Sul</ion-option>
-                <ion-option value="Gama">Gama</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Preferência de Atividade</ion-label>
-            <ion-select formControlName="preference" name="preference">
-                <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
-                <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
-                <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
-                <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Como conheceu o Laços?</ion-label>
-            <ion-select formControlName="howDidYouKnow" name="howDidYouKnow">
-                <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
-                <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
-                <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
-                <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
-                <ion-option value="Outros">Outros</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>DDD</ion-label>
-            <ion-input class="input" formControlName="ddd" type="text" name="ddd"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>Whatsapp</ion-label>
-            <ion-input formControlName="whatsapp" type="text" name="whatsapp"></ion-input>
-        </ion-item>
-
-        <ion-list radio-group formControlName="genre" name="genre">
-            <ion-list-header>
-                Sexo
-            </ion-list-header>
-
-            <ion-item>
-                <ion-label>Palhaçinho</ion-label>
-                <ion-radio checked="true" value="Masculino"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>Palhaçinha</ion-label>
-                <ion-radio value="Feminino"></ion-radio>
-            </ion-item>
-        </ion-list>
-
-        <ion-item class="item">
-            <ion-label>Desejo visitar instituições de caridade</ion-label>
-        </ion-item>
-
-        <ion-list radio-group formControlName="want_ongs" name="want_ongs">
-            <ion-item class="item">
-                <ion-label>Sim</ion-label>
-                <ion-radio checked="true" value="true"></ion-radio>
-            </ion-item>
-
-            <ion-item class="item">
-                <ion-label>Não</ion-label>
-                <ion-radio value="false"></ion-radio>
-            </ion-item>
-        </ion-list>
-
-    </ion-list>
-
-    <div class="div-btn">
-        <button id="send-btn" ion-button type="submit">Enviar</button>
-    </div>
-
-
-    </form>
-</ion-content> -->

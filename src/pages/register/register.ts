@@ -20,6 +20,15 @@ export class RegisterPage {
   @ViewChild(Slides) slides: Slides;
 
   submitAttemp: boolean = false;
+  errorUsername: boolean = false;
+  errorPassword: boolean = false;
+  errorEmail: boolean = false;
+  errorWhatsapp: boolean = false;
+  errorName: boolean = false;
+  errorCpf: boolean = false;
+  errorAddress: boolean = false;
+  errorDdd: boolean = false;  
+  
   //user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
   signupForm: FormGroup;
 
@@ -30,7 +39,7 @@ export class RegisterPage {
       username: ['', Validators.compose([Validators.maxLength(5), Validators.pattern('[a-zA-Z]*'), Validators.required])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12)])],
       email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
-      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(9), Validators.maxLength(9)]) ],
+      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9)]) ],
       name: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
       cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
       birth: ['', Validators.compose([Validators.required])],
@@ -63,24 +72,68 @@ export class RegisterPage {
     });
   }
 
-  showError(data){
-    console.log("chegou");
-    // console.log(this.signupForm.value.username);
-    // if(!this.signupForm.controls.username.valid){
-    var x = document.getElementById("us")
+  showError(data, id: string){
     
-    if (!data){
-
-      x.hidden = false;
-      // let alert = this.alertCtrl.create({
-      //   title: 'New Friend!',
-      //   subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      //   buttons: ['OK']
-      // });
-      // alert.present();
-    } else {
-      x.hidden = true;
+    switch (id) {
+      case 'us':
+        if (!data) {
+          this.errorUsername = true; 
+        } else {
+          this.errorUsername = false;
+        }
+        break;
+      case 'pw':
+        if (!data) {
+          this.errorPassword = true; 
+        } else {
+          this.errorPassword = false;
+        }
+        break;
+      case 'em':
+        if (!data) {
+          this.errorEmail = true; 
+        } else {
+          this.errorEmail = false;
+        }
+        break;
+      case 'wa':
+        if (!data) {
+          this.errorWhatsapp = true; 
+        } else {
+          this.errorWhatsapp = false;
+        }
+        break;
+      case 'nm':
+        if (!data) {
+          this.errorName = true; 
+        } else {
+          this.errorName = false;
+        }
+        break;
+      case 'cpf':
+        if (!data) {
+          this.errorCpf = true; 
+        } else {
+          this.errorCpf = false;
+        }
+        break;
+      case 'ad':
+        if (!data) {
+          this.errorAddress = true; 
+        } else {
+          this.errorAddress = false;
+        }
+        break;
+      case 'ddd':
+        if (!data) {
+          this.errorDdd = true; 
+        } else {
+          this.errorDdd = false;
+        }
+      default:
+        break;
     }
+
   }
 
   ionViewDidLoad(){
@@ -88,14 +141,6 @@ export class RegisterPage {
   }
 
   btnNext(){
-    // if(!this.signupForm.valid){
-    //   let alert = this.alertCtrl.create({
-    //     title: 'New Friend!',
-    //     subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-    //     buttons: ['OK']
-    //   });
-    //   alert.present();
-    // } else{
       this.slides.lockSwipes(false);
       this.slides.slideNext(500);
       this.slides.lockSwipes(true);
@@ -108,16 +153,5 @@ export class RegisterPage {
     this.slides.slidePrev(500);
     this.slides.lockSwipes(true);
   }
-  //   if(!this.signupOne.valid){
-  //     this.navController.push(LoginPage);
-  //   }
-  //   else{
-  //     console.log("Success!");
-  //     console.log(this.signupOne.value);
-  //   }
-  // }*/
-  // ionViewDidEnter() {
-  //   this.menu.swipeEnable(false);
-  // }
 
 }
