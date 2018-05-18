@@ -15,6 +15,7 @@ import { AlertController } from 'ionic-angular';
   selector: 'page-register',
   templateUrl: 'register.html'
 })
+
 export class RegisterPage {
   // @ViewChild('signup') signup: any;
   @ViewChild(Slides) slides: Slides;
@@ -28,6 +29,7 @@ export class RegisterPage {
   errorCpf: boolean = false;
   errorAddress: boolean = false;
   errorDdd: boolean = false;
+  isEnabled: boolean = false;
 
   //user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
   signupForm: FormGroup;
@@ -65,10 +67,10 @@ export class RegisterPage {
 
 
   btnGoToLogin(){
-    // this.navCtrl.canGoBack();        
+    // this.navCtrl.canGoBack();
     this.navCtrl.push(LoginPage);
   }
-  
+
   saveUser() {
     this.restProvider.saveUser(this.signupForm.value).then((result) => {
        console.log("oieeee");

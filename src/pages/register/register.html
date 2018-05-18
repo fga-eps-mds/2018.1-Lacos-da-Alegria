@@ -18,21 +18,24 @@
                     </ion-item>
 
                     <span *ngIf="errorName" class="warning"> Nome inválido! </span>
-    
+
                     <ion-item >
                         <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
                     </ion-item>
-    
+
                     <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
-    
+
                     <ion-item>
                         <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw')"></ion-input>
                     </ion-item >
 
                     <span *ngIf="errorPassword" class="warning"> Password inválidoooo! </span>
-                    
-                    <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>                    
-                    <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+
+                    <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>
+                    <button class="btn-prox" ion-button (click)="btnNext()" [disabled]="signupForm.controls.username.invalid || signupForm.controls.name.invalid ||
+                      signupForm.controls.email.invalid ||
+                      signupForm.controls.password.invalid">Próximo Passo
+                    </button>
 
                 </ion-list>
             </ion-slide>
@@ -41,7 +44,7 @@
                 <ion-list>
 
                     <ion-item>
-                        <ion-input formControlName="cpf" type="text" placeholder="CPF" ui-mask="999.999.999-99" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
+                        <ion-input formControlName="cpf" type="text" placeholder="CPF" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
                     </ion-item>
 
                     <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
@@ -52,7 +55,7 @@
                     </ion-item>
 
                     <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
-    
+
                     <ion-item>
                         <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
                     </ion-item>
@@ -62,7 +65,7 @@
                     </ion-item>
 
                     <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
-    
+
                     <ion-item>
                         <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
                     </ion-item>
@@ -76,10 +79,13 @@
                             <ion-option value="Masculino">Masculino</ion-option>
                         </ion-select>
                     </ion-item>
-              
+
                     <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                    <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-                   
+                    <button class="btn-prox" ion-button (click)="btnNext()" [disabled]="signupForm.controls.cpf.invalid || signupForm.controls.address.invalid || signupForm.controls.birth.invalid ||
+                      signupForm.controls.ddd.invalid || signupForm.controls.whatsapp.invalid ||
+                      signupForm.controls.genre.invalid">Próximo Passo
+                    </button>
+
                 </ion-list>
             </ion-slide>
 
@@ -133,7 +139,7 @@
                             <ion-option value="Hospital das Forças Armadas">Hospital das Forças Armadas</ion-option>
                             <ion-option value="Hospital Regional de Planaltina">Hospital Regional de Planaltina</ion-option>
                             <ion-option value="Hospital Regional de Sobradinho">Hospital Regional de Sobradinho</ion-option>
-                            <ion-option value="Hospital Regional da Asa Norte">Hospital Regional da Asa Norte</ion-option>  
+                            <ion-option value="Hospital Regional da Asa Norte">Hospital Regional da Asa Norte</ion-option>
                         </ion-select>
                     </ion-item>
 
@@ -155,9 +161,9 @@
                             <ion-option value="false">Não</ion-option>
                         </ion-select>
                     </ion-item>
-            
+
                     <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                    <button class="btn-enviar" ion-button (click)="saveUser()">Cadastrar</button>
+                    <button class="btn-enviar" ion-button (click)="saveUser()" [disabled]="signupForm.invalid">Cadastrar</button>
 
                 </ion-list>
             </ion-slide>
