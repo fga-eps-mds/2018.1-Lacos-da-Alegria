@@ -31,6 +31,7 @@
 
                     <span *ngIf="errorPassword" class="warning"> Password inválidoooo! </span>
                     
+                    <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>                    
                     <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
 
                 </ion-list>
@@ -70,7 +71,7 @@
 
                     <ion-item>
                         <ion-label>Sexo</ion-label>
-                        <ion-select formControlName="genre">
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="genre">
                             <ion-option value="Feminino">Feminino</ion-option>
                             <ion-option value="Masculino">Masculino</ion-option>
                         </ion-select>
@@ -87,7 +88,7 @@
 
                     <ion-item>
                         <ion-label>Cidade Satélite</ion-label>
-                        <ion-select formControlName="region" name="region">
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="region" name="region">
                             <ion-option value="Águas Claras">Águas Claras</ion-option>
                             <ion-option value="Asa Norte">Asa Norte</ion-option>
                             <ion-option value="Asa Sul">Asa Sul</ion-option>
@@ -124,21 +125,24 @@
                     </ion-item>
 
                     <ion-item>
-                        <ion-label>Preferência de Atividade</ion-label>
-                        <ion-select formControlName="preference" name="preference">
-                            <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
-                            <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
-                            <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
-                            <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
+                        <ion-label>Hospital que Deseja Visitar</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="preference" name="preference">
+                            <ion-option value="Hospital Regional do Gama">Hospital Regional do Gama</ion-option>
+                            <ion-option value="Hospital Regional de Taguatinga">Hospital Regional de Taguatinga</ion-option>
+                            <ion-option value="Hospital Universitário de Brasília">Hospital Universitário de Brasília</ion-option>
+                            <ion-option value="Hospital das Forças Armadas">Hospital das Forças Armadas</ion-option>
+                            <ion-option value="Hospital Regional de Planaltina">Hospital Regional de Planaltina</ion-option>
+                            <ion-option value="Hospital Regional de Sobradinho">Hospital Regional de Sobradinho</ion-option>
+                            <ion-option value="Hospital Regional da Asa Norte">Hospital Regional da Asa Norte</ion-option>  
                         </ion-select>
                     </ion-item>
 
                     <ion-item>
                         <ion-label>Como conheceu a Laços?</ion-label>
-                        <ion-select formControlName="howDidYouKnow" name="howDidYouKnow">
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="howDidYouKnow" name="howDidYouKnow">
                             <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
-                            <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
-                            <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
+                            <ion-option value="Através de uma rede social">Rede social do Laços</ion-option>
+                            <ion-option value="Através de uma palestra">Palestra</ion-option>
                             <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
                             <ion-option value="Outros">Outros</ion-option>
                         </ion-select>
@@ -146,7 +150,7 @@
 
                     <ion-item>
                         <ion-label>Deseja visitar instituições de caridade?</ion-label>
-                        <ion-select formControlName="want_ongs" name="want_ongs">
+                        <ion-select okText="Ok" cancelText="Cancelar"formControlName="want_ongs" name="want_ongs">
                             <ion-option value="true">Sim</ion-option>
                             <ion-option value="false">Não</ion-option>
                         </ion-select>

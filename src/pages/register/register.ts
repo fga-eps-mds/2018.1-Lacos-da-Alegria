@@ -63,6 +63,12 @@ export class RegisterPage {
   //     let password = group.controls[passwordKey];
   //     let confirmPassword = group.controls[confirmPasswordKey];
 
+
+  btnGoToLogin(){
+    // this.navCtrl.canGoBack();        
+    this.navCtrl.push(LoginPage);
+  }
+  
   saveUser() {
     this.restProvider.saveUser(this.signupForm.value).then((result) => {
        console.log("oieeee");
