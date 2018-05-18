@@ -8,36 +8,30 @@
                 <ion-list>
 
                     <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="username" type="text" placeholder="Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
+                        <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
                     </ion-item >
 
-                    <span *ngIf="errorUsername" class="warning"> Usuário inválidoooo! </span>
+                    <span *ngIf="errorUsername" class="warning"> Nome de usuário inválido! </span>
 
                     <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
+                        <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
+                    </ion-item>
+
+                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>
+    
+                    <ion-item >
+                        <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
+                    </ion-item>
+    
+                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
+    
+                    <ion-item>
                         <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw')"></ion-input>
                     </ion-item >
 
                     <span *ngIf="errorPassword" class="warning"> Password inválidoooo! </span>
-
-                    <ion-item >
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
-                    </ion-item>
-
-                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
-
-                    <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
-                    </ion-item>
-
-                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
-
-                    <div class="btnNextStep">
-                        <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-                    </div>
+                    
+                    <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
 
                 </ion-list>
             </ion-slide>
@@ -46,36 +40,45 @@
                 <ion-list>
 
                     <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
-                    </ion-item>
-
-                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>
-
-                    <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
                         <ion-input formControlName="cpf" type="text" placeholder="CPF" ui-mask="999.999.999-99" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
                     </ion-item>
 
                     <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
 
                     <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
-                    </ion-item>
-
-                    <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
+                        <!-- <ion-icon name="person" item-left></ion-icon> -->
                         <ion-input formControlName="address" type="text" placeholder="Endereço" (focusout)="showError(signupForm.controls.address.valid, 'ad')"></ion-input>
                     </ion-item>
 
                     <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
+    
+                    <ion-item>
+                        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+                    </ion-item>
 
-                    <div class="btnNextStep">
-                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                        <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-                    </div>
+                    <ion-item>
+                        <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
+                    </ion-item>
 
+                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
+    
+                    <ion-item>
+                        <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
+                    </ion-item>
+
+                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
+
+                    <ion-item>
+                        <ion-label>Sexo</ion-label>
+                        <ion-select formControlName="genre">
+                            <ion-option value="Feminino">Feminino</ion-option>
+                            <ion-option value="Masculino">Masculino</ion-option>
+                        </ion-select>
+                    </ion-item>
+              
+                    <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
+                   
                 </ion-list>
             </ion-slide>
 
@@ -114,63 +117,19 @@
                     </ion-item>
 
                     <ion-item>
-                        <ion-icon name="person" item-left></ion-icon>
-                        <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
+                        <ion-label>Deseja visitar instituições de caridade?</ion-label>
+                        <ion-select formControlName="want_ongs" name="want_ongs">
+                            <ion-option value="true">Sim</ion-option>
+                            <ion-option value="false">Não</ion-option>
+                        </ion-select>
                     </ion-item>
-
-                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
-
-                    <div class="btnNextStep">
-                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                        <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
-                    </div>
+            
+                    <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-enviar" ion-button (click)="saveUser()">Cadastrar</button>
 
                 </ion-list>
             </ion-slide>
 
-            <ion-slide>
-                <ion-list>
-                    <div class=last-item2>
-                        <ion-list radio-group formControlName="genre" name="genre">
-                            <div class="iradio">
-                                <ion-label>Sexo Masculino</ion-label>
-                                <ion-radio checked="true" value="Masculino" item-left></ion-radio>
-                            </div>
-
-                            <div class="eradio">
-                                <ion-label>Sexo Feminino</ion-label>
-                                <ion-radio value="Feminino" item-right></ion-radio>
-                            </div>
-                        </ion-list>
-                    </div>
-
-                    <div class=last-item>
-                        <p text-center>Desejo visitar instituições de caridade</p>
-
-
-                        <ion-list radio-group formControlName="want_ongs" name="want_ongs">
-
-                            <div class="iradio">
-                                <ion-label>Sim</ion-label>
-                                <ion-radio checked="true" value="true"></ion-radio>
-                            </div>
-
-                            <div class="eradio">
-                                <ion-label>Não</ion-label>
-                                <ion-radio value="false"></ion-radio>
-                            </div>
-
-                        </ion-list>
-
-                    </div>
-
-                    <div class="btnNextStep">
-                        <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                        <button class="btn-enviar" ion-button (click)="saveUser()">Cadastrar</button>
-                    </div>
-
-                </ion-list>
-            </ion-slide>
         </ion-slides>
     </form>
 </ion-content>

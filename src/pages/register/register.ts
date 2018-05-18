@@ -136,6 +136,18 @@ export class RegisterPage {
 
   }
 
+  // checkPasswords(data){
+  //   // var pw = document.getElementsByName("confirm");
+  //   console.log('Data = ', data);
+  //   console.log('Signup = ', this.signupForm.value.password);
+
+  //   // if(data == this.signupForm.value.password){
+  //   //   console.log("passooou");
+  //   // }else{
+  //   //   console.log("deu errado");
+  //   // }
+  // }
+
   ionViewDidLoad(){
     this.slides.lockSwipes(true);
   }
