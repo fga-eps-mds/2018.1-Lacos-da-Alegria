@@ -1,4 +1,3 @@
-import { App } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -17,10 +16,8 @@ import { StorageService } from '../../providers/storage.service';
 })
 
 export class MenuAppPage {
-
   constructor(
     public alertCtrl: AlertController,
-    public app: App,
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public restProvider: RestUserProvider,
@@ -64,18 +61,11 @@ export class MenuAppPage {
             console.log('Before logout: ', this.storage.getLocalAccessToken());
             this.storage.clearLocalUser();            
             console.log('After logout: ', this.storage.getLocalAccessToken());
-            // this.app.getRootNav().setRoot(LoginPage);
-            // console.log(this.navCtrl.getActiveChildNavs());
-            // this.navCtrl.popToRoot();
-            console.log(this.app.getActiveNavContainers());
-            this.navCtrl.setRoot(LoginPage);
-
-            // this.navCtrl.push(LoginPage);
+            this.navCtrl.push(LoginPage);
           }
         }
       ]
     });
     confirm.present();
-    // this.restProvider.userLogout();
   }
 }
