@@ -12,8 +12,8 @@
                         <ion-input formControlName="username" type="text" placeholder="Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
                     </ion-item >
 
-                    <span *ngIf="errorUsername" class="warning"> Usuário inválidoooo! </span>   
-                    
+                    <span *ngIf="errorUsername" class="warning"> Usuário inválidoooo! </span>
+
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
                         <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw')"></ion-input>
@@ -26,21 +26,21 @@
                         <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>                       
+                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
                         <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>                                           
+                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
 
                     <div class="btnNextStep">
                         <button class="btn-prox" ion-button (click)="btnNext()">Próximo Passo</button>
                     </div>
 
                 </ion-list>
-            </ion-slide> 
+            </ion-slide>
 
             <ion-slide>
                 <ion-list>
@@ -50,15 +50,15 @@
                         <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>                                                         
+                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>
 
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
                         <ion-input formControlName="cpf" type="text" placeholder="CPF" ui-mask="999.999.999-99" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>                                                         
-                    
+                    <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
+
                     <ion-item>
                         <ion-icon name="person" item-left></ion-icon>
                         <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
@@ -69,7 +69,7 @@
                         <ion-input formControlName="address" type="text" placeholder="Endereço" (focusout)="showError(signupForm.controls.address.valid, 'ad')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>                                                                       
+                    <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
 
                     <div class="btnNextStep">
                         <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
@@ -118,7 +118,7 @@
                         <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
                     </ion-item>
 
-                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>                                                                                     
+                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
 
                     <div class="btnNextStep">
                         <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>

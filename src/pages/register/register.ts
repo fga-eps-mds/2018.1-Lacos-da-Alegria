@@ -27,8 +27,8 @@ export class RegisterPage {
   errorName: boolean = false;
   errorCpf: boolean = false;
   errorAddress: boolean = false;
-  errorDdd: boolean = false;  
-  
+  errorDdd: boolean = false;
+
   //user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
   signupForm: FormGroup;
 
@@ -36,18 +36,18 @@ export class RegisterPage {
     // Validators.pattern('([0-9]).{9,9}$')
     // Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')
     this.signupForm = this.formBuilder.group({
-      username: ['', Validators.compose([Validators.maxLength(5), Validators.pattern('[a-zA-Z]*'), Validators.required])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12)])],
+      username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
       email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
-      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9)]) ],
-      name: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required])],
+      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
+      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
       cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
       birth: ['', Validators.compose([Validators.required])],
-      address: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z]*'), Validators.required]) ],
+      address: ['',Validators.compose([Validators.minLength(5), Validators.maxLength(80), Validators.required]) ],
       region:['', Validators.required],
       preference:['', Validators.required],
       howDidYouKnow: ['', Validators.required],
-      ddd: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(3)])],
+      ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(3), Validators.pattern('[0-9]*')])],
       genre:['', Validators.required],
       want_ongs:['', Validators.required],
       // confirmPassword: ['', Validators.required]
@@ -73,60 +73,60 @@ export class RegisterPage {
   }
 
   showError(data, id: string){
-    
+
     switch (id) {
       case 'us':
         if (!data) {
-          this.errorUsername = true; 
+          this.errorUsername = true;
         } else {
           this.errorUsername = false;
         }
         break;
       case 'pw':
         if (!data) {
-          this.errorPassword = true; 
+          this.errorPassword = true;
         } else {
           this.errorPassword = false;
         }
         break;
       case 'em':
         if (!data) {
-          this.errorEmail = true; 
+          this.errorEmail = true;
         } else {
           this.errorEmail = false;
         }
         break;
       case 'wa':
         if (!data) {
-          this.errorWhatsapp = true; 
+          this.errorWhatsapp = true;
         } else {
           this.errorWhatsapp = false;
         }
         break;
       case 'nm':
         if (!data) {
-          this.errorName = true; 
+          this.errorName = true;
         } else {
           this.errorName = false;
         }
         break;
       case 'cpf':
         if (!data) {
-          this.errorCpf = true; 
+          this.errorCpf = true;
         } else {
           this.errorCpf = false;
         }
         break;
       case 'ad':
         if (!data) {
-          this.errorAddress = true; 
+          this.errorAddress = true;
         } else {
           this.errorAddress = false;
         }
         break;
       case 'ddd':
         if (!data) {
-          this.errorDdd = true; 
+          this.errorDdd = true;
         } else {
           this.errorDdd = false;
         }
@@ -144,8 +144,8 @@ export class RegisterPage {
       this.slides.lockSwipes(false);
       this.slides.slideNext(500);
       this.slides.lockSwipes(true);
-    
-    
+
+
   }
 
   btnBack(){
