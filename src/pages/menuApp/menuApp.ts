@@ -1,3 +1,5 @@
+import { App } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -7,7 +9,7 @@ import { ListActivityPage } from '../list-activity/list-activity';
 import { LoginPage } from '../login/login';
 import { HelpPage } from '../help/help';
 import { RestUserProvider } from '../../providers/rest-user';
-
+import { StorageService } from '../../providers/storage.service';
 
 @Component({
   selector: 'page-menuApp',
@@ -16,8 +18,14 @@ import { RestUserProvider } from '../../providers/rest-user';
 
 export class MenuAppPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestUserProvider) {
-  }
+  constructor(
+    public alertCtrl: AlertController,
+    public app: App,
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public restProvider: RestUserProvider,
+    public storage: StorageService
+  ){ }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewsPage');
@@ -40,8 +48,34 @@ export class MenuAppPage {
   }
 
   signOutBtn() {
-    this.restProvider.userLogout();
-    this.navCtrl.push(LoginPage);
-    console.log('EOQ' );         
+    let confirm = this.alertCtrl.create({
+      title: 'Sair',
+      message: 'Deseja realmente encerrar a sessão?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Confirmar',      
+          handler: () => {
+            console.log('Before logout: ', this.storage.getLocalAccessToken());
+            this.storage.clearLocalUser();            
+            console.log('After logout: ', this.storage.getLocalAccessToken());
+            // this.app.getRootNav().setRoot(LoginPage);
+            // console.log(this.navCtrl.getActiveChildNavs());
+            // this.navCtrl.popToRoot();
+            console.log(this.app.getActiveNavContainers());
+            this.navCtrl.setRoot(LoginPage);
+
+            // this.navCtrl.push(LoginPage);
+          }
+        }
+      ]
+    });
+    confirm.present();
+    // this.restProvider.userLogout();
   }
 }

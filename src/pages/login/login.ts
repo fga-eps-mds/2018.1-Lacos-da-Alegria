@@ -14,9 +14,12 @@ import { StorageService } from '../../providers/storage.service';
 })
 export class LoginPage {
   user = { username:'', password:''}
-  constructor(public alertCtrl: AlertController, public navController: NavController,  public restProvider: RestUserProvider, public storage: StorageService) {
-
-  }
+  constructor(
+    public alertCtrl: AlertController, 
+    public navController: NavController,  
+    public restProvider: RestUserProvider, 
+    public storage: StorageService
+  ) { }
 
   register(){
     this.navController.push(RegisterPage);
@@ -31,6 +34,7 @@ export class LoginPage {
   //     console.log(err);
   //   });
   // }
+
   userLogin() {
     this.restProvider.authenticate(this.user)
       .subscribe(response => {
