@@ -31,15 +31,20 @@ export class ActivitiesListPage {
     .then(data => {
       this.activities = data;
       console.log(this.activities);
-    });
+    });  
   }
   
   postActivityID(index) {
     return this.restProvider.getActivity(index)
     .then(data => {
-      this.user.activities = data;
+      this.activities = data;
       console.log(this.activities);
+      //Chamar a mensagem de sucesso
+      /* if(this.user.activities != null){
+        this.doAlert();
+      } */
     });
+
   }
 
   doAlert() {
