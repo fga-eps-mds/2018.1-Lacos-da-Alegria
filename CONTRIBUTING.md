@@ -6,9 +6,11 @@ Todos os contribuidores, incluindo a equipe de desenvolvimento e os fundadores d
 
 * Fork o projeto principal para sua conta (se você não for um contribuidor da equipe de desenvolvimento)
 * Crie uma branch para features
+* Seguir o [plano de qualidade de código](docs/code_quality_plan.md) 
 * Realize suas alterações ou acréscimos ao projeto
 * Crie um pull request para o projeto principal
 * Testes e a cobertura dos testes serão checados automaticamente
+
 
 Um dos responsáveis pelo projeto irá revisar suas alterações e mesclará seu pull request
 
