@@ -8,7 +8,7 @@ import { CpfValidation } from '../../validators/cpf-validation';
 import { RestUserProvider } from '../../providers/rest-user';
 //import { ListUserPage } from '../listuser/listuser';
 import { LoginPage } from '../login/login';
-
+import { User } from '../../models/user';
 import { AlertController } from 'ionic-angular';
 
 @Component({
@@ -23,6 +23,7 @@ export class RegisterPage {
   submitAttemp: boolean = false;
   errorUsername: boolean = false;
   errorPassword: boolean = false;
+  errorCheckPasswords: boolean = false;
   errorEmail: boolean = false;
   errorWhatsapp: boolean = false;
   errorName: boolean = false;
@@ -40,6 +41,7 @@ export class RegisterPage {
     this.signupForm = this.formBuilder.group({
       username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
+      confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
       email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
       whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
       name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
@@ -64,7 +66,35 @@ export class RegisterPage {
   //   return (group: FormGroup): {[key: string]: any} => {
   //     let password = group.controls[passwordKey];
   //     let confirmPassword = group.controls[confirmPasswordKey];
+  
+  checkPasswords(){
+    if(this.signupForm.value.password != this.signupForm.value.confirmPassword && this.signupForm.value.confirmPassword){
+      this.errorCheckPasswords = true;
+    } else {
+      this.errorCheckPasswords = false;
+    }
+  }
 
+  getForm(): User{
+    let user: User = {
+      username: this.signupForm.value.username,
+      password: this.signupForm.value.password,
+      email: this.signupForm.value.email,
+      whatsapp: this.signupForm.value.whatsapp,
+      name: this.signupForm.value.name,
+      cpf: this.signupForm.value.cpf,
+      birth: this.signupForm.value.birth,
+      address: this.signupForm.value.address,
+      region: this.signupForm.value.region,
+      preference: this.signupForm.value.preference,
+      howDidYouKnow: this.signupForm.value.howDidYouKnow,
+      ddd: this.signupForm.value.ddd,
+      genre: this.signupForm.value.genre,
+      want_ongs: this.signupForm.value.want_ongs
+    }
+
+    return user;
+  }
 
   btnGoToLogin(){
     // this.navCtrl.canGoBack();
@@ -72,7 +102,7 @@ export class RegisterPage {
   }
 
   saveUser() {
-    this.restProvider.saveUser(this.signupForm.value).then((result) => {
+    this.restProvider.saveUser(this.getForm()).then((result) => {
        console.log("oieeee");
       this.navCtrl.push(LoginPage);
     }, (err) => {
@@ -84,56 +114,56 @@ export class RegisterPage {
 
     switch (id) {
       case 'us':
-        if (!data) {
+        if (!data && this.signupForm.value.username) {
           this.errorUsername = true;
         } else {
           this.errorUsername = false;
         }
         break;
       case 'pw':
-        if (!data) {
+        if (!data && this.signupForm.value.password) {
           this.errorPassword = true;
         } else {
           this.errorPassword = false;
         }
         break;
       case 'em':
-        if (!data) {
+        if (!data && this.signupForm.value.email) {
           this.errorEmail = true;
         } else {
           this.errorEmail = false;
         }
         break;
       case 'wa':
-        if (!data) {
+        if (!data && this.signupForm.value.whatsapp) {
           this.errorWhatsapp = true;
         } else {
           this.errorWhatsapp = false;
         }
         break;
       case 'nm':
-        if (!data) {
+        if (!data && this.signupForm.value.name) {
           this.errorName = true;
         } else {
           this.errorName = false;
         }
         break;
       case 'cpf':
-        if (!data) {
+        if (!data && this.signupForm.value.cpf) {
           this.errorCpf = true;
         } else {
           this.errorCpf = false;
         }
         break;
       case 'ad':
-        if (!data) {
+        if (!data && this.signupForm.value.address) {
           this.errorAddress = true;
         } else {
           this.errorAddress = false;
         }
         break;
       case 'ddd':
-        if (!data) {
+        if (!data && this.signupForm.value.ddd) {
           this.errorDdd = true;
         } else {
           this.errorDdd = false;
@@ -161,6 +191,7 @@ export class RegisterPage {
   }
 
   btnNext(){
+      console.log('form = ',this.getForm());
       this.slides.lockSwipes(false);
       this.slides.slideNext(500);
       this.slides.lockSwipes(true);

@@ -26,11 +26,17 @@
                     <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
 
                     <ion-item>
-                        <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw')"></ion-input>
+                        <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
                     </ion-item >
 
-                    <span *ngIf="errorPassword" class="warning"> Password inválidoooo! </span>
+                    <span *ngIf="errorPassword" class="warning"> Senha inválida! </span>
 
+                    <ion-item>
+                        <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha"  (focusout)="checkPasswords()"></ion-input>
+                    </ion-item >
+
+                    <span *ngIf="errorCheckPasswords" class="warning"> As senhas não coincidem! </span>
+                  
                     <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>
                     <button class="btn-prox" ion-button (click)="btnNext()" [disabled]="signupForm.controls.username.invalid || signupForm.controls.name.invalid ||
                       signupForm.controls.email.invalid ||
