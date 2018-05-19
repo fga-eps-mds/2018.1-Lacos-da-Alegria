@@ -38,9 +38,14 @@
                     <span *ngIf="errorCheckPasswords" class="warning"> As senhas não coincidem! </span>
                   
                     <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>
-                    <button class="btn-prox" ion-button (click)="btnNext()" [disabled]="signupForm.controls.username.invalid || signupForm.controls.name.invalid ||
-                      signupForm.controls.email.invalid ||
-                      signupForm.controls.password.invalid">Próximo Passo
+                    <button class="btn-prox" ion-button (click)="btnNext()" 
+                        [disabled]="signupForm.controls.username.invalid || 
+                        signupForm.controls.name.invalid ||
+                        signupForm.controls.email.invalid || 
+                        signupForm.controls.password.invalid ||
+                        signupForm.controls.confirmPassword.invalid ||
+                        errorCheckPasswords">
+                        Próximo Passo
                     </button>
 
                 </ion-list>
@@ -63,7 +68,7 @@
                     <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
 
                     <ion-item>
-                        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+                        <ion-datetime displayFormat="DD/MM/YYYY" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
                     </ion-item>
 
                     <ion-item>
@@ -87,9 +92,14 @@
                     </ion-item>
 
                     <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                    <button class="btn-prox" ion-button (click)="btnNext()" [disabled]="signupForm.controls.cpf.invalid || signupForm.controls.address.invalid || signupForm.controls.birth.invalid ||
-                      signupForm.controls.ddd.invalid || signupForm.controls.whatsapp.invalid ||
-                      signupForm.controls.genre.invalid">Próximo Passo
+                    <button class="btn-prox" ion-button (click)="btnNext()" 
+                        [disabled]="signupForm.controls.cpf.invalid || 
+                        signupForm.controls.address.invalid || 
+                        signupForm.controls.birth.invalid ||
+                        signupForm.controls.ddd.invalid || 
+                        signupForm.controls.whatsapp.invalid ||
+                        signupForm.controls.genre.invalid">
+                        Próximo Passo
                     </button>
 
                 </ion-list>
