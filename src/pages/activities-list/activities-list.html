@@ -1,7 +1,3 @@
-Header always set X-Frame-Options SAMEORIGIN
-Header set X-Frame-Options DENY
-Header set X-Frame-Options "ALLOW-FROM http://localhost:8000/api/profile/1/"
-
 <ion-header>
   <ion-navbar>
     <ion-title>Atividades da Semana</ion-title>
@@ -18,10 +14,10 @@ Header set X-Frame-Options "ALLOW-FROM http://localhost:8000/api/profile/1/"
 
       <div class="div-button">
         <ion-row>
-          <ion-col class="button-col" col-10>
-             <a>
-              <button ion-button block color="orange" (click)="postActivityID(index)">
-                Participar
+          <ion-col class="button-col" col-10 (click)= "doAlert({id: activity.id})">
+            <a href="http://localhost:8000/api/profile/1/relate_with_activity/?activity_key={{activity.id}}">
+              <button ion-button block color="orange" (click) = BtnBackToList()>
+                  Participar
               </button>
             </a>
           </ion-col>

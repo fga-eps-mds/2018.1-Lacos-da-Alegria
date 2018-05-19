@@ -31,28 +31,30 @@ export class ActivitiesListPage {
     .then(data => {
       this.activities = data;
       console.log(this.activities);
-    });  
+    });
   }
-  
+
   postActivityID(index) {
     return this.restProvider.getActivity(index)
     .then(data => {
-      this.activities = data;
+      this.user.activities = data;
       console.log(this.activities);
-      //Chamar a mensagem de sucesso
-      /* if(this.user.activities != null){
-        this.doAlert();
-      } */
     });
-
   }
 
-  doAlert() {
-    let alert = this.alerCtrl.create({
-      title: 'Inscrito na atividade!',
-      message: 'Você foi inscrito na atividade. Aguarde ser sorteado para visita',
-      buttons: ['Ok']
-    });
-    alert.present()
+  doAlert(index) {
+    if(index != null){
+      let alert = this.alerCtrl.create({
+        title: 'Inscrito na atividade!',
+        message: 'Você foi inscrito na atividade. Aguarde ser sorteado para visita',
+        buttons: ['Ok']
+      });
+      alert.present()
+    }
   }
+
+  //BtnBackToList(){
+  //  this.navCtrl.push(ActivitiesListPage);
+  //}
+
 }
