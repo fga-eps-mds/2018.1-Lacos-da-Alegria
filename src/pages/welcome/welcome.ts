@@ -1,31 +1,50 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { RestUserProvider } from '../../providers/rest-user';
-import { StorageService } from '../../providers/storage.service';
-import { RefreshToken } from '../../models/refresh-token'
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
 })
+
 export class WelcomePage {
-  constructor(private navController: NavController, public restProvider: RestUserProvider, public storage: StorageService) {
+  hide = false;
+
+  constructor(private navController: NavController, public navParams: NavParams) {
   }
-  BtnLogin(){
-    // let data = this.storage.getLocalRefreshToken();
-    // console.log ('data = ', data);
-    // let token: RefreshToken = {
-    //   refresh: data
-    // };
-    // console.log('token = ', token);
-    // this.restProvider.refreshToken(token)
-    //   .subscribe(response => {
-    //     console.log('response = ', response);
-    //     this.navController.push(LoginPage);
-    //   },
-    //   error => {
-    //     console.log(error);
-    //   });
+
+  slider = [
+  {
+    title: 'Seja Bem-Vindo!',
+    description: 'Arraste para a direita para conferir as funcionalidades do aplicativo da Laços da Alegria.',
+    image: "assets/imgs/logooficial.png"
+  },
+
+  {
+    title: 'Tela de Atividades',
+    description: 'Nesta aba você confere as atividades disponíveis e pode se inscrever na de sua preferência.',
+    image: "assets/imgs/activitieswelcome.png"
+  },
+
+  {
+    title: 'Tela de Noticias',
+    description: 'Nesta aba você confere as últimas notícias da Laços da Alegria, além de notificações relevantes.',
+    image: "assets/imgs/newswelcome.png"
+  },
+
+  {
+    title: 'Tela de Perfil',
+    description: 'Nesta aba você pode visualizar seus dados pessoais e modificá-los.',
+    image: "assets/imgs/perfilwelcome.png"
+  },
+
+  ]
+
+  slideShow(){
+    this.hide = true;
+  }
+
+  btnEntrar(){
     this.navController.push(LoginPage);
   }
 }

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController , MenuController} from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { LoginPage } from '../login/login';
 // import { EmailValidator } from '../../validators/email';
@@ -13,10 +14,12 @@ import { LoginPage } from '../login/login';
 })
 export class RegisterPage {
   @ViewChild('signup') signup: any;
+  @ViewChild(Slides) slides: Slides;
+
   submitAttemp: boolean = false;
   user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
 
-  constructor(public navCtrl: NavController, public restProvider: RestUserProvider, private menu: MenuController) {
+  constructor(public navCtrl: NavController, public restProvider: RestUserProvider) {
 
   }
   // constructor(public navController: NavController,  public formBuilder: FormBuilder, public RestUserProvider: RestUserProvider) {
@@ -43,13 +46,6 @@ export class RegisterPage {
   //     let password = group.controls[passwordKey];
   //     let confirmPassword = group.controls[confirmPasswordKey];
 
-  //     if(password.value !== confirmPassword.value){
-  //       return {
-  //         mismatchedPasswords: true
-  //       };
-  //     }
-  //   }
-  // }
   saveUser() {
     this.restProvider.saveUser(this.user).then((result) => {
       console.log(result);
@@ -58,19 +54,33 @@ export class RegisterPage {
       console.log(err);
     });
   }
-  /*BtnSend(){
-    this.submitAttemp = true;
 
-    if(!this.signupOne.valid){
-      this.navController.push(LoginPage);
-    }
-    else{
-      console.log("Success!");
-      console.log(this.signupOne.value);
-    }
-  }*/
-  ionViewDidEnter() {
-    this.menu.swipeEnable(false);
+  ionViewDidLoad(){
+    this.slides.lockSwipes(true);
+  }
+
+  btnNext(){
+    this.slides.lockSwipes(false);
+    this.slides.slideNext(500);
+    this.slides.lockSwipes(true);
+
+  }
+
+  btnBack(){
+    this.slides.lockSwipes(false);
+    this.slides.slidePrev(500);
+    this.slides.lockSwipes(true);
+
+  //   if(!this.signupOne.valid){
+  //     this.navController.push(LoginPage);
+  //   }
+  //   else{
+  //     console.log("Success!");
+  //     console.log(this.signupOne.value);
+  //   }
+  // }*/
+  // ionViewDidEnter() {
+  //   this.menu.swipeEnable(false);
   }
 
 }

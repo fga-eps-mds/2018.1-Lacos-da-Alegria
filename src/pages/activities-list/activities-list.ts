@@ -1,11 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ModalController } from 'ionic-angular';
-
-
-import { RestActivityProvider } from '../../providers/rest-activity';
-
 import { ActivityDetailsPage } from '../activity-details/activity-details';
+import { Component } from '@angular/core';
+import { ModalController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { RestActivityProvider } from '../../providers/rest-activity';
 
 @Component({
   selector: 'page-activities-list',
