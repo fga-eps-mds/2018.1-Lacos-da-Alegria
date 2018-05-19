@@ -15,9 +15,11 @@
       <div class="div-button">
         <ion-row>
           <ion-col class="button-col" col-10>
-            <button class="button-participate" ion-button default>
-              Participar
-            </button>
+             <a ion-item (click)="postActivityID({id: activity.id})">
++              <button class="button-participate" ion-button default>
++                Participar
++              </button>
++            </a>
           </ion-col>
           <ion-col class="button-col" col-2>
             <a ion-item (click)="openModal({id: activity.id})">

@@ -12,6 +12,7 @@ import { RestActivityProvider } from '../../providers/rest-activity';
 export class ActivitiesListPage {
   activities: any;
   indexes: any;
+  user: any;
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
     this.getActivitiesList();
@@ -30,6 +31,14 @@ export class ActivitiesListPage {
     return this.RestProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
+      console.log(this.activities);
+    });
+  }
+  
+  postActivityID(index) {
+    return this.restProvider.getActivity(index)
+    .then(data => {
+      this.user.activities = data;
       console.log(this.activities);
     });
   }
