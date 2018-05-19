@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { RestActivityProvider } from '../../providers/rest-activity';
+import { AlertController, ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-activities-list',
@@ -14,7 +15,7 @@ export class ActivitiesListPage {
   indexes: any;
   user: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider, public alerCtrl: AlertController) {
     this.getActivitiesList();
   }
 
@@ -41,5 +42,14 @@ export class ActivitiesListPage {
       this.user.activities = data;
       console.log(this.activities);
     });
+  }
+
+  doAlert() {
+    let alert = this.alerCtrl.create({
+      title: 'Inscrito na atividade!',
+      message: 'Você foi inscrito na atividade. Aguarde ser sorteado para visita',
+      buttons: ['Ok']
+    });
+    alert.present()
   }
 }

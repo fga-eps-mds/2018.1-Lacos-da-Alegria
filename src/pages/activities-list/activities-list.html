@@ -16,7 +16,7 @@
         <ion-row>
           <ion-col class="button-col" col-10>
              <a ion-item "href="http://localhost:8000/api/profile/1/relate_with_activity/?activity_key={{activity.id}}>
-              <button class="button-participate" ion-button default>
+              <button ion-button block color="orange" (click)="doAlert()">
                 Participar
               </button>
             </a>
