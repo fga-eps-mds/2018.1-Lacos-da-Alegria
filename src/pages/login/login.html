@@ -9,13 +9,11 @@
     <ion-list>
       <div class="field-login">
         <ion-item class="item">
-          <ion-label floating>Nome de usuário</ion-label>
-          <ion-input [(ngModel)]="user.username" type="text" name="username"></ion-input>
+          <ion-input [(ngModel)]="user.username" type="text" name="username" placeholder="Nome de Usuário"></ion-input>
         </ion-item >
 
         <ion-item class="item2">
-            <ion-label floating>Senha</ion-label>
-            <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
+            <ion-input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"></ion-input>
         </ion-item >
       </div>
       <p class="remenber-pass">Esqueceu sua senha?</p>

@@ -18,6 +18,18 @@ export class ProfilePage {
     console.log('ionViewDidLoad ListUserPage');
   }
 
+  showBirth(data){
+    data = data.substr(8,2) + '/' + data.substr(5,2) + '/' + data.substr(0,4);
+  
+    return data;
+  }
+
+  showCpf(data){
+    data = (data.substr(0,3) + '.' + data.substr(3,3) + '.' + 
+    data.substr(6,3) + '-' + data.substr(9,2));
+
+    return data;
+  }
   getUser(id) {
     this.RestProvider.getUser(id)
     .then(data => {
