@@ -5,24 +5,35 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
   allScriptsTimeout: 11000,
-  specs: [
-    '../e2e/**/*.e2e-spec.ts'
-  ],
+  directConnect: true,
   capabilities: {
     'browserName': 'chrome'
   },
-  directConnect: true,
-  baseUrl: 'http://localhost:8100/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
     print: function() {}
   },
-  onPrepare() {
-    require('ts-node').register({
-      project: 'e2e/tsconfig.e2e.json'
-    });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
-  }
+  specs: ['../src/pages/**/*.e2e.spec.ts'],
+  baseUrl: 'http://localhost:8100/',
+  useAllAngular2AppRoots: true,
+  beforeLaunch: function() {
+
+        require('ts-node').register({
+            project: 'e2e'
+        });
+
+        require('connect')().use(require('serve-static')('www')).listen(8100);
+
+    },
+    onPrepare: function() {
+        jasmine.getEnv().addReporter(new SpecReporter());
+    }
+  // onPrepare() {
+  //   require('ts-node').register({
+  //     project: 'e2e/tsconfig.e2e.json'
+  //   });
+  //   jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+  // }
 };
