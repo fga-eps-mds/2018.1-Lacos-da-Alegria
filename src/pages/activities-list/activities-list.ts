@@ -10,11 +10,13 @@ import { RestActivityProvider } from '../../providers/rest-activity';
 })
 
 export class ActivitiesListPage {
-  activities: any;
+  hospital_activities: any;
+  ngo_activities: any;
   indexes: any;
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
-    this.getActivitiesList();
+    this.getHospitalActivitiesList();
+    this.getNGOActivitiesList();
   }
 
   openModal(index) {
@@ -26,11 +28,19 @@ export class ActivitiesListPage {
     console.log('ionViewDidLoad ListUserPage');
   }
 
-  getActivitiesList(){
-    return this.RestProvider.getActivitiesList()
+  getHospitalActivitiesList(){
+    return this.RestProvider.getHospitalActivitiesList()
     .then(data => {
-      this.activities = data;
-      console.log(this.activities);
+      this.hospital_activities = data;
+      console.log(this.hospital_activities);
+    });
+  }
+
+  getNGOActivitiesList(){
+    return this.RestProvider.getNGOActivitiesList()
+    .then(data => {
+      this.ngo_activities = data;
+      console.log(this.ngo_activities);
     });
   }
 }

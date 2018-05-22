@@ -9,9 +9,9 @@ export class RestActivityProvider {
     console.log('Hello RestUserProvider Provider');
   }
 
-  getActivitiesList(){
+  getHospitalActivitiesList(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'activities').subscribe(data => {
+      this.http.get(this.apiUrl+'hospital_activities').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -19,9 +19,29 @@ export class RestActivityProvider {
     });
   }
 
-  getActivity(id){
+  getNGOActivitiesList(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'activities/' + id + '/').subscribe(data => {
+      this.http.get(this.apiUrl+'ngo_activities').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getHospitalActivity(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + 'hospital_activities/' + id + '/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getNGOActivity(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + 'ngo_activities/' + id + '/').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
