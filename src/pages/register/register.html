@@ -1,11 +1,18 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Cadastro</ion-title>
+    </ion-navbar>
+</ion-header>
+
 <ion-content class="register-box">
-   <h1 text-center>
-     <ion-icon class="img-topo" name="person-add"></ion-icon>
-   </h1>
+   
    <form [formGroup]="signupForm">
         <ion-slides pager="true">
             <ion-slide>
                 <ion-list>
+                    <h3>
+                        Informações Básicas do Usuário  
+                    </h3>
 
                     <ion-item>
                         <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
@@ -37,8 +44,7 @@
 
                     <span *ngIf="errorCheckPasswords" class="warning"> As senhas não coincidem! </span>
                   
-                    <button class="btn-prox" ion-button (click)="btnGoToLogin()">Voltar</button>
-                    <button class="btn-prox" ion-button (click)="btnNext()" 
+                    <button class="btn-next" ion-button (click)="btnNext()" 
                         [disabled]="signupForm.controls.username.invalid || 
                         signupForm.controls.name.invalid ||
                         signupForm.controls.email.invalid || 
@@ -53,6 +59,9 @@
 
             <ion-slide>
                 <ion-list>
+                    <h3>
+                        Informações Adicionais do Usuário  
+                    </h3>
 
                     <ion-item>
                         <ion-input formControlName="cpf" type="text" placeholder="CPF" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
@@ -91,8 +100,8 @@
                         </ion-select>
                     </ion-item>
 
-                    <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                    <button class="btn-prox" ion-button (click)="btnNext()" 
+                    <button class="btn-back" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-next" ion-button (click)="btnNext()" 
                         [disabled]="signupForm.controls.cpf.invalid || 
                         signupForm.controls.address.invalid || 
                         signupForm.controls.birth.invalid ||
@@ -107,6 +116,9 @@
 
             <ion-slide>
                 <ion-list>
+                    <h3>
+                        Localização e Preferências do Usuário  
+                    </h3>
 
                     <ion-item>
                         <ion-label>Cidade Satélite</ion-label>
@@ -178,8 +190,8 @@
                         </ion-select>
                     </ion-item>
 
-                    <button class="btn-ant" ion-button (click)="btnBack()">Passo Anterior</button>
-                    <button class="btn-enviar" ion-button (click)="saveUser()" [disabled]="signupForm.invalid">Cadastrar</button>
+                    <button class="btn-back" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-send" ion-button (click)="saveUser()" [disabled]="signupForm.invalid">Cadastrar</button>
 
                 </ion-list>
             </ion-slide>

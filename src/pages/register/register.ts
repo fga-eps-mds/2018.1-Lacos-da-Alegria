@@ -33,21 +33,21 @@ export class RegisterPage {
 
   constructor(public alertCtrl: AlertController, public formBuilder: FormBuilder, public navCtrl: NavController, public restProvider: RestUserProvider) {
     this.signupForm = this.formBuilder.group({
-      username: ['test2', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
-      password: ['12345abc', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
-      confirmPassword: ['12345abc', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
-      email: ['romulo@gmail.com', Validators.compose([Validators.required, EmailValidation.isValid])],
-      whatsapp: ['123456789', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
-      name: ['romulooo', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
-      cpf: ['12183206993', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
-      birth: ['1999-12-12', Validators.compose([Validators.required])],
-      address: ['gamaasd',Validators.compose([Validators.minLength(5), Validators.maxLength(80), Validators.required]) ],
-      region:['EOQ', Validators.required],
-      preference:['GAMAO', Validators.required],
-      howDidYouKnow: ['AMIGOS', Validators.required],
-      ddd: ['61', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern('((([1,4,6,8,9][1-9])|(2[1,2,4,7,8])|(3[1-8])|(4[1-9])|(5[1-5])|(7[1,3,4,5,7,9])))')])],
-      genre:['VRAU', Validators.required],
-      want_ongs:['YES', Validators.required],
+      username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
+      confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
+      email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
+      whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
+      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
+      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
+      birth: ['', Validators.compose([Validators.required])],
+      address: ['',Validators.compose([Validators.minLength(5), Validators.maxLength(80), Validators.required]) ],
+      region:['', Validators.required],
+      preference:['', Validators.required],
+      howDidYouKnow: ['', Validators.required],
+      ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern('((([1,4,6,8,9][1-9])|(2[1,2,4,7,8])|(3[1-8])|(4[1-9])|(5[1-5])|(7[1,3,4,5,7,9])))')])],
+      genre:['', Validators.required],
+      want_ongs:['', Validators.required],
     });
 
   }
@@ -79,11 +79,6 @@ export class RegisterPage {
     }
 
     return user;
-  }
-
-  btnGoToLogin(){
-    // this.navCtrl.canGoBack();
-    this.navCtrl.push(LoginPage);
   }
 
   saveUser() {
