@@ -1,15 +1,13 @@
+import { AlertController, NavController, Slides } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Slides } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { LoginPage } from '../login/login';
-import { EmailValidation } from '../../validators/email-validation';
+
 import { CpfValidation } from '../../validators/cpf-validation';
+import { EmailValidation } from '../../validators/email-validation';
 import { RestUserProvider } from '../../providers/rest-user';
-//import { ListUserPage } from '../listuser/listuser';
-import { LoginPage } from '../login/login';
 import { User } from '../../models/user';
-import { AlertController } from 'ionic-angular';
+
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-register',
@@ -17,7 +15,6 @@ import { AlertController } from 'ionic-angular';
 })
 
 export class RegisterPage {
-  // @ViewChild('signup') signup: any;
   @ViewChild(Slides) slides: Slides;
 
   submitAttemp: boolean = false;
@@ -32,12 +29,9 @@ export class RegisterPage {
   errorDdd: boolean = false;
   isEnabled: boolean = false;
 
-  //user = { username:'', name:'', cpf:'', email:'', birth:'', address:'', password:'', region:'', preference:'', howDidYouKnow:'', want_ongs:'', ddd:'', whatsapp:'', genre:''};
   signupForm: FormGroup;
 
   constructor(public alertCtrl: AlertController,       public formBuilder: FormBuilder, public navCtrl: NavController, public restProvider: RestUserProvider) {
-    // Validators.pattern('([0-9]).{9,9}$')
-    // Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')
     this.signupForm = this.formBuilder.group({
       username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
@@ -51,22 +45,13 @@ export class RegisterPage {
       region:['', Validators.required],
       preference:['', Validators.required],
       howDidYouKnow: ['', Validators.required],
-      ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(3), Validators.pattern('[0-9]*')])],
+      ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern('((([1,4,6,8,9][1-9])|(2[1,2,4,7,8])|(3[1-8])|(4[1-9])|(5[1-5])|(7[1,3,4,5,7,9])))')])],
       genre:['', Validators.required],
       want_ongs:['', Validators.required],
-      // confirmPassword: ['', Validators.required]
     });
 
   }
-  // constructor(public navController: NavController,  public formBuilder: FormBuilder, public RestUserProvider: RestUserProvider) {
 
-    // }, { validator: this.matchingPasswords('password', 'confirmPassword')})
-
-  // matchingPasswords(passwordKey: string, confirmPasswordKey: string){
-  //   return (group: FormGroup): {[key: string]: any} => {
-  //     let password = group.controls[passwordKey];
-  //     let confirmPassword = group.controls[confirmPasswordKey];
-  
   checkPasswords(){
     if(this.signupForm.value.password != this.signupForm.value.confirmPassword && this.signupForm.value.confirmPassword){
       this.errorCheckPasswords = true;
