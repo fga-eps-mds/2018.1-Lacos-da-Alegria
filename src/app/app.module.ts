@@ -52,7 +52,7 @@ import { StorageService } from '../providers/storage.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true}),
     IonicStorageModule.forRoot(),
   ],
 
