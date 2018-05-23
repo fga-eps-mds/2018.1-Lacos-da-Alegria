@@ -1,28 +1,83 @@
 page-register {
-    .register-box{
-        background-color: #E3ECF5;
-    }
-    .credential-box{
-        background-color: transparent;
-    }
-    .item{
-        background-color: transparent;
-        // text-decoration-color: black;
-        color: black;
-    }
-    
+  $blue-color: #084887;
+  $lightblue-color: #0565c0;
+  $black-color: #000000;
 
-    
-    .input{
-        background-color: transparent;
+  .scroll-content {
+    overflow: hidden;
+  }
+
+  .register-box {
+    background-color: $blue-color;
+  }
+
+  .img-topo {
+    font-size: 10vh;
+  }
+
+  .credential-box {
+    background-color: transparent;
+  }
+
+  .register {
+    margin-top: 2vh;
+    width: 100%;
+  }
+
+  .item {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    color: black;
+    margin-left: 2vh;
+    margin-top: 1vh;
+    width: 54.5vh;
+  }
+
+  .btn-next {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 2vh;
+    width: 25vh;
+  }
+
+  .btn-back {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 2vh;
+    width: 25vh;
+  }
+
+  .btn-send {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 2vh;
+    width: 25vh;
+  }
+
+  .last-item {
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    height: 20vh;
+    width: 100%;
+
+    .iradio {
+      float: left;
+      width: 20vh;
     }
-    .div-btn{
-        position: relative;
-        text-align: center;
-        top: 29%;
-        left: 35%;
-        .send-btn{
-            background-color: #0D68A3;
-        }
+
+    .eradio {
+      float: right;
+      width: 20vh;
     }
+  }
+
+  .last-item2 {
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+  }
+
 }

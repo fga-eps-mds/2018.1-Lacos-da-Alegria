@@ -1,8 +1,5 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>Perfil</ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,18 +7,27 @@
 <ion-content padding>
   <div>
     <ion-list>
-      <ion-card>
         <ion-item>
           <ion-avatar id="picture" item-start>
             <img src="../../assets/imgs/laços.ico">
           </ion-avatar>
         </ion-item>
-        <ion-item>Nome</ion-item>
+        <ion-item *ngFor='let user of user'>
+          {{user.username}}
+          <p> Nome: {{user.name}} </p>
+          <p> Email: {{user.email}} </p>
+          <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
+          <p> CPF: {{showCpf(user.cpf)}} </p>
+          <p> Endereço: {{user.address}} </p>
+          <p> Data de Nascimento: {{showBirth(user.birth)}} </p>
+          <p> Preferência {{user.preference}} </p>
+          <p> Genêro: {{user.genre}} </p>
+          <p> Atividades inscritas: {{user.activities}} </p>
+        </ion-item>
         <ion-item>
           <ion-icon name="md-time">Tempo de apoio:</ion-icon>
         </ion-item>
         <button id="edit-btn" full ion-button>Editar Perfil</button>
-      </ion-card>
     </ion-list>
   </div>
   <div>
@@ -65,5 +71,5 @@
       </ion-card>
     </ion-list>
   </div>
-  
+
 </ion-content>

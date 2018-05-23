@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ModalController } from 'ionic-angular';
+import { ModalController, NavController } from 'ionic-angular';
 
-
-import { RestApiProvider } from '../../providers/rest-api/rest-api';
+import { RestActivityProvider } from '../../providers/rest-activity';
 
 import { ActivityDetailsPage } from '../activity-details/activity-details';
 
@@ -16,7 +14,7 @@ export class ActivitiesListPage {
   activities: any;
   indexes: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restProvider: RestApiProvider) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
     this.getActivitiesList();
   }
 
@@ -30,7 +28,7 @@ export class ActivitiesListPage {
   }
 
   getActivitiesList(){
-    return this.restProvider.getActivitiesList()
+    return this.RestProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
       console.log(this.activities);
