@@ -35,15 +35,15 @@ O monitoramento da qualidade de código do projeto, além de garantir a entrega 
 
 ### Ferramentas
 
-* [Code Climate](https://codeclimate.com/): O Code Climate permite que as organizações assumam o controle de sua qualidade de código, incorporando cobertura de teste totalmente configurável e dados de manutenção em todo o fluxo de trabalho de desenvolvimento.
+* [Code Climate](https://codeclimate.com/github/fga-gpp-mds/2018.1-Lacos-da-Alegria): O Code Climate permite que as organizações assumam o controle de sua qualidade de código, incorporando cobertura de teste totalmente configurável e dados de manutenção em todo o fluxo de trabalho de desenvolvimento.
 
-* [Jasmine](https://www.npmjs.com/package/karma-jasmine): Jasmine é um framework de testes que ajuda a assegurar se o software está contemplando todas as funcionalidades.
+* [Jasmine](https://jasmine.github.io/pages/docs_home.html): Jasmine é um framework de testes que ajuda a assegurar se o software está contemplando todas as funcionalidades.
 
-* [Karma](https://www.npmjs.com/package/karma-jasmine): Karma é um test runner que executa os testes criados pelo jasmine.
+* [Karma](https://karma-runner.github.io/2.0/index.html): Karma é um test runner que executa os testes criados pelo jasmine.
 
 * [Pytest](https://docs.pytest.org/en/latest/): O pytest é uma ferramenta de teste Python completa e madura que ajuda você a escrever programas melhores.
 
-* [Travis](https://travis-ci.org/): O Travis é uma ferramenta de teste. Ela possibilita saber se o nossa aplicação está dentro do esperado ou não. 
+* [Travis](https://travis-ci.org/fga-gpp-mds/2018.1-Lacos-da-Alegria): O Travis é uma ferramenta de teste. Ela possibilita saber se o nossa aplicação está dentro do esperado ou não. 
 
 
 
