@@ -102,12 +102,13 @@ export class RegisterPage {
   }
 
   saveUser() {
-    this.restProvider.saveUser(this.getForm()).then((result) => {
+    this.btnGoToLogin();
+    /* this.restProvider.saveUser(this.getForm()).then((result) => {
        console.log("oieeee");
       this.navCtrl.push(LoginPage);
     }, (err) => {
       console.log(err);
-    });
+    }); */
   }
 
   showError(data, id: string){
