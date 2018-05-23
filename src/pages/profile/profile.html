@@ -17,9 +17,9 @@
           <p> Nome: {{user.name}} </p>
           <p> Email: {{user.email}} </p>
           <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
-          <p> CPF: {{user.cpf}} </p>
-          <p> Endereço: {{user.adress}} </p>
-          <p> Data de Nascimento: {{user.birth}} </p>
+          <p> CPF: {{showCpf(user.cpf)}} </p>
+          <p> Endereço: {{user.address}} </p>
+          <p> Data de Nascimento: {{showBirth(user.birth)}} </p>
           <p> Preferência {{user.preference}} </p>
           <p> Genêro: {{user.genre}} </p>
           <p> Atividades inscritas: {{user.activities}} </p>
