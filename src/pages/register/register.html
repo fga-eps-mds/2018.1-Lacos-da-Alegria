@@ -1,269 +1,201 @@
 <ion-header>
     <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Sobre</ion-title>
+      <ion-title>Cadastro</ion-title>
     </ion-navbar>
-  </ion-header>
+</ion-header>
 
-<ion-content>
-    <form (ngSubmit)="saveUser()">
+<ion-content class="register-box">
+   
+   <form [formGroup]="signupForm">
+        <ion-slides pager="true">
+            <ion-slide>
+                <ion-list>
+                    <h3>
+                        Informações Básicas do Usuário  
+                    </h3>
 
-    <ion-list>
+                    <ion-item>
+                        <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
+                    </ion-item >
 
-        <ion-item class="item">
-            <ion-label floating>Nome de usuário</ion-label>
-            <ion-input [(ngModel)]="user.username" type="text" name = "username"></ion-input>
-        </ion-item >
+                    <span *ngIf="errorUsername" class="warning"> Nome de usuário inválido! </span>
 
-        <ion-item>
-            <ion-label floating>Nome Completo</ion-label>
-            <ion-input [(ngModel)]="user.name" type="text" name="name"></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
+                    </ion-item>
 
-        <ion-item class="item">
-            <ion-label floating>CPF</ion-label>
-            <ion-input [(ngModel)]="user.cpf" type="text" name ="cpf"></ion-input>
-        </ion-item>
+                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>
 
-        <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
-        </ion-item>
+                    <ion-item >
+                        <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-label>Data de Nascimento</ion-label>
-            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="user.birth" name="birth"></ion-datetime>
-        </ion-item>
+                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
 
-        <!-- <ion-item class="item">
-            <ion-label floating>Data de Nascimento</ion-label>
-            <ion-input [(ngModel)]="user.birth" type="text" name="birth"></ion-input>
-        </ion-item> -->
+                    <ion-item>
+                        <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
+                    </ion-item >
 
-        <ion-item>
-            <ion-label floating>Endereço</ion-label>
-            <ion-input [(ngModel)]="user.address" type="text" name="address"></ion-input>
-        </ion-item>
+                    <span *ngIf="errorPassword" class="warning"> Senha inválida! </span>
 
-        <ion-item>
-            <ion-label floating>Senha</ion-label>
-            <ion-input [(ngModel)]="user.password" type="password" name="password"></ion-input>
-        </ion-item >
+                    <ion-item>
+                        <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha"  (focusout)="checkPasswords()"></ion-input>
+                    </ion-item >
 
-        <ion-item class="item">
-            <ion-label>Cidade Satélite</ion-label>
-            <ion-select [(ngModel)]="user.region" name="region">
-                <ion-option value="Águas Claras">Águas Claras</ion-option>
-                <ion-option value="Asa Norte">Asa Norte</ion-option>
-                <ion-option value="Asa Sul">Asa Sul</ion-option>
-                <ion-option value="Gama">Gama</ion-option>
-            </ion-select>
-        </ion-item>
+                    <span *ngIf="errorCheckPasswords" class="warning"> As senhas não coincidem! </span>
+                  
+                    <button class="btn-next" ion-button (click)="btnNext()" 
+                        [disabled]="signupForm.controls.username.invalid || 
+                        signupForm.controls.name.invalid ||
+                        signupForm.controls.email.invalid || 
+                        signupForm.controls.password.invalid ||
+                        signupForm.controls.confirmPassword.invalid ||
+                        errorCheckPasswords">
+                        Próximo Passo
+                    </button>
 
-        <ion-item class="item">
-            <ion-label>Preferência de Atividade</ion-label>
-            <ion-select [(ngModel)]="user.preference" name="preference">
-                <ion-option value="Hospital do Gama">Hospital do Gama</ion-option>
-                <ion-option value="Hospital de Taguatinga">Hospital de Taguatinga</ion-option>
-                <ion-option value="Hospital de Brasília">Hospital de Brasília</ion-option>
-                <ion-option value="Hospital da Asa Norte">Hospital da Asa Norte</ion-option>
-            </ion-select>
-        </ion-item>
+                </ion-list>
+            </ion-slide>
 
-        <ion-item class="item">
-            <ion-label>Como conheceu o Laços?</ion-label>
-            <ion-select [(ngModel)]="user.howDidYouKnow" name="howDidYouKnow">
-                <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
-                <ion-option value="Através de uma rede social">Através de uma rede social do Laços</ion-option>
-                <ion-option value="Através de uma palestra">Através de uma palestra</ion-option>
-                <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
-                <ion-option value="Outros">Outros</ion-option>
-            </ion-select>
-        </ion-item>
+            <ion-slide>
+                <ion-list>
+                    <h3>
+                        Informações Adicionais do Usuário  
+                    </h3>
 
-        <ion-item class="item">
-            <ion-label floating>DDD</ion-label>
-            <ion-input class="input" [(ngModel)]="user.ddd" type="text" name="ddd"></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input formControlName="cpf" type="text" placeholder="CPF" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
+                    </ion-item>
 
-        <ion-item class="item">
-            <ion-label floating>Whatsapp</ion-label>
-            <ion-input [(ngModel)]="user.whatsapp" type="text" name="whatsapp"></ion-input>
-        </ion-item>
+                    <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
 
-        <ion-list radio-group [(ngModel)]="user.genre" name="genre">
-            <ion-list-header>
-                Sexo
-            </ion-list-header>
+                    <ion-item>
+                        <!-- <ion-icon name="person" item-left></ion-icon> -->
+                        <ion-input formControlName="address" type="text" placeholder="Endereço" (focusout)="showError(signupForm.controls.address.valid, 'ad')"></ion-input>
+                    </ion-item>
 
-            <ion-item>
-                <ion-label>Palhaçinho</ion-label>
-                <ion-radio checked="true" value="Masculino"></ion-radio>
-            </ion-item>
+                    <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
 
-            <ion-item>
-                <ion-label>Palhaçinha</ion-label>
-                <ion-radio value="Feminino"></ion-radio>
-            </ion-item>
-        </ion-list>
+                    <ion-item>
+                        <ion-datetime displayFormat="DD/MM/YYYY" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+                    </ion-item>
 
-        <ion-item class="item">
-            <ion-label>Desejo visitar instituições de caridade</ion-label>
-        </ion-item>
+                    <ion-item>
+                        <ion-input class="input" formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
+                    </ion-item>
 
-        <ion-list radio-group [(ngModel)]="user.want_ongs" name="want_ongs">
-            <ion-item class="item">
-                <ion-label>Sim</ion-label>
-                <ion-radio checked="true" value="true"></ion-radio>
-            </ion-item>
+                    <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
 
-            <ion-item class="item">
-                <ion-label>Não</ion-label>
-                <ion-radio value="false"></ion-radio>
-            </ion-item>
-        </ion-list>
+                    <ion-item>
+                        <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
+                    </ion-item>
 
-    </ion-list>
+                    <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
 
-    <div class="div-btn">
-        <button id="send-btn" ion-button type="submit">Enviar</button>
-    </div>
+                    <ion-item>
+                        <ion-label>Sexo</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="genre">
+                            <ion-option value="Feminino">Feminino</ion-option>
+                            <ion-option value="Masculino">Masculino</ion-option>
+                        </ion-select>
+                    </ion-item>
 
+                    <button class="btn-back" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-next" ion-button (click)="btnNext()" 
+                        [disabled]="signupForm.controls.cpf.invalid || 
+                        signupForm.controls.address.invalid || 
+                        signupForm.controls.birth.invalid ||
+                        signupForm.controls.ddd.invalid || 
+                        signupForm.controls.whatsapp.invalid ||
+                        signupForm.controls.genre.invalid">
+                        Próximo Passo
+                    </button>
 
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list>
+                    <h3>
+                        Localização e Preferências do Usuário  
+                    </h3>
+
+                    <ion-item>
+                        <ion-label>Cidade Satélite</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="region" name="region">
+                            <ion-option value="Águas Claras">Águas Claras</ion-option>
+                            <ion-option value="Asa Norte">Asa Norte</ion-option>
+                            <ion-option value="Asa Sul">Asa Sul</ion-option>
+                            <ion-option value="Brazlândia">Brazlândia</ion-option>
+                            <ion-option value="Candangolândia">Candangolândia</ion-option>
+                            <ion-option value="Ceilândia">Ceilândia</ion-option>
+                            <ion-option value="Cruzeiro">Cruzeiro</ion-option>
+                            <ion-option value="Entorno Saída Norte">Entorno Saída Norte</ion-option>
+                            <ion-option value="Entorno Saída Sul">Entorno Saída Sul</ion-option>
+                            <ion-option value="Estrutural">Estrutural</ion-option>
+                            <ion-option value="Fercal">Fercal</ion-option>
+                            <ion-option value="Gama">Gama</ion-option>
+                            <ion-option value="Guará">Guará</ion-option>
+                            <ion-option value="Itapoã">Itapoã</ion-option>
+                            <ion-option value="Jardim Botânico">Jardim Botânico</ion-option>
+                            <ion-option value="Lago Norte">Lago Norte</ion-option>
+                            <ion-option value="Lago Sul">Lago Sul</ion-option>
+                            <ion-option value="Núcleo Bandeirante">Núcleo Bandeirante</ion-option>
+                            <ion-option value="Paranoá">Paranoá</ion-option>
+                            <ion-option value="Park Way">Park Way</ion-option>
+                            <ion-option value="Planaltina">Planaltina</ion-option>
+                            <ion-option value="Recanto das Emas">Recanto das Emas</ion-option>
+                            <ion-option value="Riacho Fundo">Riacho Fundo</ion-option>
+                            <ion-option value="Riacho Fundo 2">Riacho Fundo 2</ion-option>
+                            <ion-option value="Samambaia">Samambaia</ion-option>
+                            <ion-option value="Santa Maria">Santa Maria</ion-option>
+                            <ion-option value="São Sebastião">São Sebastião</ion-option>
+                            <ion-option value="Sobradinho">Sobradinho</ion-option>
+                            <ion-option value="Sobradinho 2">Sobradinho 2</ion-option>
+                            <ion-option value="Taguatinga">Taguatinga</ion-option>
+                            <ion-option value="Varjão">Varjão</ion-option>
+                            <ion-option value="Vicente Pires">Vicente Pires</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Hospital que Deseja Visitar</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="preference" name="preference">
+                            <ion-option value="Hospital Regional do Gama">Hospital Regional do Gama</ion-option>
+                            <ion-option value="Hospital Regional de Taguatinga">Hospital Regional de Taguatinga</ion-option>
+                            <ion-option value="Hospital Universitário de Brasília">Hospital Universitário de Brasília</ion-option>
+                            <ion-option value="Hospital das Forças Armadas">Hospital das Forças Armadas</ion-option>
+                            <ion-option value="Hospital Regional de Planaltina">Hospital Regional de Planaltina</ion-option>
+                            <ion-option value="Hospital Regional de Sobradinho">Hospital Regional de Sobradinho</ion-option>
+                            <ion-option value="Hospital Regional da Asa Norte">Hospital Regional da Asa Norte</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Como conheceu a Laços?</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="howDidYouKnow" name="howDidYouKnow">
+                            <ion-option value="Indicação de um amigo">Indicação de um amigo</ion-option>
+                            <ion-option value="Através de uma rede social">Rede social do Laços</ion-option>
+                            <ion-option value="Através de uma palestra">Palestra</ion-option>
+                            <ion-option value="Em uma reportagem na televisão">Em uma reportagem na televisão</ion-option>
+                            <ion-option value="Outros">Outros</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Deseja visitar instituições de caridade?</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar"formControlName="want_ongs" name="want_ongs">
+                            <ion-option value="true">Sim</ion-option>
+                            <ion-option value="false">Não</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <button class="btn-back" ion-button (click)="btnBack()">Passo Anterior</button>
+                    <button class="btn-send" ion-button (click)="saveUser()" [disabled]="signupForm.invalid">Cadastrar</button>
+
+                </ion-list>
+            </ion-slide>
+
+        </ion-slides>
     </form>
 </ion-content>
-<!-- <ion-content padding class="register-box">
-  <ion-list no-lines class="credential-box">
-    <form [formGroup]="signupOne" (ngSubmit)="saveUser()">
-        <ion-item class="item">
-            <ion-label floating>Login</ion-label>
-            <ion-input class="input" formControlName="login" type="text"></ion-input>
-        </ion-item >
-        <ion-item class="item">
-            <ion-label floating>Nome Completo</ion-label>
-            <ion-input class="input" formControlName="nameFull" type="text"></ion-input>
-        </ion-item>
-        <ion-item class="item" *ngIf="!signupOne.controls.nameFull.valid  && (signupOne.controls.nameFull.dirty || submitAttempt)">
-          <p>
-            Por favor insira um nome valido.
-          </p>
-        </ion-item>
-        <ion-item class="item">
-            <ion-label floating>Senha</ion-label>
-            <ion-input class="input" formControlName="password" type="password"></ion-input>
-        </ion-item >
-        <ion-item *ngIf="!signupOne.controls.password.valid  && (signupOne.controls.password.dirty || submitAttempt)">
-            <p>
-              Por favor insira uma senha valida.
-            </p>
-          </ion-item>
-          <ion-item class="item" *ngIf="signupOne.controls.password.hasError('required') && signupOne.controls.password.touched">
-              <p>Sorry, field password is required!</p>
-          </ion-item>
-          <ion-item class="item" *ngIf="signupOne.controls.password.hasError('minlength') && signupOne.controls.password.touched">
-              <p>Sorry, minimum password length is 6!</p>
-          </ion-item>
-        <ion-item class="item">
-            <ion-label floating>Confirmar Senha</ion-label>
-            <ion-input class="input" type="password" [(ngModel)]="confirmPassword" formControlName="confirmPassword" required show-password></ion-input>
-        </ion-item>
-        <ion-item class="item" *ngIf="signupOne.controls.confirmPassword.touched && signupOne.controls.confirmPassword.hasError('mismatchedPasswords') && signupOne.controls.password.valid">
-            <p>Passwords do not match</p>
-        </ion-item>
-        <ion-item class="item">
-            <ion-label floating>CPF</ion-label>
-            <ion-input class="input" formControlName="cpf" type="text"></ion-input>
-        </ion-item>
-        <ion-item class="item">
-            <ion-label floating>Email</ion-label>
-            <ion-input class="input" formControlName="email" type="text"></ion-input>
-        </ion-item>
-        <ion-item class="item" *ngIf="!signupOne.controls.email.valid  && (signupOne.controls.email.dirty || submitAttempt)">
-            <p>
-              Por favor insira um email valido.
-            </p>
-          </ion-item>
-        <ion-item class="item">
-            <ion-label floating>Data de Nascimento</ion-label>
-            <ion-input class="input" formControlName="birth" type="text"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Cidade Satélite</ion-label>
-            <ion-select formControlName ="cities" [(ngModel)]="region">
-                <ion-option value="aguas">Águas Claras</ion-option>
-                <ion-option value="asan">Asa Norte</ion-option>
-                <ion-option value="asas">Asa Sul</ion-option>
-                <ion-option value="gama">Gama</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>DDD</ion-label>
-            <ion-input class="input" formControlName="ddd" type="text"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Preferência de Atividade</ion-label>
-            <ion-select formControlName ="hospitais" [(ngModel)]="hospital">
-                <ion-option value="gama">Hospital do Gama</ion-option>
-                <ion-option value="taguatinga">Hospital de Taguatinga</ion-option>
-                <ion-option value="brasília">Hospital de Brasília</ion-option>
-                <ion-option value="asan">Hospital da Asa Norte</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>Whatsapp</ion-label>
-            <ion-input class="input" formControlName="whatsapp" type="text"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label floating>Endereço</ion-label>
-            <ion-input class="input" formControlName="endereco" type="text"></ion-input>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Como conheceu o Laços?</ion-label>
-            <ion-select formControlName ="comoConheceu" [(ngModel)]="conheceu">
-                <ion-option value="indicacao">Indicação de um amigo</ion-option>
-                <ion-option value="redeSocial">Através de uma rede social do Laços</ion-option>
-                <ion-option value="palestr">Através de uma palestra</ion-option>
-                <ion-option value="reportagem">Em uma reportagem na televisão</ion-option>
-                <ion-option value="outro">Outros</ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Deseja visitar instituições de caridade?</ion-label>
-        </ion-item>
-
-        <ion-item class="item">
-            <ion-label>Sim</ion-label>
-            <ion-checkbox color="dark" formControlName="participar" checked="false"></ion-checkbox>
-        </ion-item>
-
-        <ion-list radio-group formControlName="sexo">
-            <ion-list-header>
-                Sexo
-            </ion-list-header>
-
-            <ion-item>
-                <ion-label>Palhaçinho</ion-label>
-                <ion-radio checked="true" value="M"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>Palhaçinha</ion-label>
-                <ion-radio value="F"></ion-radio>
-            </ion-item>
-        </ion-list>
-    </form>
-  </ion-list>
-
-  <div class="div-btn">
-    <button id="send-btn" ion-button type="submit">Enviar</button>
-  </div>
-</ion-content> -->

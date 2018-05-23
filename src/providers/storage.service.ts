@@ -1,10 +1,5 @@
-import { LocalUser } from './../models/local-user';
-import { Injectable } from '@angular/core';
-
-@Injectable()
 export class StorageService {
-
-    
+  
     getLocalUserName() {
         let username = localStorage.getItem("username");
         
