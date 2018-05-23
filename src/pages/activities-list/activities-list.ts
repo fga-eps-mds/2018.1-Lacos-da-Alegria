@@ -12,6 +12,7 @@ import { RestActivityProvider } from '../../providers/rest-activity';
 export class ActivitiesListPage {
   hospital_activities: any;
   ngo_activities: any;
+  aux: any;
   indexes: any;
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
@@ -32,7 +33,7 @@ export class ActivitiesListPage {
     return this.RestProvider.getHospitalActivitiesList()
     .then(data => {
       this.hospital_activities = data;
-      console.log(this.hospital_activities);
+      console.log(this.aux);
     });
   }
 
@@ -40,7 +41,8 @@ export class ActivitiesListPage {
     return this.RestProvider.getNGOActivitiesList()
     .then(data => {
       this.ngo_activities = data;
-      console.log(this.ngo_activities);
+      console.log(this.aux);
     });
   }
+
 }

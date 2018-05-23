@@ -5,43 +5,46 @@
 </ion-header>
 
 <ion-content padding>
-
+  <div>
   <ion-segment [(ngModel)]="Atividades" color="primary">
-    <ion-segment-button value="hospitais" (ionSelect)="getHospitalActivitiesList()">
+    <ion-segment-button value="hospitais">
       Hospitais
     </ion-segment-button>
-    <ion-segment-button value="ongs" (ionselect)="getNGOActivitiesList()">
+    <ion-segment-button value="ongs">
       ONGs
     </ion-segment-button>
   </ion-segment>
 
-  <ion-list class="lista1">
-    <ion-card class="card" *ngFor="let activity of hospital_activities">
-      <ion-card-content class="card-content">
-        <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
+  </div>
 
-      </ion-card-content>
+  <div [ngSwitch]="Atividades">
+    <ion-list class="lista1" *ngSwitchCase="'hospitais'">
+      <ion-card class="card" *ngFor="let activity of hospital_activities">
+        <ion-card-content class="card-content">
+          <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
 
-      <div class="div-button">
-        <ion-row>
-          <ion-col class="button-col" col-10>
-            <button class="button-participate" ion-button default>
-              Participar
-            </button>
-          </ion-col>
-          <ion-col class="button-col" col-2>
-            <a ion-item (click)="openModal({id: activity.id})">
-              <button class="button-info" full ion-button default>
-                <ion-icon name="ios-information-circle"></ion-icon>
+        </ion-card-content>
+
+        <div class="div-button">
+          <ion-row>
+            <ion-col class="button-col" col-10>
+              <button class="button-participate" ion-button default>
+                Participar
               </button>
-            </a>
-          </ion-col>
-        </ion-row>
-      </div>
-    </ion-card>
-  </ion-list>
+            </ion-col>
+            <ion-col class="button-col" col-2>
+              <a ion-item (click)="openModal({id: activity.id})">
+                <button class="button-info" full ion-button default>
+                  <ion-icon name="ios-information-circle"></ion-icon>
+                </button>
+              </a>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card>
+    </ion-list>
 
-  <ion-list class="lista2">
+  <ion-list class="lista2" *ngSwitchCase="'ongs'">
     <ion-card class="card" *ngFor="let activity of ngo_activities">
         <ion-card-content class="card-content">
           <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
@@ -65,5 +68,5 @@
       </div>
     </ion-card>
   </ion-list>
-
+  </div>
 </ion-content>
