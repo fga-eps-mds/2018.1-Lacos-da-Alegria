@@ -31,11 +31,6 @@ Dos 64 pontos planejados, 13 foram entregues.
 
 No gráfico é possível perceber um longo período em que pontos não foram entregues, porque houve um atraso em analisar os _pull requests_ feitos.
 
-### 1.3 Gráfico de _commits_
-Os _commits_ abaixo são referentes ao repositório do _frontend_.
-
-![](images/commits_frontend_sprint7.png)
-
 ### 1.4 _Velocity_
 
 ![](images/velocity_sprint7.png)
@@ -52,7 +47,7 @@ O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos nece
 
 ### 1.7 Revisão da _Sprint_
 
-Não houveram problemas durante a _Sprint_ e ainda não é possível avaliar as mudanças aplicadas.
+Não houve problemas durante a _Sprint_ e ainda não é possível avaliar as mudanças aplicadas.
 
 
 ### 1.8 Retrospectiva
