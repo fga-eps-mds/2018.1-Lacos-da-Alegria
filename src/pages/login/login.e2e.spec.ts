@@ -1,15 +1,39 @@
 import { browser, element, by } from 'protractor';
+import { fillSignupFields, clickLastSlide, clickEntryButton, clickSignUpButton, clickNextButton } from './loginFunctions';
 
 var user;
 
 describe('Login tests', () =>{
   // Run before each case test
   beforeEach(() => {
-    browser.get('');
-    element(by.xpath('//*[@data-slide-index="3"]')).click();
-    browser.driver.sleep(500);
-    element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-welcome/ion-content/div[2]/ion-slides/div/div[1]/ion-slide[4]/div/div/button')).click();
 
+    user = {
+      username: 'renatinho',
+      name: 'renato vinicius',
+      email: 'renatinho@gmail.com',
+      password:'abc123456',
+      passwordVerify: 'abc123456',
+      cpf: '03298745611',
+      endereco: 'quadra 14',
+      ddd: '061',
+      whatsapp: '993675487'
+    };
+
+    browser.get('');
+
+    browser.driver.sleep(500);
+    clickLastSlide();
+    browser.driver.sleep(500);
+    clickEntryButton();
+    browser.driver.sleep(500);
+    clickSignUpButton();
+    browser.driver.sleep(500);
+    fillSignupFields(user);
+    browser.driver.sleep(500);
+
+    
+    
+   
     
 
     browser.driver.sleep(500);
