@@ -1,5 +1,6 @@
 import { browser, element, by} from 'protractor';
 import { send } from 'q';
+import { settings } from 'cluster';
 
 var chai = require('chai')
     , chaiHttp = require('chai-http');
@@ -161,6 +162,21 @@ export function deleteUser(user){
 
     }); 
 }
+
+export function clickAboutButton(){
+    browser.driver.sleep(500);
+    ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]/span
+    ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]
+    var aboutButon = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]/span'));
+    aboutButon.click();
+}
+
+export function clickSettingsButton(){
+    browser.driver.sleep(500);
+    var settingsButton = element(by.xpath('//*[@id="tab-t1-3"]'));
+    settingsButton.click();
+}
+
 
 
 
