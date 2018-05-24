@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
 import { fillSignupFields, clickLastSlide, clickEntryButton, clickSignUpButton, 
          clickNextButton, clickNextButton_2, clickDateFieldButton, fillSignupFields_2, 
          clickGenreFieldButton, fillSignupFields_3 , clickRegisterButton, fillSigninFields, 
          clickLoginButton, deleteUser} from './loginFunctions';
+=======
+import { browser, element, by } from 'protractor';
+import { fillSignupFields, clickLastSlide, clickEntryButton, clickSignUpButton, clickNextButton, clickNextButton_2, clickDateFieldButton, fillSignupFields_2, clickGenreFieldButton, fillSignupFields_3 , clickRegisterButton} from './loginFunctions';
+>>>>>>> bee6cb0b23b6bff3507849d68ee0935c5a0b0e4d
 
 var user;
 var chai = require('chai')
@@ -19,7 +24,11 @@ describe('Login tests', () =>{
       email: 'renatinho@gmail.com',
       password:'abc123456',
       passwordVerify: 'abc123456',
+<<<<<<< HEAD
       cpf: '09233118070',
+=======
+      cpf: '05730259166',
+>>>>>>> bee6cb0b23b6bff3507849d68ee0935c5a0b0e4d
       endereco: 'quadra 14',
       ddd: '061',
       whatsapp: '993675487'
