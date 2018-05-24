@@ -2,17 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { StorageService } from './storage.service';
 
-/*
-  Generated class for the RestUserProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class RestUserProvider {
   apiUrl = 'http://localhost:8000/api';
-  fakeUrl = 'https://jsonplaceholder.typicode.com';
-  // localUser = {token:'', usename:''}
   constructor(public http: HttpClient, public storage: StorageService) {
     console.log('Hello RestProvider Provider');
   }
@@ -59,7 +51,6 @@ export class RestUserProvider {
   userLogout() {
     this.storage.clearLocalUser();
     console.log('teste');
-    // console.log('qqqqqqqqq', this.storage.getLocalUser());
   }
 
   refreshToken(token){

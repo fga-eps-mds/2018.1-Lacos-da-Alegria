@@ -12,50 +12,49 @@ page-register {
   }
 
   .img-topo {
-    font-size: 15vh;
+    font-size: 10vh;
   }
 
   .credential-box {
     background-color: transparent;
   }
 
-  .item {
-    background-color: transparent;
-    color: black;
-  }
-
   .register {
     margin-top: 2vh;
     width: 100%;
-
-    ion-item {
-      border: 2px solid $lightblue-color;
-      border-radius: 5px;
-      margin-top: 5vh;
-    }
   }
 
-  .btn-prox {
+  .item {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
-    margin-top: 5vh;
+    color: black;
+    margin-left: 2vh;
+    margin-top: 1vh;
+    width: 54.5vh;
+  }
+
+  .btn-next {
+    background-color: transparent;
+    border: 2px solid $lightblue-color;
+    border-radius: 5px;
+    margin-top: 2vh;
     width: 25vh;
   }
 
-  .btn-ant {
+  .btn-back {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
-    margin-top: 5vh;
+    margin-top: 2vh;
     width: 25vh;
   }
 
-  .btn-enviar {
+  .btn-send {
     background-color: transparent;
     border: 2px solid $lightblue-color;
     border-radius: 5px;
-    margin-top: 5vh;
+    margin-top: 2vh;
     width: 25vh;
   }
 
@@ -81,8 +80,4 @@ page-register {
     border-radius: 5px;
   }
 
-  ion-radio {
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
-  }
 }
