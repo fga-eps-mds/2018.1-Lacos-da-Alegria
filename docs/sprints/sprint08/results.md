@@ -43,7 +43,7 @@ Em relação a _Sprint_ passada, o velocity subiu de 22,14 para 29,43.
 ### 1.6 Quadro de Conhecimento
 ![](images/knowledge_framework_sprint8.png)
 
-O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o projeto. E nessa _Sprint_ os membros melhoraram em no _backend_ e no _git_.
+O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o projeto. E nessa _Sprint_ os membros melhoraram no _backend_ e no _git_.
 
 ### 1.7 Revisão da _Sprint_
 
@@ -51,7 +51,7 @@ Durante a _Sprint_ ocorreram os seguintes problemas:
 
 * O membro Lucas teve dificuldades com o ambiente, como pode ser visto nas _issues_ <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/184">#184</a> e <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/issues/185">#185</a>, mas foi resolvido com a ajuda dos membros Luciano e Rômulo.
 * O Renan teve alguns problemas na máquina que ainda não foram resolvidos. Porém este problema não afetou seu desempenho durante a _Sprint_.
-* O _couch_ não pode participar da "seção tira dúvidas" que havia marcado por motivos pessoais.
+* O _coach_ não pode participar da "seção tira dúvidas" que havia marcado por motivos pessoais.
 
 
 ### 1.8 Retrospectiva
