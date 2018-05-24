@@ -7,6 +7,7 @@ import { RestUserProvider } from '../../providers/rest-user';
   selector: 'profile-home',
   templateUrl: 'profile.html'
 })
+
 export class ProfilePage {
 	user: any;
 

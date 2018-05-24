@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
 @Component({
-  selector: 'page-list-activity',
-  templateUrl: 'list-activity.html',
+  selector: 'page-list-subscribers',
+  templateUrl: 'list-subscribers.html',
 })
-export class ListActivityPage {
+
+export class ListSubscribersPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -11,6 +11,7 @@ import { TabsPage } from '../tabs/tabs';
   selector: 'page-login',
   templateUrl: 'login.html'
 })
+
 export class LoginPage {
   user = { username:'', password:''}
   constructor(

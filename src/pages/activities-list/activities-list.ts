@@ -18,10 +18,10 @@ export class ActivitiesListPage {
     this.getActivitiesList();
   }
 
-  openModal(index) {
-      let modal = this.modalCtrl.create(ActivityDetailsPage, index);
-      modal.present();
-    }
+  openModal(index){
+    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+    modal.present();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');

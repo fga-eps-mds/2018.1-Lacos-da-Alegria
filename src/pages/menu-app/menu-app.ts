@@ -6,7 +6,7 @@ import { StorageService } from '../../providers/storage.service';
 
 import { AboutPage } from '../about/about';
 import { HelpPage } from '../help/help';
-import { ListActivityPage } from '../list-activity/list-activity';
+import { ListSubscribersPage } from '../list-subscribers/list-subscribers';
 import { LoginPage } from '../login/login';
 import { SettingsPage } from '../settings/settings';
 
@@ -29,7 +29,7 @@ export class MenuAppPage {
   }
 
   listActivitiesBtn() {
-    this.navCtrl.push(ListActivityPage)
+    this.navCtrl.push(ListSubscribersPage)
   }
   
   helpBtn() {

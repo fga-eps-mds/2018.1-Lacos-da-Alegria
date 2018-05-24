@@ -3,12 +3,11 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { RestActivityProvider } from '../../providers/rest-activity';
 
-import { ActivitiesListPage } from '../activities-list/activities-list';
-
 @Component({
   selector: 'page-activity-details',
   templateUrl: 'activity-details.html'
 })
+
 export class ActivityDetailsPage {
   activity: any;
 
@@ -31,6 +30,6 @@ export class ActivityDetailsPage {
   }
 
   BtnBackToList(){
-    this.navCtrl.push(ActivitiesListPage);
+    this.navCtrl.pop();
   }
 }

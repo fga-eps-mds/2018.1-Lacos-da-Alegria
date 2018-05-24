@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-import { ListActivityPage } from '../list-activity/list-activity';
+import { ActivitiesListPage } from '../activities-list/activities-list';
 import { MenuAppPage } from '../menu-app/menu-app';
 import { NewsPage } from '../news/news';
 import { ProfilePage } from '../profile/profile';
-
 
 @Component({
   selector: 'page-tabs',
@@ -13,7 +12,7 @@ import { ProfilePage } from '../profile/profile';
 
 export class TabsPage {
     ProfileRoot = ProfilePage;
-    ActivitiesRoot =  ListActivityPage;
+    ActivitiesRoot =  ActivitiesListPage;
     NewsRoot = NewsPage;
     MenuRoot = MenuAppPage;
 }
