@@ -2,7 +2,7 @@ import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
 import { fillSignupFields, clickLastSlide, clickEntryButton, clickSignUpButton, 
          clickNextButton, clickNextButton_2, clickDateFieldButton, fillSignupFields_2, 
          clickGenreFieldButton, fillSignupFields_3 , clickRegisterButton, fillSigninFields, 
-         clickLoginButton, deleteUser} from './loginFunctions';
+         clickLoginButton, deleteUser} from '../../functions/testFunctions';
 
 var user;
 var chai = require('chai')
