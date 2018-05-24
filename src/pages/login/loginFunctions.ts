@@ -1,5 +1,25 @@
 import { browser, element, by} from 'protractor';
+import { send } from 'q';
 
+var chai = require('chai')
+    , chaiHttp = require('chai-http');
+var server = 'http://localhost:8000';
+
+
+
+export function fillSigninFields(user){
+    var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[1]/div[1]/div/ion-input/input'));
+    usernameField.sendKeys(user.username);
+    var passwordField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[2]/div[1]/div/ion-input/input'));
+    passwordField.sendKeys(user.password);
+
+}
+
+export function clickLoginButton(){
+    browser.driver.sleep(500);
+    var loginButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[2]/button'));
+    loginButton.click();
+}
 
 export function fillSignupFields(user){
     var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-register/ion-content/div[2]/form/ion-slides/div/div[1]/ion-slide[1]/div/ion-list/ion-item[1]/div[1]/div/ion-input/input'));
@@ -130,4 +150,14 @@ export function clickRegisterButton(){
     browser.driver.sleep(500);
     var buttonRegister = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-register/ion-content/div[2]/form/ion-slides/div/div[1]/ion-slide[3]/div/ion-list/button[2]/span'));
     buttonRegister.click();
+}
+
+export function deleteUser(user){
+    chai.use(chaiHttp);
+    chai.request(server)
+    .post('/api/profile/delete')
+    .send(user)
+    .end((err, res) =>{
+
+    }); 
 }
