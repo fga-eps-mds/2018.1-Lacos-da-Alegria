@@ -18,7 +18,7 @@ describe('Login tests', () =>{
       password:'abc123456',
       passwordVerify: 'abc123456',
       cpf: '09233118070',
-      endereco: 'quadra 14',
+      address: 'quadra 14',
       ddd: '61',
       whatsapp: '993675487'
     };

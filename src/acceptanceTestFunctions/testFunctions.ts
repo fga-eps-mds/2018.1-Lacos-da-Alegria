@@ -72,7 +72,7 @@ function fillPageOneSignupFields(user){
     cpfField.sendKeys(user.cpf);
 
     var enderecoField = element(by.xpath('//*[@formcontrolname="address"]/input[1]'));
-    enderecoField.sendKeys(user.endereco);
+    enderecoField.sendKeys(user.address);
 
     clickDateFieldButton();
 
@@ -210,7 +210,7 @@ function clickRegisterButton(){
 export function deleteUser(user){
     chai.use(chaiHttp);
     chai.request(server)
-    .post('/api/profile/delete')
+    .post('/api/profile/delete/')
     .send(user)
     .end((err, res) =>{
 
