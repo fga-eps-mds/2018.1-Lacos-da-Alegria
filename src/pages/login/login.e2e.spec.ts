@@ -1,8 +1,6 @@
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
-import { fillSignupFields, clickLastSlide, clickEntryButton, clickSignUpButton, 
-         clickNextButton, clickNextButton_2, clickDateFieldButton, fillSignupFields_2, 
-         clickGenreFieldButton, fillSignupFields_3 , clickRegisterButton, fillSigninFields, 
-         clickLoginButton, deleteUser} from '../../functions/testFunctions';
+import { clickLastSlide, clickEntryButton, clickSignUpButton, signUpUser, goToLoginPage,
+         signInUser, fillSigninFields, clickLoginButton, deleteUser} from '../../acceptanceTestFunctions/testFunctions';
 
 var user;
 var chai = require('chai')
@@ -21,45 +19,25 @@ describe('Login tests', () =>{
       passwordVerify: 'abc123456',
       cpf: '09233118070',
       endereco: 'quadra 14',
-      ddd: '061',
+      ddd: '61',
       whatsapp: '993675487'
     };
 
-    browser.get('');
+    goToLoginPage()
 
-    browser.driver.sleep(500);  
-    clickLastSlide();
-    browser.driver.sleep(500);
-    clickEntryButton();
     browser.driver.sleep(500);
     clickSignUpButton();
-    browser.driver.sleep(500);
-    fillSignupFields(user);
-    browser.driver.sleep(500);
-    clickNextButton();
-    browser.driver.sleep(500);
-    fillSignupFields_2(user);
-    browser.driver.sleep(500);
-    clickDateFieldButton();
-    browser.driver.sleep(500);
-    clickGenreFieldButton();
-    browser.driver.sleep(500);
-    clickNextButton_2();
-    browser.driver.sleep(500);
-    fillSignupFields_3();
-    browser.driver.sleep(500);
-    clickRegisterButton();
-    browser.driver.sleep(500);
 
-
+    signUpUser(user);
   });
+
   afterEach(() => {
     deleteUser(user);
   });
-/* 
+/*
   it('should sign-in', () => {
     fillSigninFields(user);
-    clickLoginButton(); 
+    clickLoginButton();
   }) */
 
   it('Login succesful', () =>{
