@@ -1,18 +1,18 @@
-import { AlertController } from 'ionic-angular';
+import { AlertController, NavController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
-import { SettingsPage } from '../settings/settings';
-import { ListActivityPage } from '../list-activity/list-activity';
-import { LoginPage } from '../login/login';
-import { HelpPage } from '../help/help';
 import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
 
+import { AboutPage } from '../about/about';
+import { HelpPage } from '../help/help';
+import { ListActivityPage } from '../list-activity/list-activity';
+import { LoginPage } from '../login/login';
+import { SettingsPage } from '../settings/settings';
+
 @Component({
-  selector: 'page-menuApp',
-  templateUrl: 'menuApp.html',
+  selector: 'page-menu-app',
+  templateUrl: 'menu-app.html',
 })
 
 export class MenuAppPage {

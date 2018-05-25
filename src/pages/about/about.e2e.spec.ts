@@ -1,5 +1,5 @@
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
-import { clickAboutButton, clickEntryButton, clickLastSlide, clickLoginButton, clickSettingsButton, fillSigninFields} from '../../functions/testFunctions';
+import { clickAboutButton, clickEntryButton, clickLastSlide, clickLoginButton, clickSettingsButton, fillSigninFields, clickSignUpButton, fillSignupFields} from '../../functions/testFunctions';
 
 var user;
 var chai = require('chai')
@@ -15,6 +15,15 @@ describe('About tests', () =>{
         password:'123456789',
         };
         browser.get('');
+        
+        browser.driver.sleep(500);
+        clickLastSlide();
+        browser.driver.sleep(500);
+        clickEntryButton();
+        browser.driver.sleep(500);
+        clickSignUpButton();
+        browser.driver.sleep(500);
+        fillSignupFields(user);
 
         browser.driver.sleep(500);
         clickLastSlide();
