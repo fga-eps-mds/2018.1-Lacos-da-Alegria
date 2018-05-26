@@ -1,32 +1,35 @@
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
-import { clickAboutButton, clickEntryButton, clickLastSlide, clickLoginButton, clickSettingsButton, fillSigninFields, clickSignUpButton, signUpUser, goToLoginPage, signInUser, goToAboutPage} from '../../acceptanceTestFunctions/testFunctions';
+import { goToHelpPage, goToLoginPage, signInUser } from '../../acceptanceTestFunctions/testFunctions';
 
 var user;
 var chai = require('chai')
     , chaiHttp = require('chai-http');
 var server = 'http://localhost:8000';
 
-describe('About tests', () =>{
-    // Run before each case test
+describe('Help tests', () =>{
     beforeEach(() => {
-
         user = {
             username: 'renatinhosss',
+            name: 'renato vinicius',
+            email: 'renatinho@gmail.com',
             password:'abc123456',
+            passwordVerify: 'abc123456',
+            cpf: '09233118070',
+            endereco: 'quadra 14',
+            ddd: '61',
+            whatsapp: '993675487'
         };
 
         goToLoginPage();
         browser.driver.sleep(500);
         signInUser(user);
-
     });
     afterEach(() => {
 
     });
 
-    it('About succesful', () =>{
+    it('Help succesful', () =>{
         browser.driver.sleep(500);
-        goToAboutPage();
+        goToHelpPage();
     });
-
 });

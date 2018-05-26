@@ -12,7 +12,7 @@ describe('Login tests', () =>{
   beforeEach(() => {
 
     user = {
-      username: 'renatinhosss',
+      username: 'renatinhosss ',
       name: 'renato vinicius',
       email: 'renatinho@gmail.com',
       password:'abc123456',
@@ -32,13 +32,14 @@ describe('Login tests', () =>{
   });
 
   afterEach(() => {
-    deleteUser(user);
+
+    browser.driver.sleep(1500);
   });
-/*
+
   it('should sign-in', () => {
     fillSigninFields(user);
     clickLoginButton();
-  }) */
+  }) 
 
   it('Login succesful', () =>{
 
