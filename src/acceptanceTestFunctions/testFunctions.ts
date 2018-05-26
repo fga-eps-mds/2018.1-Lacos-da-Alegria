@@ -1,5 +1,6 @@
 import { browser, element, by} from 'protractor';
 import { send } from 'q';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -245,7 +246,17 @@ export function goToHelpPage(){
     browser.driver.sleep(500);
     clickHelpButton();
     browser.driver.sleep(500);
+}
+
+export function clickActivityDetailsButton(){
+    browser.driver.sleep(500);
+    var activityDetailsButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[1]/span'));
+    activityDetailsButton.click();
 
 }
 
-
+export function goToActivityDetailsPage(){
+    clickSettingsButton();
+    browser.driver.sleep(500);
+    clickActivityDetailsButton();
+}
