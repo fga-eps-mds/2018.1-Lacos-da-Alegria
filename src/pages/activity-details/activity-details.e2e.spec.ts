@@ -39,7 +39,7 @@ describe('Activity details tests', () =>{
     afterEach(() => {
       // should delete user
     });
-
+    
     it('Should go to test Activity details', () => {
         var titlePage = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-list-activity/ion-header/ion-navbar/div[2]/ion-title/div'));
         expect(titlePage.getAttribute('innerHTML')).toContain('Lista de Atividades');
