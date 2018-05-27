@@ -35,6 +35,7 @@ describe('About tests', () =>{
         goToLoginPage();
         browser.driver.sleep(500);
         signInUser(user);
+        browser.driver.sleep(500);
 
     });
     afterEach(() => {
@@ -44,6 +45,7 @@ describe('About tests', () =>{
     it('About succesful', () =>{
         browser.driver.sleep(500);
         goToAboutPage();
+        browser.driver.sleep(500);
     });
 
 });

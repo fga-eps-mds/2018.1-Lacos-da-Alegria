@@ -215,48 +215,95 @@ export function deleteUser(user){
 }
 
 export function clickAboutButton(){
-    browser.driver.sleep(500);
-    ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]/span
-    ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]
     var aboutButon = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[3]/span'));
     aboutButon.click();
 }
 
-export function clickSettingsButton(){
-    browser.driver.sleep(500);
-    var settingsButton = element(by.xpath('//*[@id="tab-t1-3"]'));
-    settingsButton.click();
+export function clickMenuButton(){
+    var MenuButton = element(by.xpath('//*[@id="tab-t1-3"]'));
+    MenuButton.click();
 }
 
 export function clickHelpButton(){
-    browser.driver.sleep(500);
     var helpButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[2]/span'));
     helpButton.click();
 }
 
 export function goToAboutPage(){
-    clickSettingsButton();
+    clickMenuButton();
     browser.driver.sleep(500);
     clickAboutButton();
-    browser.driver.sleep(500);
 }
 
 export function goToHelpPage(){
-    clickSettingsButton();
+    clickMenuButton();
     browser.driver.sleep(500);
     clickHelpButton();
-    browser.driver.sleep(500);
 }
 
-export function clickActivityDetailsButton(){
-    browser.driver.sleep(500);
+export function clickActivityDetailsButton(){;
     var activityDetailsButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[1]/span'));
     activityDetailsButton.click();
 
 }
 
 export function goToActivityDetailsPage(){
-    clickSettingsButton();
+    clickMenuButton();
     browser.driver.sleep(500);
     clickActivityDetailsButton();
+}
+
+export function goToMenuPage(){
+    clickMenuButton();
+    browser.driver.sleep(500);
+    clickActivityDetailsButton();
+    browser.driver.sleep(500);
+    clickBackActivityDetailsPageButton();
+    browser.driver.sleep(500);
+    clickHelpButton();
+    browser.driver.sleep(500);
+    clickBackHelpPageButton();
+    browser.driver.sleep(500);
+    clickAboutButton();
+    browser.driver.sleep(500);
+    clickBackAboutPageButton();
+    browser.driver.sleep(500);
+    clickSettingsButton();
+    browser.driver.sleep(500);
+    clickBackSettingsPageButton();
+    browser.driver.sleep(500);
+    clickExitButton();
+    browser.driver.sleep(500);
+}
+export function clickBackActivityDetailsPageButton(){
+    
+    var BackActivityDetailsPageButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-settings/ion-header/ion-navbar/button'));
+    BackActivityDetailsPageButton.click();
+}
+
+export function clickBackHelpPageButton(){
+    var backHelpPageButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-help/ion-header/ion-navbar/button/span'));
+    backHelpPageButton.click();
+
+}
+
+export function clickBackAboutPageButton(){
+    var backAboutPageButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-about/ion-header/ion-navbar/button/span'));
+    backAboutPageButton.click();
+}
+
+export function clickBackSettingsPageButton(){
+    var backSettingsPageButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-settings/ion-header/ion-navbar/button/span'));
+    backSettingsPageButton.click();
+}
+
+export function clickExitButton(){
+    var exitButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[5]/span'));
+    exitButton.click();
+}
+
+export function clickSettingsButton(){
+    var settingsButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[4]/span'));
+    settingsButton.click();
+
 }

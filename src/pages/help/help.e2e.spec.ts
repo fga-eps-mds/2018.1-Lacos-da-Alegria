@@ -33,6 +33,7 @@ describe('Help tests', () =>{
         goToLoginPage();
         browser.driver.sleep(500);
         signInUser(user);
+    
     });
     afterEach(() => {
 
@@ -41,5 +42,6 @@ describe('Help tests', () =>{
     it('Help succesful', () =>{
         browser.driver.sleep(500);
         goToHelpPage();
+        browser.driver.sleep(500);
     });
 });

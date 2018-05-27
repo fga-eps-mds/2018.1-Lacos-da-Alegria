@@ -38,10 +38,11 @@ describe('Login tests', () =>{
   });
 
   it('should sign-in', () => {
-    goToLoginPage();
+    //goToLoginPage();
     browser.driver.sleep(500);
     signInUser(user);
-    browser.driver.sleep(500);    
+    browser.driver.sleep(500);
+    
   }); 
 
 /*   it('Login succesful', () =>{
