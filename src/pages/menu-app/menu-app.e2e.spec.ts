@@ -41,18 +41,18 @@ describe('Menu tests', () =>{
         clickMenuButton();
 
         var listActivitiesButton = element(by.xpath('//*[starts-with(@class, "list-activities-btn")]'));
-        expect(listActivitiesButton.isDisplayed()).toBeTruthy();
+        expect(listActivitiesButton.isPresent()).toBeTruthy();
 
         var helpButton = element(by.xpath('//*[starts-with(@class, "help-btn")]'));
-        expect(helpButton.isDisplayed()).toBeTruthy();
+        expect(helpButton.isPresent()).toBeTruthy();
 
         var aboutButton = element(by.xpath('//*[starts-with(@class, "about-btn")]'));
-        expect(aboutButton.isDisplayed()).toBeTruthy();
+        expect(aboutButton.isPresent()).toBeTruthy();
 
         var settingsButton = element(by.xpath('//*[starts-with(@class, "settings-btn")]'));
-        expect(settingsButton.isDisplayed()).toBeTruthy();
+        expect(settingsButton.isPresent()).toBeTruthy();
 
         var exitButton = element(by.xpath('//*[starts-with(@class, "exit-btn")]'));
-        expect(exitButton.isDisplayed()).toBeTruthy();
+        expect(exitButton.isPresent()).toBeTruthy();
     });
 });
