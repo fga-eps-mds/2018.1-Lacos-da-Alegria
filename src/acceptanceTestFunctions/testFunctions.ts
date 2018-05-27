@@ -161,7 +161,7 @@ export function clickSignUpButton(){
     buttonSignUp.click();
 }
 
-function clickPageOneNextButton(){
+export function clickPageOneNextButton(){
     browser.driver.sleep(500);
     var buttonNextStep = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-register/ion-content/div[2]/form/ion-slides/div/div[1]/ion-slide[1]/div/ion-list/button'));
 
@@ -293,7 +293,7 @@ export function clickSettingsButton(){
 
 export function clickNewsButton(){
     var newsButton = element(by.xpath('//*[@id="tab-t1-1"]'));
-    newsButton.click();    
+    newsButton.click();
 }
 
 export function clickProfileButton(){
