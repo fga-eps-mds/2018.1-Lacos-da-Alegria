@@ -44,22 +44,67 @@ describe('Login tests', () =>{
 
   });
 
-/*   it('Login succesful', () =>{
+  it('Should not login with Username containing invalid characteres', () => {
+    user.username = 'renatinho@123'
+    signInUser(user);
 
-  }); */
-/*   it('Username field is invalid', () => {
-    var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[1]/div[1]/div/ion-input/input'));
-    usernameField.sendKeys('test');
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
 
-    var passwordField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[2]/div[1]/div/ion-input/input'));
-    passwordField.sendKeys(user.password);
-    var buttonSubmitSignIn = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[2]/button'));
-    buttonSubmitSignIn.click();
-    expect(element(by.css('alert-head'))
-    .getAttribute('innerHTML'))
-    .toContain('alert-head');
-  }); */
+  it('Should not login with Username containing less than 5 characteres', () => {
+    user.username = 'rena'
+    signInUser(user);
 
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
 
+  it('Should not login with Username containing more than 20 characteres', () => {
+    user.username = 'renatinhorenatao12345'
+    signInUser(user);
+
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
+
+  it('Should not login with Password containing invalid characteres', () => {
+    user.password = 'renatinho@123'
+    signInUser(user);
+
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
+
+  it('Should not login with Password containing less than 6 characteres', () => {
+    user.password = 'renat'
+    signInUser(user);
+
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
+
+  it('Should not login with Password containing more than 32 characteres', () => {
+    user.password = 'renatorenatinhorenataoRENATORENATINHORENATAO'
+    signInUser(user);
+
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
+
+  it('Should not login with a existing Username but with wrong Password', () => {
+    user.password = 'Abc123456'
+    signInUser(user);
+
+    var errorPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
+    expect(errorPopUp.isPresent());
+    expect(errorPopUp.getAttribute('innerHTML')).toContain('Ops!');
+  });
 
 });
