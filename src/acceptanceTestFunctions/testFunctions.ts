@@ -53,7 +53,7 @@ export function goToLoginPage() {
   clickEntryButton();
 }
 
-function fillPageOneSignupFields(user){
+export function fillPageOneSignupFields(user){
     var usernameField = element(by.xpath('//*[@formcontrolname="username"]/input[1]'));
     usernameField.sendKeys(user.username);
 
@@ -70,7 +70,7 @@ function fillPageOneSignupFields(user){
     passwordVerifyField.sendKeys(user.passwordVerify);
 }
 
- function fillPageTwoSignupFields(user){
+export function fillPageTwoSignupFields(user){
     var cpfField = element(by.xpath('//*[@formcontrolname="cpf"]/input[1]'));
     cpfField.sendKeys(user.cpf);
 
@@ -89,7 +89,7 @@ function fillPageOneSignupFields(user){
     clickGenreFieldButton();
 }
 
- function fillPageThreeSignupFields(){
+export function fillPageThreeSignupFields(){
     selectCity();
     selectHospital();
     selectHowYouHaveMeet();
