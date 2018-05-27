@@ -5,7 +5,7 @@ var chai = require('chai')
     , chaiHttp = require('chai-http');
 var server = 'http://localhost:8000';
 
-describe('Settings tests', () =>{
+describe('Welcome tests', () =>{
     // Run before each case test
     beforeEach(() => {
 
