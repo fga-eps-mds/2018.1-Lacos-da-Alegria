@@ -1,5 +1,5 @@
 import { browser, element, by, ExpectedConditions, Ptor, Browser } from 'protractor';
-import { goToHelpPage, goToLoginPage, signInUser, clickSignUpButton, signUpUser, goToActivityDetailsPage, goToMenuPage } from '../../acceptanceTestFunctions/testFunctions';
+import { goToHelpPage, goToLoginPage, signInUser, clickSignUpButton, signUpUser, goToActivityDetailsPage, clickMenuButton, clickActivityDetailsButton} from '../../acceptanceTestFunctions/testFunctions';
 
 var user;
 var chai = require('chai')
@@ -18,30 +18,41 @@ describe('Menu tests', () =>{
             password:'abc123456',
             passwordVerify: 'abc123456',
             cpf: '15680423022',
-            endereco: 'quadra 14',
+            address: 'quadra 14',
             ddd: '61',
             whatsapp: '993675487'
         };
 
         goToLoginPage()
+        browser.driver.sleep(500);
 
-        browser.driver.sleep(500);
-        clickSignUpButton();
-        browser.driver.sleep(500);
-        signUpUser(user);
+        // clickSignUpButton();
+        // browser.driver.sleep(500);
+        // signUpUser(user);
 
-        goToLoginPage();
-        browser.driver.sleep(500);
         signInUser(user);
-
     });
+
     afterEach(() => {
 
     });
 
-    it('Menu sucess', () => {
-        browser.driver.sleep(500);
-        goToMenuPage();
-        browser.driver.sleep(500);
+    it('Should go to menu page', () => {
+        clickMenuButton();
+
+        var listActivitiesButton = element(by.xpath('//*[starts-with(@class, "list-activities-btn")]'));
+        expect(listActivitiesButton.isDisplayed()).toBeTruthy();
+
+        var helpButton = element(by.xpath('//*[starts-with(@class, "help-btn")]'));
+        expect(helpButton.isDisplayed()).toBeTruthy();
+
+        var aboutButton = element(by.xpath('//*[starts-with(@class, "about-btn")]'));
+        expect(aboutButton.isDisplayed()).toBeTruthy();
+
+        var settingsButton = element(by.xpath('//*[starts-with(@class, "settings-btn")]'));
+        expect(settingsButton.isDisplayed()).toBeTruthy();
+
+        var exitButton = element(by.xpath('//*[starts-with(@class, "exit-btn")]'));
+        expect(exitButton.isDisplayed()).toBeTruthy();
     });
 });

@@ -14,38 +14,38 @@ describe('About tests', () =>{
             /* username: 'naruto',
             password:'abc123456', */
 
-            username: 'renatinhosss2',
+            username: 'renatinhosss3',
             name: 'renato vinicius',
-            email: 'renatinho2@gmail.com',
+            email: 'renatinho3@gmail.com',
             password:'abc123456',
             passwordVerify: 'abc123456',
             cpf: '39789378084',
-            endereco: 'quadra 14',
+            address: 'quadra 14',
             ddd: '61',
             whatsapp: '993675487'
         };
 
         goToLoginPage()
+        browser.driver.sleep(500);
 
-        browser.driver.sleep(500);
-        clickSignUpButton();
-        browser.driver.sleep(500);
-        signUpUser(user);
+        // clickSignUpButton();
+        // browser.driver.sleep(500);
+        // signUpUser(user);
 
-        goToLoginPage();
-        browser.driver.sleep(500);
         signInUser(user);
         browser.driver.sleep(500);
 
     });
+
     afterEach(() => {
 
     });
 
-    it('About succesful', () =>{
-        browser.driver.sleep(500);
+    it('Should go to About page', () =>{
         goToAboutPage();
-        browser.driver.sleep(500);
+
+        var titlePage = element(by.xpath("//page-about/ion-header/ion-navbar/div[2]/ion-title/div"));
+        expect(titlePage.getAttribute('innerHTML')).toContain('Sobre');
     });
 
 });

@@ -1,5 +1,5 @@
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
-import { goToHelpPage, goToLoginPage, signInUser, clickSignUpButton, signUpUser } from '../../acceptanceTestFunctions/testFunctions';
+import { goToHelpPage, goToLoginPage, signInUser, clickSignUpButton, signUpUser, clickMenuButton } from '../../acceptanceTestFunctions/testFunctions';
 
 var user;
 var chai = require('chai')
@@ -24,24 +24,25 @@ describe('Help tests', () =>{
         };
 
         goToLoginPage()
+        browser.driver.sleep(500);
 
-        browser.driver.sleep(500);
-        clickSignUpButton();
-        browser.driver.sleep(500);
-        signUpUser(user);
+        // clickSignUpButton();
+        // browser.driver.sleep(500);
+        // signUpUser(user);
 
-        goToLoginPage();
-        browser.driver.sleep(500);
         signInUser(user);
-    
+        clickMenuButton();
+
     });
+
     afterEach(() => {
-
+      // shoud delete user
     });
 
-    it('Help succesful', () =>{
-        browser.driver.sleep(500);
+    it('Should go to Help page', () =>{
         goToHelpPage();
-        browser.driver.sleep(500);
+
+        var titlePage = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-help/ion-header/ion-navbar/div[2]/ion-title/div'))
+        expect(titlePage.getAttribute('innerHTML')).toContain('Ajuda');
     });
 });

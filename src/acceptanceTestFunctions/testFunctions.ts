@@ -32,10 +32,10 @@ export function signUpUser(user) {
 }
 
 export function fillSigninFields(user){
-    var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[1]/div[1]/div/ion-input/input'));
+    var usernameField = element(by.xpath('//*[@class="field-login"]/ion-item[1]/div[1]/div[1]/ion-input[1]/input'));
     usernameField.sendKeys(user.username);
 
-    var passwordField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[2]/div[1]/div/ion-input/input'));
+    var passwordField = element(by.xpath('//*[@name="password"]/input[1]'));
     passwordField.sendKeys(user.password);
 }
 
@@ -258,30 +258,8 @@ export function goToActivityDetailsPage(){
     clickActivityDetailsButton();
 }
 
-export function goToMenuPage(){
-    clickMenuButton();
-    browser.driver.sleep(500);
-    clickActivityDetailsButton();
-    browser.driver.sleep(500);
-    clickBackActivityDetailsPageButton();
-    browser.driver.sleep(500);
-    clickHelpButton();
-    browser.driver.sleep(500);
-    clickBackHelpPageButton();
-    browser.driver.sleep(500);
-    clickAboutButton();
-    browser.driver.sleep(500);
-    clickBackAboutPageButton();
-    browser.driver.sleep(500);
-    clickSettingsButton();
-    browser.driver.sleep(500);
-    clickBackSettingsPageButton();
-    browser.driver.sleep(500);
-    clickExitButton();
-    browser.driver.sleep(500);
-}
 export function clickBackActivityDetailsPageButton(){
-    
+
     var BackActivityDetailsPageButton = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-settings/ion-header/ion-navbar/button'));
     BackActivityDetailsPageButton.click();
 }

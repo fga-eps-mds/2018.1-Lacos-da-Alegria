@@ -24,24 +24,23 @@ describe('Login tests', () =>{
     };
 
     goToLoginPage()
+    browser.driver.sleep(500);
 
-    browser.driver.sleep(500);
-    clickSignUpButton();
-    browser.driver.sleep(500);
-    signUpUser(user);
-    browser.driver.sleep(500);
-    /* goToLoginPage(); */
+    // clickSignUpButton();
+    // browser.driver.sleep(500);
+    // signUpUser(user);
+
   });
 
   afterEach(() => {
     /* deleteUser(user); */
   });
 
-  it('should sign-in', () => {
-    //goToLoginPage();
-    browser.driver.sleep(500);
+  it('Should sign-in with succesful', () => {
     signInUser(user);
-    browser.driver.sleep(500);
+
+    var titlePage = element(by.xpath('//*[@id="tabpanel-t1-0"]/page-list-activity/ion-header/ion-navbar/div[2]/ion-title/div'));
+    expect(titlePage.getAttribute('innerHTML')).toContain('Lista de Atividades');
 
   });
 
