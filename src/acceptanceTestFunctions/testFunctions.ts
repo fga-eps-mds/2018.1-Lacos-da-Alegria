@@ -1,5 +1,8 @@
 import { browser, element, by} from 'protractor';
 import { send } from 'q';
+import { HttpModule } from '@angular/http';
+
+
 
 var chai = require('chai')
     , chaiHttp = require('chai-http');
@@ -29,7 +32,7 @@ export function signUpUser(user) {
 }
 
 export function fillSigninFields(user){
-    var usernameField = element(by.xpath('//*[@formcontrolname="username"]/input[1]'));
+    var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[1]/div[1]/div/ion-input/input'));
     usernameField.sendKeys(user.username);
 
     var passwordField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[2]/div[1]/div/ion-input/input'));
@@ -213,7 +216,6 @@ export function deleteUser(user){
     .post('/api/profile/delete/')
     .send(user)
     .end((err, res) =>{
-
     });
 }
 
@@ -221,7 +223,7 @@ export function clickAboutButton(){
     browser.driver.sleep(500);
     ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]/span
     ////*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]
-    var aboutButon = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menuapp/ion-content/div[2]/button[3]/span'));
+    var aboutButon = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[3]/span'));
     aboutButon.click();
 }
 
@@ -229,4 +231,37 @@ export function clickSettingsButton(){
     browser.driver.sleep(500);
     var settingsButton = element(by.xpath('//*[@id="tab-t1-3"]'));
     settingsButton.click();
+}
+
+export function clickHelpButton(){
+    browser.driver.sleep(500);
+    var helpButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[2]/span'));
+    helpButton.click();
+}
+
+export function goToAboutPage(){
+    clickSettingsButton();
+    browser.driver.sleep(500);
+    clickAboutButton();
+    browser.driver.sleep(500);
+}
+
+export function goToHelpPage(){
+    clickSettingsButton();
+    browser.driver.sleep(500);
+    clickHelpButton();
+    browser.driver.sleep(500);
+}
+
+export function clickActivityDetailsButton(){
+    browser.driver.sleep(500);
+    var activityDetailsButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[1]/span'));
+    activityDetailsButton.click();
+
+}
+
+export function goToActivityDetailsPage(){
+    clickSettingsButton();
+    browser.driver.sleep(500);
+    clickActivityDetailsButton();
 }

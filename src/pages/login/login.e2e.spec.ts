@@ -12,9 +12,9 @@ describe('Login tests', () =>{
   beforeEach(() => {
 
     user = {
-      username: 'renatinhosss',
+      username: 'renatinhosz1',
       name: 'renato vinicius',
-      email: 'renatinho@gmail.com',
+      email: 'renatinhosz1@gmail.com',
       password:'abc123456',
       passwordVerify: 'abc123456',
       cpf: '09233118070',
@@ -27,20 +27,39 @@ describe('Login tests', () =>{
 
     browser.driver.sleep(500);
     clickSignUpButton();
-
+    browser.driver.sleep(500);
     signUpUser(user);
+    browser.driver.sleep(500);
+    /* goToLoginPage(); */
   });
 
   afterEach(() => {
-    deleteUser(user);
+    /* deleteUser(user); */
   });
-/*
+
   it('should sign-in', () => {
-    fillSigninFields(user);
-    clickLoginButton();
-  }) */
-
-  it('Login succesful', () =>{
-
+    goToLoginPage();
+    browser.driver.sleep(500);
+    signInUser(user);
+    browser.driver.sleep(500);
   });
+
+/*   it('Login succesful', () =>{
+
+  }); */
+/*   it('Username field is invalid', () => {
+    var usernameField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[1]/div[1]/div/ion-input/input'));
+    usernameField.sendKeys('test');
+
+    var passwordField = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[1]/ion-item[2]/div[1]/div/ion-input/input'));
+    passwordField.sendKeys(user.password);
+    var buttonSubmitSignIn = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-login/ion-content/div[2]/form/ion-list/div[2]/button'));
+    buttonSubmitSignIn.click();
+    expect(element(by.css('alert-head'))
+    .getAttribute('innerHTML'))
+    .toContain('alert-head');
+  }); */
+
+
+
 });
