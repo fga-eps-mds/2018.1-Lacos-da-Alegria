@@ -13,7 +13,7 @@ describe('Activity details tests', () =>{
             /* username: 'naruto',
             password:'abc123456', */
 
-            username: 'renatinhosss4',
+            username: 'naruto',
             name: 'renato vinicius',
             email: 'renatinho4@gmail.com',
             password:'abc123456',
@@ -46,9 +46,9 @@ describe('Activity details tests', () =>{
     });
 
     it('Should go back to Menu', () => {
-        var buttonBack = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-list-activity/ion-header/ion-navbar/button'));
-
-        buttonBack.click();
+        var buttonBackAct = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-list-activity/ion-header/ion-navbar/button'));
+        buttonBackAct.click();
+        browser.driver.sleep(500);
         var listActivitiesButton = element(by.xpath('//*[starts-with(@class, "list-activities-btn")]'));
         expect(listActivitiesButton.isPresent()).toBeTruthy();
     });

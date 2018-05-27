@@ -12,7 +12,7 @@ describe('Menu tests', () =>{
             /* username: 'naruto',
             password:'abc123456', */
 
-            username: 'renatinhosss5',
+            username: 'naruto',
             name: 'renato vinicius',
             email: 'renatinho5@gmail.com',
             password:'abc123456',
