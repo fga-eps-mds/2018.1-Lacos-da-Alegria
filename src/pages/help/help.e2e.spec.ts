@@ -32,7 +32,7 @@ describe('Help tests', () =>{
 
         signInUser(user);
         clickMenuButton();
-
+        goToHelpPage();
     });
 
     afterEach(() => {
@@ -40,9 +40,16 @@ describe('Help tests', () =>{
     });
 
     it('Should go to Help page', () =>{
-        goToHelpPage();
-
         var titlePage = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-help/ion-header/ion-navbar/div[2]/ion-title/div'))
         expect(titlePage.getAttribute('innerHTML')).toContain('Ajuda');
+    });
+
+    it('Should go back to Menu', () => {
+        var buttonBack = element(by.xpath('//*[starts-with(@class, "tabs")]/page-help/ion-header/ion-navbar/button'));
+
+        browser.driver.sleep(500);
+        buttonBack.click();
+        var helpButton = element(by.xpath('//*[starts-with(@class, "help-btn")]'));
+        expect(helpButton.isPresent()).toBeTruthy();
     });
 });
