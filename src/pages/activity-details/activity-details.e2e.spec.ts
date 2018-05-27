@@ -33,7 +33,7 @@ describe('Activity details tests', () =>{
 
         signInUser(user);
         clickMenuButton();
-
+        clickActivityDetailsButton();
     });
 
     afterEach(() => {
@@ -41,10 +41,15 @@ describe('Activity details tests', () =>{
     });
 
     it('Should go to test Activity details', () => {
-        clickActivityDetailsButton();
-
         var titlePage = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-list-activity/ion-header/ion-navbar/div[2]/ion-title/div'));
         expect(titlePage.getAttribute('innerHTML')).toContain('Lista de Atividades');
     });
 
+    it('Should go back to Menu', () => {
+        var buttonBack = element(by.xpath('/html/body/ion-app/ng-component/ion-nav/page-tabs/ion-tabs/page-list-activity/ion-header/ion-navbar/button'));
+
+        buttonBack.click();
+        var listActivitiesButton = element(by.xpath('//*[starts-with(@class, "list-activities-btn")]'));
+        expect(listActivitiesButton.isPresent()).toBeTruthy();
+    });
 });
