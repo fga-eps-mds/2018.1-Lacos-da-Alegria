@@ -290,3 +290,9 @@ export function clickSettingsButton(){
     settingsButton.click();
 
 }
+
+export function clickNewsButton(){
+    var newsButton = element(by.xpath('//*[@id="tab-t1-1"]'));
+    newsButton.click();    
+}
+
