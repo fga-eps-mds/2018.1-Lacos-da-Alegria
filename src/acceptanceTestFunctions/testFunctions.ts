@@ -295,3 +295,13 @@ export function clickNewsButton(){
     var newsButton = element(by.xpath('//*[@id="tab-t1-1"]'));
     newsButton.click();
 }
+
+export function clickProfileButton(){
+    var profileButton = element(by.xpath('//*[@id="tab-t1-2"]'));
+    profileButton.click();
+}
+
+export function clickEditProfileButton(){
+    var editProfileButton = element(by.xpath('//*[@id="edit-btn"]/span'));
+    editProfileButton.click();
+}
