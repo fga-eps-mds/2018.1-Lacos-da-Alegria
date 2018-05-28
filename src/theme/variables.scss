@@ -49,6 +49,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 $radio-ios-color-on: secondary;
+$toolbar-ios-background: #084887;
 
 
 
@@ -59,7 +60,6 @@ $radio-ios-color-on: secondary;
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-$toolbar-ios-background: #084887;
 $toolbar-md-background: #084887;
 $toolbar-wp-background: #084887;
 $tabs-wp-background: #084887;
@@ -68,7 +68,11 @@ $radio-md-color-off: primary;
 
 $background-color: #e3ecf5;
 
-
+$text-input-md-highlight-color-invalid: transparent;
+$text-input-md-highlight-color-valid: transparent;
+$text-input-md-show-invalid-highlight: transparent;
+$text-input-md-highlight-color: transparent;
+$text-input-md-show-valid-highlight: transparent;
 
 // App Windows Variables
 // --------------------------------------------------

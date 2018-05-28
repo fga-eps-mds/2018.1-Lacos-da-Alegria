@@ -5,6 +5,7 @@
 |25/03/2018                 |1.1                             |Adição da guia de estilo do Angular e do Python   |Rômulo e João Vítor  |
 |31/03/2018                 |1.2                             |Correção de erros                                 |João Vítor           |
 |01/04/2018                 |1.3                             |Nova revisão para correção de erros                                 |João Vítor           |
+|25/05/2018                 |1.4                             |Revisão de imports do frontend da aplicação                                 |Renan Schadt e Rômulo Vinícius         |
 
 # Sumário
 
@@ -332,18 +333,19 @@ export class ValidateDirective {}
 
 ### 4.3 Imports
 
-<ul align = "justify"><li>Deixe uma linha em branco entre importações de terceiros e importações de aplicações.
-<li>Liste as linhas de importação em ordem alfabética, pelo nome do módulo.
+<ul align = "justify">
+<li>Os imports são divididos em 3 segmentos. O primeiro contém os imports provindos do ionic/angular. O segundo contém provedores, validações, entre outros. O terceiro contém as páginas do ionic.
+<li>Liste as linhas de importação em ordem alfabética, pelo nome do componente importado.
 <li>Liste as importações de símbolos sem estrutura em ordem alfabética.
 </ul>
 
 ```typescript
 //Correto:
-import { Injectable } from '@angular/core';
 import { Http }       from '@angular/http';
+import { Injectable } from '@angular/core';
 
-import { Hero } from './hero.model';
 import { ExceptionService, SpinnerService, ToastService } from '../../core';
+import { Hero } from './hero.model';
 
 //Errado:
 import { ExceptionService, SpinnerService, ToastService } from '../../core';
