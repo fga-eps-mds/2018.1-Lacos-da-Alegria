@@ -1,11 +1,11 @@
-import { AlertController } from 'ionic-angular';
+import { AlertController, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { RegisterPage } from '../register/register';
-import { TabsPage } from '../tabs/tabs';
+
 import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
 
+import { RegisterPage } from '../register/register';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-login',

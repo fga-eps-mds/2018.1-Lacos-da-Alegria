@@ -1,6 +1,5 @@
 export class StorageService {
-
-    
+  
     getLocalUserName() {
         let username = localStorage.getItem("username");
         
