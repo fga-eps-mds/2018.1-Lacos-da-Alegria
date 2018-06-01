@@ -33,7 +33,8 @@ export class LoginPage {
         console.log('refreeeeesh',refreshToken);
         console.log('acessoooooooo',accessToken);
         console.log('response',response);
-        this.storage.setLocalUser(username, accessToken, refreshToken);
+        this.restProvider.successfulLogin(username,accessToken,refreshToken);
+        // this.storage.setLocalUser(username, accessToken, refreshToken);
         this.navController.push(TabsPage);   
       },
       error => {

@@ -2,9 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { StorageService } from './storage.service';
 
+import { JwtHelper } from 'angular2-jwt';
+
 @Injectable()
 export class RestUserProvider {
   apiUrl = 'http://localhost:8000/api';
+
+  jwtHelper: JwtHelper = new JwtHelper();
+
   constructor(public http: HttpClient, public storage: StorageService) {
     console.log('Hello RestProvider Provider');
   }
@@ -65,14 +70,19 @@ export class RestUserProvider {
       }
     );
   }
-  // successfulLogin(authorizationValue: string) {
-  //   let token = authorizationValue.substring(7);
-  //   let localUser: LocalUser = {
-  //     accessToken: token,
-  //     username: username,
-  //   };
-  //   this.storage.setLocalUser(localUser);
-  // }
+
+  getId(){
+    let token = this.storage.getLocalAccessToken();
+    if(token){
+      token = this.jwtHelper.decodeToken(token);
+      return token.user_id;
+    }
+    return null;
+  }
+
+  successfulLogin(username: string, access: string, refresh: string) {
+    this.storage.setLocalUser(username, access, refresh);
+  }
   
   // userLogin(data) {
   //   return new Promise((resolve, reject) => {
