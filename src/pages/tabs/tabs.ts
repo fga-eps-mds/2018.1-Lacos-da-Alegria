@@ -5,6 +5,8 @@ import { MenuAppPage } from '../menu-app/menu-app';
 import { NewsPage } from '../news/news';
 import { ProfilePage } from '../profile/profile';
 
+import { RoleService } from '../../providers/role.service';
+
 
 @Component({
   selector: 'page-tabs',
@@ -13,10 +15,16 @@ import { ProfilePage } from '../profile/profile';
 
 
 export class TabsPage {
+
+  role: any;
+
+  constructor(public roleService: RoleService) {
+    this.role = roleService.getLocalRole();
+    console.log('ROLE SERVICE = ', this.role);    
+  }
   
-    role: string = 'novato';
-    ProfileRoot = ProfilePage;
-    ActivitiesRoot =  ListActivityPage;
-    NewsRoot = NewsPage;
-    MenuRoot = MenuAppPage;
+  ProfileRoot = ProfilePage;
+  ActivitiesRoot =  ListActivityPage;
+  NewsRoot = NewsPage;
+  MenuRoot = MenuAppPage;
 }

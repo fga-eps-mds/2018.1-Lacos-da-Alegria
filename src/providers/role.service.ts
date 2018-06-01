@@ -6,7 +6,7 @@ export class RoleService {
         if (role == null) {
             return null;
         } else {
-            return JSON.parse(role);
+            return role;
         }
     }
 

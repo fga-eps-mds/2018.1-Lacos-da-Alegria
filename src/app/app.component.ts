@@ -25,19 +25,19 @@ export class MyApp {
     this.restProvider.getUser(id)
     .then(data => {
       this.user = [data];
-      console.log("mensagem",this.user);
+      console.log("mensagem: ",this.user);
+      console.log("role = ", this.user[0].role);
+      this.roleService.setLocalRole(this.user[0].role);
     });
   }
 
   initializeApp() {
-    this.user = this.getUser(3);
-    console.log("mensege",this.user);
-    //this.roleService.setLocalRole(this.user.role);
+    this.user = this.getUser(8); //Colocar o ID de um usuario cadastrado -> quebra galho
+  
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.menu.enable(false);
-      console.log("Teste123121");
       // if(this.storage.getLocalAccessToken){
       //   this.getUser(this.user.id);
       // }
