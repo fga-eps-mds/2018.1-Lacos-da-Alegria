@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { RestActivityProvider } from '../../providers/rest-activity';
 
@@ -14,13 +15,20 @@ export class ActivitiesListPage {
   activities: any;
   indexes: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider, public localNotifications: LocalNotifications) {
     this.getActivitiesList();
   }
 
   openModal(index) {
-      let modal = this.modalCtrl.create(ActivityDetailsPage, index);
-      modal.present();
+    this.localNotifications.schedule({ 
+      text: 'Você se inscreveu em uma atividade',
+      trigger: {at: new Date(new Date().getTime() + 60)},
+      led: 'FF0000',
+      sound: null
+    });
+    
+    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+    modal.present();
     }
 
   ionViewDidLoad() {

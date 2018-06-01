@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { MyApp } from './app.component';
 import { RestActivityProvider } from '../providers/rest-activity';
@@ -80,6 +81,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
     SplashScreen,
     StatusBar,
     StorageService,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
