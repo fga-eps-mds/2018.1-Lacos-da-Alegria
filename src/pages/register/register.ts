@@ -75,7 +75,8 @@ export class RegisterPage {
       howDidYouKnow: this.signupForm.value.howDidYouKnow,
       ddd: this.signupForm.value.ddd,
       genre: this.signupForm.value.genre,
-      want_ongs: this.signupForm.value.want_ongs
+      want_ongs: this.signupForm.value.want_ongs,
+      role: 'novato',
     }
 
     return user;

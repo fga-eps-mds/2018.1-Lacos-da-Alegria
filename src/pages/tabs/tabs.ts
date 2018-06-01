@@ -11,7 +11,10 @@ import { ProfilePage } from '../profile/profile';
   templateUrl: 'tabs.html',
 })
 
+
 export class TabsPage {
+  
+    role: string = 'novato';
     ProfileRoot = ProfilePage;
     ActivitiesRoot =  ListActivityPage;
     NewsRoot = NewsPage;
