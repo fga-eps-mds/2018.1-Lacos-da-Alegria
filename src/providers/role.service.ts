@@ -14,4 +14,8 @@ export class RoleService {
         localStorage.setItem("role", role);
     }
 
+    clearRole(){
+        localStorage.removeItem("role");
+    }
+
 }
