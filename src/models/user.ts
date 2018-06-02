@@ -1,6 +1,6 @@
 export interface User {
     username: string;
-    name: string; 
+    name: string;
     cpf: string;
     email: string;
     birth: string;
@@ -13,4 +13,5 @@ export interface User {
     ddd: string;
     whatsapp: string;
     genre: string;
+    role: string;
 }

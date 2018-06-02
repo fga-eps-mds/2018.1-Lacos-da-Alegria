@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 
+import { RoleService } from '../../providers/role.service';
 import { RestActivityProvider } from '../../providers/rest-activity';
 
 import { ActivityDetailsPage } from '../activity-details/activity-details';
@@ -13,9 +14,11 @@ import { ActivityDetailsPage } from '../activity-details/activity-details';
 export class ActivitiesListPage {
   activities: any;
   indexes: any;
+  role: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public RestProvider: RestActivityProvider, public roleService: RoleService) {
     this.getActivitiesList();
+    this.role = roleService.getLocalRole();
   }
 
   openModal(index) {
