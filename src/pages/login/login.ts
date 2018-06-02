@@ -6,7 +6,6 @@ import { StorageService } from '../../providers/storage.service';
 
 import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';
-import * as jwt_decode from "jwt-decode";
 
 
 @Component({
@@ -32,10 +31,6 @@ export class LoginPage {
         let refreshToken = response.body.substr(11,209);
         let accessToken = response.body.substr(230,207);
         let username = this.user.username;
-        let tokenInfo = this.getDecodedAccessToken(accessToken);
-        let id = tokenInfo.user_id; // get token expiration dateTime
-        console.log(tokenInfo); // show decoded token object in console
-        console.log('iddd',id);
         console.log('refreeeeesh',refreshToken);
         console.log('acessoooooooo',accessToken);
         console.log('response',response);
@@ -52,25 +47,5 @@ export class LoginPage {
         });
         alert.present();
       });
-
   }
-  getDecodedAccessToken(token: string): any {
-    try{
-        return jwt_decode(token);
-    }
-    catch(Error){
-        return null;
-    }
-  }
-
-  // validUser(){
-  //     let acess = this.storage.getLocalAccessToken();
-  //     let token_info = this.getDecodedAccessToken(acess);
-  //     let id = tokenInfo.user_id;
-  //
-  // }
-
-  //console.log('idddddddddd',this.storage.getLocalUserId());
-
-
 }
