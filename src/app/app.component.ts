@@ -5,7 +5,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { RestUserProvider } from '../providers/rest-user';
 import { RoleService } from '../providers/role.service';
+
 import { WelcomePage } from '../pages/welcome/welcome';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,15 +34,16 @@ export class MyApp {
   }
 
   initializeApp() {
-    this.user = this.getUser(8); //Colocar o ID de um usuario cadastrado -> quebra galho
-  
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.menu.enable(false);
-      // if(this.storage.getLocalAccessToken){
-      //   this.getUser(this.user.id);
-      // }
+      let id = this.restProvider.getId();
+      console.log('id = ', id);
+      if(id){
+        this.rootPage = TabsPage;
+        this.user = this.getUser(id);
+      }
     });
   }
 
