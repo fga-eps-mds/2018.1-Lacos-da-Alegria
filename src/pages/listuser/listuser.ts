@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { RestUserProvider } from '../../providers/rest-user';
+
 import { RegisterPage } from '../register/register';
 
 

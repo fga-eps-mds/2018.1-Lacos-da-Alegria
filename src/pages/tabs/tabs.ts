@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { ProfilePage } from '../profile/profile';
-import {  ActivitiesListPage } from '../activities-list/activities-list';
+
+import { ActivitiesListPage } from '../activities-list/activities-list';
+import { MenuAppPage } from '../menu-app/menu-app';
 import { NewsPage } from '../news/news';
-import { MenuAppPage } from '../menuApp/menuApp';
+import { ProfilePage } from '../profile/profile';
 
 
 @Component({

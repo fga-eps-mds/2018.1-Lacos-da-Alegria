@@ -1,7 +1,9 @@
-import { ActivityDetailsPage } from '../activity-details/activity-details';
 import { Component } from '@angular/core';
+
 import { RestActivityProvider } from '../../providers/rest-activity';
 import { AlertController, ModalController, NavController } from 'ionic-angular';
+
+import { ActivityDetailsPage } from '../activity-details/activity-details';
 
 @Component({
   selector: 'page-activities-list',
