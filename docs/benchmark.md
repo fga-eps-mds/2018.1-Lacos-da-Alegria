@@ -57,8 +57,8 @@ Quais elementos fazem o aplicativo gastar bateria?
 </table>
 
 ## 4. Dados Coletados e resultados
-## 4.1. Ferramenta
-	Benchmark tem papel de estimular mudanças organizacionais para melhorar o desempenho do projeto através dos resultados dos indicadores. Nesse contexto, foi utilizado a IDE android-studio, trata-se de um ambiente integrado para desenvolvimento de software. A ferramenta android studio possui o recurso de gerar indicadores de performance e desempenho, e é sobre indicadores como esses que trataremos neste documento. 
+## 4.1. Ferramenta	
+Benchmark tem papel de estimular mudanças organizacionais para melhorar o desempenho do projeto através dos resultados dos indicadores. Nesse contexto, foi utilizado a IDE android-studio, trata-se de um ambiente integrado para desenvolvimento de software. A ferramenta android studio possui o recurso de gerar indicadores de performance e desempenho, e é sobre indicadores como esses que trataremos neste documento. 
 
 ## 4.2 Resultados
 <h2><center>Funcionalidade: Login</center></h2>
