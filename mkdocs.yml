@@ -1,0 +1,67 @@
+site_name: 'Laços da Alegria'
+repo_url: https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/
+
+theme: cosmo
+
+pages:
+- Home: index.md
+
+- Contribuindo:
+  - 'Contruibuindo': 'contributing/CONTRIBUTING.md'
+  - 'Política de Branchs': 'contributing/branch_policy.md'
+
+- Desenvolvimento:
+  - 'Documento de visão': 'development/vision_document.md'
+  - 'Documento de arquitetura': 'development/architecture_document.md'
+  - 'Protótipo de alta fidelidade': 'development/prototype.md'
+  - 'Especificação suplementar': 'development/supplementary_specification.md'
+
+- Gerenciamento:
+  - 'Abertura do Projeto': management/project_charter.md
+  - 'Metodologia': 'management/methodology_document.md'
+  - 'Roadmap': 'management/roadmap.md'
+
+- Sprints:
+  - Sprint 0:
+    - 'Planejamento': 'sprints/sprint0/planning.md'
+    - 'Resultados': 'sprints/sprint0/results.md'
+
+  - Sprint 01:
+    - 'Planejamento': 'sprints/sprint01/planning.md'
+    - 'Resultados': 'sprints/sprint01/results.md'
+
+  - Sprint 02:
+    - 'Planejamento': 'sprints/sprint02/planning.md'
+    - 'Resultados': 'sprints/sprint02/results.md'
+
+  - Sprint 03:
+    - 'Planejamento': 'sprints/sprint03/planning.md'
+    - 'Resultados': 'sprints/sprint03/results.md'
+
+  - Sprint 04:
+    - 'Planejamento': 'sprints/sprint04/planning.md'
+    - 'Resultados': 'sprints/sprint04/results.md'
+
+  - Sprint 05:
+    - 'Planejamento': 'sprints/sprint05/planning.md'
+    - 'Resultados': 'sprints/sprint05/results.md'
+
+  - Sprint 06:
+    - 'Planejamento': 'sprints/sprint06/planning.md'
+    - 'Resultados': 'sprints/sprint06/results.md'
+
+  - Sprint 07:
+    - 'Planejamento': 'sprints/sprint07/planning.md'
+    # - 'Resultados': 'sprints/sprint07/results.md'
+
+  - Sprint 08:
+    - 'Planejamento': 'sprints/sprint08/planning.md'
+    - 'Resultados': 'sprints/sprint08/results.md'
+
+  - Sprint 09:
+    - 'Planejamento': 'sprints/sprint09/planning.md'
+    # - 'Resultados': 'sprints/sprint09/results.md'
+
+  - Sprint 10:
+    - 'Planejamento': 'sprints/sprint10/planning.md'
+    # - 'Resultados': 'sprints/sprint10/results.md'
