@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
 import { RestActivityProvider } from '../../providers/rest-activity';
+import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
 import * as jwt_decode from "jwt-decode";
 
@@ -17,7 +18,7 @@ export class ActivitiesListPage {
   user: any;
   token: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restProvider: RestActivityProvider, public alerCtrl: AlertController, public storage: StorageService ) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restActivityProvider: RestActivityProvider, public restUserProvider: RestUserProvider, public alerCtrl: AlertController, public storage: StorageService ) {
     this.getActivitiesList();
     this.token = storage.getLocalAccessToken();
   }
@@ -32,17 +33,9 @@ export class ActivitiesListPage {
   }
 
   getActivitiesList(){
-    return this.restProvider.getActivitiesList()
+    return this.restActivityProvider.getActivitiesList()
     .then(data => {
       this.activities = data;
-      console.log(this.activities);
-    });
-  }
-
-  postActivityID(index) {
-    return this.restProvider.getActivity(index)
-    .then(data => {
-      this.user.activities = data;
       console.log(this.activities);
     });
   }
@@ -65,6 +58,13 @@ export class ActivitiesListPage {
     catch(Error){
         return null;
     }
+  }
+
+  postActivity(id_user: any, id_activity: any){
+    this.restUserProvider.postActivity(id_user, id_activity).
+    subscribe(response => {
+        console.log('response', response);
+    });
   }
 
   //BtnBackToList(){

@@ -1,10 +1,9 @@
 import { AlertController, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
+import { RegisterPage } from '../register/register';
 import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
-
-import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';
 
 
