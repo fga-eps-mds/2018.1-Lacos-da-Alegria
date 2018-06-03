@@ -7,10 +7,10 @@
 <ion-content padding>
   <div>
   <ion-segment [(ngModel)]="Atividades" color="primary">
-    <ion-segment-button value="hospitais">
+    <ion-segment-button value="">
       Hospitais
     </ion-segment-button>
-    <ion-segment-button value="ongs">
+    <ion-segment-button *ngIf="role != 'Novato'" value="ongs">
       ONGs
     </ion-segment-button>
   </ion-segment>
@@ -18,7 +18,7 @@
   </div>
 
   <div [ngSwitch]="Atividades">
-    <ion-list class="lista1" *ngSwitchCase="'hospitais'">
+    <ion-list class="lista1" *ngSwitchDefault>
       <ion-card class="card" *ngFor="let activity of hospital_activities">
         <ion-card-content class="card-content">
           <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
@@ -32,7 +32,7 @@
                 Participar
               </button>
             </ion-col>
-            <ion-col class="button-col" col-2>
+            <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
               <a ion-item (click)="openModal({id: activity.id})">
                 <button class="button-info" full ion-button default>
                   <ion-icon name="ios-information-circle"></ion-icon>
