@@ -57,7 +57,7 @@
               Participar
             </button>
           </ion-col>
-          <ion-col class="button-col" col-2>
+          <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
             <a ion-item (click)="openModal({id: activity.id})">
               <button class="button-info" full ion-button default>
                 <ion-icon name="ios-information-circle"></ion-icon>

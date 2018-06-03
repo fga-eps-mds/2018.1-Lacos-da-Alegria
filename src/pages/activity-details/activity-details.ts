@@ -14,10 +14,10 @@ export class ActivityDetailsPage {
 
   constructor(public navCtrl: NavController, public params: NavParams, public restProvider: RestActivityProvider) {
     //let id = this.params.get('id');
-    let id = 1;
+    let id = this.params.get('id');    
     this.getHospitalActivity(id);
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
   }
@@ -39,6 +39,6 @@ export class ActivityDetailsPage {
   }
 
   BtnBackToList(){
-    this.navCtrl.push(ActivitiesListPage);
+    this.navCtrl.pop();
   }
 }
