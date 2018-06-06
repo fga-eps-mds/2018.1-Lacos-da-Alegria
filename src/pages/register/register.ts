@@ -76,7 +76,7 @@ export class RegisterPage {
       ddd: this.signupForm.value.ddd,
       genre: this.signupForm.value.genre,
       want_ongs: this.signupForm.value.want_ongs,
-      role: 'novato',
+      role: 'Novato',
     }
 
     return user;
@@ -94,8 +94,10 @@ export class RegisterPage {
       } else if (err.error.email){
         console.log("erro no email")
         alerta = "Esse email";
-      } else {
+      } else if (err.error.cpf) {
         alerta = "Esse CPF"
+      } else {
+        return -1;
       }
 
       let alert = this.alertCtrl.create({
