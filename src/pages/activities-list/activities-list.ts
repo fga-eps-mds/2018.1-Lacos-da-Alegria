@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
+
+import { RoleService } from '../../providers/role.service';
+
 
 import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
@@ -14,14 +18,25 @@ import * as jwt_decode from "jwt-decode";
 })
 
 export class ActivitiesListPage {
-  activities: any;
+  hospital_activities: any;
+  ngo_activities: any;
+  aux: any;
   indexes: any;
   user: any;
   token: any;
+  role: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restActivityProvider: RestActivityProvider, public restUserProvider: RestUserProvider, public alertCtrl: AlertController, public storage: StorageService, public http: HttpClient ) {
-    this.getActivitiesList();
-    this.token = storage.getLocalAccessToken();
+  constructor(
+    public modalCtrl: ModalController,
+    public navCtrl: NavController,
+    public restProvider: RestActivityProvider,
+    public storage: StorageService,
+    public roleService: RoleService) {
+      this.getHospitalActivitiesList();
+      this.getNGOActivitiesList();
+      this.role = this.roleService.getLocalRole();
+      this.token = storage.getLocalAccessToken();
+
   }
 
   openModal(index) {
@@ -33,14 +48,21 @@ export class ActivitiesListPage {
     console.log('ionViewDidLoad ListUserPage');
   }
 
-  getActivitiesList(){
-    return this.restActivityProvider.getActivitiesList()
+  getHospitalActivitiesList(){
+    return this.restProvider.getHospitalActivitiesList()
     .then(data => {
-      this.activities = data;
-      console.log(this.activities);
+      this.hospital_activities = data;
+      console.log(this.aux);
     });
   }
 
+  getNGOActivitiesList(){
+    return this.restProvider.getNGOActivitiesList()
+    .then(data => {
+      this.ngo_activities = data;
+      console.log(this.aux);
+    });
+  }
 
   getDecodedAccessToken(token: string): any{
     try{
