@@ -67,16 +67,15 @@ export class RestUserProvider {
  }
 
 
-  postActivity(id_user, id_activity){
-    return this.http.get(
-        this.apiUrl+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity,
-        {
-            observe: 'response',
-            responseType: 'text'
-        }
-    );
-  }
-
+postActivity(id_user, id_activity){
+    return new Promise((resolve, reject) => {
+        this.http.get(this.apiUrl+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        console.log(err.error.status);
+      });
+    });
+}
   getUser(id){
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/profile/' + id + '/').subscribe(data => {
