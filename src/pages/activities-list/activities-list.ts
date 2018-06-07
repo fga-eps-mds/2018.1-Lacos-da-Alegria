@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
@@ -18,7 +19,7 @@ export class ActivitiesListPage {
   user: any;
   token: any;
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restActivityProvider: RestActivityProvider, public restUserProvider: RestUserProvider, public alerCtrl: AlertController, public storage: StorageService ) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restActivityProvider: RestActivityProvider, public restUserProvider: RestUserProvider, public alertCtrl: AlertController, public storage: StorageService, public http: HttpClient ) {
     this.getActivitiesList();
     this.token = storage.getLocalAccessToken();
   }
@@ -40,16 +41,6 @@ export class ActivitiesListPage {
     });
   }
 
-  doAlert(index) {
-    if(index != null){
-      let alert = this.alerCtrl.create({
-        title: 'Inscrito na atividade!',
-        message: 'Você foi inscrito na atividade. Aguarde ser sorteado para visita',
-        buttons: ['Ok']
-      });
-      alert.present()
-    }
-  }
 
   getDecodedAccessToken(token: string): any{
     try{
@@ -60,15 +51,21 @@ export class ActivitiesListPage {
     }
   }
 
-  postActivity(id_user: any, id_activity: any){
-    this.restUserProvider.postActivity(id_user, id_activity).
-    subscribe(response => {
-        console.log('response', response);
+  postActivity(id_user, id_activity){
+     return new Promise((resolve, reject) => {
+        this.http.get('http://localhost:8000/api'+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
+            resolve(data);
+        }, (err) => {
+           let alerta: string;
+           alerta = err.error.status;
+           console.log(alerta);
+           let alert = this.alertCtrl.create({
+            title: 'Inscrito na atividade!',
+            message: alerta,
+            buttons: ['Ok']
+       });
+       alert.present();
+     });
     });
   }
-
-  //BtnBackToList(){
-  //  this.navCtrl.push(ActivitiesListPage);
-  //}
-
 }
