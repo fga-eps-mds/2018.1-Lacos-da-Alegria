@@ -17,6 +17,7 @@ export class ActivitiesListPage {
   indexes: any;
   user: any;
   token: any;
+  alerta: any;
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public restActivityProvider: RestActivityProvider, public restUserProvider: RestUserProvider, public alerCtrl: AlertController, public storage: StorageService ) {
     this.getActivitiesList();
@@ -40,16 +41,6 @@ export class ActivitiesListPage {
     });
   }
 
-  doAlert(index) {
-    if(index != null){
-      let alert = this.alerCtrl.create({
-        title: 'Inscrito na atividade!',
-        message: 'Você foi inscrito na atividade. Aguarde ser sorteado para visita',
-        buttons: ['Ok']
-      });
-      alert.present()
-    }
-  }
 
   getDecodedAccessToken(token: string): any{
     try{
@@ -62,11 +53,23 @@ export class ActivitiesListPage {
 
   postActivity(id_user: any, id_activity: any){
     this.restUserProvider.postActivity(id_user, id_activity).
-    subscribe(response => {
-        console.log('response', response);
+       then((err) => {
+            this.alerta = "wewe";
+            console.log("wwwww");
     });
+    
   }
 
+  doAlert(index) {
+    if(index != null){
+      let alert = this.alerCtrl.create({
+        title: 'Inscrito na atividade!',
+        message: this.alerta,
+        buttons: ['Ok']
+      });
+      alert.present()
+    }
+  }
   //BtnBackToList(){
   //  this.navCtrl.push(ActivitiesListPage);
   //}
