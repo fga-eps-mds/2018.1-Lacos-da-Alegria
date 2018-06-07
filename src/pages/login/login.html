@@ -1,5 +1,3 @@
-
-
 <ion-content class="main">
   <div class="imgcont">
     <img class="logo" src="../../assets/imgs/lacosimg.png" >
@@ -7,32 +5,21 @@
   <form (ngSubmit)="userLogin()">
 
     <ion-list>
-      <div class="field-login">
-        <ion-item class="item">
-          <ion-input [(ngModel)]="user.username" type="text" name="username" placeholder="Nome de Usuário"></ion-input>
-        </ion-item >
+      <ion-item id="item">
+        <ion-input [(ngModel)]="user.username" type="text" name="username" placeholder="Nome de Usuário"></ion-input>
+      </ion-item >
 
-        <ion-item class="item2">
-            <ion-input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"></ion-input>
-        </ion-item >
-      </div>
-      <p class="remenber-pass">Esqueceu sua senha?</p>
+      <ion-item id="item2">
+          <ion-input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"></ion-input>
+      </ion-item >
 
+      <ion-label class='login-text'>Esqueceu sua senha?</ion-label>
 
-      <div class="div-btn">
-        <button class="login-btn" ion-button type="submit">Entrar</button>
-        <!-- <p>ou</p>
-        <button id="register-btn" ion-button full (click)="BtnRegister()">Cadastrar</button> -->
-      </div>
-      <ion-item color="primary" class="remenber">
-          <ion-label >Lembrar Senha</ion-label>
-          <ion-checkbox  color="dark" checked="true"></ion-checkbox>
-      </ion-item>
+      <button class="login-btn" ion-button type="submit">Entrar</button>
 
     </ion-list>
 
   </form>
-  <div class="registercont">
-    <button class="signup-btn" ion-button (click)="register()">Não tem conta? Cadastre-se</button>
-  </div>
+  <ion-label class='login-text'>Não tem conta?</ion-label>
+  <button class="signup-btn" ion-button (click)="register()">Cadastre-se</button>
 </ion-content>
