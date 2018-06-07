@@ -1,25 +1,23 @@
 <ion-content class="main">
-  <div class="imgcont">
+  <!-- <div class="imgcont"> -->
     <img class="logo" src="../../assets/imgs/lacosimg.png" >
-  </div>
+  <!-- </div> -->
   <form (ngSubmit)="userLogin()">
 
     <ion-list>
-      <ion-item id="item">
+      <ion-item class="credentials">
         <ion-input [(ngModel)]="user.username" type="text" name="username" placeholder="Nome de Usuário"></ion-input>
       </ion-item >
 
-      <ion-item id="item2">
+      <ion-item class="credentials">
           <ion-input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"></ion-input>
       </ion-item >
-
-      <ion-label class='login-text'>Esqueceu sua senha?</ion-label>
 
       <button class="login-btn" ion-button type="submit">Entrar</button>
 
     </ion-list>
 
   </form>
-  <ion-label class='login-text'>Não tem conta?</ion-label>
+  <ion-label class='login-text'>Crie sua conta.</ion-label>
   <button class="signup-btn" ion-button (click)="register()">Cadastre-se</button>
 </ion-content>
