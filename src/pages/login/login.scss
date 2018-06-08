@@ -3,7 +3,6 @@ page-login {
   $black-color: #000;
   $blue-color: #084887;
   $color-orange: #FF5300;
-  $lightblue-color: #0565c0;
   $white-color: #fff;
 
   .scroll-content{
@@ -15,16 +14,15 @@ page-login {
   }
 
   .logo{
-    height: 32vh;
-    width: 32vh;
     display: block;
+    height: 32vh;
     margin: auto;
     margin-bottom: 2vh;
     margin-top: 2vh;
-    
+    width: 32vh;
   }
 
-  .credentials{
+  .item{
     background-color: $white-color;
     border-color: $black-color;
     border-radius: 5px;
@@ -40,28 +38,25 @@ page-login {
   }
 
   .login-btn{
-    height: 7vh;    
-    display: block;
-    margin:auto;
     background-color: $color-orange;
     border: 0.2vh groove black;
     border-radius: 6px;
+    display: block;
+    height: 7vh;    
+    margin:auto;
+    margin-bottom: -2vh;
+    margin-top: 4vh;
     width: 40vh;
   }
 
   .signup-btn{
-    height: 7vh;
+    display: block;
+    margin: auto;
     background-color: $blue-color;
     border: 0.2vh groove black;
     border-radius: 6px;
-    display: block;
+    height: 7vh;
     width: 40vh;
-    margin: auto;
-  }
-  
-  .login-text{
-    color: $white-color;
-    text-align: center;
   }
 
 }
