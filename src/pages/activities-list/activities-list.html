@@ -54,7 +54,7 @@
         <ion-row>
           <ion-col class="button-col" col-10>
             <!-- <a "http://localhost:8000/api/profile/{{getDecodedAccessToken(token).user_id}}/relate_with_activity/?activity_key={{activity.id}}">--!> -->
-              <button ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
+              <button id="join-btnId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
                   Participar
               </button>
            <!-- </a>  -->

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
+import { HttpClient } from '@angular/common/http';
+
 import { RoleService } from '../../providers/role.service';
+
 
 import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
@@ -24,12 +27,12 @@ export class ActivitiesListPage {
   role: any;
 
   constructor(
-    public alertCtrl: AlertController,
     public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public restActivityProvider: RestActivityProvider,
-    public restUserProvider: RestUserProvider,
+    public restProvider: RestActivityProvider,
     public storage: StorageService,
+    public http: HttpClient,
+    public alertCtrl: AlertController,
     public roleService: RoleService) {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
@@ -48,7 +51,7 @@ export class ActivitiesListPage {
   }
 
   getHospitalActivitiesList(){
-    return this.restActivityProvider.getHospitalActivitiesList()
+    return this.restProvider.getHospitalActivitiesList()
     .then(data => {
       this.hospital_activities = data;
       console.log(this.aux);
@@ -56,7 +59,7 @@ export class ActivitiesListPage {
   }
 
   getNGOActivitiesList(){
-    return this.restActivityProvider.getNGOActivitiesList()
+    return this.restProvider.getNGOActivitiesList()
     .then(data => {
       this.ngo_activities = data;
       console.log(this.aux);
@@ -73,26 +76,20 @@ export class ActivitiesListPage {
   }
 
   postActivity(id_user, id_activity){
-    let alerta: any;
-    this.restUserProvider.postActivity(id_user,id_activity).then((resolve) => {
-      console.log("resolve = ", resolve);
-      alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
-      let alert1 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert1.present();
-    }, (error) => {
-      console.log("error = ", error.error.status);
-      alerta = error.error.status;
-      let alert2 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert2.present();
-    })
-
+     return new Promise((resolve, reject) => {
+        this.http.get('http://localhost:8000/api'+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
+            resolve(data);
+        }, (err) => {
+           let alerta: string;
+           alerta = err.error.status;
+           console.log(alerta);
+           let alert = this.alertCtrl.create({
+            title: 'Inscrito na atividade!',
+            message: alerta,
+            buttons: ['Ok']
+       });
+       alert.present();
+     });
+    });
   }
 }

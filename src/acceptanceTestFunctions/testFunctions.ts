@@ -220,7 +220,7 @@ export function deleteUser(user){
 }
 
 export function clickAboutButton(){
-    var aboutButon = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[3]/span'));
+    var aboutButon = element(by.id('about-btnId'));
     aboutButon.click();
 }
 
@@ -230,7 +230,7 @@ export function clickMenuButton(){
 }
 
 export function clickHelpButton(){
-    var helpButton = element(by.xpath('//*[@id="tabpanel-t1-3"]/page-menu-app/ion-content/div[2]/button[2]/span'));
+    var helpButton = element(by.id('help-btnId'));
     helpButton.click();
 }
 
@@ -304,4 +304,9 @@ export function clickProfileButton(){
 export function clickEditProfileButton(){
     var editProfileButton = element(by.xpath('//*[@id="edit-btn"]/span'));
     editProfileButton.click();
+}
+
+export function goToActivityListPage(){
+  var clickTabActivityList = element(by.id('ActivitiesListTab'));
+  clickTabActivityList.click();
 }
