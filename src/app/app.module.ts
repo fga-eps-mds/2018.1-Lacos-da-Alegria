@@ -10,6 +10,7 @@ import { MyApp } from './app.component';
 import { RestActivityProvider } from '../providers/rest-activity';
 import { RestUserProvider } from '../providers/rest-user';
 import { StorageService } from '../providers/storage.service';
+import { RoleService } from '../providers/role.service';
 
 import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
@@ -80,6 +81,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
     SplashScreen,
     StatusBar,
     StorageService,
+    RoleService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })

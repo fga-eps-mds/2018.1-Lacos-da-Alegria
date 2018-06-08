@@ -2,6 +2,7 @@ import { AlertController, NavController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { RestUserProvider } from '../../providers/rest-user';
+import { RoleService } from '../../providers/role.service';
 import { StorageService } from '../../providers/storage.service';
 
 import { AboutPage } from '../about/about';
@@ -21,6 +22,7 @@ export class MenuAppPage {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public restProvider: RestUserProvider,
+    public roleService: RoleService,
     public storage: StorageService
   ){ }
 
@@ -59,7 +61,8 @@ export class MenuAppPage {
           text: 'Confirmar',      
           handler: () => {
             console.log('Before logout: ', this.storage.getLocalAccessToken());
-            this.storage.clearLocalUser();            
+            this.storage.clearLocalUser(); 
+            this.roleService.clearRole();           
             console.log('After logout: ', this.storage.getLocalAccessToken());
             this.navCtrl.push(LoginPage);
           }
