@@ -307,6 +307,6 @@ export function clickEditProfileButton(){
 }
 
 export function goToActivityListPage(){
-  var clickTabActivityList = element(by.id('ActivitiesListTab'));
+  var clickTabActivityList = element(by.xpath('//*[@id="tab-t1-0"]'));
   clickTabActivityList.click();
 }

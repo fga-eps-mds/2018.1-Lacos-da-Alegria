@@ -9,8 +9,6 @@ import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
 import { RestActivityProvider } from '../../providers/rest-activity';
 import { RestUserProvider } from '../../providers/rest-user';
-import { StorageService } from '../../providers/storage.service';
-import * as jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'page-activities-list',
@@ -23,22 +21,20 @@ export class ActivitiesListPage {
   aux: any;
   indexes: any;
   user: any;
-  token: any;
   role: any;
 
   constructor(
     public modalCtrl: ModalController,
     public navCtrl: NavController,
     public restProvider: RestActivityProvider,
-    public storage: StorageService,
+    //public storage: StorageService,
     public http: HttpClient,
     public alertCtrl: AlertController,
+    public restUserProvider: RestUserProvider,
     public roleService: RoleService) {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
-      this.token = storage.getLocalAccessToken();
-
   }
 
   openModal(index) {
@@ -66,13 +62,8 @@ export class ActivitiesListPage {
     });
   }
 
-  getDecodedAccessToken(token: string): any{
-    try{
-        return jwt_decode(token);
-    }
-    catch(Error){
-        return null;
-    }
+  getDecodedAccessToken(){
+    return this.restUserProvider.getId();
   }
 
   postActivity(id_user, id_activity){

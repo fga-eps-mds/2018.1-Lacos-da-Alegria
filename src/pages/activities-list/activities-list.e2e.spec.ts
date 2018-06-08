@@ -1,10 +1,12 @@
 import { browser, element, by, ExpectedConditions, Ptor } from 'protractor';
-import { goToLoginPage, signInUser, clickSignUpButton, signUpUser, goToActivityListPage} from '../../acceptanceTestFunctions/testFunctions';
+import { goToLoginPage, signInUser, clickSignUpButton, clickMenuButton, signUpUser, goToActivityListPage} from '../../acceptanceTestFunctions/testFunctions';
+
+
+var user;
 
 describe('Activities Lists tests', () =>{
     beforeEach(() => {
         user = {
-
             username: 'renatinhosss3',
             name: 'renato vinicius',
             email: 'renatinho3@gmail.com',
@@ -24,7 +26,7 @@ describe('Activities Lists tests', () =>{
         // signUpUser(user);
 
         signInUser(user);
-        clickMenuButton();
+        browser.driver.sleep(500);
         goToActivityListPage();
     });
 
@@ -33,12 +35,12 @@ describe('Activities Lists tests', () =>{
     });
 
     it('Should sign up for activity', () =>{
-        var joinButton = element(by.id('join-btnId'));
+        var joinButton = element(by.xpath('//*[@id="tabpanel-t1-0"]/page-activities-list/ion-content/div[2]/div[2]/ion-list/ion-card/div/ion-row/ion-col/button/span'));
         joinButton.click();
         browser.driver.sleep(500);
-        // var successPopUp = element(by.xpath(''))
-        // expect(titlePage.getAttribute('innerHTML')).toContain('');
-        // browser.driver.sleep(500);
+        var successPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'))
+        expect(successPopUp.getAttribute('innerHTML')).toContain('Inscrito na atividade!');
+        browser.driver.sleep(500);
     });
 
 });
