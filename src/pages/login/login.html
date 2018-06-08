@@ -1,15 +1,13 @@
 <ion-content class="main">
-  <!-- <div class="imgcont"> -->
-    <img class="logo" src="../../assets/imgs/lacosimg.png" >
-  <!-- </div> -->
+  <img class="logo" src="../../assets/imgs/lacosimg.png" >
   <form (ngSubmit)="userLogin()">
 
     <ion-list>
-      <ion-item class="credentials">
+      <ion-item>
         <ion-input [(ngModel)]="user.username" type="text" name="username" placeholder="Nome de Usuário"></ion-input>
       </ion-item >
 
-      <ion-item class="credentials">
+      <ion-item>
           <ion-input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"></ion-input>
       </ion-item >
 
@@ -18,6 +16,5 @@
     </ion-list>
 
   </form>
-  <ion-label class='login-text'>Crie sua conta.</ion-label>
   <button class="signup-btn" ion-button (click)="register()">Cadastre-se</button>
 </ion-content>
