@@ -68,14 +68,14 @@ export class RestUserProvider {
 
 
   postActivity(id_user, id_activity){
-    return new Promise(resolve => {
+    return new Promise((resolve,reject) => {
         this.http.get(this.apiUrl+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
         resolve(data);
       }, (err) => {
-        console.log(err.error.status);
+        reject(err);
       });
     });
- }
+  }
 
   getUser(id){
     return new Promise(resolve => {
