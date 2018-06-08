@@ -13,39 +13,44 @@
                     <ion-label>
                         Informações Básicas  
                     </ion-label> 
-                    <ion-label>
+                    <ion-label class="space">
                         do Usuário
                     </ion-label>
 
                     <ion-item>
                         <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" (focusout)="showError(signupForm.controls.username.valid, 'us')"></ion-input>
+                        <span *ngIf="errorUsername" class="wrong" item-right>X</span>
                     </ion-item >
 
-                    <span *ngIf="errorUsername" class="warning"> Nome de usuário inválido! </span>
+                    <span *ngIf="errorUsername" class="warning">Nome de usuário inválido!</span>
 
                     <ion-item>
                         <ion-input formControlName="name" type="text" placeholder="Nome Completo"  (focusout)="showError(signupForm.controls.name.valid, 'nm')"></ion-input>
+                        <span *ngIf="errorName" class="wrong" item-right>X</span>
                     </ion-item>
 
-                    <span *ngIf="errorName" class="warning"> Nome inválido! </span>
+                    <span *ngIf="errorName" class="warning">Nome inválido!</span>
 
                     <ion-item >
                         <ion-input formControlName="email" type="email" placeholder="E-mail"  (focusout)="showError(signupForm.controls.email.valid, 'em')"></ion-input>
+                        <span *ngIf="errorEmail" class="wrong" item-right>X</span>
                     </ion-item>
 
-                    <span *ngIf="errorEmail" class="warning"> Email inválido! </span>
+                    <span *ngIf="errorEmail" class="warning">Email inválido!</span>
 
                     <ion-item>
                         <ion-input formControlName="password" type="password" placeholder="Senha"  (focusout)="showError(signupForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
+                        <span *ngIf="errorPassword" class="wrong" item-right>X</span>
                     </ion-item >
 
-                    <span *ngIf="errorPassword" class="warning"> Senha inválida! </span>
+                    <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
 
                     <ion-item>
                         <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha"  (focusout)="checkPasswords()"></ion-input>
+                        <span *ngIf="errorCheckPasswords" class="wrong" item-right>X</span>
                     </ion-item >
 
-                    <span *ngIf="errorCheckPasswords" class="warning"> As senhas não coincidem! </span>
+                    <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
                   
                     <button text-center class="btn-next" ion-button (click)="btnNext()" 
                         [disabled]="signupForm.controls.username.invalid || 
@@ -65,34 +70,38 @@
                     <ion-label>
                         Informações Adicionais 
                     </ion-label>
-                    <ion-label>
+                    <ion-label class="space">
                         do Usuário
                     </ion-label>
 
                     <ion-item>
                         <ion-input formControlName="cpf" type="text" placeholder="CPF" (focusout)="showError(signupForm.controls.cpf.valid, 'cpf')"></ion-input>
+                        <span *ngIf="errorCpf" class="wrong" item-right>X</span>
                     </ion-item>
 
                     <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
 
                     <ion-item>
                         <ion-input formControlName="address" type="text" placeholder="Endereço" (focusout)="showError(signupForm.controls.address.valid, 'ad')"></ion-input>
+                        <span *ngIf="errorAddress" class="wrong" item-right>X</span>
                     </ion-item>
 
                     <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
 
                     <ion-item>
-                        <ion-datetime displayFormat="DD/MM/YYYY" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+                        <ion-datetime class="data" displayFormat="DD/MM/YYYY" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
                     </ion-item>
 
                     <ion-item>
                         <ion-input formControlName="ddd" type="text"  placeholder="DDD" (focusout)="showError(signupForm.controls.ddd.valid, 'ddd')"></ion-input>
+                        <span *ngIf="errorDdd" class="wrong" item-right>X</span>
                     </ion-item>
 
                     <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
 
                     <ion-item>
                         <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  (focusout)="showError(signupForm.controls.whatsapp.valid, 'wa')"></ion-input>
+                        <span *ngIf="errorWhatsapp" class="wrong" item-right>X</span>
                     </ion-item>
 
                     <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
@@ -105,7 +114,7 @@
                         </ion-select>
                     </ion-item>
 
-                    <button ion-button (click)="btnBack()">Anterior</button>
+                    <button class="btn-back" ion-button (click)="btnBack()">Anterior</button>
                     <button ion-button (click)="btnNext()" 
                         [disabled]="signupForm.controls.cpf.invalid || 
                         signupForm.controls.address.invalid || 
@@ -124,7 +133,7 @@
                     <ion-label>
                         Localização e Preferências  
                     </ion-label>
-                    <ion-label>
+                    <ion-label class="space">
                         do Usuário
                     </ion-label>
 
@@ -198,7 +207,7 @@
                         </ion-select>
                     </ion-item>
 
-                    <button ion-button (click)="btnBack()">Anterior</button>
+                    <button class="btn-back" ion-button (click)="btnBack()">Anterior</button>
                     <button class="btn-send" ion-button (click)="saveUser()" [disabled]="signupForm.invalid">Cadastrar</button>
 
                 </ion-list>

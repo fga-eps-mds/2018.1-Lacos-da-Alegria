@@ -1,5 +1,4 @@
 import { AlertController, NavController } from 'ionic-angular';
-import { Events } from 'ionic-angular'; 
 import { Component } from '@angular/core';
 
 import { RestUserProvider } from '../../providers/rest-user';
