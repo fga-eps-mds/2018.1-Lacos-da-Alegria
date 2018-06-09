@@ -1,15 +1,15 @@
 page-register {
   $black-color: #000;
-  // $blue-color: #0565c0;
   $blue-color: #084887;
-  $color-orange: #FF5300;
-  // $lightblue-color: #084887;
+  $color-orange: #ff5300;
+  $green-color: #008000;
   $lightblue-color: #0565c0;
+  $red-color: #ff0000;
   $white-color: #fff;
 
   .label {
     color: $white-color;
-    font-size: 3.4vh; 
+    font-size: 3.4vh;
     text-align: center;
   }
 
@@ -48,14 +48,14 @@ page-register {
     max-width: 47vh;
 
     .label {
+      font-size: 2.5vh;
       text-align: start;
-      font-size: 2.5vh; 
     }
   }
-  
+
   .button {
-    background-color: green;
-    border: 0.2vh groove black;
+    background-color: $green-color;
+    border: .2vh groove $black-color;
     border-radius: 6px;
     height: 7vh;
     width: 20vh;
@@ -66,18 +66,18 @@ page-register {
   }
 
   .warning {
-    color: white;
+    color: $white-color;
     display: block;
     font-size: 2.5vh;
     margin: auto;
-    margin-bottom: 0.5vh;
+    margin-bottom: .5vh;
     margin-top: -1.8vh;
     max-width: 47vh;
     text-align: start;
   }
 
   .wrong {
-    color: red;
+    color: $red-color;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4vh;
   }

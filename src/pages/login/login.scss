@@ -2,7 +2,8 @@ page-login {
 
   $black-color: #000;
   $blue-color: #084887;
-  $color-orange: #FF5300;
+  $color-orange: #ff5300;
+  $green-color: #008000;
   $white-color: #fff;
 
   .scroll-content{
@@ -32,30 +33,30 @@ page-login {
     max-width: 45vh;
     text-decoration-color: $blue-color;
   }
-  
+
   .input{
     background-color: transparent;
   }
 
   .login-btn{
     background-color: $color-orange;
-    border: 0.2vh groove black;
+    border: .2vh groove $black-color;
     border-radius: 6px;
     display: block;
-    height: 7vh;    
-    margin:auto;
+    height: 7vh;
+    margin: auto;
     margin-bottom: -2vh;
     margin-top: 4vh;
     width: 40vh;
   }
 
   .signup-btn{
-    display: block;
-    margin: auto;
-    background-color: green;
-    border: 0.2vh groove black;
+    background-color: $green-color;
+    border: .2vh groove $black-color;
     border-radius: 6px;
+    display: block;
     height: 7vh;
+    margin: auto;
     width: 40vh;
   }
 
