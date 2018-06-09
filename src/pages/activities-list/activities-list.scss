@@ -1,57 +1,43 @@
 page-activities-list {
 
-}
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 35vh;
+    width: 100%;
+  }
 
-.card{
-  width: auto;
-  margin-left: 2px;
-  margin-right: 2px;
-  height: 35vh;
-}
+  ion-segment-button {
+    margin-bottom: 0.5vh;
+  }
 
-.card-content{
-  width: auto;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  height: 28vh;
-  background-image: url("https://t1.uc.ltmcdn.com/pt/images/1/7/1/img_como_colocar_fundo_preto_nas_fotos_16171_orig.jpg");
-}
+  ion-item-sliding {
+    position: relative;
+  }
+  
+  ion-item {
+    position: relative;
+  }
 
-.activity-title{
-  text-align: center;
-  background-color: white;
-  position: relative;
-  top: 21vh;
-}
+  .image {
+    height: 100%;
+  }
 
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
 
-.button-col{
-  padding: 0vh;
-}
+  .card-subtitle {
+    font-size: 1em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
 
-.div-button{
-  padding: 0vh;
-}
-
-.button-participate{
-  padding: 0vh;
-  height: 7vh;
-  width: 40vh;
-  background-color: orangered;
-}
-
-.button-info{
-  padding: 0vh;
-  height: 7vh;
-  background-color: orangered;
-}
-
-.button-ios{
-  background-color: #FF4605;
-  color: white;
-}
-
-.button{
-  text-align: left;
 }
