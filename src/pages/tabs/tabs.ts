@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
+import { RoleService } from '../../providers/role.service';
+
 import { ActivitiesListPage } from '../activities-list/activities-list';
 import { MenuAppPage } from '../menu-app/menu-app';
 import { NewsPage } from '../news/news';
 import { ProfilePage } from '../profile/profile';
 
-import { RoleService } from '../../providers/role.service';
 
 
 @Component({

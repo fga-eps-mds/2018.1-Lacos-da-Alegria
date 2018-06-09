@@ -4,11 +4,9 @@
       <img class="imagem" [src]="slide.image"/>
       <h2 class="titulo" [innerHTML]="slide.title"></h2>
       <p class="texto" [innerHTML]="slide.description"></p>
-        <div class="hidden" *ngIf="hide">
-          <button ion-button (click)="btnEntrar()">
-            ENTRAR
-          </button>
-        </div>
+        <button *ngIf="slide.title == 'Tela de Perfil'" ion-button (click)="btnEntrar()">
+          ENTRAR
+        </button>
     </ion-slide>
   </ion-slides>
 </ion-content>
