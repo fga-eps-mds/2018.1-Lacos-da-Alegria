@@ -1,7 +1,21 @@
 page-register {
+  $black-color: #000;
   $blue-color: #084887;
+  $color-orange: #ff5300;
+  $green-color: #008000;
   $lightblue-color: #0565c0;
-  $black-color: #000000;
+  $red-color: #ff0000;
+  $white-color: #fff;
+
+  .label {
+    color: $white-color;
+    font-size: 3.4vh;
+    text-align: center;
+  }
+
+  .space {
+    margin-top: -2vh;
+  }
 
   .scroll-content {
     overflow: hidden;
@@ -25,59 +39,47 @@ page-register {
   }
 
   .item {
-    background-color: transparent;
-    border: 2px solid $lightblue-color;
+    background-color: $white-color;
+    border-color: $black-color;
     border-radius: 5px;
-    color: black;
-    margin-left: 2vh;
-    margin-top: 1vh;
-    width: 54.5vh;
+    margin: auto;
+    margin-bottom: 2vh;
+    max-height: 2vh;
+    max-width: 47vh;
+
+    .label {
+      font-size: 2.5vh;
+      text-align: start;
+    }
   }
 
-  .btn-next {
-    background-color: transparent;
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
-    margin-top: 2vh;
-    width: 25vh;
+  .button {
+    background-color: $green-color;
+    border: .2vh groove $black-color;
+    border-radius: 6px;
+    height: 7vh;
+    width: 20vh;
   }
 
   .btn-back {
-    background-color: transparent;
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
-    margin-top: 2vh;
-    width: 25vh;
+    background-color: $color-orange;
   }
 
-  .btn-send {
-    background-color: transparent;
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
-    margin-top: 2vh;
-    width: 25vh;
+  .warning {
+    color: $white-color;
+    display: block;
+    font-size: 2.5vh;
+    margin: auto;
+    margin-bottom: .5vh;
+    margin-top: -1.8vh;
+    max-width: 47vh;
+    text-align: start;
   }
 
-  .last-item {
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
-    height: 20vh;
-    width: 100%;
-
-    .iradio {
-      float: left;
-      width: 20vh;
-    }
-
-    .eradio {
-      float: right;
-      width: 20vh;
-    }
-  }
-
-  .last-item2 {
-    border: 2px solid $lightblue-color;
-    border-radius: 5px;
+  .wrong {
+    color: $red-color;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
   }
 
 }
