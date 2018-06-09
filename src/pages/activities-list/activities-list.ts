@@ -41,7 +41,6 @@ export class ActivitiesListPage {
     return this.restProvider.getHospitalActivitiesList()
     .then(data => {
       this.hospital_activities = data;
-      console.log(this.aux);
     });
   }
 
@@ -49,7 +48,6 @@ export class ActivitiesListPage {
     return this.restProvider.getNGOActivitiesList()
     .then(data => {
       this.ngo_activities = data;
-      console.log(this.aux);
     });
   }
 
