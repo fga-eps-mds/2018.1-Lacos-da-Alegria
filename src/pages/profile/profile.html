@@ -5,71 +5,18 @@
 </ion-header>
 
 <ion-content padding>
-  <div>
-    <ion-list>
-        <ion-item>
+        <ion-item class="profile" *ngFor='let user of user'>
           <ion-avatar id="picture" item-start>
             <img src="../../assets/imgs/laços.ico">
           </ion-avatar>
+            <h1> {{user.username}} </h1>
+            <p> Nome: {{user.name}} </p>
+            <p> Email: {{user.email}} </p>
+            <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
+            <p> Função: {{user.role}} </p>
         </ion-item>
-        <ion-item *ngFor='let user of user'>
-          {{user.username}}
-          <p> Nome: {{user.name}} </p>
-          <p> Email: {{user.email}} </p>
-          <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
-          <p> CPF: {{showCpf(user.cpf)}} </p>
-          <p> Endereço: {{user.address}} </p>
-          <p> Data de Nascimento: {{showBirth(user.birth)}} </p>
-          <p> Preferência {{user.preference}} </p>
-          <p> Genêro: {{user.genre}} </p>
-          <p> Atividades inscritas: {{user.activities}} </p>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="md-time">Tempo de apoio:</ion-icon>
-        </ion-item>
+          <ion-item class="time">
+            <ion-icon icon-left name="md-time"> Tempo de apoio:</ion-icon>
+          </ion-item>
         <button id="edit-btn" full ion-button>Editar Perfil</button>
-    </ion-list>
-  </div>
-  <div>
-    <ion-list>
-      <ion-card>
-        <div>
-          <ion-row>
-            <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-             <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-             <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-          </ion-row> <ion-row>
-            <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-             <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-             <ion-col col-4>
-              <ion-item>
-                <ion-icon name="ios-star">Info</ion-icon>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-card>
-    </ion-list>
-  </div>
-
 </ion-content>
