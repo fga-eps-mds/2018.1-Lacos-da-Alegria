@@ -35,12 +35,11 @@ describe('Activities Lists tests', () =>{
     });
 
     it('Should sign up for activity', () =>{
-        var joinButton = element(by.xpath('//*[@id="tabpanel-t1-0"]/page-activities-list/ion-content/div[2]/div[2]/ion-list/ion-card/div/ion-row/ion-col/button/span'));
+        var joinButton = element(by.xpath('//*[@id="tabpanel-t1-0"]/page-activities-list/ion-content/div[2]/div[2]/ion-list/ion-card[1]/div/ion-row/ion-col/button'));
         joinButton.click();
         browser.driver.sleep(500);
-        var successPopUp = element(by.xpath('//*[@id="alert-hdr-0"]'))
-        expect(successPopUp.getAttribute('innerHTML')).toContain('Inscrito na atividade!');
-        browser.driver.sleep(500);
+        var alertMsg = element(by.xpath('//*[@id="alert-msg-0"]'));
+        expect<any>(alertMsg.getText()).toEqual('Você entrou na pré-lista, aguarde o resultado do sorteio.');
     });
 
 });
