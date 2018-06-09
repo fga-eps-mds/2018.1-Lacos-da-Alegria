@@ -17,7 +17,7 @@ export class ProfilePage {
 
 	constructor(
     public alertCtrl: AlertController,
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public params: NavParams,
     public restProvider: RestUserProvider,
     public storage: StorageService) {
@@ -57,7 +57,8 @@ export class ProfilePage {
       inputs: [
         {
           name: 'password',
-          placeholder: 'Senha'
+          placeholder: 'Senha',
+          type:'password'
         },
       ],
       buttons: [
@@ -78,7 +79,7 @@ export class ProfilePage {
                 this.navCtrl.push(LoginPage);
               }, error => {
                 console.log(error.error);
-    
+
                 const alert = this.alertCtrl.create({
                   title: 'Não foi possível excluir a conta',
                   subTitle: 'As senhas não coincidem',
