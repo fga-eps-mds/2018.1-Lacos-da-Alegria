@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { ModalController, NavController } from 'ionic-angular';
+
+import { HttpClient } from '@angular/common/http';
 
 import { RoleService } from '../../providers/role.service';
-import { RestActivityProvider } from '../../providers/rest-activity';
 
+
+import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
+import { RestActivityProvider } from '../../providers/rest-activity';
+import { RestUserProvider } from '../../providers/rest-user';
 
 @Component({
   selector: 'page-activities-list',
@@ -16,12 +20,17 @@ export class ActivitiesListPage {
   ngo_activities: any;
   aux: any;
   indexes: any;
+  user: any;
   role: any;
 
   constructor(
-    public modalCtrl: ModalController, 
-    public navCtrl: NavController, 
+    public modalCtrl: ModalController,
+    public navCtrl: NavController,
     public restProvider: RestActivityProvider,
+    //public storage: StorageService,
+    public http: HttpClient,
+    public alertCtrl: AlertController,
+    public restUserProvider: RestUserProvider,
     public roleService: RoleService) {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
@@ -53,4 +62,25 @@ export class ActivitiesListPage {
     });
   }
 
+  getDecodedAccessToken(){
+    return this.restUserProvider.getId();
+  }
+
+  postActivity(id_user, id_activity){
+     return new Promise((resolve, reject) => {
+        this.http.get('http://localhost:8000/api'+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
+            resolve(data);
+        }, (err) => {
+           let alerta: string;
+           alerta = err.error.status;
+           console.log(alerta);
+           let alert = this.alertCtrl.create({
+            title: 'Inscrito na atividade!',
+            message: alerta,
+            buttons: ['Ok']
+       });
+       alert.present();
+     });
+    });
+  }
 }

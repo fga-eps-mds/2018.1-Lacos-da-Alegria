@@ -191,5 +191,4 @@ export class RegisterPage {
     this.slides.slidePrev(500);
     this.slides.lockSwipes(true);
   }
-
 }

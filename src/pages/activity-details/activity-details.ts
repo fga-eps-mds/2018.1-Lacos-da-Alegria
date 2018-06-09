@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { RestActivityProvider } from '../../providers/rest-activity';
 
-import { ActivitiesListPage } from '../activities-list/activities-list';
 
 @Component({
   selector: 'page-activity-details',

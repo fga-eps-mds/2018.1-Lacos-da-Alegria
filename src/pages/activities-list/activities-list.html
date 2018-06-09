@@ -28,8 +28,8 @@
         <div class="div-button">
           <ion-row>
             <ion-col class="button-col" col-10>
-              <button class="button-participate" ion-button default>
-                Participar
+              <button ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(), activity.id)">
+                  Participar
               </button>
             </ion-col>
             <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
@@ -53,9 +53,9 @@
       <div class="div-button">
         <ion-row>
           <ion-col class="button-col" col-10>
-            <button class="button-participate" ion-button default>
-              Participar
-            </button>
+              <button id="join-btnId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(), activity.id)">
+                  Participar
+              </button>
           </ion-col>
           <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
             <a ion-item (click)="openModal({id: activity.id})">

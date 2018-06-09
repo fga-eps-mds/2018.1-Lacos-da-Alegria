@@ -16,8 +16,8 @@ export class RestUserProvider {
   saveUser(data) {
       return new Promise((resolve, reject) => {
         this.http.post(
-          this.apiUrl+'/profile/', 
-          JSON.stringify(data), 
+          this.apiUrl+'/profile/',
+          JSON.stringify(data),
           {
             headers: new HttpHeaders().set('Content-Type', 'application/json'),
           })
@@ -62,10 +62,21 @@ export class RestUserProvider {
       this.apiUrl+'/token/refresh/',
       token,
       {
+        //headers: new HttpHeaders().set('Content-Type', 'application/json'),
         observe: 'response', // Capturar o HEADER
         responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
       }
     );
+ }
+
+  postActivity(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'/profile/'+id_user+'/relate_with_activity/?activity_key='+id_activity).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
   }
 
   getId(){

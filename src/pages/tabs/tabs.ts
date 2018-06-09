@@ -16,16 +16,16 @@ import { ProfilePage } from '../profile/profile';
 
 
 export class TabsPage {
+    ProfileRoot = ProfilePage;
+    ActivitiesRoot =  ActivitiesListPage;
+    NewsRoot = NewsPage;
+    MenuRoot = MenuAppPage;
 
   // role: any;
 
   // constructor(public roleService: RoleService) {
   //   this.role = roleService.getLocalRole();
-  //   console.log('ROLE SERVICE = ', this.role);    
+  //   console.log('ROLE SERVICE = ', this.role);
   // }
-  
-  ProfileRoot = ProfilePage;
-  ActivitiesRoot =  ActivitiesListPage;
-  NewsRoot = NewsPage;
-  MenuRoot = MenuAppPage;
+
 }

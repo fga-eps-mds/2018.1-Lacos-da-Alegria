@@ -1,12 +1,11 @@
 import { AlertController, NavController } from 'ionic-angular';
-import { Events } from 'ionic-angular'; 
+import { Events } from 'ionic-angular';
 import { Component } from '@angular/core';
 
+import { RegisterPage } from '../register/register';
 import { RestUserProvider } from '../../providers/rest-user';
 import { RoleService } from '../../providers/role.service';
 import { StorageService } from '../../providers/storage.service';
-
-import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';
 
 
@@ -18,10 +17,10 @@ export class LoginPage {
   user = { username:'', password:''}
   users: any;
   constructor(
-    public alertCtrl: AlertController, 
+    public alertCtrl: AlertController,
     public events: Events,
-    public navController: NavController,  
-    public restProvider: RestUserProvider, 
+    public navController: NavController,
+    public restProvider: RestUserProvider,
     public roleService: RoleService,
     public storage: StorageService
   ) { }
@@ -42,8 +41,9 @@ export class LoginPage {
         this.restProvider.successfulLogin(username,accessToken,refreshToken);
         this.getUser(this.restProvider.getId());
         this.events.subscribe('Next Page',()=>{
-          this.navController.push(TabsPage);   
+          this.navController.push(TabsPage);
         })
+
       },
       error => {
         let alert = this.alertCtrl.create({
@@ -66,5 +66,4 @@ export class LoginPage {
       this.events.publish('Next Page');
     });
   }
-
 }
