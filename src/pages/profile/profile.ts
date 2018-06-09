@@ -1,7 +1,11 @@
+import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { RestUserProvider } from '../../providers/rest-user';
+
+import { LoginPage } from '../login/login';
+import { StorageService } from '../../providers/storage.service';
 
 @Component({
   selector: 'profile-home',
@@ -9,9 +13,16 @@ import { RestUserProvider } from '../../providers/rest-user';
 })
 export class ProfilePage {
 	user: any;
+  id: any;
 
-	constructor(public navCtrl: NavController, public params: NavParams, public RestProvider: RestUserProvider) {
-    this.getUser(this.RestProvider.getId());
+	constructor(
+    public alertCtrl: AlertController,
+    public navCtrl: NavController,
+    public params: NavParams,
+    public restProvider: RestUserProvider,
+    public storage: StorageService) {
+      this.id = this.restProvider.getId();
+      this.getUser(this.id);
   }
 
   ionViewDidLoad() {
@@ -30,11 +41,56 @@ export class ProfilePage {
 
     return data;
   }
+
   getUser(id) {
-    this.RestProvider.getUser(id)
+    this.restProvider.getUser(id)
     .then(data => {
       this.user = [data];
       console.log(this.user);
     });
+  }
+
+  confirmDelete() {
+    const prompt = this.alertCtrl.create({
+      title: 'Deseja realmente excluir a conta?',
+      message: "Após a conta ser excluída, não poderá ser recuperada.",
+      inputs: [
+        {
+          name: 'password',
+          placeholder: 'Senha',
+          type:'password'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: data => {
+            console.log('Saved clicked');
+            console.log("Senha  = ", data);
+            this.restProvider.deleteUser(this.id, data)
+              .then(response => {
+                console.log(response);
+                this.navCtrl.push(LoginPage);
+              }, error => {
+                console.log(error.error);
+
+                const alert = this.alertCtrl.create({
+                  title: 'Não foi possível excluir a conta',
+                  subTitle: 'As senhas não coincidem',
+                  buttons: ['OK']
+                });
+                alert.present();
+              })
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 }
