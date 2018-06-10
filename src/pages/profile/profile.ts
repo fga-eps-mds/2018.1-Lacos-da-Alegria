@@ -4,7 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { RestUserProvider } from '../../providers/rest-user';
 
 @Component({
-  selector: 'profile-home',
+  selector: 'page-profile',
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
