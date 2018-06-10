@@ -1,44 +1,48 @@
 page-activities-list {
 
-  ion-card {
-    position: relative;
-    text-align: center;
-    height: 35vh;
-    width: 35vh;
-    border: 0.2vh groove #ff5300;
+  .itemActivityList {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  ion-segment-button {
-    margin-bottom: 0.5vh;
+ // Miopia effect
+  // .image {
+  //   -webkit-filter: blur(2px);
+  //   -moz-filter: blur(2px);
+  //   -o-filter: blur(2px);
+  //   -ms-filter: blur(2px);
+  //   filter: blur(2px);
+  // }
+
+  .card-hosp {
+    margin: auto;
   }
 
-  ion-item-sliding {
-    position: relative;
+  .item-md.item-block .item-inner {
+    padding-right: 0px;
   }
 
-  ion-item {
-    position: relative;
-  }
-
-  .image {
-    height: 100%;
+  .label-md {
+    margin: 13px -13px 13px -13px;
   }
 
   .card-title {
-    position: absolute;
-    top: 36%;
     font-size: 1.5em;
-    width: 100%;
     font-weight: bold;
     color: #fff;
+    text-transform: capitalize;
   }
 
   .card-subtitle {
     font-size: 1em;
-    position: absolute;
-    top: 52%;
-    width: 100%;
     color: #fff;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
   }
 
 }
