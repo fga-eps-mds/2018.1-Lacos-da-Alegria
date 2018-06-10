@@ -28,7 +28,7 @@
         <div class="div-button">
           <ion-row>
             <ion-col class="button-col" col-10>
-              <button ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
+              <button [disabled]="buttonDisabled"  ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
                   Participar
               </button>
             </ion-col>

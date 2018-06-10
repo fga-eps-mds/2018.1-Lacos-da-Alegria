@@ -83,6 +83,7 @@ export class ActivitiesListPage {
         buttons: ['OK']
       });
       alert1.present();
+      this.buttonDisabled = true;
     }, (error) => {
       console.log("error = ", error.error.status);
       alerta = error.error.status;
