@@ -13,9 +13,14 @@ export class ActivityDetailsPage {
   activity: any;
 
   constructor(public navCtrl: NavController, public params: NavParams, public restProvider: RestActivityProvider) {
-    //let id = this.params.get('id');
     let id = this.params.get('id');
-    this.getHospitalActivity(id);
+    let nome = this.params.get('nome');
+    if(nome == 'hosp'){
+      this.getHospitalActivity(id);
+    }
+    else{
+      this.getNGOActivity(id);
+    }
   }
 
   ionViewDidLoad() {
