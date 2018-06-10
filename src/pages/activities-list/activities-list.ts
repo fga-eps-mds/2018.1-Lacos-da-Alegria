@@ -19,8 +19,8 @@ export class ActivitiesListPage {
   role: any;
 
   constructor(
-    public modalCtrl: ModalController, 
-    public navCtrl: NavController, 
+    public modalCtrl: ModalController,
+    public navCtrl: NavController,
     public restProvider: RestActivityProvider,
     public roleService: RoleService) {
       this.getHospitalActivitiesList();
@@ -30,6 +30,7 @@ export class ActivitiesListPage {
 
   openModal(index) {
       let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+      console.log('index = ',index);
       modal.present();
     }
 
