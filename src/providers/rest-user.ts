@@ -103,12 +103,14 @@ export class RestUserProvider {
   }
 
   getUser(id){
-    return new Promise(resolve => {
+    return new Promise((resolve,reject) => {
       this.http.get(this.apiUrl + '/profile/' + id + '/').subscribe(data => {
         resolve(data);
       }, err => {
+        reject(err);
         console.log(err);
       });
     });
+    // return this.http.get(this.apiUrl + 'profile' + id + '/');
   }
 }

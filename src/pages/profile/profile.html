@@ -12,7 +12,11 @@
             <img src="../../assets/imgs/laços.ico">
           </ion-avatar>
         </ion-item>
-        <ion-item *ngFor='let user of user'>
+
+        <ion-label *ngIf="user">
+          Nome = {{user.name}}
+        </ion-label>
+        <ion-item *ngIf="user&&!edit">
           {{user.username}}
           <p> Nome: {{user.name}} </p>
           <p> Email: {{user.email}} </p>
@@ -24,10 +28,57 @@
           <p> Genêro: {{user.genre}} </p>
           <p> Atividades inscritas: {{user.activities}} </p>
         </ion-item>
-        <ion-item>
-          <ion-icon name="md-time">Tempo de apoio:</ion-icon>
-        </ion-item>
-        <button id="edit-btn" full ion-button>Editar Perfil</button>
+
+        <form *ngIf="edit" [formGroup]="editProfileForm">
+          <ion-list >
+            
+            <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" value="{{user.username}}" (focusout)="showError(editProfileForm.controls.username.valid, 'us')"></ion-input>
+            <span *ngIf="errorUsername" class="warning">Nome de usuário inválido!</span>
+
+            <ion-input formControlName="name" type="text" placeholder="Nome Completo" value="{{user.name}}" (focusout)="showError(editProfileForm.controls.name.valid, 'nm')"></ion-input>
+            <span *ngIf="errorName" class="warning">Nome inválido!</span>
+
+            <ion-input formControlName="email" type="email" placeholder="E-mail" value="{{user.email}}" (focusout)="showError(editProfileForm.controls.email.valid, 'em')"></ion-input>
+            <span *ngIf="errorEmail" class="warning">Email inválido!</span>
+
+            <button *ngIf="!changePassword">Alterar Senha</button>
+
+            <ion-input formControlName="password" type="password" placeholder="Senha" (focusout)="showError(editProfileForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
+            <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
+
+            <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha" (focusout)="checkPasswords()"></ion-input>
+            <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
+            
+            <ion-input formControlName="cpf" type="text" placeholder="CPF" value="{{user.cpf}}" (focusout)="showError(editProfileForm.controls.cpf.valid, 'cpf')"></ion-input>
+            <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
+
+            <ion-input formControlName="address" type="text" placeholder="Endereço" value="{{user.address}}" (focusout)="showError(editProfileForm.controls.address.valid, 'ad')"></ion-input>
+            <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
+
+            <ion-item>
+              <ion-datetime class="data" displayFormat="DD/MM/YYYY" placeholder="{{user.birth}}" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
+            </ion-item>
+
+            
+            <ion-input formControlName="ddd" type="text"  placeholder="DDD" value="{{user.ddd}}" (focusout)="showError(editProfileForm.controls.ddd.valid, 'ddd')"></ion-input>
+            <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
+
+            <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  value="{{user.whatsapp}}" (focusout)="showError(editProfileForm.controls.whatsapp.valid, 'wa')"></ion-input>
+            <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
+            
+            <ion-item>
+              <ion-label>Sexo</ion-label>
+              <ion-select okText="Ok" cancelText="Cancelar" placeholder="{{user.genre}}" formControlName="genre">
+                  <ion-option value="Feminino">Feminino</ion-option>
+                  <ion-option value="Masculino">Masculino</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <button (click)="confirmEdit()">Alterar dados</button>
+          </ion-list>
+        </form>
+        
+        <button full ion-button (click)="editProfile()">Editar Perfil</button>
     </ion-list>
   </div>
   <div>
