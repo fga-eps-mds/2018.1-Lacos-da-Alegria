@@ -22,6 +22,7 @@ export class ActivitiesListPage {
   user: any;
   token: any;
   role: any;
+  buttonDisabled: any;
 
   constructor(
     public alertCtrl: AlertController,
@@ -83,6 +84,7 @@ export class ActivitiesListPage {
         buttons: ['OK']
       });
       alert1.present();
+
       this.buttonDisabled = true;
     }, (error) => {
       console.log("error = ", error.error.status);

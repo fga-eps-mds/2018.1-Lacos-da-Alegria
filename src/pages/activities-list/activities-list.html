@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Atividades da Semana</ion-title>
+    <ion-title id="ActivityTitle">Atividades da Semana</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,7 +16,6 @@
   </ion-segment>
 
   </div>
-
   <div [ngSwitch]="Atividades">
     <ion-list class="lista1" *ngSwitchDefault>
       <ion-card class="card" *ngFor="let activity of hospital_activities">
