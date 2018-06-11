@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title id="ActivityTitle">Atividades da Semana</ion-title>
+    <ion-title id="activityTitle">Atividades da Semana</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -27,7 +27,7 @@
         <div class="div-button">
           <ion-row>
             <ion-col class="button-col" col-10>
-              <button [disabled]="buttonDisabled"  ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
+              <button [disabled]="buttonDisabled" id="participateId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
                   Participar
               </button>
             </ion-col>
