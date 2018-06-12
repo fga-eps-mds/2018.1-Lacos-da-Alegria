@@ -79,6 +79,17 @@ export class RestUserProvider {
     });
   }
 
+  isButtonDisabled(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'/profile/'+id_user+'/is_user_related_with_this_activity/?activity_key='+id_activity).subscribe(data => {
+          console.log("dataaaaaaaa = ", data)
+          resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
   getId(){
     let token = this.storage.getLocalAccessToken();
     if(token){

@@ -98,4 +98,14 @@ export class ActivitiesListPage {
     })
 
   }
+
+  isButtonDisabled(id_user, id_activity){
+    console.log("ta aquiiiiiiiii")
+    this.restUserProvider.isButtonDisabled(id_user,id_activity).then((data) => {
+      console.log("resolve data = ", data);
+      this.buttonDisabled = true;
+
+    }, (error) => {
+    })
+  }
 }
