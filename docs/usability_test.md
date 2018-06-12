@@ -59,14 +59,43 @@ Para realizar um teste de usabilidade com qualidade é preciso conhecer os usuá
 ### 4.1. Definição do grupo de usuários
 Definir o grupo de usuários para testar a aplicação é o primeiro passo desta pesquisa e diz muito sobre qual o perfil de usuário que usará o software, visto que os desenvolvedores querem atingir o público alvo, e assim o maior número de pessoas a permanecerem usando a aplicação. Geralmente quando um usuário se identifica com um software, ele tende a usar mais, portanto, nessa etapa  busca-se conhecer as necessidades e expectativas do usuário.
 
-### 4.2.Pesquisa
+### 4.2. Pesquisa
 É importante para o avaliador ter uma visão clara da tarefa, e qual o critério de sucesso para que o usuário que fará o teste de usabilidade entenda as tarafas que ele deve realizar sem que haja dúvidas. Por isso, a pesquisa deve ser conduzida explicando o contexto e descrevendo a tarefa sem induzir o usuário.
 
+----
+Nome:
+
+Idade:
+
+Novato() Voluntário() Apoio()
+
+*  Entrar na aplicação e se cadastrar em um hospital, caso não haja vagas ver sua posição na fila.
+
 ### 4.3. Validação de Informações
-Para validar e ter um feedback da pesquisa foram respondidas 15 perguntas segundo o padrão SUS(System Usability Scale) com 5 opções de concordancia para avaliar a facilidade de uso da amostra.
+Para validar e ter um feedback da pesquisa foram respondidas 10 perguntas segundo o padrão SUS(System Usability Scale) com 5 opções de concordancia para avaliar a facilidade de uso da amostra.
 
 |Discordo Totalmente|Discordo|Neutro|Concordo|Concordo Completamente|
 |-------------------|--------|------|--------|----------------------|
+
+### Afirmações Propostas:
+1. Gostaria de usar este aplicativo com freqüência.
+2. O aplicativo é desnecessariamente complexo.
+3. Achei o aplicativo fácil de usar.
+4. Acho que precisaria do apoio de técnico para ser capaz de usar este aplicativo.
+5. Achei que as várias funções deste aplicativo foram bem integradas.
+6. Achei que havia muita inconsistência neste aplicativo.
+7. Imagino que a maioria das pessoas aprenderá a usar este aplicativo muito rapidamente.
+8. Achei o aplicativo muito complicado de usar.
+9. Senti-me muito confiante usando o aplicativo.
+10. Eu preciso aprender um monte de coisas antes de usar este aplicativo
+
+O resultado foi calculado seguindo a técnica SUS. Para os itens 1, 3, 5, 7, e 9 do questionário (itens formulados
+positivamente) a pontuação atribuida a cada afirmação é a
+posição da escala menos um. Para os itens 2, 4, 6, 8 e 10 (itens
+redigidos negativamente), a contribuição é cinco menos a
+escala. Em seguida, foi necessário multiplicar a soma das
+pontuações por 2,5, para que as notas sejam normalizadas em
+uma escala de 0 a 100.
 
 ### 4.5. Requisições dos Usuários
 Essa etapa consiste em entender porque uma funcionalidade foi importante para as pessoas que usaram minha aplicação. O que fez a maioria dos usuários acessar uma página que não estava prevista pela equipe de desenvolvimento? Para assim fazer com que os usuários usem o aplicativo e diminua as frustações evitando a busca pela concorrência.
