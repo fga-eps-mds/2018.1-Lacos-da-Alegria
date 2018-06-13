@@ -5,18 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-        <ion-item class="profile" *ngFor='let user of user'>
-          <ion-avatar id="picture" item-start>
-            <img src="../../assets/imgs/laços.ico">
+        <ion-item text-center class="profile" *ngFor='let user of user'>
+          <ion-avatar class="picture">
+            <img src="../../assets/imgs/logooficial.png">
           </ion-avatar>
             <h1> {{user.username}} </h1>
-            <p> Nome: {{user.name}} </p>
-            <p> Email: {{user.email}} </p>
-            <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
-            <p> Função: {{user.role}} </p>
+            <h2> {{user.role}} </h2>
+            <p> {{user.name}} </p>
+            <p> {{user.email}} </p>
+            <p> {{user.ddd}} {{user.whatsapp}} </p>
         </ion-item>
-          <ion-item class="time">
-            <ion-icon icon-left name="md-time"> Tempo de apoio:</ion-icon>
-          </ion-item>
         <button id="edit-btn" full ion-button>Editar Perfil</button>
 </ion-content>
