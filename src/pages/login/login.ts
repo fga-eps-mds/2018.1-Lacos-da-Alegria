@@ -1,5 +1,4 @@
 import { AlertController, NavController } from 'ionic-angular';
-import { Events } from 'ionic-angular'; 
 import { Component } from '@angular/core';
 
 import { RestUserProvider } from '../../providers/rest-user';
@@ -18,8 +17,7 @@ export class LoginPage {
   user = { username:'', password:''}
   users: any;
   constructor(
-    public alertCtrl: AlertController, 
-    public events: Events,
+    public alertCtrl: AlertController,
     public navController: NavController,  
     public restProvider: RestUserProvider, 
     public roleService: RoleService,
@@ -41,9 +39,6 @@ export class LoginPage {
         console.log('response',response);
         this.restProvider.successfulLogin(username,accessToken,refreshToken);
         this.getUser(this.restProvider.getId());
-        this.events.subscribe('Next Page',()=>{
-          this.navController.push(TabsPage);   
-        })
       },
       error => {
         let alert = this.alertCtrl.create({
@@ -63,7 +58,7 @@ export class LoginPage {
       console.log("mensagem: ",this.users);
       console.log("role = ", this.users[0].role);
       this.roleService.setLocalRole(this.users[0].role);
-      this.events.publish('Next Page');
+      this.navController.push(TabsPage);
     });
   }
 

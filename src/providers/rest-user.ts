@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { JwtHelper } from 'angular2-jwt';
 
 import { StorageService } from './storage.service';
+import { reject } from 'q';
 
 @Injectable()
 export class RestUserProvider {
@@ -79,6 +80,26 @@ export class RestUserProvider {
 
   successfulLogin(username: string, access: string, refresh: string) {
     this.storage.setLocalUser(username, access, refresh);
+  }
+
+  deleteUser(id, password) {
+    console.log('Id no delete = ', id);
+    console.log('Password no delete = ',password);
+
+    return new Promise((resolve,reject) => {
+      this.http.post(
+        this.apiUrl + '/profile/' + id + '/delete_user/',
+        password,
+        {
+          headers: new HttpHeaders().set('Content-Type', 'application/json'),
+        }
+      ).subscribe(data => {
+        resolve(data);
+      }, err => {
+        reject(err);
+      });
+    });
+
   }
 
   getUser(id){
