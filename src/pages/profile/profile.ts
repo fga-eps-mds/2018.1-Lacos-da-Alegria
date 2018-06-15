@@ -35,7 +35,7 @@ export class ProfilePage {
 
   id: any;
   editProfileForm: FormGroup;
-  
+
 	constructor(
     public alertCtrl: AlertController,
     public formBuilder: FormBuilder,
@@ -61,12 +61,12 @@ export class ProfilePage {
         want_ongs:['', Validators.required],
         role:['',Validators.required]
       });
-      
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
-    this.id = this.restProvider.getId();    
+    this.id = this.restProvider.getId();
     this.restProvider.getUser(this.id).then ((data) => {
 
       this.user= data;
@@ -100,7 +100,7 @@ export class ProfilePage {
       ddd: this.editProfileForm.value.ddd,
       genre: this.editProfileForm.value.genre,
       want_ongs: this.editProfileForm.value.want_ongs,
-      role: 'Novato',
+      role: this.editProfileForm.value.role,
     }
 
     return user;
@@ -179,8 +179,6 @@ export class ProfilePage {
   editProfile(){
     this.edit=true;
 
-    this.user.password = "12345abc";
-
     this.editProfileForm.patchValue({
       genre: this.user.genre,
       password: this.user.password,
@@ -207,9 +205,16 @@ export class ProfilePage {
     console.log('asdas = ', this.editProfileForm.value.cpf);
   }
 
-  edited(){
+  confirmEdit(){
     this.edit = false;
-    //restProvider.editProfile() vai aqui
+    this.restProvider.editProfile(this.restProvider.getId(), this.getForm()).subscribe(
+       (data) => {
+            console.log('deu certo', data);
+       },
+       (err) => {
+            console.log(err);
+       }
+    );
   }
 
   showCpf(data){

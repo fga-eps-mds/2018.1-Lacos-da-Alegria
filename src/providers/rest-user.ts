@@ -113,4 +113,13 @@ export class RestUserProvider {
     });
     // return this.http.get(this.apiUrl + 'profile' + id + '/');
   }
+
+  editProfile(id, user){
+    return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
+    user,
+        {
+          headers: new HttpHeaders().set('Content-Type', 'application/json'),
+        }
+      );
+  }
 }
