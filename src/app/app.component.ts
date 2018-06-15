@@ -21,20 +21,20 @@ export class MyApp {
 
   constructor(
     public menu: MenuController,
-    public platform: Platform, 
-    public restProvider: RestUserProvider, 
-    public roleService: RoleService, 
-    public splashScreen: SplashScreen, 
+    public platform: Platform,
+    public restProvider: RestUserProvider,
+    public roleService: RoleService,
+    public splashScreen: SplashScreen,
     public statusBar: StatusBar,
     public storage: StorageService
   ) {
-    
+
     this.initializeApp();
   }
   user: any;
 
   getUser(id) {
-    
+
     this.restProvider.getUser(id)
     .then(data => {
       this.user = [data];
@@ -53,20 +53,20 @@ export class MyApp {
         'refresh':''
       }
       refreshToken.refresh = this.storage.getLocalRefreshToken();
+      console.log('acesso', this.storage.getLocalAccessToken());
       console.log('refresh 1 = ',refreshToken);
       if(refreshToken){
         this.restProvider.refreshToken(refreshToken).subscribe((data)=>{
           console.log('refresh = ',data);
           let id = this.restProvider.getId();
-          this.user = this.getUser(id);      
-          console.log('id = ', id);              
+          this.user = this.getUser(id);
+          console.log('id = ', id);
           this.rootPage = TabsPage;
         }, (err)=>{
+          //this.rootPage = WelcomePage;
           console.log('erro no refresh = ',err);
         })
       }
-
-     
     });
   }
 

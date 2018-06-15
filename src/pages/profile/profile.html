@@ -31,7 +31,7 @@
 
         <form *ngIf="edit" [formGroup]="editProfileForm">
           <ion-list >
-            
+
             <ion-input formControlName="username" type="text" placeholder="Nome de Usuário" value="{{user.username}}" (focusout)="showError(editProfileForm.controls.username.valid, 'us')"></ion-input>
             <span *ngIf="errorUsername" class="warning">Nome de usuário inválido!</span>
 
@@ -41,14 +41,14 @@
             <ion-input formControlName="email" type="email" placeholder="E-mail" value="{{user.email}}" (focusout)="showError(editProfileForm.controls.email.valid, 'em')"></ion-input>
             <span *ngIf="errorEmail" class="warning">Email inválido!</span>
 
-            <!-- <button *ngIf="!changePassword">Alterar Senha</button> -->
+            <form [formGroup]="editPasswordForm">
+              <ion-input formControlName="password" type="password" placeholder="Senha" (focusout)="showError(editPasswordForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
+              <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
 
-            <ion-input formControlName="password" type="password" placeholder="Senha" (focusout)="showError(editProfileForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
-            <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
+              <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha" (focusout)="checkPasswords()"></ion-input>
+              <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
+            </form>
 
-            <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha" (focusout)="checkPasswords()"></ion-input>
-            <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
-            
             <ion-input formControlName="cpf" type="text" placeholder="CPF" value="{{user.cpf}}" (focusout)="showError(editProfileForm.controls.cpf.valid, 'cpf')"></ion-input>
             <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
 
@@ -58,13 +58,13 @@
             <ion-item>
               <ion-datetime class="data" displayFormat="DD/MM/YYYY" placeholder="{{user.birth}}" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
             </ion-item>
-            
+
             <ion-input formControlName="ddd" type="text"  placeholder="DDD" value="{{user.ddd}}" (focusout)="showError(editProfileForm.controls.ddd.valid, 'ddd')"></ion-input>
             <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
 
             <ion-input formControlName="whatsapp" type="text" placeholder="WhatsApp"  value="{{user.whatsapp}}" (focusout)="showError(editProfileForm.controls.whatsapp.valid, 'wa')"></ion-input>
             <span *ngIf="errorWhatsapp" class="warning"> Whatsapp inválido! </span>
-            
+
             <ion-item>
               <ion-label>Sexo</ion-label>
               <ion-select okText="Ok" cancelText="Cancelar" placeholder="{{user.genre}}" formControlName="genre">
@@ -73,10 +73,10 @@
               </ion-select>
             </ion-item>
 
-            <button [disabled]="editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
+            <button [disabled]="editPasswordForm.invalid && editPasswordForm.value.password != '' || editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
           </ion-list>
         </form>
-        
+
         <button full ion-button (click)="editProfile()">Editar Perfil</button>
     </ion-list>
   </div>

@@ -35,6 +35,7 @@ export class ProfilePage {
 
   id: any;
   editProfileForm: FormGroup;
+  editPasswordForm: FormGroup;
 
 	constructor(
     public alertCtrl: AlertController,
@@ -45,8 +46,6 @@ export class ProfilePage {
     public storage: StorageService) {
       this.editProfileForm = this.formBuilder.group({
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
-        password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
-        confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
         email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
         whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
         name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
@@ -62,6 +61,10 @@ export class ProfilePage {
         role:['',Validators.required]
       });
 
+      this.editPasswordForm = this.formBuilder.group({
+        password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
+        confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
+      });
   }
 
   ionViewDidLoad() {
@@ -77,7 +80,7 @@ export class ProfilePage {
   }
 
   checkPasswords(){
-    if(this.editProfileForm.value.password != this.editProfileForm.value.confirmPassword && this.editProfileForm.value.confirmPassword){
+    if(this.editPasswordForm.value.password != this.editPasswordForm.value.confirmPassword && this.editPasswordForm.value.confirmPassword){
       this.errorCheckPasswords = true;
     } else {
       this.errorCheckPasswords = false;
@@ -85,9 +88,20 @@ export class ProfilePage {
   }
 
   getForm(): User{
+    let aux: string;
+
+    if(this.editPasswordForm.value.password == ''){
+      aux = this.editProfileForm.value.password;
+      console.log('aux', aux);
+    }
+    else{
+      aux = this.editPasswordForm.value.password;
+      console.log('não amiddaaaaaaaaaa', aux);
+    }
+
     let user: User = {
       username: this.editProfileForm.value.username,
-      password: this.editProfileForm.value.password,
+      password: aux,
       email: this.editProfileForm.value.email,
       whatsapp: this.editProfileForm.value.whatsapp,
       name: this.editProfileForm.value.name,
@@ -107,7 +121,6 @@ export class ProfilePage {
   }
 
   showError(data, id: string){
-
     switch (id) {
       case 'us':
         if (!data && this.editProfileForm.value.username) {
@@ -117,7 +130,7 @@ export class ProfilePage {
         }
         break;
       case 'pw':
-        if (!data && this.editProfileForm.value.password) {
+        if (!data && this.editPasswordForm.value.password) {
           this.errorPassword = true;
         } else {
           this.errorPassword = false;
@@ -185,7 +198,7 @@ export class ProfilePage {
       birth: this.user.birth,
       username: this.user.username,
       name: this.user.name,
-      confirmPassword: this.user.password,
+//      confirmPassword: this.user.password,
       email: this.user.email,
       whatsapp: this.user.whatsapp,
       cpf: this.user.cpf,
@@ -207,14 +220,24 @@ export class ProfilePage {
 
   confirmEdit(){
     this.edit = false;
-    this.restProvider.editProfile(this.restProvider.getId(), this.getForm()).subscribe(
-       (data) => {
-            console.log('deu certo', data);
-       },
-       (err) => {
-            console.log(err);
-       }
-    );
+    let passwordChanged: boolean;
+
+    if(this.editPasswordForm.value.password == ''){
+      passwordChanged = false;
+    }
+    else{
+      passwordChanged = true;
+    }
+
+    this.restProvider.editProfile(passwordChanged, this.restProvider.getId(), this.getForm())
+    // .subscribe(
+    //    (data) => {
+    //         console.log('deu certo', data);
+    //    },
+    //    (err) => {
+    //         console.log(err);
+    //    }
+    // );
   }
 
   showCpf(data){
@@ -257,6 +280,7 @@ export class ProfilePage {
             console.log("Senha  = ", data);
             this.restProvider.deleteUser(this.id, data)
               .then(response => {
+                this.storage.clearLocalUser();
                 console.log(response);
                 this.navCtrl.push(LoginPage);
               }, error => {

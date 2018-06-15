@@ -17,8 +17,8 @@ export class RestUserProvider {
   saveUser(data) {
       return new Promise((resolve, reject) => {
         this.http.post(
-          this.apiUrl+'/profile/', 
-          JSON.stringify(data), 
+          this.apiUrl+'/profile/',
+          JSON.stringify(data),
           {
             headers: new HttpHeaders().set('Content-Type', 'application/json'),
           })
@@ -99,7 +99,6 @@ export class RestUserProvider {
         reject(err);
       });
     });
-
   }
 
   getUser(id){
@@ -114,7 +113,19 @@ export class RestUserProvider {
     // return this.http.get(this.apiUrl + 'profile' + id + '/');
   }
 
-  editProfile(id, user){
+  editProfile(passwordChanged, id, user){
+    if(passwordChanged){
+      this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
+      user,
+          {
+            headers: new HttpHeaders().set('Content-Type', 'application/json'),
+          }
+        ).subscribe((data) => {
+            console.log('user', data);
+            user.password  = data.password;
+            console.log('password', user.password)
+        })
+    }
     return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
     user,
         {
