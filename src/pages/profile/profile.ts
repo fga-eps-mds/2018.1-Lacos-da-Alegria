@@ -21,26 +21,7 @@ export class ProfilePage {
   user: any;
   edit: boolean = false;
   changePassword: boolean = false;
-
-  aux = {
-    username:'',
-    password:'',
-    email:'',
-    whatsapp:'',
-    name:'',
-    cpf:'',
-    birth:'',
-    address:'',
-    region:'',
-    preference:'',
-    howDidYouKnow:'',
-    ddd:'',
-    genre:'',
-    want_ongs:'',
-    url:'',
-    role:'',
-    activities:''
-  }
+  oldPassword: any;
 
   errorUsername: boolean = false;
   errorPassword: boolean = false;
@@ -78,6 +59,7 @@ export class ProfilePage {
         ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern('((([1,4,6,8,9][1-9])|(2[1,2,4,7,8])|(3[1-8])|(4[1-9])|(5[1-5])|(7[1,3,4,5,7,9])))')])],
         genre:['', Validators.required],
         want_ongs:['', Validators.required],
+        role:['',Validators.required]
       });
       
   }
@@ -88,9 +70,7 @@ export class ProfilePage {
     this.restProvider.getUser(this.id).then ((data) => {
 
       this.user= data;
-      this.aux = data[0];
       console.log('user = ',this.user);
-      console.log('aux = ',this.aux);
     }, (err) => {
       console.log(err);
     })
@@ -198,17 +178,30 @@ export class ProfilePage {
 
   editProfile(){
     this.edit=true;
-    this.editProfileForm.value.birth = this.user.birth;
-    this.editProfileForm.value.username = this.user.username;
-    this.editProfileForm.value.name = this.user.name;
-    this.editProfileForm.value.confirmPassword = this.user.confirmPassword
-    this.editProfileForm.value.password = this.user.password;
-    this.editProfileForm.value.email = this.user.email;
-    this.editProfileForm.value.whatsapp = this.user.whatsapp;
-    this.editProfileForm.value.cpf = this.user.cpf;
-    this.editProfileForm.value.address = this.user.address;
-    this.editProfileForm.value.ddd = this.user.ddd;
-    this.editProfileForm.value.genre = this.user.genre;
+
+    this.user.password = "12345abc";
+
+    this.editProfileForm.patchValue({
+      genre: this.user.genre,
+      password: this.user.password,
+      birth: this.user.birth,
+      username: this.user.username,
+      name: this.user.name,
+      confirmPassword: this.user.password,
+      email: this.user.email,
+      whatsapp: this.user.whatsapp,
+      cpf: this.user.cpf,
+      address: this.user.address,
+      ddd: this.user.ddd,
+      want_ongs: this.user.want_ongs,
+      region: this.user.region,
+      preference: this.user.preference,
+      howDidYouKnow: this.user.howDidYouKnow,
+      role: this.user.role
+    })
+
+    console.log('form = ', this.editProfileForm);
+    this.oldPassword = this.editProfileForm.value.password;
     console.log('asdas = ', this.editProfileForm.value.name);
     console.log('asdas = ', this.editProfileForm.value.password);
     console.log('asdas = ', this.editProfileForm.value.cpf);

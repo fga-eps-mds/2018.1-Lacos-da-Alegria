@@ -41,7 +41,7 @@
             <ion-input formControlName="email" type="email" placeholder="E-mail" value="{{user.email}}" (focusout)="showError(editProfileForm.controls.email.valid, 'em')"></ion-input>
             <span *ngIf="errorEmail" class="warning">Email inválido!</span>
 
-            <button *ngIf="!changePassword">Alterar Senha</button>
+            <!-- <button *ngIf="!changePassword">Alterar Senha</button> -->
 
             <ion-input formControlName="password" type="password" placeholder="Senha" (focusout)="showError(editProfileForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
             <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
@@ -58,7 +58,6 @@
             <ion-item>
               <ion-datetime class="data" displayFormat="DD/MM/YYYY" placeholder="{{user.birth}}" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
             </ion-item>
-
             
             <ion-input formControlName="ddd" type="text"  placeholder="DDD" value="{{user.ddd}}" (focusout)="showError(editProfileForm.controls.ddd.valid, 'ddd')"></ion-input>
             <span *ngIf="errorDdd" class="warning"> DDD inválido! </span>
@@ -74,7 +73,7 @@
               </ion-select>
             </ion-item>
 
-            <button (click)="confirmEdit()">Alterar dados</button>
+            <button [disabled]="editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
           </ion-list>
         </form>
         
