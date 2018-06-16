@@ -16,7 +16,7 @@
         <ion-label *ngIf="user">
           Nome = {{user.name}}
         </ion-label>
-        <ion-item *ngIf="user&&!edit">
+        <ion-item *ngIf="user&&!edit&&!changePassword">
           {{user.username}}
           <p> Nome: {{user.name}} </p>
           <p> Email: {{user.email}} </p>
@@ -41,13 +41,6 @@
             <ion-input formControlName="email" type="email" placeholder="E-mail" value="{{user.email}}" (focusout)="showError(editProfileForm.controls.email.valid, 'em')"></ion-input>
             <span *ngIf="errorEmail" class="warning">Email inválido!</span>
 
-            <form [formGroup]="editPasswordForm">
-              <ion-input formControlName="password" type="password" placeholder="Senha" (focusout)="showError(editPasswordForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
-              <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
-
-              <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha" (focusout)="checkPasswords()"></ion-input>
-              <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
-            </form>
 
             <ion-input formControlName="cpf" type="text" placeholder="CPF" value="{{user.cpf}}" (focusout)="showError(editProfileForm.controls.cpf.valid, 'cpf')"></ion-input>
             <span *ngIf="errorCpf" class="warning"> Cpf inválido! </span>
@@ -73,11 +66,23 @@
               </ion-select>
             </ion-item>
 
-            <button [disabled]="editPasswordForm.invalid && editPasswordForm.value.password != '' || editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
+            <button [disabled]="editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
           </ion-list>
+          
         </form>
 
+        <form *ngIf="changePassword" [formGroup]="editPasswordForm">
+          <ion-input formControlName="password" type="password" placeholder="Nova Senha" (focusout)="showError(editPasswordForm.controls.password.valid, 'pw'); checkPasswords()"></ion-input>
+          <span *ngIf="errorPassword" class="warning">Senha inválida!</span>
+
+          <ion-input formControlName="confirmPassword" type="password" placeholder="Confirme a Senha" (focusout)="checkPasswords()"></ion-input>
+          <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
+        </form>
+        
+        <button *ngIf="changePassword" [disabled]="editPasswordForm.invalid || errorCheckPasswords" (click)="confirmEditPassword()">Alterar Senha</button>
+
         <button full ion-button (click)="editProfile()">Editar Perfil</button>
+        <button full ion-button (click)="editPassword()">Editar Senha</button>
     </ion-list>
   </div>
   <div>

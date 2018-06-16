@@ -56,6 +56,7 @@ export class ProfilePage {
         preference:['', Validators.required],
         howDidYouKnow: ['', Validators.required],
         ddd: ['', Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(2), Validators.pattern('((([1,4,6,8,9][1-9])|(2[1,2,4,7,8])|(3[1-8])|(4[1-9])|(5[1-5])|(7[1,3,4,5,7,9])))')])],
+        password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(255)])],
         genre:['', Validators.required],
         want_ongs:['', Validators.required],
         role:['',Validators.required]
@@ -90,14 +91,19 @@ export class ProfilePage {
   getForm(): User{
     let aux: string;
 
-    if(this.editPasswordForm.value.password == ''){
-      aux = this.editProfileForm.value.password;
-      console.log('aux', aux);
+    if(this.changePassword){
+      aux = this.editPasswordForm.value.password;      
+    } else {
+      aux = this.editProfileForm.value.password;      
     }
-    else{
-      aux = this.editPasswordForm.value.password;
-      console.log('não amiddaaaaaaaaaa', aux);
-    }
+    // if(this.editPasswordForm.value.password == ''){
+    //   aux = this.editProfileForm.value.password;
+    //   console.log('aux', aux);
+    // }
+    // else{
+    //   aux = this.editPasswordForm.value.password;
+    //   console.log('não amiddaaaaaaaaaa', aux);
+    // }
 
     let user: User = {
       username: this.editProfileForm.value.username,
@@ -191,7 +197,7 @@ export class ProfilePage {
 
   editProfile(){
     this.edit=true;
-
+    this.changePassword=false;
     this.editProfileForm.patchValue({
       genre: this.user.genre,
       password: this.user.password,
@@ -218,26 +224,50 @@ export class ProfilePage {
     console.log('asdas = ', this.editProfileForm.value.cpf);
   }
 
-  confirmEdit(){
+  confirmEditPassword(){
+    this.restProvider.editPassword(this.restProvider.getId(), this.getForm())
+      .subscribe((data)=>{
+        this.changePassword= false
+        console.log('data = ',data);
+        let alert2 = this.alertCtrl.create({
+          title: 'Tudo certo!',
+          subTitle: 'Nova senha alterada com sucesso',
+          buttons: ['Ok']
+        });
+        alert2.present();
+      }, (err)=>{
+        if(err.error.error == "A senha nova coincide com a senha antiga"){
+          console.log("deeeu")
+          let alert = this.alertCtrl.create({
+            title: 'Ops!',
+            subTitle: 'Nova senha igual à senha antiga',
+            buttons: ['Ok']
+          });
+          alert.present();
+        }
+      })
+  }
+
+  editPassword(){
     this.edit = false;
-    let passwordChanged: boolean;
+    this.changePassword = true;
 
-    if(this.editPasswordForm.value.password == ''){
-      passwordChanged = false;
-    }
-    else{
-      passwordChanged = true;
-    }
-
-    this.restProvider.editProfile(passwordChanged, this.restProvider.getId(), this.getForm())
-    // .subscribe(
-    //    (data) => {
-    //         console.log('deu certo', data);
-    //    },
-    //    (err) => {
-    //         console.log(err);
-    //    }
-    // );
+    this.editPasswordForm.patchValue({
+      password: '',
+      confirmPassword: ''
+    })
+  }
+  
+  confirmEdit(){
+    this.restProvider.editProfile( this.restProvider.getId(), this.getForm())
+      .subscribe((data:any) => {
+        this.user = data;
+        this.edit = false;
+        console.log('put padrao else = ',data);
+      }, (error)=>{
+        this.edit = false;
+        console.log('Erro put else = ', error);
+      })
   }
 
   showCpf(data){
