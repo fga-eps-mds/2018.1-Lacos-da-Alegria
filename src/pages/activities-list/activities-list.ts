@@ -56,6 +56,33 @@ export class ActivitiesListPage {
       
   }
   
+  refresh(){
+    this.id = this.restUserProvider.getId();
+    this.array = new Array(10);
+      this.restUserProvider.getUserActivitiesIds(this.id).subscribe((data: any)=>{
+        console.log('data = ', data);
+        for (let index = 0; index < data.aux.length; index++) {
+          console.log('data.aux index = ', data.aux[index]);
+          //data.aux[index] = id of activity
+          //this.id = id of user
+          this.restUserProvider.searchPosition(this.id, data.aux[index]).subscribe((resp: any)=>{
+            console.log('resp = ', resp); 
+            this.array[index] = [data.aux[index],resp.resp];
+          }, (error)=>{
+            console.log('error = ', error);
+          })
+          
+        }
+      }, (err) =>{
+        console.log('erro = ', err);
+      })
+      this.getHospitalActivitiesList();
+      this.getNGOActivitiesList();
+      this.role = this.roleService.getLocalRole();
+      console.log('iiid = ', this.id);
+      // this.restUserProvider.getUserActivitiesIds(2);
+  }
+
   getResp(id){
     // console.log('id no get = ', id.id)
     for (let index = 0; index < this.array.length; index++) {
