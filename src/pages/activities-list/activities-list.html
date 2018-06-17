@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Atividades da Semana</ion-title>
+    <ion-icon item-right name="md-refresh"></ion-icon>
   </ion-navbar>
 </ion-header>
 
@@ -22,7 +23,8 @@
               <img class="image" src="/../../assets/imgs/backgroudwelcome.jpeg"/>
               <div class="title-wrapper">
                 <div class="card-title">{{activity.name}}</div>
-                <div class="card-subtitle">Clique para saber mais</div>
+                <div *ngIf="getResp({id: activity.id})" class="card-subtitle">{{resposta}}</div>
+                <!-- *ngIf="getResp({{activity.id}})" -->
               </div>
           </ion-card>
         </ion-item>
