@@ -30,7 +30,18 @@ export class ActivitiesListPage {
     public restProvider: RestActivityProvider,
     public restUserProvider: RestUserProvider,
     public roleService: RoleService) {
-      this.id = this.restUserProvider.getId();
+      this.refresh();
+      this.getHospitalActivitiesList();
+      this.getNGOActivitiesList();
+      this.role = this.roleService.getLocalRole();
+      console.log('iiid = ', this.id);
+      // this.restUserProvider.getUserActivitiesIds(2);
+      
+  }
+  
+  refresh(){
+    this.id = this.restUserProvider.getId();
+    this.array = new Array(10);
       this.restUserProvider.getUserActivitiesIds(this.id).subscribe((data: any)=>{
         console.log('data = ', data);
         for (let index = 0; index < data.aux.length; index++) {
@@ -53,9 +64,8 @@ export class ActivitiesListPage {
       this.role = this.roleService.getLocalRole();
       console.log('iiid = ', this.id);
       // this.restUserProvider.getUserActivitiesIds(2);
-      
   }
-  
+
   getResp(id){
     // console.log('id no get = ', id.id)
     for (let index = 0; index < this.array.length; index++) {

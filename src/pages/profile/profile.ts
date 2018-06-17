@@ -21,7 +21,6 @@ export class ProfilePage {
   user: any;
   edit: boolean = false;
   changePassword: boolean = false;
-  oldPassword: any;
 
   errorUsername: boolean = false;
   errorPassword: boolean = false;
@@ -72,9 +71,7 @@ export class ProfilePage {
     console.log('ionViewDidLoad ListUserPage');
     this.id = this.restProvider.getId();
     this.restProvider.getUser(this.id).then ((data) => {
-
       this.user= data;
-      console.log('user = ',this.user);
     }, (err) => {
       console.log(err);
     })
@@ -96,15 +93,6 @@ export class ProfilePage {
     } else {
       aux = this.editProfileForm.value.password;
     }
-    // if(this.editPasswordForm.value.password == ''){
-    //   aux = this.editProfileForm.value.password;
-    //   console.log('aux', aux);
-    // }
-    // else{
-    //   aux = this.editPasswordForm.value.password;
-    //   console.log('não amiddaaaaaaaaaa', aux);
-    // }
-
     let user: User = {
       username: this.editProfileForm.value.username,
       password: aux,
@@ -204,7 +192,6 @@ export class ProfilePage {
       birth: this.user.birth,
       username: this.user.username,
       name: this.user.name,
-//      confirmPassword: this.user.password,
       email: this.user.email,
       whatsapp: this.user.whatsapp,
       cpf: this.user.cpf,
@@ -216,12 +203,6 @@ export class ProfilePage {
       howDidYouKnow: this.user.howDidYouKnow,
       role: this.user.role
     })
-
-    console.log('form = ', this.editProfileForm);
-    this.oldPassword = this.editProfileForm.value.password;
-    console.log('asdas = ', this.editProfileForm.value.name);
-    console.log('asdas = ', this.editProfileForm.value.password);
-    console.log('asdas = ', this.editProfileForm.value.cpf);
   }
 
   confirmEditPassword(){
