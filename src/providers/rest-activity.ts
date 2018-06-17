@@ -48,4 +48,15 @@ export class RestActivityProvider {
       });
     });
   }
+
+  postActivity(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'hospital-activities/'+id_activity+'/subscribe/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
 }

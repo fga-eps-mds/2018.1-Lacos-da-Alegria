@@ -75,7 +75,7 @@ export class ActivitiesListPage {
 
   postActivity(id_user, id_activity){
     let alerta: any;
-    this.restUserProvider.postActivity(id_user,id_activity).then((resolve) => {
+    this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
       console.log("resolve = ", resolve);
       alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
       let alert1 = this.alertCtrl.create({
