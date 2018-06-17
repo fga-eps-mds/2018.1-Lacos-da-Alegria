@@ -83,6 +83,14 @@ export class RestUserProvider {
     this.storage.setLocalUser(username, access, refresh);
   }
 
+  getUserActivitiesIds(id){
+    return this.http.get(this.apiUrl + '/profile/' + id + '/get_user_activities/');
+  }
+
+  searchPosition(user_id, activity_id){
+    return this.http.get(this.apiUrl + '/hospital-activities/' + activity_id + '/search_user/' + '?user_key=' + user_id);
+  }
+
   deleteUser(id, password) {
     console.log('Id no delete = ', id);
     console.log('Password no delete = ',password);

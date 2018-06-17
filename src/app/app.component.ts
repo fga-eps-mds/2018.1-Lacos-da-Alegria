@@ -55,7 +55,7 @@ export class MyApp {
       refreshToken.refresh = this.storage.getLocalRefreshToken();
       console.log('acesso', this.storage.getLocalAccessToken());
       console.log('refresh 1 = ',refreshToken);
-      if(refreshToken){
+      if(refreshToken.refresh){
         this.restProvider.refreshToken(refreshToken).subscribe((data)=>{
           console.log('refresh = ',data);
           let id = this.restProvider.getId();

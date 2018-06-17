@@ -5,11 +5,9 @@
 </ion-header>
 
 <ion-content padding>
-  <div>
-    <ion-list>
-        <ion-item>
-          <ion-avatar id="picture" item-start>
-            <img src="../../assets/imgs/laços.ico">
+        <ion-item text-center class="profile" *ngIf="user">
+          <ion-avatar class="picture">
+            <img src="../../assets/imgs/logooficial.png">
           </ion-avatar>
         </ion-item>
 
@@ -87,9 +85,7 @@
 
         <button full ion-button (click)="editProfile()">Editar Perfil</button>
         <button full ion-button (click)="editPassword()">Editar Senha</button>
-    </ion-list>
-  </div>
-  <div>
+  
     <ion-list>
       <ion-card>
         <div>
@@ -129,7 +125,7 @@
         </div>
       </ion-card>
     </ion-list>
-  </div>
+
 
   <ion-item>
     <button (click)="confirmDelete()">Excluir Conta</button>

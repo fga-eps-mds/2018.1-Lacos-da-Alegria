@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Atividades da Semana</ion-title>
+    <ion-icon item-right name="md-refresh"></ion-icon>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <div>
-  <ion-segment [(ngModel)]="Atividades" color="primary">
-    <ion-segment-button value="">
+  <ion-segment [(ngModel)]="Atividades">
+    <ion-segment-button value="hospital">
       Hospitais
     </ion-segment-button>
     <ion-segment-button *ngIf="role != 'Novato'" value="ongs">
@@ -15,58 +15,32 @@
     </ion-segment-button>
   </ion-segment>
 
-  </div>
-
-  <div [ngSwitch]="Atividades">
-    <ion-list class="lista1" *ngSwitchDefault>
-      <ion-card class="card" *ngFor="let activity of hospital_activities">
-        <ion-card-content class="card-content">
-          <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
-
-        </ion-card-content>
-
-        <div class="div-button">
-          <ion-row>
-            <ion-col class="button-col" col-10>
-              <button class="button-participate" ion-button default>
-                Participar
-              </button>
-            </ion-col>
-            <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
-              <a ion-item (click)="openModal({id: activity.id})">
-                <button class="button-info" full ion-button default>
-                  <ion-icon name="ios-information-circle"></ion-icon>
-                </button>
-              </a>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-card>
+  <div class="divosa" [ngSwitch]="Atividades">
+    <ion-list class="list-hosp" *ngSwitchDefault>
+      <ion-item-sliding *ngFor="let activity of hospital_activities">
+        <ion-item class="itemActivityList">
+          <ion-card class="card-hosp" (click)="openModal({id: activity.id, nome: 'hosp'})">
+              <img class="image" src="/../../assets/imgs/backgroudwelcome.jpeg"/>
+              <div class="title-wrapper">
+                <div class="card-title">{{activity.name}}</div>
+                <div *ngIf="getResp({id: activity.id})" class="card-subtitle">{{resposta}}</div>
+                <!-- *ngIf="getResp({{activity.id}})" -->
+              </div>
+          </ion-card>
+        </ion-item>
+      </ion-item-sliding>
     </ion-list>
 
-  <ion-list class="lista2" *ngSwitchCase="'ongs'">
-    <ion-card class="card" *ngFor="let activity of ngo_activities">
-        <ion-card-content class="card-content">
-          <h2 class="activity-title" style="color:black;">{{activity.name}}</h2>
-
-      </ion-card-content>
-      <div class="div-button">
-        <ion-row>
-          <ion-col class="button-col" col-10>
-            <button class="button-participate" ion-button default>
-              Participar
-            </button>
-          </ion-col>
-          <ion-col *ngIf="role != 'Novato'" class="button-col" col-2>
-            <a ion-item (click)="openModal({id: activity.id})">
-              <button class="button-info" full ion-button default>
-                <ion-icon name="ios-information-circle"></ion-icon>
-              </button>
-            </a>
-          </ion-col>
-        </ion-row>
-      </div>
-    </ion-card>
-  </ion-list>
+    <ion-list class="list-ngos" *ngSwitchCase="'ongs'">
+      <ion-item-sliding *ngFor="let activityONG of ngo_activities">
+        <ion-item>
+          <ion-card class="card-ongs" (click)="openModal({id: activityONG.id, nome:'ong'})">
+            <img class="image" src="/../../assets/imgs/lacosimg.png"/>
+            <div class="card-title">{{activityONG.name}}</div>
+            <div class="card-subtitle">Clique para saber mais</div>
+          </ion-card>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
   </div>
 </ion-content>
