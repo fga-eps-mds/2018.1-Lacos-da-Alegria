@@ -14,7 +14,7 @@ import { EmailValidation } from '../../validators/email-validation';
 import { User } from '../../models/user';
 
 @Component({
-  selector: 'profile-home',
+  selector: 'page-profile',
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
@@ -92,9 +92,9 @@ export class ProfilePage {
     let aux: string;
 
     if(this.changePassword){
-      aux = this.editPasswordForm.value.password;      
+      aux = this.editPasswordForm.value.password;
     } else {
-      aux = this.editProfileForm.value.password;      
+      aux = this.editProfileForm.value.password;
     }
     // if(this.editPasswordForm.value.password == ''){
     //   aux = this.editProfileForm.value.password;
@@ -257,7 +257,7 @@ export class ProfilePage {
       confirmPassword: ''
     })
   }
-  
+
   confirmEdit(){
     this.restProvider.editProfile( this.restProvider.getId(), this.getForm())
       .subscribe((data:any) => {
