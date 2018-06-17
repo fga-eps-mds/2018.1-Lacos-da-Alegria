@@ -8,7 +8,7 @@ import { LoginPage } from '../login/login';
 import { StorageService } from '../../providers/storage.service';
 
 @Component({
-  selector: 'profile-home',
+  selector: 'page-profile',
   templateUrl: 'profile.html'
 })
 export class ProfilePage {

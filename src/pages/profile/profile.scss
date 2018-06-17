@@ -1,3 +1,39 @@
 page-profile {
-    
+
+  $nosso-blue:  #0565c0;
+
+  .scroll-content{
+      overflow: hidden;
+    }
+
+  .item-md ion-avatar ion-img, .item-md ion-avatar img {
+      position: relative;
+      display: block;
+      width: 25vh;
+      height: 25vh;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 0.4vh solid lightblue;
+      margin-bottom: 5vh;
+      margin-top: 0vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .item {
+      border: 0.2vh solid $nosso-blue;
+      width: 100%;
+      height: 60vh;
+    }
+
+    h1{
+      position: relative;
+      width: auto;
+      border-bottom: 0.2vh solid $nosso-blue;
+    }
+
+    h2{
+      padding: 0.8vh;
+      position: relative;
+    }
 }
