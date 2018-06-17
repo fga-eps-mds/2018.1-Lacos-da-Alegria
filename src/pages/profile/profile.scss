@@ -1,39 +1,25 @@
 page-profile {
+  $light-color: #f4f4f4;
 
-  $nosso-blue:  #0565c0;
 
-  .scroll-content{
-      overflow: hidden;
-    }
+  .fields{
+    font-size: 12px;
+    font-family: arial;
+    margin-bottom: 0px;
+  }
+  .input{
+    background-color: $light-color;
+    border: 0.5px solid black;
+    border-radius: 5px;
+  }
+  .date{
 
-  .item-md ion-avatar ion-img, .item-md ion-avatar img {
-      position: relative;
-      display: block;
-      width: 25vh;
-      height: 25vh;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 0.4vh solid lightblue;
-      margin-bottom: 5vh;
-      margin-top: 0vh;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .item {
-      border: 0.2vh solid $nosso-blue;
-      width: 100%;
-      height: 60vh;
-    }
-
-    h1{
-      position: relative;
-      width: auto;
-      border-bottom: 0.2vh solid $nosso-blue;
-    }
-
-    h2{
-      padding: 0.8vh;
-      position: relative;
-    }
+    background-color: $light-color;
+    border: 0.5px solid black;
+    border-radius: 5px;
+  }
+  .select{
+    //background-color: $light-color;
+    //border: 0.5px solid black;
+  }
 }

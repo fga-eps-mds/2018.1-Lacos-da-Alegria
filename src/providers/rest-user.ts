@@ -4,6 +4,7 @@ import { JwtHelper } from 'angular2-jwt';
 
 import { StorageService } from './storage.service';
 import { reject } from 'q';
+import { User } from '../models/user';
 
 @Injectable()
 export class RestUserProvider {
@@ -17,8 +18,8 @@ export class RestUserProvider {
   saveUser(data) {
       return new Promise((resolve, reject) => {
         this.http.post(
-          this.apiUrl+'/profile/', 
-          JSON.stringify(data), 
+          this.apiUrl+'/profile/',
+          JSON.stringify(data),
           {
             headers: new HttpHeaders().set('Content-Type', 'application/json'),
           })
@@ -107,16 +108,71 @@ export class RestUserProvider {
         reject(err);
       });
     });
-
   }
 
   getUser(id){
-    return new Promise(resolve => {
+    return new Promise((resolve,reject) => {
       this.http.get(this.apiUrl + '/profile/' + id + '/').subscribe(data => {
         resolve(data);
       }, err => {
+        reject(err);
         console.log(err);
       });
     });
+    // return this.http.get(this.apiUrl + 'profile' + id + '/');
+  }
+
+  editPassword(id, user){
+    return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
+        user,
+        {
+          headers: new HttpHeaders().set('Content-Type', 'application/json'),
+        })
+  }
+
+  editProfile(id, user){
+ 
+      // this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
+      //   user,
+      //   {
+      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
+      //   })
+        // .subscribe((data: any) => {
+        //   console.log('user', data);
+        //   // console.log('data password: ', data.valueOf())
+        //   user.password  = data.password;
+        //   console.log('password ', user.password, ' ====== entrando no put')
+          return this.http.put(this.apiUrl + '/profile/' + id + '/',
+          user,
+          {
+            headers: new HttpHeaders().set('Content-Type', 'application/json'),
+          })
+      //     .subscribe((data:any) => {
+      //       console.log('put padrao = ',data);
+      //     }, (error)=>{
+      //       console.log('Erro put = ', error);
+      //     })
+      //   }, (err)=>{
+      //     console.log ('Erro post = ',err);
+      //   })
+      // console.log("password changed: ",passwordChanged)
+      // console.log("PASSWORD = ", user.password);
+      // return this.http.put(this.apiUrl + '/profile/' + id + '/',
+      //   user,
+      //   {
+      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
+      //   })
+      //   .subscribe((data:any) => {
+      //     console.log('put padrao else = ',data);
+      //   }, (error)=>{
+      //     console.log('Erro put else = ', error);
+      //   })
+    
+    // return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
+    // user,
+    //     {
+    //       headers: new HttpHeaders().set('Content-Type', 'application/json'),
+    //     }
+    //   );
   }
 }
