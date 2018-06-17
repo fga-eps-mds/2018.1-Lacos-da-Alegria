@@ -18,6 +18,12 @@ page-activities-list {
     margin: auto;
   }
 
+  .refreshButton {
+    display: inline-flex;
+    left: 50px;
+    position: relative;
+  }
+
   .item-md.item-block .item-inner {
     padding-right: 0px;
   }

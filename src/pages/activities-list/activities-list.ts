@@ -30,24 +30,7 @@ export class ActivitiesListPage {
     public restProvider: RestActivityProvider,
     public restUserProvider: RestUserProvider,
     public roleService: RoleService) {
-      this.id = this.restUserProvider.getId();
-      this.restUserProvider.getUserActivitiesIds(this.id).subscribe((data: any)=>{
-        console.log('data = ', data);
-        for (let index = 0; index < data.aux.length; index++) {
-          console.log('data.aux index = ', data.aux[index]);
-          //data.aux[index] = id of activity
-          //this.id = id of user
-          this.restUserProvider.searchPosition(this.id, data.aux[index]).subscribe((resp: any)=>{
-            console.log('resp = ', resp); 
-            this.array[index] = [data.aux[index],resp.resp];
-          }, (error)=>{
-            console.log('error = ', error);
-          })
-          
-        }
-      }, (err) =>{
-        console.log('erro = ', err);
-      })
+      this.refresh();
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();

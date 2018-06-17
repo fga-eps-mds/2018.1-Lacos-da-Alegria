@@ -1,7 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Atividades da Semana</ion-title>
-    <ion-icon item-right name="md-refresh"></ion-icon>
+    <ion-title>
+      Atividades da Semana
+      <button class="refreshButton" ion-button (click)="refresh()">
+        <ion-icon name="md-refresh"></ion-icon>
+      </button>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
