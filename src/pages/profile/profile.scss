@@ -1,39 +1,55 @@
 page-profile {
 
-  $nosso-blue:  #0565c0;
+  $color-orange: #ff5300;
+  $lightblue-color:  #0565c0;
 
-  .scroll-content{
-      overflow: hidden;
-    }
+  // .scroll-content{
+  //     overflow: hidden;
+  // }
 
-  .item-md ion-avatar ion-img, .item-md ion-avatar img {
-      position: relative;
-      display: block;
-      width: 25vh;
-      height: 25vh;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 0.4vh solid lightblue;
-      margin-bottom: 5vh;
-      margin-top: 0vh;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .item-md ion-avatar img {
+    border: .4vh solid $lightblue-color;
+    border-radius: 50%;
+    display: block;
+    height: 25vh;
+    margin-bottom: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+    width: 25vh;
+  }
 
-    .item {
-      border: 0.2vh solid $nosso-blue;
-      width: 100%;
-      height: 60vh;
-    }
+  .profile {
+    border: .2vh solid $lightblue-color;
+    height: 54vh;
+    width: 100%;
+  }
 
-    h1{
-      position: relative;
-      width: auto;
-      border-bottom: 0.2vh solid $nosso-blue;
-    }
+  h1{
+    border-bottom: .2vh solid $lightblue-color;
+    position: relative;
+    width: auto;
+  }
 
-    h2{
-      padding: 0.8vh;
-      position: relative;
-    }
+  h2{
+    padding: .8vh;
+    position: relative;
+  }
+
+  .button {
+    width: 21vh;
+  }
+
+  .eoq {
+    background-color: $color-orange;
+    display: block;
+    margin: auto;
+  }
+
+  .delete-btn {
+    display: block;
+    margin: auto;
+  }
 }
