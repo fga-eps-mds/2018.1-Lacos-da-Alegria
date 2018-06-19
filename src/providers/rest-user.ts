@@ -64,11 +64,12 @@ export class RestUserProvider {
       this.apiUrl+'/token/refresh/',
       token,
       {
+        //headers: new HttpHeaders().set('Content-Type', 'application/json'),
         observe: 'response', // Capturar o HEADER
         responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
       }
     );
-  }
+ }
 
   getId(){
     let token = this.storage.getLocalAccessToken();

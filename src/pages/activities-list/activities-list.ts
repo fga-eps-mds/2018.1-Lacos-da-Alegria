@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { ModalController, NavController } from 'ionic-angular';
 
 import { RoleService } from '../../providers/role.service';
-import { RestActivityProvider } from '../../providers/rest-activity';
 
+import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { ActivityDetailsPage } from '../activity-details/activity-details';
+import { RestActivityProvider } from '../../providers/rest-activity';
 import { RestUserProvider } from '../../providers/rest-user';
+import { StorageService } from '../../providers/storage.service';
 
 @Component({
   selector: 'page-activities-list',
@@ -17,23 +18,29 @@ export class ActivitiesListPage {
   ngo_activities: any;
   aux: any;
   indexes: any;
+  user: any;
   role: any;
   id: any;
   resposta: string;
+  buttonDisabled: any;
   // array[number, string];
   array = new Array(10);
   contador = 0;
 
   constructor(
+    public alertCtrl: AlertController,
     public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public restProvider: RestActivityProvider,
+    public restActivityProvider: RestActivityProvider,
     public restUserProvider: RestUserProvider,
+    public storage: StorageService,    
     public roleService: RoleService) {
       this.refresh();
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
+      // this.token = storage.getLocalAccessToken();
+
       console.log('iiid = ', this.id);
       // this.restUserProvider.getUserActivitiesIds(2);
       
@@ -78,27 +85,28 @@ export class ActivitiesListPage {
   }
 
   openModal(index) {
-      let modal = this.modalCtrl.create(ActivityDetailsPage, index);
-      console.log('index = ',index);
-      modal.present();
-    }
+    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+    console.log('index = ',index);
+    modal.present();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
   }
 
   getHospitalActivitiesList(){
-    return this.restProvider.getHospitalActivitiesList()
+    return this.restActivityProvider.getHospitalActivitiesList()
     .then(data => {
       this.hospital_activities = data;
     });
   }
 
   getNGOActivitiesList(){
-    return this.restProvider.getNGOActivitiesList()
+    return this.restActivityProvider.getNGOActivitiesList()
     .then(data => {
       this.ngo_activities = data;
     });
   }
 
+  
 }

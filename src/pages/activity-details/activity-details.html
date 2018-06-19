@@ -17,6 +17,8 @@
   </ion-list>
       
   <button ion-button class="btnBack" (click)="BtnBackToList()">Voltar</button>
-  <button ion-button color="danger" class="btnParticipate" (click)="BtnBackToList()">Participar</button>
-
+  <button ion-button color="danger" class="btnParticipate" (click)="postActivity(getId(), activity[0].id)">Participar</button>
+<!-- <button [disabled]="buttonDisabled" id="participateId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
+  Participar
+</button> -->
 </ion-content>

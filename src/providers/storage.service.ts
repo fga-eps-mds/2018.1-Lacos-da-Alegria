@@ -13,6 +13,7 @@ export class StorageService {
             return JSON.parse(username);
         }
     }
+
     getLocalAccessToken(){
         let access = localStorage.getItem("access");
 
@@ -45,11 +46,4 @@ export class StorageService {
         localStorage.setItem("refresh", refresh);
     }
 
-    // setLocalUser(localUser: LocalUser) {
-    //     if (localUser == null) {
-    //     localStorage.removeItem("localUser");
-    //     } else {
-    //     localStorage.setItem("localUser", JSON.parse(localUser));
-    //     }
-    // }
 }
