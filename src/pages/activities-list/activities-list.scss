@@ -1,57 +1,54 @@
 page-activities-list {
 
-}
+  .itemActivityList {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
-.card{
-  width: auto;
-  margin-left: 2px;
-  margin-right: 2px;
-  height: 35vh;
-}
+ // Miopia effect
+  // .image {
+  //   -webkit-filter: blur(2px);
+  //   -moz-filter: blur(2px);
+  //   -o-filter: blur(2px);
+  //   -ms-filter: blur(2px);
+  //   filter: blur(2px);
+  // }
 
-.card-content{
-  width: auto;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  height: 28vh;
-  background-image: url("https://t1.uc.ltmcdn.com/pt/images/1/7/1/img_como_colocar_fundo_preto_nas_fotos_16171_orig.jpg");
-}
+  .card-hosp {
+    margin: auto;
+  }
 
-.activity-title{
-  text-align: center;
-  background-color: white;
-  position: relative;
-  top: 21vh;
-}
+  .refreshButton {
+    display: inline-flex;
+    left: 50px;
+    position: relative;
+  }
 
+  .item-md.item-block .item-inner {
+    padding-right: 0px;
+  }
 
-.button-col{
-  padding: 0vh;
-}
+  .label-md {
+    margin: 13px -13px 13px -13px;
+  }
 
-.div-button{
-  padding: 0vh;
-}
+  .card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;
+  }
 
-.button-participate{
-  padding: 0vh;
-  height: 7vh;
-  width: 40vh;
-  background-color: orangered;
-}
+  .card-subtitle {
+    font-size: 1em;
+    color: #fff;
+  }
 
-.button-info{
-  padding: 0vh;
-  height: 7vh;
-  background-color: orangered;
-}
+  .title-wrapper {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+  }
 
-.button-ios{
-  background-color: #FF4605;
-  color: white;
-}
-
-.button{
-  text-align: left;
 }

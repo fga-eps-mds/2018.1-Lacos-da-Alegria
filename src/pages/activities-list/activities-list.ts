@@ -7,7 +7,6 @@ import { ActivityDetailsPage } from '../activity-details/activity-details';
 import { RestActivityProvider } from '../../providers/rest-activity';
 import { RestUserProvider } from '../../providers/rest-user';
 import { StorageService } from '../../providers/storage.service';
-import * as jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'page-activities-list',
@@ -20,9 +19,13 @@ export class ActivitiesListPage {
   aux: any;
   indexes: any;
   user: any;
-  token: any;
   role: any;
+  id: any;
+  resposta: string;
   buttonDisabled: any;
+  // array[number, string];
+  array = new Array(10);
+  contador = 0;
 
   constructor(
     public alertCtrl: AlertController,
@@ -30,19 +33,62 @@ export class ActivitiesListPage {
     public navCtrl: NavController,
     public restActivityProvider: RestActivityProvider,
     public restUserProvider: RestUserProvider,
-    public storage: StorageService,
+    public storage: StorageService,    
     public roleService: RoleService) {
+      this.refresh();
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
-      this.token = storage.getLocalAccessToken();
+      // this.token = storage.getLocalAccessToken();
 
+      console.log('iiid = ', this.id);
+      // this.restUserProvider.getUserActivitiesIds(2);
+      
+  }
+  
+  refresh(){
+    this.id = this.restUserProvider.getId();
+    this.array = new Array(10);
+      this.restUserProvider.getUserActivitiesIds(this.id).subscribe((data: any)=>{
+        console.log('data = ', data);
+        for (let index = 0; index < data.aux.length; index++) {
+          console.log('data.aux index = ', data.aux[index]);
+          //data.aux[index] = id of activity
+          //this.id = id of user
+          this.restUserProvider.searchPosition(this.id, data.aux[index]).subscribe((resp: any)=>{
+            console.log('resp = ', resp); 
+            this.array[index] = [data.aux[index],resp.resp];
+          }, (error)=>{
+            console.log('error = ', error);
+          })
+          
+        }
+      }, (err) =>{
+        console.log('erro = ', err);
+      })
+      this.getHospitalActivitiesList();
+      this.getNGOActivitiesList();
+      this.role = this.roleService.getLocalRole();
+      console.log('iiid = ', this.id);
+      // this.restUserProvider.getUserActivitiesIds(2);
+  }
+
+  getResp(id){
+    // console.log('id no get = ', id.id)
+    for (let index = 0; index < this.array.length; index++) {
+      if(this.array[index] && id.id == this.array[index][0]){
+        this.resposta = this.array[index][1];
+        return true;
+      }
+    }
+    return false;
   }
 
   openModal(index) {
-      let modal = this.modalCtrl.create(ActivityDetailsPage, index);
-      modal.present();
-    }
+    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+    console.log('index = ',index);
+    modal.present();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
@@ -52,7 +98,6 @@ export class ActivitiesListPage {
     return this.restActivityProvider.getHospitalActivitiesList()
     .then(data => {
       this.hospital_activities = data;
-      console.log(this.aux);
     });
   }
 
@@ -60,42 +105,8 @@ export class ActivitiesListPage {
     return this.restActivityProvider.getNGOActivitiesList()
     .then(data => {
       this.ngo_activities = data;
-      console.log(this.aux);
     });
   }
 
-  getDecodedAccessToken(token: string): any{
-    try{
-        return jwt_decode(token);
-    }
-    catch(Error){
-        return null;
-    }
-  }
-
-  postActivity(id_user, id_activity){
-    let alerta: any;
-    this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
-      console.log("resolve = ", resolve);
-      alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
-      let alert1 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert1.present();
-
-      this.buttonDisabled = true;
-    }, (error) => {
-      console.log("error = ", error.error.status);
-      alerta = error.error.status;
-      let alert2 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert2.present();
-    })
-
-  }
+  
 }
