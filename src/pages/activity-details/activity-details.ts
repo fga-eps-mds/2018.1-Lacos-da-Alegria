@@ -12,6 +12,7 @@ import { RestUserProvider } from '../../providers/rest-user';
 export class ActivityDetailsPage {
   activity: any;
   buttonDisabled: any;
+  btnText: any;
 
   constructor(
     public alertCtrl: AlertController,
@@ -22,6 +23,17 @@ export class ActivityDetailsPage {
     ) {
     let id = this.params.get('id');
     let nome = this.params.get('nome');
+    this.btnText = "Participar"
+    this.restUserProvider.getUserActivitiesIds(this.restUserProvider.getId()).subscribe((data: any)=>{
+      for (let index = 0; index < data.aux.length; index++) {
+        if (id == data.aux[index]){
+          this.btnText = "Cancelar"
+        }
+      }
+    }
+    , (error)=>{
+      console.log('error = ', error);
+    })
     
     if(nome == 'hosp'){
       this.getHospitalActivity(id);
@@ -62,26 +74,52 @@ export class ActivityDetailsPage {
   postActivity(id_user, id_activity){
     let alerta: any;
     console.log('id user = ',id_user, ' id activ = ',id_activity)
-    this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
-      console.log("resolve = ", resolve);
-      alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
-      let alert1 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert1.present();
+    if (this.btnText == "Participar") {
+      this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
+        console.log("resolve = ", resolve);
+        alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
+        let alert1 = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: alerta,
+          buttons: ['OK']
+        });
+        this.btnText = "Cancelar"
+        alert1.present();
 
-      this.buttonDisabled = true;
-    }, (error) => {
-      console.log("error = ", error.error.status);
-      alerta = error.error.status;
-      let alert2 = this.alertCtrl.create({
-        title: 'Atenção!',
-        subTitle: alerta,
-        buttons: ['OK']
-      });
-      alert2.present();
-    })
+      }, (error) => {
+        console.log("error = ", error.error.status);
+        alerta = error.error.status;
+        let alert2 = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: alerta,
+          buttons: ['OK']
+        });
+        alert2.present();
+      })
+
+    } else {
+      this.restActivityProvider.cancelActivity(id_user,id_activity).then((resolve) => {
+        console.log("resolve = ", resolve);
+        alerta = 'Atividade cancelada.';
+        let alert3 = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: alerta,
+          buttons: ['OK']
+        });
+        this.btnText = "Participar"
+        alert3.present();
+
+      }, (error) => {
+        console.log("error = ", error.error.status);
+        alerta = error.error.status;
+        let alert4 = this.alertCtrl.create({
+          title: 'Atenção!',
+          subTitle: alerta,
+          buttons: ['OK']
+        });
+        alert4.present();
+      })
+    }
+
   }
 }
