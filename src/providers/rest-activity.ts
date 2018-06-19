@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RestActivityProvider {
-  private apiUrl = 'http://localhost:8000/api/';
+  // private apiUrl = 'http://localhost:8000/api/';
+  private apiUrl = 'http://178.128.160.80:8000/api/';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestActivityProvider');
