@@ -6,7 +6,6 @@ import { RestUserProvider } from '../../providers/rest-user';
 import { RegisterPage } from '../register/register';
 
 
-@IonicPage()
 @Component({
   selector: 'page-listuser',
   templateUrl: 'listuser.html',
