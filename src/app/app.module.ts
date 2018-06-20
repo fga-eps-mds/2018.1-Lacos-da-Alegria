@@ -51,7 +51,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true}),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: false, autoFocusAssist: false}),
     IonicStorageModule.forRoot(),
   ],
 
