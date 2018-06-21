@@ -42,7 +42,7 @@ page-profile {
 
   .profile {
     border: 1px solid $lightblue-color;
-    height: 300px;
+    height: 350px;
   }
 
   h1{
@@ -57,22 +57,52 @@ page-profile {
   }
 
   .button {
-    width: 120px;
+    width: 45%;
+    // position: relative;
+    left: 3%;
   }
 
+  // .button {
+  //   padding-left: 2vh;
+  //   width: 22vh;
+
+    
+  // }
   .editProfile{
-    float: left;
-    padding-left: 20px
+    // align-self: center
+    // display: inline-block;
+    // position: relative;
+    width: 100%;
+    margin: 0 auto;
+    // align-items: center;
+    // padding-left: 8.5%
+    // float: left;
+    // width: 80%;  
+    // margin: 0 auto;
+    // padding-left: 2vh;
+    // padding-left: 20px
   }
 
   // .editPassword{
-  //   position: relative;
-  //   right: 0px;
+  //   width: 50%;
+  //   margin: auto;
+  //   float: right;
+  //   // position: relative;
+  //   // right: 0px;
   // }
+
   .delete-btn {
     background-color: $color-orange;
-    display: block;
-    margin: auto;
+    width: 60%;
+    // display: block;
+    // position: relative;
+    // margin: auto;
+  }
+
+  .div-delete {
+    width: 100%;
+    position: relative;
+    padding-left: 24%;
   }
 
   

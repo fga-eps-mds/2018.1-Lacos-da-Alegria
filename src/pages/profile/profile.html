@@ -9,11 +9,11 @@
           <!-- <ion-avatar class="picture">
             <img src="../../assets/imgs/logooficial.png">
           </ion-avatar> -->
-          <img *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)"/>
+          <img class="photo" *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)"/>
 
           <br>
             <button ion-button icon-right (click)="openGallery()">
-              Abrir Galeria <ion-icon name="images"></ion-icon>
+              Galeria <ion-icon name="images"></ion-icon>
             </button>
             <button ion-button icon-right (click)="onTakePicture()">
               Tirar Foto <ion-icon name="camera"></ion-icon>
@@ -115,10 +115,10 @@
               <div> -->
                 <div class="editProfile">
                   <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>         
-
+<!-- 
                 </div>
-                <div>
-                  <button class="editPassword" *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>
+                <div class="editPassword"> -->
+                  <button  *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>
                   
                 </div>
               <!-- </div>
@@ -129,7 +129,9 @@
             </ion-col>
           </ion-row>
         </ion-grid> -->
-        
-        <button class="delete-btn" *ngIf="!changePassword && !edit" ion-button (click)="confirmDelete()">Excluir Conta</button>
+        <div class="div-delete">
+          <button class="delete-btn" *ngIf="!changePassword && !edit" ion-button (click)="confirmDelete()">Excluir Conta</button>
+
+        </div>
 
 </ion-content>
