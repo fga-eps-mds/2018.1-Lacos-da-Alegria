@@ -27,6 +27,8 @@ import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
 
+import { Camera } from '@ionic-native/camera';
+import { PhotoLibrary } from '@ionic-native/photo-library';
 
 
 @NgModule({
@@ -76,6 +78,8 @@ import { WelcomePage } from '../pages/welcome/welcome';
   ],
 
   providers: [
+    Camera,
+    PhotoLibrary,
     RestActivityProvider,
     RestUserProvider,
     SplashScreen,

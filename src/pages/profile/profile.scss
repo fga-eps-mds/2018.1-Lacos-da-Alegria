@@ -2,54 +2,108 @@ page-profile {
 
   $color-orange: #ff5300;
   $lightblue-color:  #0565c0;
+  $light-color: #f4f4f4;
 
   // .scroll-content{
   //     overflow: hidden;
   // }
 
-  .item-md ion-avatar img {
-    border: .4vh solid $lightblue-color;
-    border-radius: 50%;
-    display: block;
-    height: 25vh;
-    margin-bottom: 3vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    overflow: hidden;
-    position: relative;
-    width: 25vh;
+  .fields{
+    font-size: 12px;
+    font-family: arial;
+    margin-bottom: 0px;
   }
 
+  .input{
+    background-color: $light-color;
+    border: 0.5px solid black;
+    border-radius: 5px;
+  }
+
+  .date{
+    background-color: $light-color;
+    border: 0.5px solid black;
+    border-radius: 5px;
+  }
+
+  // .item-md ion-avatar img {
+  //   border: .4vh solid $lightblue-color;
+  //   border-radius: 50%;
+  //   display: block;
+  //   height: 25vh;
+  //   margin-bottom: 3vh;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   margin-top: 0;
+  //   overflow: hidden;
+  //   position: relative;
+  //   width: 25vh;
+  // }
+
   .profile {
-    border: .2vh solid $lightblue-color;
-    height: 54vh;
-    width: 100%;
+    border: 1px solid $lightblue-color;
+    height: 350px;
   }
 
   h1{
-    border-bottom: .2vh solid $lightblue-color;
+    border-bottom: 1px solid $lightblue-color;
     position: relative;
     width: auto;
   }
 
   h2{
-    padding: .8vh;
+    padding: 5px;
     position: relative;
   }
 
   .button {
-    width: 21vh;
+    width: 45%;
+    // position: relative;
+    left: 3%;
   }
 
-  .eoq {
-    background-color: $color-orange;
-    display: block;
-    margin: auto;
+  // .button {
+  //   padding-left: 2vh;
+  //   width: 22vh;
+
+
+  // }
+  .editProfile{
+    // align-self: center
+    // display: inline-block;
+    // position: relative;
+    width: 100%;
+    margin: 0 auto;
+    // align-items: center;
+    // padding-left: 8.5%
+    // float: left;
+    // width: 80%;
+    // margin: 0 auto;
+    // padding-left: 2vh;
+    // padding-left: 20px
   }
+
+  // .editPassword{
+  //   width: 50%;
+  //   margin: auto;
+  //   float: right;
+  //   // position: relative;
+  //   // right: 0px;
+  // }
 
   .delete-btn {
-    display: block;
-    margin: auto;
+    background-color: $color-orange;
+    width: 60%;
+    // display: block;
+    // position: relative;
+    // margin: auto;
   }
+
+  .div-delete {
+    width: 100%;
+    position: relative;
+    padding-left: 24%;
+  }
+
+
 }

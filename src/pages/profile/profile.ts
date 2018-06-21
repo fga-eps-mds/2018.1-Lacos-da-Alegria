@@ -13,6 +13,10 @@ import { CpfValidation } from '../../validators/cpf-validation';
 import { EmailValidation } from '../../validators/email-validation';
 import { User } from '../../models/user';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { PhotoLibrary } from '@ionic-native/photo-library';
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'
@@ -21,6 +25,7 @@ export class ProfilePage {
   user: any;
   edit: boolean = false;
   changePassword: boolean = false;
+  image: any;
 
   errorUsername: boolean = false;
   errorPassword: boolean = false;
@@ -42,6 +47,10 @@ export class ProfilePage {
     public navCtrl: NavController,
     public params: NavParams,
     public restProvider: RestUserProvider,
+    private camera: Camera,
+    // private photoLibrary: PhotoLibrary,
+    private domSanitizer: DomSanitizer,
+
     public storage: StorageService) {
       this.editProfileForm = this.formBuilder.group({
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
@@ -58,7 +67,8 @@ export class ProfilePage {
         password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(255)])],
         genre:['', Validators.required],
         want_ongs:['', Validators.required],
-        role:['',Validators.required]
+        role:['',Validators.required],
+        inscrito:['',Validators.required]
       });
 
       this.editPasswordForm = this.formBuilder.group({
@@ -70,6 +80,7 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
     this.id = this.restProvider.getId();
+    this.image = this.storage.getLocalPhoto();
     this.restProvider.getUser(this.id).then ((data) => {
       this.user= data;
     }, (err) => {
@@ -109,6 +120,7 @@ export class ProfilePage {
       genre: this.editProfileForm.value.genre,
       want_ongs: this.editProfileForm.value.want_ongs,
       role: this.editProfileForm.value.role,
+      inscrito: this.editProfileForm.value.inscrito
     }
 
     return user;
@@ -201,7 +213,8 @@ export class ProfilePage {
       region: this.user.region,
       preference: this.user.preference,
       howDidYouKnow: this.user.howDidYouKnow,
-      role: this.user.role
+      role: this.user.role,
+      inscrito: this.user.inscrito
     })
   }
 
@@ -310,4 +323,42 @@ export class ProfilePage {
     });
     prompt.present();
   }
+
+  onTakePicture() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      saveToPhotoAlbum: true,
+      correctOrientation: true,
+      targetWidth: 200,
+      targetHeight: 200,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+
+    this.camera.getPicture(options).then((imageData) => {
+      this.image = 'data:image/jpeg;base64,' + imageData;
+      this.storage.setLocalPhoto(this.image);
+    }, (err) => {
+        console.log(err);
+      });
+  }
+
+  openGallery (): void {
+    let cameraOptions = {
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      quality: 100,
+      targetWidth: 200,
+      targetHeight: 200,
+      encodingType: this.camera.EncodingType.JPEG,
+      correctOrientation: true
+    }
+
+    this.camera.getPicture(cameraOptions)
+      .then(file_uri =>{
+        this.image = file_uri;
+        this.storage.setLocalPhoto(this.image);
+      }, err => console.log(err));
+  }
+
 }
