@@ -3,26 +3,27 @@ page-profile {
   $color-orange: #ff5300;
   $lightblue-color:  #0565c0;
   $light-color: #f4f4f4;
+  $color-black: #000;
 
   // .scroll-content{
   //     overflow: hidden;
   // }
 
   .fields{
-    font-size: 12px;
     font-family: arial;
-    margin-bottom: 0px;
+    font-size: 12px;
+    margin-bottom: 0;
   }
 
   .input{
     background-color: $light-color;
-    border: 0.5px solid black;
+    border: .5px solid $color-black;
     border-radius: 5px;
   }
 
   .date{
     background-color: $light-color;
-    border: 0.5px solid black;
+    border: .5px solid $color-black;
     border-radius: 5px;
   }
 
@@ -57,27 +58,27 @@ page-profile {
   }
 
   .button {
+    left: 3%;
     width: 45%;
     // position: relative;
-    left: 3%;
   }
 
   // .button {
   //   padding-left: 2vh;
   //   width: 22vh;
 
-    
+
   // }
-  .editProfile{
+  .edit-profile{
     // align-self: center
     // display: inline-block;
     // position: relative;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
     // align-items: center;
     // padding-left: 8.5%
     // float: left;
-    // width: 80%;  
+    // width: 80%;
     // margin: 0 auto;
     // padding-left: 2vh;
     // padding-left: 20px
@@ -100,10 +101,10 @@ page-profile {
   }
 
   .div-delete {
-    width: 100%;
-    position: relative;
     padding-left: 24%;
+    position: relative;
+    width: 100%;
   }
 
-  
+
 }

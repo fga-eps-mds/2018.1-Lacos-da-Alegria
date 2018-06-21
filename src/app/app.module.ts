@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { Camera } from '@ionic-native/camera';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
+import { PhotoLibrary } from '@ionic-native/photo-library';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -26,8 +28,6 @@ import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { Camera } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
 
 
 
@@ -53,7 +53,7 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true}),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: false, autoFocusAssist: false}),
     IonicStorageModule.forRoot(),
   ],
 
