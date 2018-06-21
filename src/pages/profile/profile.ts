@@ -67,7 +67,8 @@ export class ProfilePage {
         password: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(255)])],
         genre:['', Validators.required],
         want_ongs:['', Validators.required],
-        role:['',Validators.required]
+        role:['',Validators.required],
+        inscrito:['',Validators.required]
       });
 
       this.editPasswordForm = this.formBuilder.group({
@@ -118,6 +119,7 @@ export class ProfilePage {
       genre: this.editProfileForm.value.genre,
       want_ongs: this.editProfileForm.value.want_ongs,
       role: this.editProfileForm.value.role,
+      inscrito: this.editProfileForm.value.inscrito
     }
 
     return user;
@@ -210,7 +212,8 @@ export class ProfilePage {
       region: this.user.region,
       preference: this.user.preference,
       howDidYouKnow: this.user.howDidYouKnow,
-      role: this.user.role
+      role: this.user.role,
+      inscrito: this.user.inscrito
     })
   }
 
