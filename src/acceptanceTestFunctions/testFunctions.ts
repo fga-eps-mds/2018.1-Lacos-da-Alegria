@@ -305,3 +305,8 @@ export function clickEditProfileButton(){
     var editProfileButton = element(by.xpath('//*[@id="edit-btn"]/span'));
     editProfileButton.click();
 }
+
+export function goToActivityList(){
+  var activityListButton = element(by.xpath('//*[@id="tab-t1-0"]'));
+  activityListButton.click();
+}

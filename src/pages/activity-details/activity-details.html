@@ -4,20 +4,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<ion-content text-center>
   <ion-list inset>
     <ion-item *ngFor='let activity of activity'>
-      {{activity.name}}
-      <p> Voluntárioos: {{activity.volunteers}}</p>
-      <p> Limite: {{activity.limit}}</p>
-      <p> Criada em: {{activity.created}}</p>
-      <p> Status:{{activity.status}}</p>
-      <p> Tempo: {{activity.time}}</p>
-      <p> Duração: {{activity.duration}}</p>
-      <p> Inscrito: {{activity.subscription}}</p>
-      <p> Chamado: {{activity.call}}</p>
+      <h2 class="title" text-center>{{activity.name}} - HRSM</h2>
+      <br>
+      <h5 text-center> Número de Voluntários: {{activity.volunteers}}</h5>
+      <h5 text-center> Localização: Q. E, 56 - Granja do Torto</h5>
+      <h5 text-center> Data: 16/10</h5>
+      <h5 text-center> Duração: {{activity.duration}} horas</h5>
     </ion-item>
   </ion-list>
-
-  <button ion-button class="btnGoRegister" (click)="BtnBackToList()">Voltar</button>
+      
+  <button ion-button class="btnBack" (click)="BtnBackToList()">Voltar</button>
+  <button ion-button color="danger" class="btnParticipate" (click)="postActivity(getId(), activity[0].id)"> {{btnText}} </button>
+<!-- <button [disabled]="buttonDisabled" id="participateId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
+  Participar
+</button> -->
 </ion-content>
