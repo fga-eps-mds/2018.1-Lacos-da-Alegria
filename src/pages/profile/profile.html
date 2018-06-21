@@ -6,9 +6,19 @@
 
 <ion-content padding>
         <ion-item *ngIf="user&&!edit&&!changePassword" text-center class="profile">
-          <ion-avatar class="picture">
+          <!-- <ion-avatar class="picture">
             <img src="../../assets/imgs/logooficial.png">
-          </ion-avatar>
+          </ion-avatar> -->
+          <img *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)"/>
+
+          <br>
+            <button ion-button icon-right (click)="openGallery()">
+              Abrir Galeria <ion-icon name="images"></ion-icon>
+            </button>
+            <button ion-button icon-right (click)="onTakePicture()">
+              Tirar Foto <ion-icon name="camera"></ion-icon>
+            </button>
+         
             <h1> {{user.username}} </h1>
             <h2> {{user.role}} </h2>
             <p> {{user.name}} </p>
@@ -82,7 +92,8 @@
               </ion-select>
             </ion-item>
 
-            <button [disabled]="editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
+            <button ion-button [disabled]="editProfileForm.invalid" (click)="confirmEdit()">Alterar dados</button>
+            <button ion-button (click)="edit=false">Cancelar</button>
           </ion-list>
 
         </form>
@@ -95,23 +106,30 @@
           <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
         </form>
 
-        <button *ngIf="changePassword" [disabled]="editPasswordForm.invalid || errorCheckPasswords" (click)="confirmEditPassword()">Alterar Senha</button>
-
-        <ion-grid>
+        <button ion-button *ngIf="changePassword" [disabled]="editPasswordForm.invalid || errorCheckPasswords" (click)="confirmEditPassword()">Alterar Senha</button>
+        <button *ngIf="changePassword" ion-button (click)="changePassword=false">Cancelar</button>
+        
+        <!-- <ion-grid>
           <ion-row>
             <ion-col>
-              <div>
-                <button ion-button (click)="editProfile()">Editar Perfil</button>         
-              </div>
+              <div> -->
+                <div class="editProfile">
+                  <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>         
+
+                </div>
+                <div>
+                  <button class="editPassword" *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>
+                  
+                </div>
+              <!-- </div>
             </ion-col>
             <ion-col>
-              <div>
-                <button ion-button (click)="editPassword()">Editar Senha</button>
-              </div>
+              <div> -->
+              <!-- </div>
             </ion-col>
           </ion-row>
-        </ion-grid>
+        </ion-grid> -->
         
-        <button class="eoq" ion-button (click)="confirmDelete()">Excluir Conta</button>
+        <button class="delete-btn" *ngIf="!changePassword && !edit" ion-button (click)="confirmDelete()">Excluir Conta</button>
 
 </ion-content>

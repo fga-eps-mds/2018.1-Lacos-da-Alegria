@@ -13,6 +13,10 @@ import { CpfValidation } from '../../validators/cpf-validation';
 import { EmailValidation } from '../../validators/email-validation';
 import { User } from '../../models/user';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { PhotoLibrary } from '@ionic-native/photo-library';
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'
@@ -21,6 +25,7 @@ export class ProfilePage {
   user: any;
   edit: boolean = false;
   changePassword: boolean = false;
+  image: any;
 
   errorUsername: boolean = false;
   errorPassword: boolean = false;
@@ -42,6 +47,10 @@ export class ProfilePage {
     public navCtrl: NavController,
     public params: NavParams,
     public restProvider: RestUserProvider,
+    private camera: Camera, 
+    private photoLibrary: PhotoLibrary,
+    private domSanitizer: DomSanitizer,
+
     public storage: StorageService) {
       this.editProfileForm = this.formBuilder.group({
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
@@ -310,4 +319,36 @@ export class ProfilePage {
     });
     prompt.present();
   }
+
+  onTakePicture() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      saveToPhotoAlbum: true,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+
+    this.camera.getPicture(options).then((imageData) => {
+      this.image = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+        console.log(err);
+      });
+  }
+
+  openGallery (): void {
+    let cameraOptions = {
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      quality: 100,
+      targetWidth: 1000,
+      targetHeight: 1000,
+      encodingType: this.camera.EncodingType.JPEG,
+      correctOrientation: true
+    }
+
+    this.camera.getPicture(cameraOptions)
+      .then(file_uri => this.image = file_uri, 
+      err => console.log(err));
+  }
+
 }
