@@ -6,17 +6,17 @@
 
 <ion-content padding>
         <ion-item *ngIf="user&&!edit&&!changePassword" text-center class="profile">
-          <!-- <ion-avatar class="picture">
+          <ion-avatar class="picture">
             <img src="../../assets/imgs/logooficial.png">
-          </ion-avatar> -->
-          <img src="{{image}}" alt="SEM FOTO">
+          </ion-avatar>
+          <!-- <img src="{{image}}" alt="SEM FOTO">
           <br>
-            <button ion-button icon-right (click)="openGallery()">
-              Abrir Galeria <ion-icon name="images"></ion-icon>
-            </button>
-            <button ion-button icon-right (click)="onTakePicture()">
-              Tirar Foto <ion-icon name="camera"></ion-icon>
-            </button>
+          <button ion-button icon-right (click)="openGallery()">
+            Abrir Galeria <ion-icon name="images"></ion-icon>
+          </button>
+          <button ion-button icon-right (click)="onTakePicture()">
+            Tirar Foto <ion-icon name="camera"></ion-icon>
+          </button> -->
 
             <h1> {{user.username}} </h1>
             <h2> {{user.role}} </h2>

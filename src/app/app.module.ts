@@ -76,8 +76,8 @@ import { WelcomePage } from '../pages/welcome/welcome';
   ],
 
   providers: [
-    Camera,
-    PhotoLibrary,
+    // Camera,
+    // PhotoLibrary,
     RestActivityProvider,
     RestUserProvider,
     SplashScreen,
