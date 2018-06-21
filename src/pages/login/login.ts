@@ -1,11 +1,12 @@
 import { AlertController, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
-import { RestUserProvider } from '../../providers/rest-user';
-import { StorageService } from '../../providers/storage.service';
-
 import { RegisterPage } from '../register/register';
+import { RestUserProvider } from '../../providers/rest-user';
+import { RoleService } from '../../providers/role.service';
+import { StorageService } from '../../providers/storage.service';
 import { TabsPage } from '../tabs/tabs';
+
 
 @Component({
   selector: 'page-login',
@@ -13,10 +14,12 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
   user = { username:'', password:''}
+  users: any;
   constructor(
-    public alertCtrl: AlertController, 
+    public alertCtrl: AlertController,
     public navController: NavController,  
     public restProvider: RestUserProvider, 
+    public roleService: RoleService,
     public storage: StorageService
   ) { }
 
@@ -33,8 +36,8 @@ export class LoginPage {
         console.log('refreeeeesh',refreshToken);
         console.log('acessoooooooo',accessToken);
         console.log('response',response);
-        this.storage.setLocalUser(username, accessToken, refreshToken);
-        this.navController.push(TabsPage);   
+        this.restProvider.successfulLogin(username,accessToken,refreshToken);
+        this.getUser(this.restProvider.getId());
       },
       error => {
         let alert = this.alertCtrl.create({
@@ -47,4 +50,14 @@ export class LoginPage {
       });
   }
 
+  getUser(id) {
+    this.restProvider.getUser(id)
+    .then(data => {
+      this.users = [data];
+      console.log("mensagem: ",this.users);
+      console.log("role = ", this.users[0].role);
+      this.roleService.setLocalRole(this.users[0].role);
+      this.navController.push(TabsPage);
+    });
+  }
 }

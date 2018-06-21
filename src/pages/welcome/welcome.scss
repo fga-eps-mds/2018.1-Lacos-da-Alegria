@@ -2,7 +2,7 @@ page-welcome{
     
     $color-blue: #084887;
     $color-white: #e3ecf5;
-    $color-orange: #ff6605;
+    $color-orange: #FF5300;
 
     .scroll-content{
       overflow: hidden;
@@ -19,11 +19,11 @@ page-welcome{
     }
 
     .titulo{
-      color: white;
+      color: $color-white;
     }
 
     .texto{
-      color: white;
+      color: $color-white;
       margin: 1vh;      
       text-align: center;
     }

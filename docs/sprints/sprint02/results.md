@@ -23,7 +23,7 @@
 ### 1.1 Fechamento da _Sprint_
 ![](images/results_sprint2.png)
 
-Dos 54 pontos planejados, apenas 19 foram entregues. Isso ocorreu, pois muitos membros não abriram _Pull Request_ para entregarem
+Dos 54 pontos planejados, apenas 27 foram entregues. Isso ocorreu, pois muitos membros não abriram _Pull Request_ para entregarem
 os documentos entregues, não seguindo a definição de "pronto".
 
 ### 1.2 _Burndown_

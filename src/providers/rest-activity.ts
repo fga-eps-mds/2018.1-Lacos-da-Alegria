@@ -6,12 +6,12 @@ export class RestActivityProvider {
   private apiUrl = 'http://localhost:8000/api/';
 
   constructor(public http: HttpClient) {
-    console.log('Hello RestUserProvider Provider');
+    console.log('Hello RestActivityProvider');
   }
 
-  getActivitiesList(){
+  getHospitalActivitiesList(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'activities').subscribe(data => {
+      this.http.get(this.apiUrl+'hospital-activities').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -19,13 +19,54 @@ export class RestActivityProvider {
     });
   }
 
-  getActivity(id){
+  getNGOActivitiesList(){
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + 'activities/' + id + '/').subscribe(data => {
+      this.http.get(this.apiUrl+'ngo-activities').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
       });
     });
   }
+
+  getHospitalActivity(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + 'hospital-activities/' + id + '/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getNGOActivity(id){
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + 'ngo-activities/' + id + '/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  postActivity(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'hospital-activities/'+id_activity+'/subscribe/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  cancelActivity(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'hospital-activities/'+id_activity+'/unsubscribe/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
 }
