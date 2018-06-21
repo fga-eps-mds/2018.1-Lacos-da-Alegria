@@ -14,7 +14,6 @@ import { EmailValidation } from '../../validators/email-validation';
 import { User } from '../../models/user';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -47,10 +46,8 @@ export class ProfilePage {
     public navCtrl: NavController,
     public params: NavParams,
     public restProvider: RestUserProvider,
-    private camera: Camera, 
-    private photoLibrary: PhotoLibrary,
+    private camera: Camera,
     private domSanitizer: DomSanitizer,
-
     public storage: StorageService) {
       this.editProfileForm = this.formBuilder.group({
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
@@ -80,6 +77,7 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListUserPage');
     this.id = this.restProvider.getId();
+    this.image = this.storage.getLocalPhoto();
     this.restProvider.getUser(this.id).then ((data) => {
       this.user= data;
     }, (err) => {
@@ -328,11 +326,15 @@ export class ProfilePage {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       saveToPhotoAlbum: true,
+      correctOrientation: true,
+      targetWidth: 200,
+      targetHeight: 200,
       mediaType: this.camera.MediaType.PICTURE
     }
 
     this.camera.getPicture(options).then((imageData) => {
       this.image = 'data:image/jpeg;base64,' + imageData;
+      this.storage.setLocalPhoto(this.image);
     }, (err) => {
         console.log(err);
       });
@@ -343,15 +345,17 @@ export class ProfilePage {
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.FILE_URI,
       quality: 100,
-      targetWidth: 1000,
-      targetHeight: 1000,
+      targetWidth: 200,
+      targetHeight: 200,
       encodingType: this.camera.EncodingType.JPEG,
       correctOrientation: true
     }
 
     this.camera.getPicture(cameraOptions)
-      .then(file_uri => this.image = file_uri, 
-      err => console.log(err));
+      .then(file_uri =>{
+        this.image = file_uri;
+        this.storage.setLocalPhoto(this.image);        
+      }, err => console.log(err));
   }
 
 }
