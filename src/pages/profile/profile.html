@@ -18,7 +18,7 @@
             <button ion-button icon-right (click)="onTakePicture()">
               Tirar Foto <ion-icon name="camera"></ion-icon>
             </button>
-
+         
             <h1> {{user.username}} </h1>
             <h2> {{user.role}} </h2>
             <p> {{user.name}} </p>
@@ -108,18 +108,18 @@
 
         <button ion-button *ngIf="changePassword" [disabled]="editPasswordForm.invalid || errorCheckPasswords" (click)="confirmEditPassword()">Alterar Senha</button>
         <button *ngIf="changePassword" ion-button (click)="changePassword=false">Cancelar</button>
-
+        
         <!-- <ion-grid>
           <ion-row>
             <ion-col>
               <div> -->
-                <div class="editProfile">
-                  <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>
-<!--
+                <div class="edit-profile">
+                  <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>         
+<!-- 
                 </div>
                 <div class="editPassword"> -->
                   <button  *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>
-
+                  
                 </div>
               <!-- </div>
             </ion-col>

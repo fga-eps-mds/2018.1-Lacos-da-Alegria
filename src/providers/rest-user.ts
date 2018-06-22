@@ -10,7 +10,6 @@ import { User } from '../models/user';
 export class RestUserProvider {
   // apiUrl = 'http://localhost:8000/api';
   apiUrl = 'http://178.128.160.80:8000/api';
-  
   jwtHelper: JwtHelper = new JwtHelper();
 
   constructor(public http: HttpClient, public storage: StorageService) {

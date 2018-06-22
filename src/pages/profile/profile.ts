@@ -14,7 +14,6 @@ import { EmailValidation } from '../../validators/email-validation';
 import { User } from '../../models/user';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -48,9 +47,7 @@ export class ProfilePage {
     public params: NavParams,
     public restProvider: RestUserProvider,
     private camera: Camera,
-    // private photoLibrary: PhotoLibrary,
     private domSanitizer: DomSanitizer,
-
     public storage: StorageService) {
       this.editProfileForm = this.formBuilder.group({
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
@@ -357,7 +354,7 @@ export class ProfilePage {
     this.camera.getPicture(cameraOptions)
       .then(file_uri =>{
         this.image = file_uri;
-        this.storage.setLocalPhoto(this.image);
+        this.storage.setLocalPhoto(this.image);        
       }, err => console.log(err));
   }
 
