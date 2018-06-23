@@ -53,7 +53,12 @@ Em relação a _Sprint_ passada, o velocity subiu de 26,43 para 28,71.
 
 ### 1.7 Custos
 ![Imgur](https://i.imgur.com/17MsyIl.png)
-![Imgur](https://i.imgur.com/mrjkwqp.png)
+
+#### Valor Planejado x Custo Real x Valor Agregado![Imgur](https://i.imgur.com/mrjkwqp.png)
+
+#### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/w18doHw.png)
+
+#### Índices de Desempenho ![Imgur](https://i.imgur.com/PTC9Mo6.png)
 
 ### 1.8 Revisão da _Sprint_
 
