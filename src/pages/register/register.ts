@@ -77,6 +77,7 @@ export class RegisterPage {
       genre: this.signupForm.value.genre,
       want_ongs: this.signupForm.value.want_ongs,
       role: 'Novato',
+      inscrito: 'False'
     }
 
     return user;

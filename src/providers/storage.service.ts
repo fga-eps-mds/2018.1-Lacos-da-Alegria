@@ -46,4 +46,22 @@ export class StorageService {
         localStorage.setItem("refresh", refresh);
     }
 
+    getLocalPhoto() {
+        let photo = localStorage.getItem("photo");
+
+        if (photo == null) {
+            return null;
+        } else {
+            return photo;
+        }
+    }
+
+    setLocalPhoto(photo: string) {
+        localStorage.setItem("photo", photo);
+    }
+
+    clearPhoto(){
+        localStorage.removeItem("photo");
+    }
+
 }
