@@ -86,6 +86,18 @@ Benchmark tem papel de estimular mudanças organizacionais para melhorar o desem
 |2	        |00:00:01	      |00:00:04    |0:00:03              |	-                     |	-                    |142.9                   |	26,00%        |
 |3	        |00:00:01	      |00:00:04    |0:00:03              |	-                     |	-                    |145.2                   |	22,70%        |
 
+<h2><center>Funcionalidade: Cadastro</center></h2>
+
+|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1          |	0:01:08	        |0:01:10         |	0:00:02            |	3.6                   | 4.5                  |	191	                  | 6.3%          |
+|2	        |00:00:58	        |00:01:00        |	0:00:02            |	3.6                   |	4.4	                 |196.4                   | 5.7%          |
+|3	        |00:00:43         |00:00:46	       |  0:00:03            |	3.8                   |	4.1	                 | 192.2	                | 6.1%          |
+
+
+
+
+
 
 
 
