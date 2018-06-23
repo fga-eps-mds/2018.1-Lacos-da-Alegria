@@ -45,24 +45,28 @@ Em relação a _Sprint_ passada, o velocity caiu de 27,4 para 22,14.
 
 O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos necessários e nessa _Sprint_ houve uma melhora especial de alguns membros nos testes.
 
-### 1.7 Custos
+### 1.7 EVM
 ![Imgur](https://i.imgur.com/umb1O8U.png)
 
-![Imgur](https://i.imgur.com/JHe2vzF.png)
+#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/JHe2vzF.png)
 
-![Imgur](https://i.imgur.com/6HGVCnd.png)
+#### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/6HGVCnd.png)
 
-![Imgur](https://i.imgur.com/eeqIniE.png)
-### 1.8 Revisão da _Sprint_
+##### Índices de Desempenho ![Imgur](https://i.imgur.com/eeqIniE.png)
+
+### 1.8 Análise do Tracker
+Na sétima Sprint foram planejados 43 pontos, além dos 21 pontos adicionados, no entanto foram feitos apenas  13 pontos.Na visão do cliente, o projeto deveria estar com 53,33% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 49,05%, gerando um deficit de 4,28% para a próxima sprint. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
+### 1.9 Revisão da _Sprint_
 
 Não houve problemas durante a _Sprint_ e ainda não é possível avaliar as mudanças aplicadas.
 
 
-### 1.9 Retrospectiva
+### 2.0 Retrospectiva
 
 ![](images/retrospective_sprint7.png)
 
-### 2. Análise do _Scrum Master_
+### 2.1 Análise do _Scrum Master_
 
 Em relação a _Sprint_ anterior, essa melhorou muito pouco. Poucos pontos foram entregues e o _Velocity_ caiu muito. Isso ocorreu porque os membros de MDS tinham outras matérias para focar e esse risco não foi identificado a tempo.
 
