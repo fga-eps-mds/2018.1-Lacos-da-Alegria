@@ -48,6 +48,8 @@ O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos nece
 ### 1.7 Custos
 ![Imgur](https://i.imgur.com/JHe2vzF.png)
 
+![Imgur](https://i.imgur.com/6HGVCnd.png)
+
 ### 1.8 Revisão da _Sprint_
 
 Não houve problemas durante a _Sprint_ e ainda não é possível avaliar as mudanças aplicadas.
