@@ -55,7 +55,7 @@ O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos nece
 ##### Índices de Desempenho ![Imgur](https://i.imgur.com/eeqIniE.png)
 
 ### 1.8 Análise do Tracker
-Na sétima Sprint foram planejados 43 pontos, além dos 21 pontos adicionados, no entanto foram feitos apenas  13 pontos.Na visão do cliente, o projeto deveria estar com 53,33% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 49,05%, gerando um deficit de 4,28% para a próxima sprint. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+Na sétima Sprint foram planejados 43 pontos, além dos 21 pontos adicionados, no entanto foram feitos apenas  13 pontos. Na visão do cliente, o projeto deveria estar com 53,33% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 49,05%, gerando um deficit de 4,28% para a próxima sprint. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
 
 ### 1.9 Revisão da _Sprint_
 

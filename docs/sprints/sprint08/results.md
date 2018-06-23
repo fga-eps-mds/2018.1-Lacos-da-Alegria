@@ -45,16 +45,20 @@ Em relação a _Sprint_ passada, o velocity subiu de 22,14 para 29,43.
 
 O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o projeto. E nessa _Sprint_ os membros melhoraram no _backend_ e no _git_.
 
-### 1.7 Custos 
+### 1.7 EVM 
 ![Imgur](https://i.imgur.com/fc9OKKL.png)
 
-![Imgur](https://i.imgur.com/1GRYgli.png)
+#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/1GRYgli.png)
 
-![Imgur](https://i.imgur.com/BDvWAao.png)
+#### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/BDvWAao.png)
 
-![Imgur](https://i.imgur.com/i56a25L.png)
+#### Índices de Desempenho ![Imgur](https://i.imgur.com/i56a25L.png)
 
-### 1.8 Revisão da _Sprint_
+### 1.8 Análise do Tracker
+Na oitava Sprint foram planejados 22 pontos, além dos 35 pontos adicionados, no entanto foram feitos apenas  34 pontos. Na visão do cliente, o projeto deveria estar com 60,00% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 56,24%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
+
+### 1.9 Revisão da _Sprint_
 
 Durante a _Sprint_ ocorreram os seguintes problemas:
 
@@ -63,11 +67,11 @@ Durante a _Sprint_ ocorreram os seguintes problemas:
 * O _coach_ não pode participar da "seção tira dúvidas" que havia marcado por motivos pessoais.
 
 
-### 1.9 Retrospectiva
+### 2. Retrospectiva
 
 ![](images/retrospective_sprint8.png)
 
-### 2. Análise do _Scrum Master_
+### 2.1 Análise do _Scrum Master_
 
 Com relação às duas últimas _Sprints_ essa foi muito boa, pois foram entregues quase todas as dívidas técnicas relacionadas ao código. Porém, as dívidas relacionadas ao processo ainda estão pendentes e isso é um problema para o time que pode se prejudicar em futuro próximo.
 
