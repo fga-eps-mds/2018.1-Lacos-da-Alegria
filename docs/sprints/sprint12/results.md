@@ -50,7 +50,7 @@
 
 #### Valor Planejado x Custo Real x Valor Agregado![Imgur](https://i.imgur.com/caTnlii.png)
 
-#### Variação de Custos x Variação de Prazos!![Imgur](https://i.imgur.com/DE5tpHe.png)
+#### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/DE5tpHe.png)
 
 #### Índices de Desempenho ![Imgur](https://i.imgur.com/N7AoMnd.png)
 
