@@ -60,7 +60,10 @@ Em relação a _Sprint_ passada, o velocity subiu de 26,43 para 28,71.
 
 #### Índices de Desempenho ![Imgur](https://i.imgur.com/PTC9Mo6.png)
 
-### 1.8 Revisão da _Sprint_
+### 1.8 Análise do Tracker
+Na décima Sprint foram planejados 31 pontos, além dos 23 pontos adicionados, no entanto foram feitos apenas  40 pontos. Na visão do cliente, o projeto deveria estar com 73,33% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 73,15%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
+### 1.9 Revisão da _Sprint_
 
 Nessa _Sprint_ houve dois problemas:
 
@@ -68,11 +71,11 @@ Nessa _Sprint_ houve dois problemas:
 * Dificuldades para gerar o APK que atrasou a história do Rômulo e da Sara, pois eles não conseguiram testar a aplicação no celular. O Luis conseguiu gerar o APK e os ajudou a gerá-lo.
 
 
-### 1.9 Retrospectiva
+### 2 Retrospectiva
 
 ![](images/retrospective_sprint10.png)
 
-### 2. Análise do _Scrum Master_
+### 2.1 Análise do _Scrum Master_
 
 Essa foi uma boa _Sprint_, em relação as anteriores. O _Velocity_ voltou a subir e isso foi possível pela quebra das histórias, porém os membros ainda estão trabalhando muitas horas, o que mostra que a produtividade ainda está baixa.
 
