@@ -50,6 +50,8 @@ O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o
 
 ![Imgur](https://i.imgur.com/1GRYgli.png)
 
+![Imgur](https://i.imgur.com/i56a25L.png)
+
 ### 1.8 Revisão da _Sprint_
 
 Durante a _Sprint_ ocorreram os seguintes problemas:
