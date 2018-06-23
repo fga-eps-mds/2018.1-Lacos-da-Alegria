@@ -69,7 +69,8 @@ Idade:
 
 Novato() Voluntário() Apoio()
 
-*  Entrar na aplicação e se cadastrar em um hospital, caso não haja vagas ver sua posição na fila.
+*  Entrar na aplicação, se cadastrar em um hospital, caso não haja vagas ver sua posição na fila.
+* Olhar sua página de perfil, caso não tenha foto adicionar uma foto.
 
 ### 4.3. Validação de Informações
 Para validar e ter um feedback da pesquisa foram respondidas 10 perguntas segundo o padrão SUS(System Usability Scale) com 5 opções de concordancia para avaliar a facilidade de uso da amostra.
@@ -106,4 +107,3 @@ Essa etapa consiste em entender porque uma funcionalidade foi importante para as
 |-------------------|--------------------------------|-----------|--------------|-------------|
 |Taxa de aprendizado|comparação entre 1ª e 2ª medição|mesma coisa|melhor 2ª     |muito melhor |
 |Uso inicial|tempo para realizar..|20 min|2min|0.5 min|
-||
