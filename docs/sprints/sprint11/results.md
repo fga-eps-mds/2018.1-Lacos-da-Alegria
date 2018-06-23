@@ -44,7 +44,12 @@
 
 ### 1.7. Custos
 ![Imgur](https://i.imgur.com/kugRkNy.png)
-![Imgur](https://i.imgur.com/lmQKC13.png)
+
+#### Valor Planejado x Custo Real x Valor Agregado![Imgur](https://i.imgur.com/lmQKC13.png)
+
+#### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/wOPrPnO.png)
+
+#### Índices de Desempenho![Imgur](https://i.imgur.com/YslslFw.png)
 
 ### 1.7 Revisão da _Sprint_
 
@@ -67,4 +72,3 @@
 <p align="justify"> Não houve uma diferença significativa no quadro de conhecimentos. A falta de alguém que saiba fazer testes unitários em typescript é um grande problema e risco para o projeto. </p>
 
 <p align="justify"> Apesar disso os membros estiveram mais presentes nas dailies, o que ajudou na transparência e a Julliana parece estar menos perdida. </p>
->>>>>>> f3fd346bf5254c28730d0fc7bf36be9554cb814e
