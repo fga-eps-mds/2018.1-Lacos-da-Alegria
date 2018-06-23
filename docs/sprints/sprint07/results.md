@@ -46,6 +46,8 @@ Em relação a _Sprint_ passada, o velocity caiu de 27,4 para 22,14.
 O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos necessários e nessa _Sprint_ houve uma melhora especial de alguns membros nos testes.
 
 ### 1.7 Custos
+![Imgur](https://i.imgur.com/umb1O8U.png)
+
 ![Imgur](https://i.imgur.com/JHe2vzF.png)
 
 ![Imgur](https://i.imgur.com/6HGVCnd.png)
