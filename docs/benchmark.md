@@ -48,7 +48,7 @@ Quais elementos fazem o aplicativo gastar bateria?
 
   <th ></th>
    <td  center> 
-      <li> Medir o tempo para completar uma tarefa em específico. </li>
+      <li> Medir o tempo para completar uma tarefa em específico. </li>Co-authored-by:
       <li> Inspecionar o consumo da CPU </li>
       <li> Coletar dados da bateria no dispositivo android</li>
   </td>
@@ -96,8 +96,50 @@ Benchmark tem papel de estimular mudanças organizacionais para melhorar o desem
 
 
 
+<h2><center>Funcionalidade: Cadastro</center></h2>
+
+|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1          |	0:10:08         |	0:10:09        |	0:00:01            |	1.7                   |	1.7                  |	134	                  | 6,00%         |
+|2          |	00:05:34	      | 00:05:35       |  0:00:01	           |  1.6                   |	1.8	                 |  152.5                 |	5.8%          |
+|3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
 
 
 
+<h2><center>Funcionalidade: Cadastrar na atividade</center></h2>
+
+|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1          |	0:10:08         |	0:10:09        |	0:00:01            |	1.7                   |	1.7                  |	134	                  | 6,00%         |
+|2          |	00:05:34	      | 00:05:35       |  0:00:01	           |  1.6                   |	1.8	                 |  152.5                 |	5.8%          |
+|3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
+
+
+<h2><center>Funcionalidade: Cancelar inscrição</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+| 1 	       | 00:14:19         |	00:14:20       |	0:00:01            |	2.5                   |	1.7                  |	140                   |	6.8%|
+|2|	00:18:01	|00:18:02	|0:00:01	|2.5	|1.7	|142.1	|6.5%|
+|3|	00:03:24|	00:03:25|	0:00:01	|2.5|	1.8	|133.3	|6.7%|
+
+
+
+<h2><center>Funcionalidade: Visualizar Perfil</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1           |	00:19:02        |	00:19:04       |	0:00:02            |	2.8                   |	4.1                  |	131.8                 | 5.8%          |
+|2|	00:03:24|	00:03:25|	0:00:01|	2.5|	4.3	|130| 6.5%|
+|3|	00:03:55|	00:03:57|	0:00:02	|2.9	|4.1	|132.1 |6.4%|
+
+
+<h2><center>Funcionalidade: Editar Perfil</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1|	00:00:34|	00:00:35|	0:00:01|	4.7|	4.2|	142.7	|5.5%|
+|2|	00:01:22|	00:01:23|	0:00:01	|4.7	|4.3|	143	|6.9%|
+|3|	00:07:13|	00:07:15|	0:00:02|	4.7|	4.3|	147.6	|6.2%|
 
 
