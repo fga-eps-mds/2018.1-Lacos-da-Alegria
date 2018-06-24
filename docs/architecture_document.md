@@ -108,7 +108,11 @@
 
 <p align="justify">A lógica do projeto será baseado no diagrama de classes abaixo, que está sujeito a alterações ao longo do desenvolvimento.</p>
 
+### Versão 1
 ![Diagrama de Classes](images/diagrama_de_classes.png)
+
+### Versão 2
+![Imgur](https://i.imgur.com/xA1euNq.png)]
 
 **Figura 3 -** Diagrama de Classes
 
