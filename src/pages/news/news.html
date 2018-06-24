@@ -5,13 +5,13 @@
 </ion-header>
 
 <ion-content text-center>
-  <h2>lalalalalalal</h2>
   <ion-list *ngFor="let news of news_list">
-      <ion-item>
-        <h2 class="title" text-center>{{news.title}}</h2>
-        <br>
-        <h5 text-center>{{news.text}}</h5>
+      <ion-item class="item-news" text-wrap>
+        <ion-icon class="icon-info"name="information-circle"></ion-icon>
+        <h2 class="title">{{news.title}}</h2>
+        <p>{{news.text}}
+
+        </p>
       </ion-item>
     </ion-list>
   </ion-content>
-
