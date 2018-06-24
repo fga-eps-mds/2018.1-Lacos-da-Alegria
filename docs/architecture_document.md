@@ -112,7 +112,8 @@
 ![Diagrama de Classes](images/diagrama_de_classes.png)
 
 ### Versão 2
-![Imgur](https://i.imgur.com/xA1euNq.png)]
+![Imgur](https://i.imgur.com/xA1euNq.png)
+[Clique aqui para dar zoom](https://i.imgur.com/xA1euNq.png)
 
 **Figura 3 -** Diagrama de Classes
 
