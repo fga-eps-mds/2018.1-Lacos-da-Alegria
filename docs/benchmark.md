@@ -143,3 +143,32 @@ Benchmark tem papel de estimular mudanças organizacionais para melhorar o desem
 |3|	00:07:13|	00:07:15|	0:00:02|	4.7|	4.3|	147.6	|6.2%|
 
 
+<h2><center>Funcionalidade: Tirar Foto</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1|	00:02:42|	00:02:45|	0:00:03	|0,00|	0,00|	128.6|
+|2|	00:06:09|	00:06:14|	0:00:05	|0,00|	0,00	|129.1|
+|3	|00:13:02	|00:13:05	|0:00:03	|0,00	|0,00	|130.1|
+
+
+
+<h2><center>Funcionalidade: Selecionar Foto da Galeria</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1|	00:01:12|	00:01:14|	0:00:02|	0,00|	0,00|	134|	11.3%|
+|2|	00:07:51|	00:07:53|	0:00:02|	0,00|	0,00|	151.2|	11.8%|
+|3|	00:14:22|	00:14:25|	0:00:03|	0,00|	0,00|	148.3|	11.4%|
+
+
+
+
+
+<h2><center>Funcionalidade: Logout</center></h2>
+
+|Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1|	00:21:23|	00:21:24|	0:00:01|	0,00|	0,00|	188.1|	8.9%|
+|2|	00:16:48|	00:16:51|	0:00:03|	0	|0	|189.9	|9.1%|
+|3|	00:17:11|	00:17:13|	0:00:02|	0	|0	|191.0|	10.1%|
