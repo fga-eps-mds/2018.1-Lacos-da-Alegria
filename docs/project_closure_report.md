@@ -1,13 +1,13 @@
 # Relatório de Fechamento de Projeto
-## 1. Fechamento da Sprint 
-## 2. Burndown
-## 3. Velocity
-## 4. Quadro de Horas
-## 5. Quadro de conhecimento
-## 6. Riscos
-## 7. Arquitetura 
+# 1. Fechamento da Sprint 
+# 2. Burndown
+# 3. Velocity
+# 4. Quadro de Horas
+# 5. Quadro de conhecimento
+# 6. Riscos
+# 7. Arquitetura 
 Para execução do projeto foi utilizada arquitetura Django REST Framework para o backend, a qual busca modularizar a interação com diferentes funcionalidades da API. Cada funcionalidade, deve ter uma estrutura que também é herdada da estrutura do Django, contendo uma ‘model’ e uma ‘view’ em cada funcionalidade, em diferentes endpoints, gerando módulos que podem ser retirados e adicionados sem uma alteração na estrutura do projeto.
-### 7.1 Diagram de Classe
+# 7.1 Diagram de Classe
 Esta seção busca ilustrar as versões: inicial e final, a fim de visibilizar as mudanças no projeto.
 <h2>Versão inicial</h2>
 
@@ -18,10 +18,12 @@ Esta seção busca ilustrar as versões: inicial e final, a fim de visibilizar a
 ![Imgur](https://i.imgur.com/xA1euNq.png)
 [Clique aqui para dar zoom](https://i.imgur.com/xA1euNq.png)
 
-### 7.2 Benchmark
+# 7.2 Benchmark
 Nesta seção são apresentados valores das medições das principais funcionalidades da aplicação.
 
-<h2><center>Funcionalidade: Login</center></h2>
+<h2><center> -> Benchmark versão inicial</center></h2>
+
+<h3><center>Funcionalidade: Login</center></h3>
 
 |Medição    |	 Tempo Inicial|	Tempo Final|	Tempo de Execução|	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |-----------|-----------------|------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -29,7 +31,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |2	        |00:00:27	      |00:00:28    |0:00:01              |	2.7                   |	3.7                  |178.1                   |	13,50%        |
 |3	        |00:00:35	      |00:00:36    |0:00:01              |	2.8                   |	3.5                  |183.3                   |	7,80%         |
 
-<h2><center>Funcionalidade: Câmera</center></h2>
+<h3><center>Funcionalidade: Câmera</center></h3>
 
 |Medição    |	 Tempo Inicial|	Tempo Final|	Tempo de Execução|	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |-----------|-----------------|------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -38,7 +40,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |3	        |00:01:51	      |00:01:56    |0:00:05              |	-                     |	-                    |264.4                   |	25,60%        |
 
 
-<h2><center>Funcionalidade: Início da Aplicação</center></h2>
+<h3><center>Funcionalidade: Início da Aplicação</center></h3>
 
 |Medição    |	 Tempo Inicial|	Tempo Final|	Tempo de Execução|	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |-----------|-----------------|------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -46,7 +48,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |2	        |00:00:01	      |00:00:04    |0:00:03              |	-                     |	-                    |142.9                   |	26,00%        |
 |3	        |00:00:01	      |00:00:04    |0:00:03              |	-                     |	-                    |145.2                   |	22,70%        |
 
-<h2><center>Funcionalidade: Cadastro</center></h2>
+<h3><center>Funcionalidade: Cadastro</center></h3>
 
 |Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -54,19 +56,9 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |2	        |00:00:58	        |00:01:00        |	0:00:02            |	3.6                   |	4.4	                 |196.4                   | 5.7%          |
 |3	        |00:00:43         |00:00:46	       |  0:00:03            |	3.8                   |	4.1	                 | 192.2	                | 6.1%          |
 
+<h2><center> -> Benchmark Versão Final</center></h2>
 
-
-<h2><center>Funcionalidade: Cadastro</center></h2>
-
-|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
-|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
-|1          |	0:10:08         |	0:10:09        |	0:00:01            |	1.7                   |	1.7                  |	134	                  | 6,00%         |
-|2          |	00:05:34	      | 00:05:35       |  0:00:01	           |  1.6                   |	1.8	                 |  152.5                 |	5.8%          |
-|3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
-
-
-
-<h2><center>Funcionalidade: Cadastrar na atividade</center></h2>
+<h3><center>Funcionalidade: Cadastro</center></h3>
 
 |Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -75,7 +67,17 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
 
 
-<h2><center>Funcionalidade: Cancelar inscrição</center></h2>
+
+<h3><center>Funcionalidade: Cadastrar na atividade</center></h3>
+
+|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
+|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
+|1          |	0:10:08         |	0:10:09        |	0:00:01            |	1.7                   |	1.7                  |	134	                  | 6,00%         |
+|2          |	00:05:34	      | 00:05:35       |  0:00:01	           |  1.6                   |	1.8	                 |  152.5                 |	5.8%          |
+|3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
+
+
+<h3><center>Funcionalidade: Cancelar inscrição</center></h3>
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -85,7 +87,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 
 
 
-<h2><center>Funcionalidade: Visualizar Perfil</center></h2>
+<h3><center>Funcionalidade: Visualizar Perfil</center></h3>
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -94,7 +96,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |3|	00:03:55|	00:03:57|	0:00:02	|2.9	|4.1	|132.1 |6.4%|
 
 
-<h2><center>Funcionalidade: Editar Perfil</center></h2>
+<h3><center>Funcionalidade: Editar Perfil</center></h3>
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -103,7 +105,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |3|	00:07:13|	00:07:15|	0:00:02|	4.7|	4.3|	147.6	|6.2%|
 
 
-<h2><center>Funcionalidade: Tirar Foto</center></h2>
+<h3><center>Funcionalidade: Tirar Foto</center></h3>
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
@@ -113,7 +115,7 @@ Nesta seção são apresentados valores das medições das principais funcionali
 
 
 
-<h2><center>Funcionalidade: Selecionar Foto da Galeria</center></h2>
+<h3><center>Funcionalidade: Selecionar Foto da Galeria</center></h3>
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
