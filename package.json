@@ -25,7 +25,7 @@
     "@angular/core": "5.2.9",
     "@angular/forms": "5.2.9",
     "@angular/http": "5.2.9",
-    "@angular/platform-browser": "5.2.9",
+    "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "5.2.9",
     "@auth0/angular-jwt": "^2.0.0",
     "@ionic-native/camera": "4.6.0",
@@ -83,7 +83,11 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-photo-library": {
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "To choose photos"
+      }
     },
     "platforms": [
       "android"
