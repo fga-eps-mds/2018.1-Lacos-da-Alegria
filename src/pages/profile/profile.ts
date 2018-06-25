@@ -301,7 +301,7 @@ export class ProfilePage {
             console.log("Senha  = ", data);
             this.restProvider.deleteUser(this.id, data)
               .then(response => {
-                this.storage.clearLocalUser();
+                this.storage.setLocalUser(null);
                 console.log(response);
                 this.navCtrl.push(LoginPage);
               }, error => {
