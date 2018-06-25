@@ -8,7 +8,6 @@ import { User } from '../models/user';
 
 @Injectable()
 export class RestUserProvider {
-  // apiUrl = 'http://localhost:8000/api';
   apiUrl = 'http://178.128.160.80:8000/api';
   jwtHelper: JwtHelper = new JwtHelper();
 
@@ -133,48 +132,10 @@ export class RestUserProvider {
   }
 
   editProfile(id, user){
- 
-      // this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
-      //   user,
-      //   {
-      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
-      //   })
-        // .subscribe((data: any) => {
-        //   console.log('user', data);
-        //   // console.log('data password: ', data.valueOf())
-        //   user.password  = data.password;
-        //   console.log('password ', user.password, ' ====== entrando no put')
-          return this.http.put(this.apiUrl + '/profile/' + id + '/',
-          user,
-          {
-            headers: new HttpHeaders().set('Content-Type', 'application/json'),
-          })
-      //     .subscribe((data:any) => {
-      //       console.log('put padrao = ',data);
-      //     }, (error)=>{
-      //       console.log('Erro put = ', error);
-      //     })
-      //   }, (err)=>{
-      //     console.log ('Erro post = ',err);
-      //   })
-      // console.log("password changed: ",passwordChanged)
-      // console.log("PASSWORD = ", user.password);
-      // return this.http.put(this.apiUrl + '/profile/' + id + '/',
-      //   user,
-      //   {
-      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
-      //   })
-      //   .subscribe((data:any) => {
-      //     console.log('put padrao else = ',data);
-      //   }, (error)=>{
-      //     console.log('Erro put else = ', error);
-      //   })
-    
-    // return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
-    // user,
-    //     {
-    //       headers: new HttpHeaders().set('Content-Type', 'application/json'),
-    //     }
-    //   );
+    return this.http.put(this.apiUrl + '/profile/' + id + '/',
+    user,
+    {
+      headers: new HttpHeaders().set('Content-Type', 'application/json'),
+    })
   }
 }

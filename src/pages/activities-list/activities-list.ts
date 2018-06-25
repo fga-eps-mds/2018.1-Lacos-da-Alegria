@@ -23,7 +23,6 @@ export class ActivitiesListPage {
   id: any;
   resposta: string;
   buttonDisabled: any;
-  // array[number, string];
   array = new Array(10);
   contador = 0;
 
@@ -39,10 +38,8 @@ export class ActivitiesListPage {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
-      // this.token = storage.getLocalAccessToken();
 
       console.log('iiid = ', this.id);
-      // this.restUserProvider.getUserActivitiesIds(2);
       
   }
   
@@ -53,8 +50,6 @@ export class ActivitiesListPage {
         console.log('data = ', data);
         for (let index = 0; index < data.aux.length; index++) {
           console.log('data.aux index = ', data.aux[index]);
-          //data.aux[index] = id of activity
-          //this.id = id of user
           this.restUserProvider.searchPosition(this.id, data.aux[index]).subscribe((resp: any)=>{
             console.log('resp = ', resp); 
             this.array[index] = [data.aux[index],resp.resp];
@@ -70,11 +65,9 @@ export class ActivitiesListPage {
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
       console.log('iiid = ', this.id);
-      // this.restUserProvider.getUserActivitiesIds(2);
   }
 
   getResp(id){
-    // console.log('id no get = ', id.id)
     for (let index = 0; index < this.array.length; index++) {
       if(this.array[index] && id.id == this.array[index][0]){
         this.resposta = this.array[index][1];
