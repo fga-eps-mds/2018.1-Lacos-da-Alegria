@@ -1,11 +1,14 @@
 ## Custos
 ![Imgur](https://i.imgur.com/YcDWJ1X.png)
 
-#### Valor Planejado x Custo Real x Valor Agregado![Imgur](https://i.imgur.com/Pc4XYri.png)
+#### Valor Planejado x Custo Real x Valor Agregado
+![Imgur](https://i.imgur.com/05bO6OL.png)
 
-#### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/aIvepKi.png)
+#### Variação de Custos x Variação de Prazos
+![Imgur](https://i.imgur.com/aIvepKi.png)
 
-#### Índices de Desempenho![Imgur](https://i.imgur.com/abxhC7B.png)
+#### Índices de Desempenho
+![Imgur](https://i.imgur.com/abxhC7B.png)
 
 
 ### 1.8 Análise do Tracker

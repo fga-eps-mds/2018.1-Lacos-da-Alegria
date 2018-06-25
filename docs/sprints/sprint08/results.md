@@ -48,11 +48,14 @@ O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o
 ### 1.7 EVM 
 ![Imgur](https://i.imgur.com/fc9OKKL.png)
 
-#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/1GRYgli.png)
+#### Valor Planejado x Custo Real x Valor Agregado 
+![Imgur](https://i.imgur.com/htsblGc.png)
 
-#### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/BDvWAao.png)
+#### Variação de Custos x Variação de Prazos 
+![Imgur](https://i.imgur.com/BDvWAao.png)
 
-#### Índices de Desempenho ![Imgur](https://i.imgur.com/i56a25L.png)
+#### Índices de Desempenho 
+![Imgur](https://i.imgur.com/i56a25L.png)
 
 ### 1.8 Análise do Tracker
 Na oitava Sprint foram planejados 22 pontos, além dos 35 pontos adicionados, no entanto foram feitos apenas  34 pontos. Na visão do cliente, o projeto deveria estar com 60,00% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 56,24%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)

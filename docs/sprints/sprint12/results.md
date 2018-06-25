@@ -48,7 +48,8 @@
 
 ![Imgur](https://i.imgur.com/gMEXWrS.png)
 
-#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/caTnlii.png)
+#### Valor Planejado x Custo Real x Valor Agregado 
+![Imgur](https://i.imgur.com/05bO6OL.png)
 
 #### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/DE5tpHe.png)
 

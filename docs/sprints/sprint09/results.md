@@ -46,7 +46,8 @@ Em relação a _Sprint_ passada, o velocity caiu de 29,43 para 26,43.
 ### 1.7 EVM
 ![Imgur](https://i.imgur.com/eLqclm2.png)
 
-#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/IazD9sB.png)
+#### Valor Planejado x Custo Real x Valor Agregado 
+![Imgur](https://i.imgur.com/Z4dChhN.png)
 
 #### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/xfXQFjj.png)
 
