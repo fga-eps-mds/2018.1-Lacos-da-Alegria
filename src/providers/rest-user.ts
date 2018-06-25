@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelper } from 'angular2-jwt';
 
+import { LocalUser } from '../models/local-user';
 import { StorageService } from './storage.service';
 import { reject } from 'q';
 import { User } from '../models/user';
@@ -50,14 +51,9 @@ export class RestUserProvider {
       user,
       {
         observe: 'response', // Capturar o HEADER
-        responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
+        // responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
       }
     );
-  }
-
-  userLogout() {
-    this.storage.clearLocalUser();
-    console.log('teste');
   }
 
   refreshToken(token){
@@ -73,16 +69,18 @@ export class RestUserProvider {
  }
 
   getId(){
-    let token = this.storage.getLocalAccessToken();
+    let token = this.storage.getLocalUser().accessToken;
     if(token){
-      token = this.jwtHelper.decodeToken(token);
-      return token.user_id;
+      let token2 = this.jwtHelper.decodeToken(token);
+      console.log('token no getId() = ', token)
+      return token2.user_id;
     }
     return null;
   }
 
-  successfulLogin(username: string, access: string, refresh: string) {
-    this.storage.setLocalUser(username, access, refresh);
+
+  successfulLogin(user: LocalUser) {
+    this.storage.setLocalUser(user);
   }
 
   getUserActivitiesIds(id){
