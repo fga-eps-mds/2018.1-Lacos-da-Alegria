@@ -13,6 +13,11 @@ export class ActivityDetailsPage {
   activity: any;
   buttonDisabled: any;
   btnText: any;
+  btnColor: any;
+  month: any;
+  day: any;
+  time: any;
+  schedule: any;
 
   constructor(
     public alertCtrl: AlertController,
@@ -23,11 +28,13 @@ export class ActivityDetailsPage {
     ) {
     let id = this.params.get('id');
     let nome = this.params.get('nome');
+    this.btnColor = "#ff5300"
     this.btnText = "Participar"
     this.restUserProvider.getUserActivitiesIds(this.restUserProvider.getId()).subscribe((data: any)=>{
       for (let index = 0; index < data.aux.length; index++) {
         if (id == data.aux[index]){
           this.btnText = "Cancelar"
+          this.btnColor = "red"
         }
       }
     }
@@ -55,7 +62,11 @@ export class ActivityDetailsPage {
     this.restActivityProvider.getHospitalActivity(id)
     .then(data => {
       this.activity = [data];
-      console.log('aquiii',this.activity);
+      this.schedule = this.activity[0].schedule;
+      this.month = this.schedule.substring(5, 7);
+      this.day = this.schedule.substring(8, 10);
+      this.time = this.schedule.substring(11, 16);
+      console.log('aquiii',this.activity[0].schedule);
     });
   }
 
@@ -63,6 +74,10 @@ export class ActivityDetailsPage {
     this.restActivityProvider.getNGOActivity(id)
     .then(data => {
       this.activity = [data];
+      this.schedule = this.activity[0].schedule
+      this.month = this.schedule.substr(5, 2)
+      this.day = this.schedule.substr(8, 2)
+      this.time = this.schedule.substr(11, 5)
       console.log(this.activity);
     });
   }
@@ -84,6 +99,7 @@ export class ActivityDetailsPage {
           buttons: ['OK']
         });
         this.btnText = "Cancelar"
+        this.btnColor = "red"
         alert1.present();
 
       }, (error) => {
@@ -106,6 +122,7 @@ export class ActivityDetailsPage {
           subTitle: alerta,
           buttons: ['OK']
         });
+        this.btnColor = "#ff5300"
         this.btnText = "Participar"
         alert3.present();
 

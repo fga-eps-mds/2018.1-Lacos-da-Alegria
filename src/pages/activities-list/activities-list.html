@@ -24,7 +24,7 @@
       <ion-item-sliding *ngFor="let activity of hospital_activities">
         <ion-item class="itemActivityList">
           <ion-card class="card-hosp" (click)="openModal({id: activity.id, nome: 'hosp'})">
-              <img class="image" src="/../../assets/imgs/backgroudwelcome.jpeg"/>
+              <img class="image" src="{{activity.image}}"/>
               <div class="title-wrapper">
                 <div class="card-title">{{activity.name}}</div>
                 <div *ngIf="getResp({id: activity.id})" class="card-subtitle">{{resposta}}</div>
@@ -39,7 +39,7 @@
       <ion-item-sliding *ngFor="let activityONG of ngo_activities">
         <ion-item>
           <ion-card class="card-ongs" (click)="openModal({id: activityONG.id, nome:'ong'})">
-            <img class="image" src="/../../assets/imgs/lacosimg.png"/>
+            <img class="image" src="{{activityONG.name}}"/>
             <div class="card-title">{{activityONG.name}}</div>
             <div class="card-subtitle">Clique para saber mais</div>
           </ion-card>

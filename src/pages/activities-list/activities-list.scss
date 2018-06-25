@@ -28,6 +28,11 @@ page-activities-list {
     padding-right: 0px;
   }
 
+  img {
+    -webkit-filter: blur(.55px); /* Safari */
+    filter: blur(.55px);
+  }
+
   .label-md {
     margin: 13px -13px 13px -13px;
   }
@@ -40,7 +45,7 @@ page-activities-list {
   }
 
   .card-subtitle {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #fff;
   }
 
