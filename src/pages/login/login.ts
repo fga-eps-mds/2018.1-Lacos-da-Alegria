@@ -2,10 +2,12 @@ import { AlertController, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { RegisterPage } from '../register/register';
+import { TabsPage } from '../tabs/tabs';
+
+import { LocalUser } from '../../models/local-user';
 import { RestUserProvider } from '../../providers/rest-user';
 import { RoleService } from '../../providers/role.service';
 import { StorageService } from '../../providers/storage.service';
-import { TabsPage } from '../tabs/tabs';
 
 
 @Component({
@@ -29,14 +31,16 @@ export class LoginPage {
 
   userLogin() {
     this.restProvider.authenticate(this.user)
-      .subscribe(response => {
-        let refreshToken = response.body.substr(11,209);
-        let accessToken = response.body.substr(230,207);
-        let username = this.user.username;
-        console.log('refreeeeesh',refreshToken);
-        console.log('acessoooooooo',accessToken);
-        console.log('response',response);
-        this.restProvider.successfulLogin(username,accessToken,refreshToken);
+      .subscribe((response: any) => {
+        console.log("refresh token response = ",response.body.refresh)
+        console.log("access token response = ",response.body.access)
+
+        let localUser: LocalUser = {
+          accessToken: response.body.access,
+          refreshToken:  response.body.refresh,
+          username: this.user.username
+        };
+        this.restProvider.successfulLogin(localUser);
         this.getUser(this.restProvider.getId());
       },
       error => {

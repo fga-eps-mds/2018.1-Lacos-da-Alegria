@@ -38,7 +38,7 @@ export class RegisterPage {
       confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('[a-zA-Z0-9]*')])],
       email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
       whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
-      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
+      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+([ ]?[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ  ])*$'), Validators.required])],
       cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
       birth: ['', Validators.compose([Validators.required])],
       address: ['',Validators.compose([Validators.minLength(5), Validators.maxLength(80), Validators.required]) ],
@@ -77,7 +77,7 @@ export class RegisterPage {
       genre: this.signupForm.value.genre,
       want_ongs: this.signupForm.value.want_ongs,
       role: 'Novato',
-      inscrito: 'False'
+      inscrito: 'false'
     }
 
     return user;
