@@ -39,8 +39,10 @@
         <ion-item>
           <ion-card class="card-ongs" (click)="openModal({id: activityONG.id, nome:'ong'})">
             <img class="image" src="{{activityONG.image}}"/>
-            <div class="card-title">{{activityONG.name}}</div>
-            <div class="card-subtitle">Clique para saber mais</div>
+            <div class="title-wrapper">
+              <div class="card-title">{{activityONG.name}}</div>
+              <div *ngIf="getRespNgo({id: activityONG.id})" class="card-subtitle">{{respostaNgo}}</div>
+            </div>
           </ion-card>
         </ion-item>
       </ion-item-sliding>

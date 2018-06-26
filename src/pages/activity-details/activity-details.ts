@@ -18,6 +18,7 @@ export class ActivityDetailsPage {
   day: any;
   time: any;
   schedule: any;
+  nome: any;
 
   constructor(
     public alertCtrl: AlertController,
@@ -27,26 +28,37 @@ export class ActivityDetailsPage {
     public restUserProvider: RestUserProvider,
     ) {
     let id = this.params.get('id');
-    let nome = this.params.get('nome');
+    this.nome = this.params.get('nome');
     this.btnColor = "#ff5300"
     this.btnText = "Participar"
-    this.restUserProvider.getUserActivitiesIds(this.restUserProvider.getId()).subscribe((data: any)=>{
-      for (let index = 0; index < data.aux.length; index++) {
-        if (id == data.aux[index]){
-          this.btnText = "Cancelar"
-          this.btnColor = "red"
+
+    if(this.nome == 'hosp'){
+      this.getHospitalActivity(id);
+      this.restUserProvider.getUserActivitiesIds(this.restUserProvider.getId()).subscribe((data: any)=>{
+        for (let index = 0; index < data.aux.length; index++) {
+          if (id == data.aux[index]){
+            this.btnText = "Cancelar"
+            this.btnColor = "red"
+          }
         }
       }
-    }
-    , (error)=>{
-      console.log('error = ', error);
-    })
-    
-    if(nome == 'hosp'){
-      this.getHospitalActivity(id);
+      , (error)=>{
+        console.log('error = ', error);
+      })
     }
     else{
       this.getNGOActivity(id);
+      this.restUserProvider.getUserNgosIds(this.restUserProvider.getId()).subscribe((data: any)=>{
+        for (let i = 0; i < data.aux.length; i++) {
+          if (id == data.aux[i]){
+            this.btnText = "Cancelar"
+            this.btnColor = "red"
+          }
+        }
+      }
+      , (error)=>{
+        console.log('error = ', error);
+      })
     }
   }
 
@@ -89,54 +101,105 @@ export class ActivityDetailsPage {
   postActivity(id_user, id_activity){
     let alerta: any;
     console.log('id user = ',id_user, ' id activ = ',id_activity)
-    if (this.btnText == "Participar") {
-      this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
-        console.log("resolve = ", resolve);
-        alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
-        let alert1 = this.alertCtrl.create({
-          title: 'Atenção!',
-          subTitle: alerta,
-          buttons: ['OK']
-        });
-        this.btnText = "Cancelar"
-        this.btnColor = "red"
-        alert1.present();
+    if(this.nome == 'hosp') {
+      if(this.btnText == "Participar") {
+        this.restActivityProvider.postActivity(id_user,id_activity).then((resolve) => {
+          console.log("resolve = ", resolve);
+          alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
+          let alert1 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          this.btnText = "Cancelar"
+          this.btnColor = "red"
+          alert1.present();
 
-      }, (error) => {
-        console.log("error = ", error.error.status);
-        alerta = error.error.status;
-        let alert2 = this.alertCtrl.create({
-          title: 'Atenção!',
-          subTitle: alerta,
-          buttons: ['OK']
-        });
-        alert2.present();
-      })
+        }, (error) => {
+          console.log("error = ", error.error.status);
+          alerta = error.error.status;
+          let alert2 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          alert2.present();
+        })
 
-    } else {
-      this.restActivityProvider.cancelActivity(id_user,id_activity).then((resolve) => {
-        console.log("resolve = ", resolve);
-        alerta = 'Atividade cancelada.';
-        let alert3 = this.alertCtrl.create({
-          title: 'Atenção!',
-          subTitle: alerta,
-          buttons: ['OK']
-        });
-        this.btnColor = "#ff5300"
-        this.btnText = "Participar"
-        alert3.present();
+      } else {
+        this.restActivityProvider.cancelActivity(id_user,id_activity).then((resolve) => {
+          console.log("resolve = ", resolve);
+          alerta = 'Atividade cancelada.';
+          let alert3 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          this.btnColor = "#ff5300"
+          this.btnText = "Participar"
+          alert3.present();
 
-      }, (error) => {
-        console.log("error = ", error.error.status);
-        alerta = error.error.status;
-        let alert4 = this.alertCtrl.create({
-          title: 'Atenção!',
-          subTitle: alerta,
-          buttons: ['OK']
-        });
-        alert4.present();
-      })
+        }, (error) => {
+          console.log("error = ", error.error.status);
+          alerta = error.error.status;
+          let alert4 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          alert4.present();
+        })
+      }
     }
+    else {
+      if(this.btnText=="Participar") {
+        this.restActivityProvider.postNgo(id_user,id_activity).then((resolve) => {
+          console.log("resolve = ", resolve);
+          alerta = 'Você entrou na pré-lista, aguarde o resultado do sorteio.';
+          let alert1 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          this.btnText = "Cancelar"
+          this.btnColor = "red"
+          alert1.present();
 
+        }, (error) => {
+          console.log("error = ", error.error.status);
+          alerta = error.error.status;
+          let alert2 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          alert2.present();
+        })
+
+      } else {
+        this.restActivityProvider.cancelNgo(id_user,id_activity).then((resolve) => {
+          console.log("resolve = ", resolve);
+          alerta = 'Atividade cancelada.';
+          let alert3 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          this.btnColor = "#ff5300"
+          this.btnText = "Participar"
+          alert3.present();
+
+        }, (error) => {
+          console.log("error = ", error.error.status);
+          alerta = error.error.status;
+          let alert4 = this.alertCtrl.create({
+            title: 'Atenção!',
+            subTitle: alerta,
+            buttons: ['OK']
+          });
+          alert4.present();
+        })
+      }
+    }
   }
 }
