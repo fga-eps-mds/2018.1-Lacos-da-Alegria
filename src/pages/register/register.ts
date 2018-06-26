@@ -83,6 +83,9 @@ export class RegisterPage {
     return user;
   }
 
+  /* Objective: this method will save user's information on the API.
+     Parameters: it does not receive any parameters. */
+
   saveUser() {
     this.restProvider.saveUser(this.getForm()).then((result) => {
       this.navCtrl.push(LoginPage);
@@ -181,7 +184,6 @@ export class RegisterPage {
   }
 
   btnNext(){
-      console.log('form = ',this.getForm());
       this.slides.lockSwipes(false);
       this.slides.slideNext(500);
       this.slides.lockSwipes(true);

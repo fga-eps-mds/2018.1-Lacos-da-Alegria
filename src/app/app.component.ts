@@ -38,8 +38,6 @@ export class MyApp {
     this.restProvider.getUser(id)
     .then(data => {
       this.user = [data];
-      console.log("mensagem: ",this.user);
-      console.log("role = ", this.user[0].role);
       this.roleService.setLocalRole(this.user[0].role);
     });
   }
@@ -54,19 +52,15 @@ export class MyApp {
       }
 
       let localUser = this.storage.getLocalUser();
-      console.log ('localUser = ', localUser)
       if(localUser){
         refreshToken.refresh = localUser.refreshToken
       }
       if(refreshToken.refresh != ''){
         this.restProvider.refreshToken(refreshToken).subscribe((data)=>{
-          console.log('refresh = ',data);
           let id = this.restProvider.getId();
           this.user = this.getUser(id);
-          console.log('id = ', id);
           this.rootPage = TabsPage;
         }, (err)=>{
-          //this.rootPage = WelcomePage;
           console.log('erro no refresh = ',err);
         })
       }

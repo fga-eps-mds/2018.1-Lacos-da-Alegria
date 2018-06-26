@@ -16,10 +16,6 @@ export class NewsPage {
       this.getNewsList()
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
-  }
-
   getNewsList(){
     return this.restNewsProvider.getNewsList()
     .then(data => {

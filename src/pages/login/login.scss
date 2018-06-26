@@ -10,12 +10,16 @@ page-login {
     overflow: hidden;
   }
 
-  // .input-cover {
-  //   position: initial;
-  // }
-
   .main{
     background-color: $blue-color;
+  }
+
+  .label{
+    bottom: 0;
+    color: $white-color;
+    font-size: 11px;
+    position: absolute;
+    right: 0;
   }
 
   .logo{
@@ -26,13 +30,6 @@ page-login {
     max-height: 200px;
     max-width: 200px;
   }
-
-  // .logo {
-  //   display: block;
-  //   margin: auto;
-  //   height: 10;
-  //   width: 10;
-  // }
 
   .item{
     position: initial !important;

@@ -9,7 +9,6 @@ import { User } from '../models/user';
 
 @Injectable()
 export class RestUserProvider {
-  // apiUrl = 'http://localhost:8000/api';
   apiUrl = 'http://178.128.160.80:8000/api';
   jwtHelper: JwtHelper = new JwtHelper();
 
@@ -51,7 +50,6 @@ export class RestUserProvider {
       user,
       {
         observe: 'response', // Capturar o HEADER
-        // responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
       }
     );
   }
@@ -61,12 +59,11 @@ export class RestUserProvider {
       this.apiUrl+'/token/refresh/',
       token,
       {
-        //headers: new HttpHeaders().set('Content-Type', 'application/json'),
-        observe: 'response', // Capturar o HEADER
-        responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
+        observe: 'response',
+        responseType: 'text'
       }
     );
- }
+  }
 
   getId(){
     let token = this.storage.getLocalUser().accessToken;
@@ -77,7 +74,6 @@ export class RestUserProvider {
     }
     return null;
   }
-
 
   successfulLogin(user: LocalUser) {
     this.storage.setLocalUser(user);
@@ -100,9 +96,6 @@ export class RestUserProvider {
   }
 
   deleteUser(id, password) {
-    console.log('Id no delete = ', id);
-    console.log('Password no delete = ',password);
-
     return new Promise((resolve,reject) => {
       this.http.post(
         this.apiUrl + '/profile/' + id + '/delete_user/',
@@ -127,7 +120,6 @@ export class RestUserProvider {
         console.log(err);
       });
     });
-    // return this.http.get(this.apiUrl + 'profile' + id + '/');
   }
 
   editPassword(id, user){
@@ -139,48 +131,10 @@ export class RestUserProvider {
   }
 
   editProfile(id, user){
- 
-      // this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
-      //   user,
-      //   {
-      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
-      //   })
-        // .subscribe((data: any) => {
-        //   console.log('user', data);
-        //   // console.log('data password: ', data.valueOf())
-        //   user.password  = data.password;
-        //   console.log('password ', user.password, ' ====== entrando no put')
-          return this.http.put(this.apiUrl + '/profile/' + id + '/',
-          user,
-          {
-            headers: new HttpHeaders().set('Content-Type', 'application/json'),
-          })
-      //     .subscribe((data:any) => {
-      //       console.log('put padrao = ',data);
-      //     }, (error)=>{
-      //       console.log('Erro put = ', error);
-      //     })
-      //   }, (err)=>{
-      //     console.log ('Erro post = ',err);
-      //   })
-      // console.log("password changed: ",passwordChanged)
-      // console.log("PASSWORD = ", user.password);
-      // return this.http.put(this.apiUrl + '/profile/' + id + '/',
-      //   user,
-      //   {
-      //     headers: new HttpHeaders().set('Content-Type', 'application/json'),
-      //   })
-      //   .subscribe((data:any) => {
-      //     console.log('put padrao else = ',data);
-      //   }, (error)=>{
-      //     console.log('Erro put else = ', error);
-      //   })
-    
-    // return this.http.post(this.apiUrl + '/profile/' + id + '/edit_user/',
-    // user,
-    //     {
-    //       headers: new HttpHeaders().set('Content-Type', 'application/json'),
-    //     }
-    //   );
+    return this.http.put(this.apiUrl + '/profile/' + id + '/',
+    user,
+    {
+      headers: new HttpHeaders().set('Content-Type', 'application/json'),
+    })
   }
 }

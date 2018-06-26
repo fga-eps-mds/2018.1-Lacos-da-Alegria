@@ -19,8 +19,6 @@ import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { HelpPage } from '../pages/help/help';
-import { ListActivityPage } from '../pages/list-activity/list-activity';
-import { ListUserPage } from '../pages/listuser/listuser';
 import { LoginPage } from '../pages/login/login';
 import { MenuAppPage } from '../pages/menu-app/menu-app';
 import { NewsPage } from '../pages/news/news';
@@ -36,8 +34,6 @@ import { WelcomePage } from '../pages/welcome/welcome';
     ActivitiesListPage,
     ActivityDetailsPage,
     HelpPage,
-    ListActivityPage,
-    ListUserPage,
     LoginPage,
     MenuAppPage,
     MyApp,
@@ -63,8 +59,6 @@ import { WelcomePage } from '../pages/welcome/welcome';
     ActivitiesListPage,
     ActivityDetailsPage,
     HelpPage,
-    ListActivityPage,
-    ListUserPage,
     LoginPage,
     MenuAppPage,
     MyApp,
