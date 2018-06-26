@@ -60,10 +60,9 @@ export class MenuAppPage {
         {
           text: 'Confirmar',      
           handler: () => {
-            console.log('Before logout: ', this.storage.getLocalAccessToken());
-            this.storage.clearLocalUser(); 
-            this.roleService.clearRole();           
-            console.log('After logout: ', this.storage.getLocalAccessToken());
+            this.storage.setLocalUser(null);
+            this.roleService.clearRole(); 
+            console.log('After logout: ', this.storage.getLocalUser());          
             this.navCtrl.push(LoginPage);
           }
         }

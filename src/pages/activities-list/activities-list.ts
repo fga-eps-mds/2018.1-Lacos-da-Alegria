@@ -22,9 +22,11 @@ export class ActivitiesListPage {
   role: any;
   id: any;
   resposta: string;
+  respostaNgo: string;
   buttonDisabled: any;
   // array[number, string];
   array = new Array(10);
+  arrayNgo = new Array(10);
   contador = 0;
 
   constructor(
@@ -69,8 +71,31 @@ export class ActivitiesListPage {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
+      this.refreshNgo();
       console.log('iiid = ', this.id);
       // this.restUserProvider.getUserActivitiesIds(2);
+  }
+
+  refreshNgo(){
+    this.id = this.restUserProvider.getId();
+    this.arrayNgo = new Array(5);
+      this.restUserProvider.getUserNgosIds(this.id).subscribe((data: any)=>{
+        console.log('data = ', data);
+        for (let i = 0; i < data.aux.length; i++) {
+          console.log('data.aux index = ', data.aux[i]);
+          //data.aux[index] = id of activity
+          //this.id = id of user
+          this.restUserProvider.searchPositionNgo(this.id, data.aux[i]).subscribe((resp: any)=>{
+            console.log('resp = ', resp); 
+            this.arrayNgo[i] = [data.aux[i],resp.resp];
+          }, (error)=>{
+            console.log('error = ', error);
+          })
+          
+        }
+      }, (err) =>{
+        console.log('erro = ', err);
+      })
   }
 
   getResp(id){
@@ -78,6 +103,17 @@ export class ActivitiesListPage {
     for (let index = 0; index < this.array.length; index++) {
       if(this.array[index] && id.id == this.array[index][0]){
         this.resposta = this.array[index][1];
+        return true;
+      }
+    }
+    return false;
+  }
+
+  getRespNgo(id){
+    // console.log('id no get = ', id.id)
+    for (let i = 0; i < this.arrayNgo.length; i++) {
+      if(this.arrayNgo[i] && id.id == this.arrayNgo[i][0]){
+        this.respostaNgo = this.arrayNgo[i][1];
         return true;
       }
     }
