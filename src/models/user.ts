@@ -14,4 +14,5 @@ export interface User {
     whatsapp: string;
     genre: string;
     role: string;
+    inscrito: string;
 }
