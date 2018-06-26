@@ -4,6 +4,8 @@ page-news{
     background-color: #FFF;
     margin-top: 15px;
     border-top: 0.4px groove #084887;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .title{
@@ -14,7 +16,7 @@ page-news{
   .icon-info{
     float: left;
     margin-right: 8px;
-    margin-top: 3px;
+    margin-top: 2px;
   }
   
 }

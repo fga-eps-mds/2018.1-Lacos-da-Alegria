@@ -12,8 +12,8 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 export class HelpPage {
     video: any = {
         url: 'https://www.youtube.com/embed/SW1I5sfWnsg',
-        title: 'Siga os passos desse video!',
-        description: 'Vídeo institucional sobre como proceder na visita.'
+        title: 'Vídeo Institucional',
+        description: 'Vídeo institucional sobre a realização e como se comportar durante a visita.'
     };
 
     trustedVideoUrl: SafeResourceUrl;
