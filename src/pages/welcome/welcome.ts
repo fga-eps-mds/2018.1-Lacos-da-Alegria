@@ -17,7 +17,7 @@ export class WelcomePage {
   slider = [
   {
     title: 'Seja Bem-Vindo!',
-    description: 'Arraste para a direita para conferir as funcionalidades do aplicativo da Laços da Alegria.',
+    description: 'Arraste para a esquerda para conferir as funcionalidades do aplicativo da Laços da Alegria.',
     image: "assets/imgs/logooficial.png"
   },
 
