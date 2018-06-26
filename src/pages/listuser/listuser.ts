@@ -30,6 +30,10 @@ export class ListUserPage {
     });
   }
 
+  /* Objective: this method will redirect to the Register Page.
+  Parameters: it does not receive any parameters.
+  Returns: it does not return anything. */
+
   BtnGoToRegister(){
     this.navCtrl.push(RegisterPage);
   }

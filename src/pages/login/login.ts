@@ -27,15 +27,16 @@ export class LoginPage {
     this.navController.push(RegisterPage);
   }
 
+  /* Objective: this method will check login validation.
+  Parameters: it does not receive any parameters.
+  Returns: it does not return anything. */
+
   userLogin() {
     this.restProvider.authenticate(this.user)
       .subscribe(response => {
         let refreshToken = response.body.substr(11,209);
         let accessToken = response.body.substr(230,207);
         let username = this.user.username;
-        console.log('refreeeeesh',refreshToken);
-        console.log('acessoooooooo',accessToken);
-        console.log('response',response);
         this.restProvider.successfulLogin(username,accessToken,refreshToken);
         this.getUser(this.restProvider.getId());
       },

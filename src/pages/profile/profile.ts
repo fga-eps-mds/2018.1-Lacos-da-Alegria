@@ -321,6 +321,10 @@ export class ProfilePage {
     prompt.present();
   }
 
+  /* Objective: this method will take a picture with user's camera.
+  Parameters: it does not receive any parameters.
+  Returns: it does not return anything. */
+
   onTakePicture() {
     const options: CameraOptions = {
       quality: 100,
@@ -340,7 +344,7 @@ export class ProfilePage {
       });
   }
 
-  openGallery (): void {
+  openGallery(): void {
     let cameraOptions = {
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.FILE_URI,

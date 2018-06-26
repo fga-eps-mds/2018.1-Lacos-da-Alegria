@@ -83,6 +83,10 @@ export class RegisterPage {
     return user;
   }
 
+  /* Objective: this method will save user's information on the API.
+  Parameters: it does not receive any parameters.
+  Returns: it can return an error. */
+
   saveUser() {
     this.restProvider.saveUser(this.getForm()).then((result) => {
       this.navCtrl.push(LoginPage);

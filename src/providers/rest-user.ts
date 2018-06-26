@@ -48,8 +48,8 @@ export class RestUserProvider {
       this.apiUrl+'/token/',
       user,
       {
-        observe: 'response', // Capturar o HEADER
-        responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
+        observe: 'response', // Capture the HEADER
+        responseType: 'text' // Avoid parse error about void JSON-body
       }
     );
   }
@@ -64,9 +64,8 @@ export class RestUserProvider {
       this.apiUrl+'/token/refresh/',
       token,
       {
-        //headers: new HttpHeaders().set('Content-Type', 'application/json'),
-        observe: 'response', // Capturar o HEADER
-        responseType: 'text' // Evitor erro de parse de JSON em corpo vazio {}
+        observe: 'response',
+        responseType: 'text'
       }
     );
  }
@@ -120,7 +119,6 @@ export class RestUserProvider {
         console.log(err);
       });
     });
-    // return this.http.get(this.apiUrl + 'profile' + id + '/');
   }
 
   editPassword(id, user){

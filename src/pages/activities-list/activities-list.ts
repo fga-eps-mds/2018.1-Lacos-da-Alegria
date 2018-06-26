@@ -42,7 +42,10 @@ export class ActivitiesListPage {
       console.log('iiid = ', this.id);
       
   }
-  
+    /* Objective: this method will refresh the activities-list on screen.
+       Parameters: it does not receive any parameters.
+       Returns: it does not return anything. */
+       
   refresh(){
     this.id = this.restUserProvider.getId();
     this.array = new Array(10);
@@ -66,6 +69,10 @@ export class ActivitiesListPage {
       this.role = this.roleService.getLocalRole();
       console.log('iiid = ', this.id);
   }
+
+  /* Objective: this method will verify the existance of a value in a list.
+  Parameters: it receives an ID.
+  Returns: it returns a boolean. */
 
   getResp(id){
     for (let index = 0; index < this.array.length; index++) {
