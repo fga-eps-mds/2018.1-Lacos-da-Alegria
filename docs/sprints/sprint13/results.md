@@ -63,8 +63,23 @@ Abaixo segue o gráfico de _commits_ referente ao backend do projeto.
   <li> A função de mostrar a posição do usuário na fila não estava implementada, impossibilitando a execução do teste de usabilidade. </li>
 </ul>
 
+## 1.8 Custos
+![Imgur](https://i.imgur.com/YcDWJ1X.png)
 
-### 1.8 Retrospectiva
+#### Valor Planejado x Custo Real x Valor Agregado
+![Imgur](https://i.imgur.com/05bO6OL.png)
+
+#### Variação de Custos x Variação de Prazos
+![Imgur](https://i.imgur.com/aIvepKi.png)
+
+#### Índices de Desempenho
+![Imgur](https://i.imgur.com/abxhC7B.png)
+
+
+### 1.9 Análise do Tracker
+Na décima terceira Sprint foram planejados 42 pontos, além dos 23 pontos adicionados, no entanto foram feitos 42 pontos. Na visão do cliente, o projeto deveria estar com 93,33% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 88,58%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
+### 2 Retrospectiva
 
 ![](images/retrospective_sprint13.png)
 
@@ -89,3 +104,4 @@ Abaixo segue o gráfico de _commits_ referente ao backend do projeto.
 <p align="justify"> A interdependência das histórias foi um problema para eles, mas de certa forma foi bom, pois foi o que incentivou essa união.</p>
 
 <p align="justify"> Apesar de o velocity ter subido nessa _Sprint_ (algo que não acontecia a algum tempo), ele ainda está baixo e, junto com a grande quantidade de horas trabalhadas, significa que o time ainda não alcançou a produtividade. O conhecimento do time subiu (resultado dos pareamentos), porém o conhecimento em testes de aceitação ainda estão muito concentrados e é necessário disseminá-lo entre os outros membros. </p>
+

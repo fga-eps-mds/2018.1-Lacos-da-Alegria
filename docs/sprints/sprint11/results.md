@@ -42,6 +42,17 @@
 
 ![](images/knowledge_framework_sprint11.png)
 
+### 1.7. Custos
+![Imgur](https://i.imgur.com/kugRkNy.png)
+
+#### Valor Planejado x Custo Real x Valor Agregado![Imgur](https://i.imgur.com/lmQKC13.png)
+
+#### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/wOPrPnO.png)
+
+#### Índices de Desempenho![Imgur](https://i.imgur.com/YslslFw.png)
+
+Na décima primeira Sprint foram planejados 35 pontos, além dos 12 pontos adicionados, no entanto foram feitos apenas  14 pontos. Na visão do cliente, o projeto deveria estar com 80,00% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 76,11%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
 ### 1.7 Revisão da _Sprint_
 
 <p align="justify">Nessa _Sprint_ houve dois problemas: </p>
