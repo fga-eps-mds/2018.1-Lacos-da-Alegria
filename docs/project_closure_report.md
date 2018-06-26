@@ -4,7 +4,20 @@
 # 3. Velocity
 # 4. Quadro de Horas
 # 5. Quadro de conhecimento
+O quadro de conhecimento ilustra  como cada membro do time se sente em relação aos conhecimentos listados na primeira coluna, a seguir encontra-se as versões: inicial e final.
+## 5.1 Conhecimento Inicial
+![Imgur](https://i.imgur.com/668nk0H.png)
+## 5.2 Conhecimento Final
+
+## 5.3 Evolução do Conhecimento
+![Imgur](https://i.imgur.com/45UJhwc.png)
 # 6. Riscos
+## 6.1 Burndow de Riscos
+![Imgur](https://i.imgur.com/SfE8ErF.png)
+
+## 6.2 SWOT
+![Imgur](https://i.imgur.com/2OWcWOj.png)
+
 # 7. Arquitetura 
 Para execução do projeto foi utilizada arquitetura Django REST Framework para o backend, a qual busca modularizar a interação com diferentes funcionalidades da API. Cada funcionalidade, deve ter uma estrutura que também é herdada da estrutura do Django, contendo uma ‘model’ e uma ‘view’ em cada funcionalidade, em diferentes endpoints, gerando módulos que podem ser retirados e adicionados sem uma alteração na estrutura do projeto.
 # 7.1 Diagram de Classe
@@ -19,7 +32,7 @@ Esta seção busca ilustrar as versões: inicial e final, a fim de visibilizar a
 [Clique aqui para dar zoom](https://i.imgur.com/xA1euNq.png)
 
 # 7.2 Benchmark
-Nesta seção são apresentados valores das medições das principais funcionalidades da aplicação.
+Nesta seção são apresentados valores das medições das principais funcionalidades da aplicação. Com as modificações na arquitetura, as funcionalidades demoram menos para serem executadas. 
 
 <h2><center> -> Benchmark versão inicial</center></h2>
 
@@ -57,15 +70,6 @@ Nesta seção são apresentados valores das medições das principais funcionali
 |3	        |00:00:43         |00:00:46	       |  0:00:03            |	3.8                   |	4.1	                 | 192.2	                | 6.1%          |
 
 <h2><center> -> Benchmark Versão Final</center></h2>
-
-<h3><center>Funcionalidade: Cadastro</center></h3>
-
-|Medição    |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
-|-----------|-----------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
-|1          |	0:10:08         |	0:10:09        |	0:00:01            |	1.7                   |	1.7                  |	134	                  | 6,00%         |
-|2          |	00:05:34	      | 00:05:35       |  0:00:01	           |  1.6                   |	1.8	                 |  152.5                 |	5.8%          |
-|3          |	00:07:22        |	00:07:24       |	0:00:02	           |  1.9                   |	2,00                 |	144.9                 |	5.9%          |
-
 
 
 <h3><center>Funcionalidade: Cadastrar na atividade</center></h3>
@@ -109,9 +113,9 @@ Nesta seção são apresentados valores das medições das principais funcionali
 
 |Medição     |	 Tempo Inicial  |	Tempo Final    |	Tempo de Execução  |	Dados Recebidos (KB/s)|	Dados Enviados (KB/s)|	Uso de Memória (em MB)|	Consumo de CPU|
 |------------|------------------|----------------|---------------------|------------------------|----------------------|------------------------|---------------|
-|1|	00:02:42|	00:02:45|	0:00:03	|0,00|	0,00|	128.6|
-|2|	00:06:09|	00:06:14|	0:00:05	|0,00|	0,00	|129.1|
-|3	|00:13:02	|00:13:05	|0:00:03	|0,00	|0,00	|130.1|
+|1|	00:02:42|	00:02:45|	0:00:03	|0,00|	0,00|	128.6|9.7 %|
+|2|	00:06:09|	00:06:14|	0:00:05	|0,00|	0,00	|129.1|9.5 %|
+|3	|00:13:02	|00:13:05	|0:00:03	|0,00	|0,00	|130.1|9.2 %|
 
 
 
