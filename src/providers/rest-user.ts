@@ -87,8 +87,16 @@ export class RestUserProvider {
     return this.http.get(this.apiUrl + '/profile/' + id + '/get_user_activities/');
   }
 
+  getUserNgosIds(id){
+    return this.http.get(this.apiUrl + '/profile/' + id + '/get_user_ngos/');
+  }
+
   searchPosition(user_id, activity_id){
     return this.http.get(this.apiUrl + '/hospital-activities/' + activity_id + '/search_user/' + '?user_key=' + user_id);
+  }
+
+  searchPositionNgo(user_id, activity_id){
+    return this.http.get(this.apiUrl + '/ngo-activities/' + activity_id + '/search_user_ngo/' + '?user_key=' + user_id);
   }
 
   deleteUser(id, password) {

@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { RestActivityProvider } from '../providers/rest-activity';
+import { RestNewsProvider } from '../providers/rest-news';
 import { RestUserProvider } from '../providers/rest-user';
 import { StorageService } from '../providers/storage.service';
 import { RoleService } from '../providers/role.service';
@@ -79,6 +80,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
     Camera,
     PhotoLibrary,
     RestActivityProvider,
+    RestNewsProvider,
     RestUserProvider,
     SplashScreen,
     StatusBar,
