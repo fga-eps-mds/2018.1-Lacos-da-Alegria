@@ -1,57 +1,50 @@
 page-activities-list {
 
-}
+  .itemActivityList {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
-.card{
-  width: auto;
-  margin-left: 2px;
-  margin-right: 2px;
-  height: 35vh;
-}
+  .card-hosp .card-ongs {
+    margin: auto;
+  }
 
-.card-content{
-  width: auto;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  height: 28vh;
-  background-image: url("https://t1.uc.ltmcdn.com/pt/images/1/7/1/img_como_colocar_fundo_preto_nas_fotos_16171_orig.jpg");
-}
+  .refreshButton {
+    display: inline-flex;
+    left: 50px;
+    position: relative;
+  }
 
-.activity-title{
-  text-align: center;
-  background-color: white;
-  position: relative;
-  top: 21vh;
-}
+  .item-md.item-block .item-inner {
+    padding-right: 0px;
+  }
 
+  img {
+    -webkit-filter: blur(.55px); /* Safari */
+    filter: blur(.55px);
+  }
 
-.button-col{
-  padding: 0vh;
-}
+  .label-md {
+    margin: 13px -13px 13px -13px;
+  }
 
-.div-button{
-  padding: 0vh;
-}
+  .card-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    // word-wrap: break-word;
+  }
 
-.button-participate{
-  padding: 0vh;
-  height: 7vh;
-  width: 40vh;
-  background-color: orangered;
-}
+  .card-subtitle {
+    font-size: 18px;
+    color: #fff;
+  }
 
-.button-info{
-  padding: 0vh;
-  height: 7vh;
-  background-color: orangered;
-}
+  .title-wrapper {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+  }
 
-.button-ios{
-  background-color: #FF4605;
-  color: white;
-}
-
-.button{
-  text-align: left;
 }

@@ -1,28 +1,69 @@
 page-register {
-    .register-box{
-        background-color: #E3ECF5;
-    }
-    .credential-box{
-        background-color: transparent;
-    }
-    .item{
-        background-color: transparent;
-        // text-decoration-color: black;
-        color: black;
-    }
-    
+  $black-color: #000;
+  $blue-color: #084887;
+  $color-orange: #ff5300;
+  $green-color: #008000;
+  $lightblue-color: #0565c0;
+  $red-color: #ff0000;
+  $white-color: #fff;
 
-    
-    .input{
-        background-color: transparent;
-    }
-    .div-btn{
-        position: relative;
-        text-align: center;
-        top: 29%;
-        left: 35%;
-        .send-btn{
-            background-color: #0D68A3;
-        }
-    }
+  .label {
+    color: $black-color;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .space {
+    margin-top: -6px;
+  }
+
+  .scroll-content {
+    overflow: hidden;
+  }
+
+  .credential-box {
+    background-color: transparent;
+  }
+
+  .item {
+    background-color: $white-color;
+    border: $blue-color groove 1px;
+    border-color: $black-color;
+    border-radius: 5px;
+    border: $blue-color groove 1px;
+    margin: auto;
+    margin-bottom: 8px;
+    max-height: 8px;
+    max-width: 260px;
+  }
+
+  .button {
+    background-color: $green-color;
+    border: .7px groove $black-color;
+    border-radius: 6px;
+    height: 40px;
+    width: 100px;
+  }
+
+  .btn-back {
+    background-color: $color-orange;
+  }
+
+  .warning {
+    color: $red-color;
+    display: block;
+    font-size: 15px;
+    margin: auto;
+    margin-bottom: 2px;
+    margin-top: -5px;
+    max-width: 47vh;
+    text-align: start;
+  }
+
+  .wrong {
+    color: $red-color;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
+  }
+
 }

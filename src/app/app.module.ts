@@ -1,71 +1,86 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { Camera } from '@ionic-native/camera';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
+import { PhotoLibrary } from '@ionic-native/photo-library';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+
+import { MyApp } from './app.component';
+import { RestActivityProvider } from '../providers/rest-activity';
+import { RestNewsProvider } from '../providers/rest-news';
+import { RestUserProvider } from '../providers/rest-user';
+import { StorageService } from '../providers/storage.service';
+import { RoleService } from '../providers/role.service';
 
 import { AboutPage } from '../pages/about/about';
-import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
+import { HelpPage } from '../pages/help/help';
 import { LoginPage } from '../pages/login/login';
+import { MenuAppPage } from '../pages/menu-app/menu-app';
+import { NewsPage } from '../pages/news/news';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
+import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { ListUserPage } from '../pages/listuser/listuser'
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { RestApiProvider } from '../providers/rest-api/rest-api';
-
-import { HttpClientModule } from '@angular/common/http'
-import { RestProvider } from '../providers/rest/rest';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    WelcomePage,
-    LoginPage,
-    RegisterPage,
-    ListUserPage,
+    AboutPage,
     ActivitiesListPage,
     ActivityDetailsPage,
+    HelpPage,
+    LoginPage,
+    MenuAppPage,
+    MyApp,
+    NewsPage,
     ProfilePage,
-    AboutPage,
+    RegisterPage,
     SettingsPage,
-    ListUserPage
+    TabsPage,
+    WelcomePage
   ],
 
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: true, autoFocusAssist: true}),
+    IonicStorageModule.forRoot(),
   ],
 
   bootstrap: [IonicApp],
 
   entryComponents: [
-    MyApp,
-    HomePage,
-    WelcomePage,
-    LoginPage,
-    RegisterPage,
-    ListUserPage,
+    AboutPage,
     ActivitiesListPage,
     ActivityDetailsPage,
+    HelpPage,
+    LoginPage,
+    MenuAppPage,
+    MyApp,
+    NewsPage,
     ProfilePage,
-    AboutPage,
+    RegisterPage,
     SettingsPage,
-    ListUserPage
+    TabsPage,
+    WelcomePage
   ],
 
   providers: [
-    StatusBar,
-    RestApiProvider,
+    Camera,
+    PhotoLibrary,
+    RestActivityProvider,
+    RestNewsProvider,
+    RestUserProvider,
     SplashScreen,
+    StatusBar,
+    StorageService,
+    RoleService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
   ]
 })
 

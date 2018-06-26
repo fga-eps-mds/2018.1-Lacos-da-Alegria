@@ -1,3 +1,64 @@
 page-profile {
-    
+
+  $color-orange: #ff5300;
+  $lightblue-color:  #0565c0;
+  $light-color: #f4f4f4;
+  $color-black: #000;
+
+  .fields{
+    font-family: arial;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .input{
+    background-color: $light-color;
+    border: .5px solid $color-black;
+    border-radius: 5px;
+  }
+
+  .date{
+    background-color: $light-color;
+    border: .5px solid $color-black;
+    border-radius: 5px;
+  }
+
+  .profile {
+    border: 1px solid $lightblue-color;
+    height: 350px;
+  }
+
+  h1{
+    border-bottom: 1px solid $lightblue-color;
+    position: relative;
+    width: auto;
+  }
+
+  h2{
+    padding: 5px;
+    position: relative;
+  }
+
+  .button {
+    left: 3%;
+    width: 45%;
+  }
+
+  .edit-profile{
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .delete-btn {
+    background-color: $color-orange;
+    width: 60%;
+  }
+
+  .div-delete {
+    padding-left: 24%;
+    position: relative;
+    width: 100%;
+  }
+
+
 }
