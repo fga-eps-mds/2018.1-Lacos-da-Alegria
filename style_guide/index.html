@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Guia de Estilo - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Guia de Estilo";
+    var mkdocs_page_input_path = "style_guide.md";
+    var mkdocs_page_url = "/style_guide/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Guia de Estilo</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#historico-de-revisoes">Histórico de revisões</a></li>
+    
+
+    <li class="toctree-l2"><a href="#sumario">Sumário</a></li>
+    
+
+    <li class="toctree-l2"><a href="#guia-de-estilo">Guia de Estilo</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-objetivo">1. Objetivo</a></li>
+        
+            <li><a class="toctree-l3" href="#2-organizacao-do-documento">2. Organização do Documento</a></li>
+        
+            <li><a class="toctree-l3" href="#3-guia-de-estilo-geral">3. Guia de Estilo Geral</a></li>
+        
+            <li><a class="toctree-l3" href="#4-guia-de-estilo-angular">4. Guia de Estilo Angular</a></li>
+        
+            <li><a class="toctree-l3" href="#5-referencias">5. Referências</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Guia de Estilo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/style_guide.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="historico-de-revisoes">Histórico de revisões</h1>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21/03/2018</td>
+<td>1.0</td>
+<td>Inserção da folha de estilo</td>
+<td>Renan e Rafael</td>
+</tr>
+<tr>
+<td>25/03/2018</td>
+<td>1.1</td>
+<td>Adição da guia de estilo do Angular e do Python</td>
+<td>Rômulo e João Vítor</td>
+</tr>
+<tr>
+<td>31/03/2018</td>
+<td>1.2</td>
+<td>Correção de erros</td>
+<td>João Vítor</td>
+</tr>
+<tr>
+<td>01/04/2018</td>
+<td>1.3</td>
+<td>Nova revisão para correção de erros</td>
+<td>João Vítor</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sumario">Sumário</h1>
+<p><a href="#1-objetivo">1. Objetivo</a></p>
+<p><a href="#2-organização-do-documento">2. Organização do Documento</a></p>
+<p><a href="#3-guia-de-estilo-geral">3. Guia de Estilo Geral</a></p>
+<ul>
+<li><a href="#31-layout-do-código">3.1 Layout do Código</a></li>
+<li><a href="#32-tabs-ou-espaços">3.2 Tabs ou espaços?</a></li>
+<li><a href="#33-tamanho-máximo-da-linha">3.3 Tamanho máximo da linha</a></li>
+<li><a href="#34-linhas-em-branco">3.4 Linhas em branco</a></li>
+<li><a href="#35-codificação-do-arquivo-de-origem">3.5 Codificação do Arquivo de Origem</a></li>
+<li><a href="#36-imports">3.6 Imports</a></li>
+<li><a href="#37-espaços-em-branco">3.7 Espaços em branco</a></li>
+<li><a href="#38-métodos">3.8 Métodos</a></li>
+<li><a href="#39-comentários">3.9 Comentários</a></li>
+<li><a href="#310-comentários-em-linha">3.10 Comentários em linha</a></li>
+<li><a href="#311-nomenclatura">3.11 Nomenclatura</a></li>
+</ul>
+<p><a href="#4-guia-de-estilo-angular">4. Guia de Estilo Angular</a></p>
+<ul>
+<li><a href="#41-nomenclatura">4.1 Nomenclatura</a></li>
+<li><a href="#42-formatação">4.2 Formatação</a></li>
+<li><a href="#43-imports">4.3 Imports</a></li>
+<li><a href="#44-estrutura-da-aplicação">4.4 Estrutura da aplicação</a></li>
+<li><a href="#45-components">4.5 Components</a></li>
+<li><a href="#46-directives">4.6 Directives</a></li>
+<li><a href="#47-services">4.7 Services</a></li>
+</ul>
+<p><a href="#5-referências">5. Referências</a></p>
+<h1 id="guia-de-estilo">Guia de Estilo</h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p><p align = "justify">Este documento tem por finalidade esclarecer as formas de implementação
+do projeto. Aqui estarão expostas as maneiras de declarar de variáveis,
+definir de métodos, escrever comentários, entre outros.</p></p>
+<h2 id="2-organizacao-do-documento">2. Organização do Documento</h2>
+<p><p align = "justify">O documento está dividido em três partes. As folhas de estilo utilizadas
+são do Angular e Python. Os aspectos diferentes entre cada uma
+destas duas folhas são especificados na segunda e terceira parte do
+documento, na primeira parte são utilizados padrões que ambos seguem ou
+alguma convenção feita pelo grupo.</p></p>
+<h2 id="3-guia-de-estilo-geral">3. Guia de Estilo Geral</h2>
+<h3 id="31-layout-do-codigo">3.1 Layout do código</h3>
+<p>Use 4 espaços por nível de indentação.</p>
+<ul><li align = "justify">As linhas de continuação devem alinhar os elementos envolvidos verticalmente usando a linha implícita do Python unindo parênteses, colchetes e chaves ou usando um recuo deslocado.
+<li align = "justify">Ao usar um travessão, não deve haver argumentos na primeira linha e deve-se usar recuo adicional para se distinguir claramente como uma linha de continuação.
+</ul>
+
+<pre><code class="python">Exemplo:
+
+Correto:
+    foo = long_function_name(var_one, var_two,
+                                    var_three, var_four)
+
+Errado:
+    foo = long_function_name(var_one, var_two,
+            var_three, var_four)
+
+
+
+Correto:
+    def long_function_name(
+            var_one, var_two, var_three,
+            var_four):
+             print(var_one)
+
+
+Errado:
+    def long_function_name(
+            var_one, var_two, var_three,
+            var_four):
+        print(var_one)
+</code></pre>
+
+<h3 id="32-tabs-ou-espacos">3.2 Tabs ou espaços?</h3>
+<ul>
+<li align = "justify">O método de identação que utilizaremos nesse projeto é a utilização de espaços, sem nenhuma utilização de tabs.
+</ul>
+
+<h3 id="33-tamanho-maximo-da-linha">3.3 Tamanho máximo da linha</h3>
+<ul>
+<li align = "justify">O tamanho limite para todas as linhas do código é de 79 caracteres.
+</ul>
+
+<h3 id="34-linhas-em-branco">3.4 Linhas em branco</h3>
+<ul>
+<li align = "justify">É recomendado envolver funções de nível superior e definições de classe com duas linhas em branco.
+<li align = "justify">Definições de método dentro de uma classe são cercadas por uma única linha em branco.
+<li align = "justify">Linhas em branco são usadas em funções para indicar seções lógicas.
+</ul>
+
+<pre><code class="python">Exemplo:
+
+Correto:
+    class Exemp:
+
+
+      def meth():
+          print(&quot;Método&quot;)
+
+      def meth2():
+          print(&quot;Método 2&quot;)
+
+Errado:
+    class Exemp:
+      def meth():
+          print(&quot;Método&quot;)
+      def meth2():
+          print(&quot;Método 2&quot;)
+
+</code></pre>
+
+<h3 id="35-codificacao-do-arquivo-de-origem">3.5 Codificação do Arquivo de Origem</h3>
+<ul>
+<li align = "justify">Código no núcleo de distribuição do Python deve sempre usar UTF-8 (ou ASCII no Python 2).
+<li align = "justify">Arquivos que utilizam ASCII (no Python 2) ou UTF-8 (no Python 3) não devem ter uma declaração de codificação.
+</ul>
+
+<h3 id="36-imports">3.6 Imports</h3>
+<ul><li align = "justify">Imports devem ser sempre feitos em linhas separadas.</ul>
+
+<pre><code>Exemplo:
+    Correto
+    import os
+    import sys
+    Errado:
+        import sys, os
+</code></pre>
+<ul>
+<li>Porém, também está correto: </ul>
+
+<pre><code>from subprocess import Popen, PIPE
+</code></pre>
+<ul>
+  <li align = "justify">Imports são sempre colocados no começo do arquivo, logo após qualquer comentário de módulo e docstrings e antes de globais de módulo e constantes.
+  <li>Imports devem ser agrupados na ordem: <br>
+  -Imports da biblioteca padrão. <br>
+  -Imports de terceiros relacionados. <br>
+  -Imports de aplicativos e bibliotecas locais. <br>
+</ul>
+
+<h3 id="37-espacos-em-branco">3.7 Espaços em branco</h3>
+<ul>
+<li>Evite sempre espaços em branco excessivos no código.
+</ul>
+
+<pre><code>Exemplo:
+Correto:
+    spam(ham[1], {eggs: 2})
+Errado:
+    spam( ham[ 1 ], { eggs: 2 } )
+</code></pre>
+<h3 id="38-metodos">3.8 Métodos</h3>
+<ul align = "justify">
+<li>Antes de cada método, faça uma síntese sobre esse, explicando seu objetivo, os parâmetros de entrada e o tipo de retorno do método, cada coisa em uma linha, conforme o exemplo.
+</ul>
+
+<pre><code class="python">Exemplo:
+
+    &quot;&quot;&quot; Objective: this method will display the desired phrase on the screen.
+      Parameters: it does not receive any parameters.
+      Returns: it does not return anything. &quot;&quot;&quot;
+
+       def printar():
+          print(&quot;Desired phrase.&quot;)
+</code></pre>
+
+<h3 id="39-comentarios">3.9 Comentários</h3>
+<ul align = "justify">
+<li>Comentários que contradizem o código são piores do que não comentar.
+<li>Sempre priorize atualizar os comentários quando for mudar o código.
+<li>Comentários devem ser frases completas e devem começar com letra maiúscula.
+<li>Comentários devem ser escritos sempre em inglês.
+</ul>
+
+<pre><code class="python">Exemplo:
+
+Correto:
+   &quot;&quot;&quot; Objective: this method will display the desired phrase on the screen.
+       Parameters: it does not receive any parameters.
+       Returns: it does not return anything. &quot;&quot;&quot;
+
+        def printar():
+          print(&quot;Desired phrase.&quot;)
+Errado:
+      &quot;&quot;&quot; Esse método vai mostrar uma frase na tela. &quot;&quot;&quot;
+
+          def printar():
+            print(&quot;Desired phrase.&quot;)
+
+Errado:
+      &quot;&quot;&quot; this method will display the desired phrase on the screen. it does not receive any parameters, nor does it return anything &quot;&quot;&quot;
+          def printar():
+            print(&quot;Desired phrase&quot;)
+</code></pre>
+
+<h3 id="310-comentarios-em-linha">3.10 Comentários em linha</h3>
+<ul align = "justify">
+<li>Não escreva nada óbvio nos comentários na linha, pois eles podem ser desnecessários.
+<li>Comece com # e um espaço em branco.
+</ul>
+
+<pre><code class="python">Exemplo:
+
+Correto:
+      x = x + 1  # Compensate for border 
+
+Errado:
+      x = x + 1  # Increment x
+
+</code></pre>
+
+<h3 id="311-nomenclatura">3.11 Nomenclatura</h3>
+<ul align = "justify">
+<li>Nunca use L minúsculo, ‘o’ maiúsculo ou ‘i’ maiúsculo como variáveis, pois podem ser confundidas em algumas fontes com 0 e 1.</li>
+<li>Nomes de classes, variáveis de tipo e exceções usam a convenção CapWords.</li>
+<li>Nomes de funções, de variáveis globais e de métodos devem ser escritas em minúsculo, com palavras separadas por ‘_’.</li>
+<li>Sempre use ‘self’ como primeiro argumento para instanciar métodos e ‘cls’ como primeiro argumento para métodos de classes.</li>
+<li>Utilize um ‘_’ no começo de métodos não-públicos e para instanciar variáveis.</li>
+<li>Nomes de constantes devem ser todas as letras maiúsculas com ‘_’ separando as palavras.</li>
+</ul>
+
+<pre><code class="python">Exemplo:
+
+  Classes, variáveis de tipo e excessões: MyClass
+  Funções, variáveis globais e métodos: my_function
+  Constantes: MY_CONSTANT
+
+</code></pre>
+
+<h2 id="4-guia-de-estilo-angular">4. Guia de Estilo Angular</h2>
+<h3 id="41-nomenclatura">4.1 Nomenclatura</h3>
+<p><ul><li align = "justify">Classes e interfaces são nomeadas com Upper Camel Case.</ul></p>
+<pre><code>Ex: class MercadoFinanceiro {
+    }
+</code></pre>
+<ul><li align = "justify">Variáveis e métodos são feitos com Lower Camel Case.</ul>
+
+<pre><code>Ex: int mercadoFinanceiro;
+</code></pre>
+<ul><li align = "justify">Nunca usar snake_case.</li></ul>
+
+<pre><code>Ex: int mercado_financeiro
+</code></pre>
+<ul><li align = "justify">Variáveis devem possuir a sua feature e o seu tipo na sua declaração, separados por pontos.</ul>
+
+<pre><code>Ex: feature.type.ts
+</code></pre>
+<ul><li align = "justify">Use os sufixos convencionais para cada tipo de arquivo.</ul>
+
+<pre><code>Ex : .component.ts, .directive.ts, .module.ts, .pipe.ts, .service.ts
+</code></pre>
+<ul><li align = "justify">Evite criar nomes não convencionais. Sempre que possível, usar os tipos padrão.</ul>
+
+<pre><code>Ex: .service, .component, .pipe, .module
+</code></pre>
+<ul><li align = "justify">Use prefixos personalizados para selecionar um componente, separados por hífen.</ul>
+
+<pre><code class="typescript">//Correto:
+@Component({
+  selector: 'admin-users'
+})
+export class UsersComponent {}
+
+//Errado:
+@Component({
+  selector: 'users'
+})
+export class UsersComponent {}
+</code></pre>
+
+<ul><li>Use prefixos personalizados para selecionar diretivas, em Lower Cammel Case.</ul>
+
+<pre><code class="typescript">//Correto:
+@Directive({
+  selector: '[tohValidate]'
+})
+export class ValidateDirective {}
+
+//Errado:
+@Directive({
+  selector: '[validate]'
+})
+export class ValidateDirective {}
+</code></pre>
+
+<ul><li>Os testes recebem o mesmo nome dos arquivos que ele testa, adicionando o sufixo <b>.spec</b>.</ul>
+
+<pre><code>Ex: heroes.component.spec.ts, filter-text.service.spec.ts
+</code></pre>
+<h3 id="42-formatacao">4.2 Formatação</h3>
+<ul align = "justify">
+<li>Apenas um componente por arquivo.</li>
+<li>Limitar os arquivos a 400 linhas de código.
+<li>Definir funções pequenas, com no máximo 75 linhas.
+</ul>
+
+<h3 id="43-imports">4.3 Imports</h3>
+<ul align = "justify"><li>Deixe uma linha em branco entre importações de terceiros e importações de aplicações.
+<li>Liste as linhas de importação em ordem alfabética, pelo nome do módulo.
+<li>Liste as importações de símbolos sem estrutura em ordem alfabética.
+</ul>
+
+<pre><code class="typescript">//Correto:
+import { Injectable } from '@angular/core';
+import { Http }       from '@angular/http';
+
+import { Hero } from './hero.model';
+import { ExceptionService, SpinnerService, ToastService } from '../../core';
+
+//Errado:
+import { ExceptionService, SpinnerService, ToastService } from '../../core';
+import { Http } from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Hero } from './hero.model';
+</code></pre>
+
+<h3 id="44-estrutura-da-aplicacao">4.4 Estrutura da aplicação</h3>
+<ul align = "justify">
+<li>Nomeie os arquivos de forma que seja fácil reconhecer seus conteúdos e suas funcionalidades.
+<li>Coloque todos os códigos em uma pasta chamada src.
+<li>Crie subpastas específicas para cada área.
+</ul>
+
+<h3 id="45-components">4.5 Components</h3>
+<ul align = "justify"><li>Extraia templates e estilos para arquivos separados, quando estes possuem mais de 3 linhas.</ul>
+
+<pre><code>Ex: [component-name].component.html, [component-name].component.css
+</code></pre>
+<ul align = "justify"><li>Especifique as URLs relativas aos componentes com o prefixo <b>./</b>.</ul>
+
+<pre><code class="typescript">//Correto:
+@Component({
+  selector: 'toh-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls:  ['./heroes.component.css']
+})
+
+export class HeroesComponent implements OnInit {
+  heroes: Observable&lt;Hero[]&gt;;
+  selectedHero: Hero;
+
+  constructor(private heroService: HeroService) { }
+
+  ngOnInit() {
+    this.heroes = this.heroService.getHeroes();
+  }
+}
+
+//Errado:
+@Component({
+  selector: 'toh-heroes',
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;My Heroes&lt;/h2&gt;
+      &lt;ul class=&quot;heroes&quot;&gt;
+        &lt;li *ngFor=&quot;let hero of heroes | async&quot; (click)=&quot;selectedHero=hero&quot;&gt;
+          &lt;span class=&quot;badge&quot;&gt;{{hero.id}}&lt;/span&gt; {{hero.name}}
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div *ngIf=&quot;selectedHero&quot;&gt;
+        &lt;h2&gt;{{selectedHero.name | uppercase}} is my hero&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `,
+  styles: [`
+    .heroes {
+      margin: 0 0 2em 0; list-style-type: none; padding: 0; width: 15em;
+    }
+    .heroes li {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      background-color: #EEE;
+      margin: .5em;
+      padding: .3em 0;
+      height: 1.6em;
+      border-radius: 4px;
+    }
+    .heroes .badge {
+      display: inline-block;
+      font-size: small;
+      color: white;
+      padding: 0.8em 0.7em 0 0.7em;
+      background-color: #607D8B;
+      line-height: 1em;
+      position: relative;
+      left: -1px;
+      top: -4px;
+      height: 1.8em;
+      margin-right: .8em;
+      border-radius: 4px 0 0 4px;
+    }
+  `]
+})
+export class HeroesComponent implements OnInit {
+  heroes: Observable&lt;Hero[]&gt;;
+  selectedHero: Hero;
+
+ constructor(private heroService: HeroService) { }
+
+  ngOnInit() {
+    this.heroes = this.heroService.getHeroes();
+  }
+}
+</code></pre>
+
+<ul align = "justify"><li>Use <b>@Input()</b< e <b>@Output()</b> para referenciar a propriedade da classe. Escreva na mesma linha.</ul>
+
+<pre><code class="typescript">//Correto:
+@Component({
+  selector: 'toh-hero-button',
+  template: `&lt;button&gt;{{label}}&lt;/button&gt;`
+})
+
+export class HeroButtonComponent {
+  @Output() change = new EventEmitter&lt;any&gt;();
+  @Input() label: string;
+}
+
+//Errado:
+@Component({
+  selector: 'toh-hero-button',
+  template: `&lt;button&gt;&lt;/button&gt;`,
+  inputs: [
+    'label'
+  ],
+  outputs: [
+    'change'
+  ]
+})
+export class HeroButtonComponent {
+  change = new EventEmitter&lt;any&gt;();
+  label: string;
+}
+</code></pre>
+
+<ul align = "justify"><li>Atributos e métodos devem ser instanciados em ordem alfabética, sendo que, em ambos os casos, os membros privados deverão vir antes dos públicos.</ul>
+
+<pre><code class="typescript">//Correto:
+export class ToastComponent implements OnInit {
+  // public properties
+  message: string;
+  title: string;
+
+  // private fields
+  private defaults = {
+    title: '',
+    message: 'May the Force be with you'
+  };
+  private toastElement: any;
+
+  // public methods
+  activate(message = this.defaults.message, title = this.defaults.title) {
+    this.title = title;
+    this.message = message;
+    this.show();
+  }
+
+  ngOnInit() {
+    this.toastElement = document.getElementById('toh-toast');
+  }
+
+  // private methods
+  private hide() {
+    this.toastElement.style.opacity = 0;
+    window.setTimeout(() =&gt; this.toastElement.style.zIndex = 0, 400);
+  }
+
+  private show() {
+    console.log(this.message);
+    this.toastElement.style.opacity = 1;
+    this.toastElement.style.zIndex = 9999;
+    window.setTimeout(() =&gt; this.hide(), 2500);
+  }
+}
+
+//Errado
+export class ToastComponent implements OnInit {
+
+  private defaults = {
+    title: '',
+    message: 'May the Force be with you'
+  };
+  message: string;
+  title: string;
+  private toastElement: any;
+
+  ngOnInit() {
+    this.toastElement = document.getElementById('toh-toast');
+  }
+
+  // private methods
+  private hide() {
+    this.toastElement.style.opacity = 0;
+    window.setTimeout(() =&gt; this.toastElement.style.zIndex = 0, 400);
+  }
+
+  activate(message = this.defaults.message, title = this.defaults.title) {
+    this.title = title;
+    this.message = message;
+    this.show();
+  }
+
+  private show() {
+    console.log(this.message);
+    this.toastElement.style.opacity = 1;
+    this.toastElement.style.zIndex = 9999;
+
+    window.setTimeout(() =&gt; this.hide(), 2500);
+  }
+}
+</code></pre>
+
+<h3 id="46-directives">4.6 Directives</h3>
+<ul align = "justify"><li>Use diretivas quando tiver uma lógica de apresentação sem um template.</ul>
+
+<pre><code class="typescript">@Directive({
+  selector: '[tohHighlight]'
+})
+
+export class HighlightDirective {
+  @HostListener('mouseover') onMouseEnter() {
+    // do highlight work
+  }
+}
+</code></pre>
+
+<h3 id="47-services">4.7 Services</h3>
+<ul align = "justify"><li>Use serviços para compartilhar dados e funcionalidades.</ul>
+
+<pre><code class="typescript">export class HeroService {
+  constructor(private http: Http) { }
+
+  getHeroes() {
+    return this.http.get('api/heroes')
+      .map((response: Response) =&gt; &lt;Hero[]&gt;response.json());
+  }
+}
+</code></pre>
+
+<h2 id="5-referencias">5. Referências</h2>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0008/">Python Style Guide</a></li>
+<li><a href="https://angular.io/guide/styleguide">Angular Style Guide</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../supplementary_specification/" class="btn btn-neutral float-right" title="Documento de Especificação Suplementar">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../pull_request_template/" class="btn btn-neutral" title="Template de Pull Requests"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../pull_request_template/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../supplementary_specification/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Plano de Qualidade de Código - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plano de Qualidade de C\u00f3digo";
+    var mkdocs_page_input_path = "code_quality_plan.md";
+    var mkdocs_page_url = "/code_quality_plan/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Plano de Qualidade de Código</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#plano-de-gerenciamento-de-qualidade-de-codigo">Plano de gerênciamento de qualidade de código</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#introducao">Introdução</a></li>
+        
+            <li><a class="toctree-l3" href="#planejamento">Planejamento</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Plano de Qualidade de Código</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/code_quality_plan.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="plano-de-gerenciamento-de-qualidade-de-codigo">Plano de gerênciamento de qualidade de código</h1>
+<table>
+<thead>
+<tr>
+<th align="center">Data</th>
+<th align="center">Versão</th>
+<th align="center">Descrição</th>
+<th align="center">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">14/05/2018</td>
+<td align="center">0.0.1</td>
+<td align="center">Primeira Versão do Plano de Qualidade de código</td>
+<td align="center">Luciano dos Santos &amp;&amp; Luiz guilherme</td>
+</tr>
+</tbody>
+</table>
+<h2 id="introducao">Introdução</h2>
+<p>Este documento visa esclarecer entre os envolvidos no projeto Laços da Alegria os critérios, ferramentas e o planejamento da qualidade de código do projeto.</p>
+<p>"Qualidade de software é a conformidade com requisitos funcionais e de desempenho explicitamente declarados, padrões de desenvolvimento explicitamente documentados e características implícitas, que são esperadas em todo software desenvolvido profissionalmente" (PRESSMAN, 2002).</p>
+<h2 id="planejamento">Planejamento</h2>
+<p>Visando uma boa qualidade de código do projeto, alguns padrões de qualidade de corpos de conhecimentos e de normas foram definidos, tanto quanto as ferramentas que serão utilizadas para monitorar essa qualidade.</p>
+<h3 id="metricas">Métricas</h3>
+<p>Para a análise das métricas foram estabelecidos alguns critérios a serem seguidos. Quanto mais próximo do bom melhor.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Métrica</th>
+<th>Bom</th>
+<th>Regular</th>
+<th>Crítico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Complexidade ciclomática</td>
+<td>0 a 20</td>
+<td>21 a 60</td>
+<td>acima de 60</td>
+</tr>
+<tr>
+<td align="center">Duplicação de código</td>
+<td>0% a 1.5%</td>
+<td>1.6% a 2.9%</td>
+<td>acima de 3%</td>
+</tr>
+<tr>
+<td align="center">Quebras no padrão de código/Flake8/ESLint ES6</td>
+<td>0 a 5</td>
+<td>6 a 10</td>
+<td>acima de 11</td>
+</tr>
+<tr>
+<td align="center">Cobertura de código</td>
+<td>acima de 90%</td>
+<td>acima de 80%</td>
+<td>abaixo de 80%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://eslint.org/docs/user-guide/configuring">ESLint ES6</a>: Folha de estilo do python para o frontend.</li>
+<li><a href="http://flake8.pycqa.org/en/latest/">Flake8</a>: Folha de estilo do python para o backend.</li>
+</ul>
+<h3 id="monitoramento">Monitoramento</h3>
+<p>O monitoramento da qualidade de código do projeto, além de garantir a entrega com qualidade desejada do produto, também garante um maior controle de um todo durante o seu desenvolvimento. Através do monitoramento, com o auxilio de ferramentas para isso, e medição de alguns aspectos podemos adequar os processos durante os tempo e assim conseguimos uma rastreabilidade melhor.</p>
+<h3 id="ferramentas">Ferramentas</h3>
+<ul>
+<li>
+<p><a href="https://codeclimate.com/github/fga-gpp-mds/2018.1-Lacos-da-Alegria">Code Climate</a>: O Code Climate permite que as organizações assumam o controle de sua qualidade de código, incorporando cobertura de teste totalmente configurável e dados de manutenção em todo o fluxo de trabalho de desenvolvimento.</p>
+</li>
+<li>
+<p><a href="https://jasmine.github.io/pages/docs_home.html">Jasmine</a>: Jasmine é um framework de testes que ajuda a assegurar se o software está contemplando todas as funcionalidades.</p>
+</li>
+<li>
+<p><a href="https://karma-runner.github.io/2.0/index.html">Karma</a>: Karma é um test runner que executa os testes criados pelo jasmine.</p>
+</li>
+<li>
+<p><a href="https://docs.pytest.org/en/latest/">Pytest</a>: O pytest é uma ferramenta de teste Python completa e madura que ajuda você a escrever programas melhores.</p>
+</li>
+<li>
+<p><a href="https://travis-ci.org/fga-gpp-mds/2018.1-Lacos-da-Alegria">Travis</a>: O Travis é uma ferramenta de teste. Ela possibilita saber se o nossa aplicação está dentro do esperado ou não.</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../evolve_prototype/" class="btn btn-neutral float-right" title="Evolução do Protótipo">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../branch_policy/" class="btn btn-neutral" title="Política de Branches"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../branch_policy/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../evolve_prototype/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

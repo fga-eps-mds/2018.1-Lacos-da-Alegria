@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Documento de Visão - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documento de Vis\u00e3o";
+    var mkdocs_page_input_path = "vision_document.md";
+    var mkdocs_page_url = "/vision_document/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Documento de Visão</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#documento-de-visao">Documento de Visão</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#historico-de-versao">Histórico de Versão</a></li>
+        
+            <li><a class="toctree-l3" href="#sumario">Sumário</a></li>
+        
+            <li><a class="toctree-l3" href="#1-introducao">1. Introdução</a></li>
+        
+            <li><a class="toctree-l3" href="#2-descricao-do-usuario">2. Descrição do Usuário</a></li>
+        
+            <li><a class="toctree-l3" href="#3-envolvidos">3. Envolvidos</a></li>
+        
+            <li><a class="toctree-l3" href="#4-visao-geral-do-produto">4. Visão Geral do Produto</a></li>
+        
+            <li><a class="toctree-l3" href="#5-recursos-do-produto">5. Recursos do Produto</a></li>
+        
+            <li><a class="toctree-l3" href="#6-referencias">6. Referências</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Documento de Visão</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/vision_document.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="documento-de-visao">Documento de Visão</h1>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Data</th>
+<th align="left">Versão</th>
+<th align="left">Descrição</th>
+<th align="left">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">17/03</td>
+<td align="left">0.1</td>
+<td align="left">Adicionados tópicos 1, 4 e 5</td>
+<td align="left">Rafael Makaha</td>
+</tr>
+<tr>
+<td align="left">17/03</td>
+<td align="left">0.2</td>
+<td align="left">Adicionados tópicos 2, 3 e 5</td>
+<td align="left">Renan Schadt</td>
+</tr>
+<tr>
+<td align="left">18/03</td>
+<td align="left">1.0</td>
+<td align="left">Revisão tópicos 1 à 5</td>
+<td align="left">Julliana do Couto Almeida</td>
+</tr>
+<tr>
+<td align="left">25/03</td>
+<td align="left">1.1</td>
+<td align="left">Revisão Markdown, referências na ABNT e imagens adicionadas</td>
+<td align="left">Renan Schadt</td>
+</tr>
+<tr>
+<td align="left">10/04</td>
+<td align="left">1.2</td>
+<td align="left">Tópico 5 refatorado, sumário adicionado</td>
+<td align="left">Renan Schadt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sumario">Sumário</h2>
+<p><a href="#1-introdução">1. Introdução</a></p>
+<ul>
+<li><a href="#11-sobre-a-organização">1.1 Sobre a Organização</a></li>
+<li><a href="#12-objetivos">1.2 Objetivos</a></li>
+<li><a href="#13-visão-geral-da-solução">1.3 Visão Geral da Solução</a></li>
+</ul>
+<p><a href="#2-descrição-do-usuário">2. Descrição do Usuário</a></p>
+<ul>
+<li><a href="#21-tipos-de-usuário">2.1 Tipos de Usuário</a></li>
+<li><a href="#22-principais-necessidades-do-usuário">2.2 Principais Necessidades do Usuário</a></li>
+<li><a href="#23-ambiente-do-usuário">2.3 Ambiente do Usuário</a></li>
+<li><a href="#24-alternativas-e-competiçãok">2.4 Alternativas e Competição</a></li>
+</ul>
+<p><a href="#3-envolvidos">3. Envolvidos</a></p>
+<p><a href="#4-visão-geral-do-produto">4. Visão Geral do Produto</a></p>
+<ul>
+<li><a href="#41-perspectiva-do-produto">4.1 Perspectiva do Produto</a></li>
+<li><a href="#42-declaração-de-posição-do-produto">4.2 Declaração de Posição do Produto</a></li>
+</ul>
+<p><a href="#5-recursos-do-produto">5. Recursos do Produto</a></p>
+<p><a href="#6-referências">6. Referências</a></p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>Este documento tem o propósito de apresentar o escopo em alto nível do aplicativo. A Laços da Alegria, trata-se de uma ONG que promove visitas voluntárias a hospitais e organizações sem fins lucrativos para levar alegria e descontração aos pacientes. Com intuito de proporcionar um maior contato com os voluntários, surgiu a ideia de instituir o aplicativo na ONG.</p>
+<h3 id="11-sobre-a-organizacao">1.1 Sobre a Organização</h3>
+<p>De acordo com a psicóloga Dayana Lima Dantas Valverde (2010), “Embora a palavra hospital venha da palavra hospitalidade, muitos pacientes não o consideram como local hospedeiro. O bem estar psicológico do paciente não é o principal objetivo do atendimento e sim prestar socorro àquele que tem um sofrimento relacionado com o biológico e orgânico”.</p>
+<p>É a partir disso que a Laços da Alegria age para tratar do bem estar mental e social dos pacientes de hospitais. Os voluntários vão de corações abertos para as visitações a fim de proporcionar boa companhia para os presentes nos locais visitados. Os voluntários fazem as visitas caracterizados e proporcionam abordagens diferenciadas levando-se em consideração a cultura regional. Tendo como exemplo as “piadas” ocorridas em um local, podem não ser bem recebidas em um outro. Assim, são tomados cuidados especiais em cada visitação.</p>
+<p>As visitas ocorrem em grupos de cerca de 20 pessoas, as quais são subdivididas em grupos de voluntários - que já realizaram sua primeira visita -, apoio - são responsáveis pela interação inicial com os pacientes - e novatos - que estão fazendo sua primeira visita. Atualmente a ONG Laços da Alegria proporciona suas visitas a 7 hospitais em todo o Distrito Federal. As visitas a hospitais ocorrem semanalmente e quinzenalmente às outras organizações. Por ser uma organização sem fins lucrativos, não são cobradas taxas para participar ou promover o projeto.</p>
+<h3 id="12-objetivos">1.2 Objetivos</h3>
+<p>Este projeto tem como objetivo principal ser o facilitador para a organização das visitações feitas pela Laços da Alegria aos hospitais e instituições. Esta aplicação mobile servirá de base para a melhoria do sistema atual da Laços da Alegria.</p>
+<p>O atual website da Laços da Alegria não informa sobre o andamento das filas de espera dos voluntários. Isso gera frustração nos voluntários, pois, por exemplo, se um voluntário de uma fila cancela sua participação, o próximo da fila tem sua vaga garantida, porém não é notificado da chegada de sua vez na fila. Com esta aplicação, as notificações serão enviadas, informando e atualizando os voluntários.</p>
+<h3 id="13-visao-geral-da-solucao">1.3 Visão Geral da Solução</h3>
+<p>O propósito da aplicação mobile a ser desenvolvida é de gerenciar o sistema de visitas aos hospitais, na qual o usuário do aplicativo pode entrar na fila de espera para realizar visita em um determinado hospital de sua preferência.</p>
+<p>O sistema irá prover gerenciamento da fila de espera para novatos, voluntários e equipe de apoio - cada um destes contando com uma fila exclusiva - em cada hospital ou instituição parceiros da Laços da Alegria.</p>
+<p>Além das funcionalidades já citadas, o aplicativo permitirá o cadastro/login de usuários, enviando notificações quando necessário e tendo integração nativa com o calendário do celular, entre outras funcionalidades menores.</p>
+<table>
+<thead>
+<tr>
+<th align="left">O problema da</th>
+<th align="center">Ineficiência da página atual em atualizar os usuários sobre andamento da fila por ausência de notificações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Afeta</td>
+<td align="center">Os voluntários da Laços da Alegria.</td>
+</tr>
+<tr>
+<td align="left">Cujo impacto é</td>
+<td align="center">esquecimento da data de visita e falta por não saber que fora convocado para a visitação.</td>
+</tr>
+<tr>
+<td align="left">Uma boa solução seria</td>
+<td align="center">Um aplicativo que envie notificações conforme o andamento da fila e marque o horário da visita no calendário nativo do sistema operacional utilizado pelo usuário.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-descricao-do-usuario">2. Descrição do Usuário</h2>
+<p>Os usuários do aplicativo serão moradores do Distrito Federal e seu entorno, principalmente das cidades onde a Laços da Alegria atua com seus projetos. A idade média dos usuários é de 18 a 25 anos.</p>
+<h3 id="21-tipos-de-usuario">2.1 Tipos de Usuário</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Tipo</th>
+<th align="left">Descrição</th>
+<th align="left">Restrição de Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Novatos</td>
+<td align="left">Ainda não fez sua primeira visita</td>
+<td align="left">Não tem acesso a aba insitituições, nem a lista de inscritos nas atividades</td>
+</tr>
+<tr>
+<td align="left">Voluntários</td>
+<td align="left">Já fez sua primeira visita</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Equipe de Apoio</td>
+<td align="left">Coordenam a visita e auxiliam os novatos</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-principais-necessidades-do-usuario">2.2 Principais Necessidades do Usuário</h3>
+<table>
+<thead>
+<tr>
+<th>Necessidade</th>
+<th>Prioridade</th>
+<th>Interesses</th>
+<th>Solução atual</th>
+<th>Solução proposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inscrição em eventos de visitação.</td>
+<td>Alta.</td>
+<td>Manter o controle contínuo dos voluntários envolvidos nas visitações.</td>
+<td>Website pouco organizado.</td>
+<td>Promover as inscrições por meio de uma aplicação mobile de fácil utilização.</td>
+</tr>
+<tr>
+<td>Notificar os voluntários.</td>
+<td>Alta.</td>
+<td>Manter os voluntários informados a respeito da sua situação nas filas.</td>
+<td>O usuário deve continuamente verificar o website para saber sua situação na fila.</td>
+<td>A aplicação mobile irá notificar continuamente o usuário sobre sua posição na fila inscrita.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-ambiente-do-usuario">2.3 Ambiente do Usuário</h3>
+<p>O aplicativo será desenvolvido para aumentar a comodidade dos usuários e notificá-los das suas visitas, estará presente no Android e IOS, necessita-se que o usuário tenha acesso a internet.</p>
+<h3 id="24-alternativas-e-competicao">2.4 Alternativas e Competição</h3>
+<p>Nesta seção são descritos competidores ou alternativas ao aplicativo que está sendo criado.</p>
+<h4 id="241-doutores-da-alegria">2.4.1 Doutores da Alegria</h4>
+<p><img alt="Tela_Doutores_da_Alegria" src="../images/doutores.png" /> <strong>Figura 1 -</strong> Home page do site da Doutores da Alegria <br></p>
+<p>Uma fundação cujo objetivo é visitar crianças e adolescentes internados, a equipe é composta por cerca de 40 artistas profissionais que se vestem de palhaços para entreter seu público e realizam atividades semanais em 12 hospitais de Recife e São Paulo.</p>
+<p>A fundação sobrevive e paga os artistas através de doações de empresas ou qualquer outro interessado, apesar de ser gratuito para os hospitais e pacientes, o trabalho não é voluntário.</p>
+<h4 id="242-hospitalhacos">2.4.2 Hospitalhaços</h4>
+<p><img alt="Tela_Hospitalhaços" src="../images/hospitalhacos.png" /> <strong>Figura 2 -</strong> Home page da Hospitalhaços <br></p>
+<p>Uma ONG criada em 1999 que utiliza a figura de palhaços para levar sorrisos ao ambiente hospitalar. Conta com mais de 600 voluntários ativos atuando nos estados de São Paulo e Pernambuco. Antes de se tornar um voluntário é preciso passar por um processo seletivo e um treinamento. Conta com uma página web em funcionamento e um aplicativo em estágio de desenvolvimento.</p>
+<h4 id="243-site-da-lacos-da-alegria">2.4.3 Site da Laços da Alegria</h4>
+<p><img alt="Tela_Laços" src="../images/site_lacos.png" /> <strong>Figura 3 -</strong> Página exibida aos novatos no site Laços da Alegria <br></p>
+<p>É o meio pela qual as visitas relacionadas a Laços da Alegria são agendadas atualmente. Permite cadastro/login, entrar na fila de espera dos hospitais, visualizar posição na fila de espera e confirmar/recusar presença. O site não envia nenhuma espécie de notificação ou email para lhe avisar de sua posição ou data de visita, é necessário ficar logando com frequência para não perdê-la.</p>
+<p>Posteriormente, a página será adaptada para usar a mesma API do aplicativo.</p>
+<h2 id="3-envolvidos">3. Envolvidos</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Nome</th>
+<th align="left">Ocupação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Renan Welz Schadt</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">Rafael Makaha Gomes Ferreira</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">João Vítor Morandi</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">Luciano dos Santos Silva</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">Rômulo Vinícius de Souza</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">Sara Silva</td>
+<td align="left">Equipe de Desenvolvimento</td>
+</tr>
+<tr>
+<td align="left">Luiz Guilherme Santos da Silva</td>
+<td align="left">Equipe de Gerência</td>
+</tr>
+<tr>
+<td align="left">Lucas Oliveira</td>
+<td align="left">Equipe de Gerência</td>
+</tr>
+<tr>
+<td align="left">Julliana do Couto Almeida</td>
+<td align="left">Equipe de Gerência</td>
+</tr>
+<tr>
+<td align="left">Cauê Mateus Oliveira</td>
+<td align="left">Equipe de Gerência</td>
+</tr>
+<tr>
+<td align="left">Vitor Nere Araújo Ribeiro</td>
+<td align="left">Cliente</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-visao-geral-do-produto">4. Visão Geral do Produto</h2>
+<p>O cadastro/login é fundamental para acessar o aplicativo. Usuários logados poderão entrar na fila de espera de qualquer hospital presente na aplicação e visualizar sua posição.</p>
+<p>Usuários que já fizeram sua primeira visita serão inseridos em uma fila exclusiva, diferente da fila dos novatos, além de possuírem acesso a outros projetos da ONG, como visitas a outras fundações, realizadas quinzenalmente.</p>
+<h3 id="41-perspectiva-do-produto">4.1 Perspectiva do Produto</h3>
+<p>Espera-se que o aplicativo ofereça uma experiência superior ao usuário comparado a página atual, tanto pela comodidade, como pelas funcionalidades exclusivas do aplicativo já mencionadas anteriormente.</p>
+<p>O aplicativo também tem a intenção de diminuir o número de faltas em visitas - causadas por esquecimento - e aumentar o número de pessoas que participam do projeto regularmente.</p>
+<h3 id="42-declaracao-de-posicao-do-produto">4.2 Declaração de Posição do Produto</h3>
+<table>
+<thead>
+<tr>
+<th>Para</th>
+<th align="left">Moradores do Distrito Federal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Que</td>
+<td align="left">Queiram participar de visitas a hospitais e instituições parceiros da fundação.</td>
+</tr>
+<tr>
+<td>A</td>
+<td align="left">Laços da Alegria(aplicação)</td>
+</tr>
+<tr>
+<td>Que</td>
+<td align="left">Promove maior facilidade de agendamento de visitas</td>
+</tr>
+<tr>
+<td>Ao Contrário</td>
+<td align="left">Da aplicação atual, a qual possui dificuldade de sustentar o atual porte da fundação e de notificar os participantes.</td>
+</tr>
+<tr>
+<td>Nosso Produto</td>
+<td align="left">Permite que os voluntários se inscrevam em visitas de maneira simples e os mantém atualizados sobre suas posições na fila de espera do evento escolhido.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-recursos-do-produto">5. Recursos do Produto</h2>
+<p>O aplicativo Laços da Alegria fornece as seguintes funcionalidades a todos usuários:
+<em> <strong>Cadastrar Usuário -</strong> Permite que o usuário insira suas informações pessoais e realize um cadastro.
+</em> <strong>Login e Logout -</strong> Permite que usuário execute o login e o logout na aplicação.
+* <strong>Splash Screen / Tutorial -</strong> Permite que o usuário visualize uma splash screen listando as principais funcionalidades do aplicativo.</p>
+<p>O aplicativo Laços da Alegria fornece as seguintes funcionalidades a usuários logados:
+<em> <strong>Visualizar Informações Sobre a Atividade -</strong> Permite que o usuário visualize informações sobre a atividade, como hora, local, entre outros.
+</em> <strong>Participar de Atividade (Hospital) -</strong> Permite que o usuário se inscreva para uma atividade em um hospital, veja o status de sua inscrição e sua posição na fila de espera caso necessário.
+<em> <strong>Cancelar Participação na Atividade -</strong> Permite que o usuário cancele sua participação em uma atividade na qual está inscrito.
+</em> <strong>Visualizar Página de Novidades -</strong> Permite que o usuário veja uma aba com o histórico das notificações enviadas pelo aplicativo.
+<em> <strong>Visualizar Perfil de Usuário -</strong> Permite que o usuário veja suas informações pessoais e conquistas obtidas.
+</em> <strong>Gerenciar Perfil de Usuário -</strong> Permite que o usuário modifique suas informações pessoais.
+<em> <strong>Visualizar Abas de Ajuda -</strong> Permite que o usuário veja tutoriais úteis a visita.
+</em> <strong>Entrar em Contato -</strong> Permite que o usuário entre em contato com uma ouvidoria da Laços, para sugestões, dúvidas ou reclamações.
+* <strong>Alterar Configurações -</strong> Permite que o usuário altere algumas preferências do aplicativo.</p>
+<p>Funcionalidades adicionais disponíveis a quem já fez sua primeira visita (voluntário/apoio):
+<em> <strong>Visualizar Hospitais da Semana -</strong> Permite que o usuário visualize os hospitais que receberão visitas na semana.
+</em> <strong>Visualizar Lista de Atividade -</strong> Permite que o usuário veja a lista de inscritos em uma determinada atividade.
+<em> <strong>Visualizar ONGs -</strong> Permite que o usuário visualize as ONGs que estão abertas a visitas.
+</em> <strong>Participar de Atividade (ONG) -</strong> Permite que o usuário se inscreva para uma atividade em uma ONG, veja o status de sua inscrição e sua posição na fila de espera caso necessário.</p>
+<h2 id="6-referencias">6. Referências</h2>
+<p>PÁGINA DO FACEBOOK LAÇOS DA ALEGRIA. Disponível em: https://www.facebook.com/LacosDaAlegria/. Acesso em: 17 mar. 2018.</p>
+<p>PÁGINA DO INSTAGRAM LAÇOS DA ALEGRIA. Disponível em: https://www.instagram.com/lacosdaalegria/?hl=pt-br. Acesso em: 17 mar. 2018.</p>
+<p>PÁGINA LAÇOS DA ALEGRIA. Disponível em: http://intra.lacosdaalegria.com/login. Acesso em: 17 mar. 2018.</p>
+<p>VÍDEO INSTITUCIONAL LAÇOS DA ALEGRIA. Disponível em: https://www.youtube.com/watch?v=SW1I5sfWnsg. Acesso em: 18 mar. 2018.</p>
+<p>PÁGINA HOSPITALHAÇOS. Disponível em: http://www.hospitalhacos.org.br/. Acesso em: 18 mar. 2018.</p>
+<p>PÁGINA DOUTORES DA ALEGRIA. Disponível em: https://www.doutoresdaalegria.org.br/. Acesso em: 18 mar. 2018.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../architecture_document/" class="btn btn-neutral float-right" title="Documento de Arquitetura">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Início"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../architecture_document/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

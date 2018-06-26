@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Documento de Arquitetura - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documento de Arquitetura";
+    var mkdocs_page_input_path = "architecture_document.md";
+    var mkdocs_page_url = "/architecture_document/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Documento de Arquitetura</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#historico-de-versoes">Histórico de Versões</a></li>
+    
+
+    <li class="toctree-l2"><a href="#sumario">Sumário</a></li>
+    
+
+    <li class="toctree-l2"><a href="#documento-de-arquitetura">Documento de Arquitetura</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-introducao">1. Introdução</a></li>
+        
+            <li><a class="toctree-l3" href="#2-representacao-da-arquitetura">2. Representação da Arquitetura</a></li>
+        
+            <li><a class="toctree-l3" href="#3-metas-e-restricoes-de-arquitetura">3. Metas e Restrições de Arquitetura</a></li>
+        
+            <li><a class="toctree-l3" href="#4-visao-logica">4. Visão Lógica</a></li>
+        
+            <li><a class="toctree-l3" href="#5-visao-de-implementacao">5. Visão de Implementação</a></li>
+        
+            <li><a class="toctree-l3" href="#6-qualidade">6. Qualidade</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Documento de Arquitetura</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/architecture_document.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="historico-de-versoes">Histórico de Versões</h1>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19/03/2018</td>
+<td>0.1</td>
+<td>Adição tópicos 1 e 2</td>
+<td>João Vítor, Luciano, Rômulo e Sara</td>
+</tr>
+<tr>
+<td>20/03/2018</td>
+<td>0.2</td>
+<td>Adição tópicos 3 e 4</td>
+<td>João Vítor, Luciano, Rômulo e Sara</td>
+</tr>
+<tr>
+<td>21/03/2018</td>
+<td>1.0</td>
+<td>Adição tópicos 5 e 6</td>
+<td>João Vítor, Luciano, Rômulo e Sara</td>
+</tr>
+<tr>
+<td>18/04/2018</td>
+<td>1.1</td>
+<td>Adição de novas imagens, refatoração dos tópicos 2, 4 e 5</td>
+<td>Rômulo, Renan Schadt, Rafael Makaha</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sumario">Sumário</h1>
+<p><a href="#1-introdução">1. Introdução</a></p>
+<ul>
+<li><a href="#11-finalidade">1.1 Finalidade</a></li>
+<li><a href="#12-escopo">1.2 Escopo</a></li>
+<li><a href="#13-referências">1.3 Referências</a></li>
+<li><a href="#14-visão-geral">1.4 Visão Geral</a></li>
+</ul>
+<p><a href="#2-representação-da-arquitetura">2. Representação da Arquitetura</a></p>
+<ul>
+<li><a href="#21-arquitetura-django-rest">2.1 Arquitetura Django REST</a></li>
+<li><a href="#22-arquitetura-ionic-framework">2.2 Arquitetura Ionic Framework</a></li>
+</ul>
+<p><a href="#3-metas-e-restrições-de-arquitetura">3. Metas e Restrições de Arquitetura</a></p>
+<p><a href="#4-visão-lógica">4. Visão Lógica</a></p>
+<ul>
+<li><a href="#41-diagrama-de-classes">4.1 Diagrama de Classes</a></li>
+<li><a href="#42-diagrama-de-pacotes">4.2 Diagrama de Pacotes</a></li>
+</ul>
+<p><a href="#5-visão-de-implementação">5. Visão de Implementação</a></p>
+<p><a href="#6-qualidade">6. Qualidade</a></p>
+<h1 id="documento-de-arquitetura">Documento de Arquitetura</h1>
+<h2 id="1-introducao">1. Introdução</h2>
+<h3 id="11-finalidade">1.1. Finalidade</h3>
+<p align="justify">A criação de um software está ligada à definição da sua arquitetura. Este documento tem como objetivo esclarecer essa relação, contextualizada no projeto Laços da Alegria. Para isso, será detalhado como serão trabalhadas as linguagens Python, através do Django Rest Framework e HTML, CSS, JavaScript, através do Ionic Framework.</p>
+
+<h3 id="12-escopo">1.2. Escopo</h3>
+<p align="justify">Este documento descreve toda a arquitetura utilizada para a implementação do projeto Laços da Alegria, explica as tecnologias django REST e Ionic que serão utilizadas e possibilita uma visão ampla do projeto, assim, facilitando sua compreensão e entendimento.</p>
+
+<h3 id="13-referencias">1.3. Referências</h3>
+<p align="justify">PADRÕES ARQUITETURAIS MVC X ARQUITETURA DO DJANGO. Disponível em:
+<https://github.com/fga-gpp-mds/A-Disciplina/wiki/Padr%C3%B5es-Arquiteturais---MVC-X-Arquitetura-do-Django>. Acesso em: 17 mar. 2018.</p>
+
+<p align="justify">DOCUMENTO DE ARQUITETURA DE SOFTWARE (DAS). Disponível em: <https://github.com/DroidFoundry/DroidMetronome/wiki/Documento-de-Arquitetura-de-Software-(DAS)#11-finalidade>. Acesso em: 17 mar. 2018.</p>
+
+<h3 id="14-visao-geral">1.4. Visão Geral</h3>
+<p align="justify">O documento detalha a arquitetura utilizada no projeto, justificando escolhas de padrões arquiteturais, linguagens, frameworks e ainda a representa o modelo de arquitetura utilizado e sua aplicação nas duas tecnologias escolhidas, Ionic Framework e Django Rest Framework além de suas metas e restrições, visão lógica, visão de implementação e, por fim, a qualidade.</p>
+
+<h2 id="2-representacao-da-arquitetura">2. Representação da Arquitetura</h2>
+<h3 id="21-arquitetura-django-rest">2.1. Arquitetura Django REST</h3>
+<p align="justify">O Django REST Framework (DRF) é um extensão do Django Framework e é utilizado para a construção de APIs em plataforma Web, com este é possível criar um back-end independente, através de micro serviços, podendo se comunicar com um front-end de uma aplicação mobile ou web através de arquivos JSON. Uma arquitetura REST opera através de métodos de protocolo HTTP; como GET, POST, PUT, DELETE, entre outros.</p>
+
+<p align="justify">A arquitetura do Django REST Framework é baseada na arquitetura MVC, que é oriunda do Django Framework e busca modularizar a interação com diferentes funcionalidades da API. Cada funcionalidade, deve ter uma estrutura que também é herdada da estrutura do Django, contendo uma ‘model’ e uma ‘view’ em cada funcionalidade, em diferentes endpoints, gerando módulos que podem ser retirados e adicionados sem uma alteração na estrutura do projeto.</p>
+
+<p align="justify">A model define a estrutura de dados que estará presente no banco de dados. É, também, responsável por armazenar os métodos das classes criadas para a implementação da aplicação que serão chamadas - na arquitetura REST -, pelas views.</p>
+
+<p align="justify">As views, através de requisições HTTP, realizam os métodos solicitados e enviam uma resposta. Essas requisições são feitas através de endpoints, que são definidos como URLs.</p>
+
+<p align="justify">Na camada de bancos de dados, o PostgreSQL é o sistema de gerenciamento de bancos de dados (SGDB) responsável pela persistência dos dados na aplicação. Assim, sua principal funcionalidade é de armazenar dados de maneira segura e de retorná-los quando forem requisitados.</p>
+
+<p align="justify">A informação de entrada e de saída da arquitetura REST é gerenciada pelo Serializer. Este é responsável, na saída de dados, pela conversão de estruturas complexas de dados em JSON - estrutura simplificada de pacote de informação -; e, na entrada de dados na API, é responsável por fazer o oposto, ou seja, receber um JSON e transformá-lo em uma estrutura complexa de dados compatível com as presentes na API.</p>
+
+<p align="justify">As migrations são utilizadas para escrever no banco de dados tudo o que foi descrito nas models, automaticamente, de uma forma que possa ser compreendido por este. Sempre que houver alterações na model, devem ser criadas novas migrations, através do comando makemigrations, e executadas, através do comando migrate.</p>
+
+<p><img alt="Arquitetura Projeto" src="../images/arquitetura_projeto.png" /></p>
+<p><strong>Figura 1 -</strong> Arquitetura do Projeto</p>
+<h3 id="22-arquitetura-ionic-framework">2.2. Arquitetura Ionic Framework</h3>
+<p align="justify">O Ionic é um framework open-source em JavaScript para desenvolvimento de aplicativos móveis híbridos usando HTML, CSS e JavaScript. Com ele é possível escrever o código da aplicação apenas uma vez para rodar no IOS, Android e Windows Phone.</p>
+
+<p align="justify">O Ionic, através do Apache Cordova, ajuda na comunicação com as APIs (Application Program Interface) de cada Sistema Operacional Móvel que, por sua vez, comunicam-se com um componente chamado Web View, usado por aplicativos nativos para visualização de páginas web dentro do contexto dos aplicativos móveis). O aplicativo Ionic funciona de forma embarcada dentro dessa Web View, que interpreta e renderiza o código.</p>
+
+<p><img alt="Arquitetura Ionic" src="../images/arquitetura_ionic.png" /></p>
+<p><strong>Figura 2 -</strong> Arquitetura Ionic</p>
+<p align="justify">O framework é baseado no Angular e utiliza sua infraestrutura e seus módulos, como services, controllers, routes, etc.</p>
+
+<p align="justify">O Ionic estiliza os componentes HTML para se parecer com os componentes nativos de cada plataforma móvel, simulando a experiência nativa do usuário final e usa esse ‘navegador’ para rodar os aplicativos e disponibiliza bibliotecas JavaScript para acesso do hardware e tecnologias nativas como câmera, GPS, Bluetooth, entre outros; além de que também é possível rodar essas aplicação em um navegador web.</p>
+
+<p align="justify">A aplicação é empacotada em arquivos instaláveis para cada plataforma móvel que então passa a ficar disponível nas principais lojas de aplicativos móveis e ser distribuída para o público-alvo.</p>
+
+<h2 id="3-metas-e-restricoes-de-arquitetura">3. Metas e Restrições de Arquitetura</h2>
+<p align="justify">O desenvolvimento do projeto será com o Ionic Framework 3.x.x junto com o Django Rest 3.7.7 e para utilização das ferramentas são necessários alguns requerimentos como Python 3.6.4, Django 2.0.3 e Nodejs 6.9.4. </p>
+
+<p align="justify">O desenvolvimento deverá estar de acordo as boas práticas de programação e requisitos não funcionais para que facilite a manutenção por outras equipes.</p>
+
+<p align="justify">Laços da Alegria será um aplicativo nativo que deverá rodar apenas em versões superiores a 4.1 do Android e 7.0 do IOS, essa restrição é baseada nos requerimentos das tecnologias usadas para o desenvolvimento do projeto. Além disso, para que o aplicativo funcione será necessário conexão com a internet.</p>
+
+<h2 id="4-visao-logica">4. Visão Lógica</h2>
+<h3 id="41-diagrama-de-classes">4.1. Diagrama de Classes</h3>
+<p align="justify">A lógica do projeto será baseado no diagrama de classes abaixo, que está sujeito a alterações ao longo do desenvolvimento.</p>
+
+<p><img alt="Diagrama de Classes" src="../images/diagrama_de_classes.png" /></p>
+<p><strong>Figura 3 -</strong> Diagrama de Classes</p>
+<h3 id="42-diagrama-de-pacotes">4.2. Diagrama de Pacotes</h3>
+<p><img alt="Diagrama de Pacotes" src="../images/diagrama_de_pacotes.png" /></p>
+<p><strong>Figura 4 -</strong> Diagrama de Pacotes</p>
+<h2 id="5-visao-de-implementacao">5. Visão de Implementação</h2>
+<p align="justify">A proposta da arquitetura MVC( Model, View, Controller) é fazer uma divisão em 3 camadas sobrepostas, de uma forma que o usuário só irá interagir com uma delas, no caso a View. Cada parte tem um valor diferente:</p>
+
+<ul align="justify">
+<li> Modelos (models) - Armazenamento de dados, definição dos estados das camadas e interpretação de requisições, que será controlada pelo Django Rest.
+<li>Visão (views) - Controle de layout e definição de design, que será controlada pelo Ionic.
+<li>Controles (controllers) - Tráfego de informações entre todas as camadas, entre o Django Rest e o Ionic Framework.
+</ul>
+
+<h2 id="6-qualidade">6. Qualidade</h2>
+<p align="justify">O aplicativo seguirá o padrão de desenvolvimento definido nos frameworks utilizados que irá organizar as diversas camadas da aplicação sendo que cada camada tem sua função específica dentro do software. Onde será mantida uma boa organização do código facilitando a visualização, entendimento e implementação do código.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../roadmap/" class="btn btn-neutral float-right" title="Documento de Roadmap">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../vision_document/" class="btn btn-neutral" title="Documento de Visão"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../vision_document/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../roadmap/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Termo de Abertura do Projeto - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Termo de Abertura do Projeto";
+    var mkdocs_page_input_path = "project_charter.md";
+    var mkdocs_page_url = "/project_charter/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Termo de Abertura do Projeto</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#historico-de-revisao">Histórico de Revisão</a></li>
+    
+
+    <li class="toctree-l2"><a href="#sumario">Sumário</a></li>
+    
+
+    <li class="toctree-l2"><a href="#1-introducao">1. Introdução</a></li>
+    
+
+    <li class="toctree-l2"><a href="#2-descricao-do-projeto">2. Descrição do Projeto</a></li>
+    
+
+    <li class="toctree-l2"><a href="#3-proposito-e-justificativa-do-projeto">3. Propósito e Justificativa do Projeto</a></li>
+    
+
+    <li class="toctree-l2"><a href="#4-objetivos-do-projeto">4. Objetivos do Projeto</a></li>
+    
+
+    <li class="toctree-l2"><a href="#5-requisitos-de-alto-nivel">5. Requisitos de Alto Nível</a></li>
+    
+
+    <li class="toctree-l2"><a href="#6-riscos">6. Riscos</a></li>
+    
+
+    <li class="toctree-l2"><a href="#7-resumo-do-cronograma-de-marcos">7. Resumo do Cronograma de Marcos</a></li>
+    
+
+    <li class="toctree-l2"><a href="#8-resumo-do-orcamento">8. Resumo do Orçamento</a></li>
+    
+
+    <li class="toctree-l2"><a href="#9-lista-das-partes-interessadas">9. Lista das Partes Interessadas</a></li>
+    
+
+    <li class="toctree-l2"><a href="#10-requisitos-para-a-aprovacao-do-projeto">10. Requisitos para a aprovação do projeto</a></li>
+    
+
+    <li class="toctree-l2"><a href="#11-gerencia-do-projeto">11. Gerência do projeto</a></li>
+    
+
+    <li class="toctree-l2"><a href="#12-referencias-do-projeto">12. Referências do Projeto</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Termo de Abertura do Projeto</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/project_charter.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="historico-de-revisao">Histórico de Revisão</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Data</th>
+<th align="center">Versão</th>
+<th align="center">Descrição</th>
+<th align="center">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">15/03/2018</td>
+<td align="center">0.1</td>
+<td align="center">Criando estrutura inicial do documento</td>
+<td align="center">Luiz Guilherme</td>
+</tr>
+<tr>
+<td align="center">15/03/2018</td>
+<td align="center">0.2</td>
+<td align="center">Tópico 6</td>
+<td align="center">Luiz Guilherme e Julliana Almeida</td>
+</tr>
+<tr>
+<td align="center">18/03/2018</td>
+<td align="center">0.3</td>
+<td align="center">Tópicos 1 e 2</td>
+<td align="center">Cauê Mateus</td>
+</tr>
+<tr>
+<td align="center">19/03/2018</td>
+<td align="center">0.4</td>
+<td align="center">Tópicos 3, 4 e 5</td>
+<td align="center">Cauê Mateus</td>
+</tr>
+<tr>
+<td align="center">20/03/2018</td>
+<td align="center">0.5</td>
+<td align="center">Tópicos 7, 8, 9, 10 e 11</td>
+<td align="center">Cauê Mateus</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sumario">Sumário</h2>
+<p><a href="#1-introdu%C3%A7%C3%A3o">1. Introdução</a></p>
+<p><a href="#2-descri%C3%A7%C3%A3o-do-projeto">2. Descrição do Projeto</a></p>
+<p><a href="#3-prop%C3%B3sito-e-justificativa-do-projeto">3. Propósito e justificativa do projeto</a> </p>
+<p><a href="#4-objetivos-do-projeto">4. Objetivos do projeto</a> </p>
+<p><a href="#5-requisitos-de-alto-n%C3%ADvel">5. Requisitos de alto nível</a></p>
+<p><a href="#6-riscos">6. Riscos</a></p>
+<p><a href="#7-resumo-do-cronograma-de-marcos">7. Resumo do cronograma de marcos</a></p>
+<p><a href="#8-resumo-do-or%C3%A7amento">8. Resumo do orçamento</a> </p>
+<p><a href="#9-lista-das-partes-interessadas">9. Partes interessadas</a></p>
+<p><a href="#10-requisitos-para-a-aprova%C3%A7%C3%A3o-do-projeto">10. Requisitos para aprovação do projeto</a></p>
+<p><a href="#11-ger%C3%AAncia-do-projeto">11. Gerência do projeto</a></p>
+<p><a href="#12-refer%C3%AAncias-do-projeto">12. Referências</a></p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p align = "justify">Este documento tem como objetivo concretizar e acordar o desenvolvimento e gestão do projeto Laços da Alegria e definir as relações entre os stakeholders. O termo de abertura do projeto ainda define os principais riscos, documentar os requisitos elicitados, e um breve resumo do orçamento utilizado.</p>
+
+<h2 id="2-descricao-do-projeto">2. Descrição do Projeto</h2>
+<p align = "justify">O projeto consiste na criação de uma aplicação que possibilite novatos (primeira visita), voluntários/doutores (todos que já foram mais de uma vez), Apoio/Diretor (todos que participam da diretoria do laços ou é diretor de algum hospital) possam fazer suas inscrições para fazer as visitas nos hospitais, com presença de listas de espera, notificações e marcação da visita em calendário.</p>
+
+<h2 id="3-proposito-e-justificativa-do-projeto">3. Propósito e Justificativa do Projeto</h2>
+<p align = "justify">O Laços da Alegria já existe a pouco mais de 6 anos e conta atualmente com 1.555 voluntários ativos e 1.493 novos voluntários esperando para fazer a primeira visita a um dos 7 hospitais atendidos pelo laços semanalmente. A aplicação <i>mobile</i> vem para somar com a aplicação <i>web</i> já existente do laços.</p>
+
+<p align = "justify">Alguns dos grandes problemas do laços atualmente são: alguns voluntários acabam se esquecendo de verificar no site do laços se eles foram ou não chamados para visitar o hospital naquela semana; quando um usuário entra na lista de espera e alguém acaba desistindo da visita e com isso a pessoa acaba subindo na lista de espera e pode ser selecionada para fazer a visita, porém o voluntário pode não verificar o site diariamente e acabar sendo selecionado e não ficar sabendo da visita que deveria ir. Se o usuário levar a falta na visita ele acaba perdendo a prioridade nas próximas visitas e quando selecionado para fila de espera acabando indo para último.</p>
+
+<p align = "justify">O aplicativo do laços virá para sanar estes problemas recorrentes.</p>
+
+<h2 id="4-objetivos-do-projeto">4. Objetivos do Projeto</h2>
+<p align = "justify">Os objetivos da aplicação mobile do laços são: a melhora no sistema de notificações quandos os voluntários forem selecionados para as visitas e conforme eles forem subindo na lista de espera; a lembrança da visita com a marcação do horário e data no calendário nativo.</p>
+
+<h2 id="5-requisitos-de-alto-nivel">5. Requisitos de Alto Nível</h2>
+<ul>
+<li>O design será simples e a aplicação será de fácil uso;</li>
+<li>Os voluntários poderão se inscrever para fazer as visitas nos hospitais;</li>
+<li>Os voluntários poderão acompanhar o avançar da lista de espera por meio de notificações;</li>
+<li>Os voluntários terão as datas de visitas marcadas em sua agenda para lembrá-los do dia e hora.</li>
+</ul>
+<h2 id="6-riscos">6. Riscos</h2>
+<p align = "justify"></p>
+
+<p><strong>Riscos</strong> | <strong>Plano de Ação</strong>
+-----------|------------|
+Membros da equipe trancar ou abandonar a disciplina. | Distribuir as tarefas entre os membros remanescentes, de forma a não causar um <em>overhead</em> em nenhum dos membros.
+Equipe de desenvolvimento não conseguir se adaptar as tecnologias escolhidas para a elaboração do projeto. | Realização de treinamentos com o intuito de disseminar o conhecimento entre a equipe de desenvolvimento.
+As ferramentas propostas não conseguirem serem instaladas pelos membros da equipe de desenvolvimento. | Configurar o ambiente através de um ambiente virtual.
+O tamanho da equipe, que dificulta a comunicação, o encontro de horários comuns durante a semana para reuniões e o gerenciamento dos membros. | Manter uma boa integração entre a equipe, exigindo <em>feedbacks</em> constantes entre os membros da equipe de desenvolvimento para diminuir a dificuldade de comunicação, utilizar meios de comunicação que todos tenham o hábito de olhar a todo momento, marcar encontros nos finais de semana para que todos membros do grupo possam comparecer, marcar reuniões semanais e fazer o acompanhamento dos membros.
+Membros da equipe fazendo estágio, podendo causar uma falta de comprometimento por causa do pouco tempo livre do membro. | Comunicar o membro que não estiver comprometido com o trabalho acerca do que se é esperado do mesmo, e exigir um maior comprometimento do mesmo. Caso a situação perdure o caso será levado para a professora Carla.</p>
+<h2 id="7-resumo-do-cronograma-de-marcos">7. Resumo do Cronograma de Marcos</h2>
+<ul>
+<li>Os principais marcos do projeto serão 2 Releases, sendo a primeira a entrega da documentação de gestão e da aplicação e a segunda entrega a aplicação finalizada em sua versão 1.0 na play store.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Marco</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release 1</td>
+<td>19/04/2018</td>
+</tr>
+<tr>
+<td>Release 2</td>
+<td>27/04/2018</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-resumo-do-orcamento">8. Resumo do Orçamento</h2>
+<p align = "justify">Calculamos o tempo total do projeto com 16 semanas e é estimado que cada um dos 10 integrantes do grupo trabalhará 10 horas semanais no projeto. O grupo conta com dois Coachs, que trabalharão aproximadamente 2 horas por semana no auxílio do grupo no desenvolvimento e gestão do projeto.</p>
+
+<p align = "justify">Os recursos físicos necessários para o desenvolvimento do projeto é que cada um dos envolvidos com o projeto tenha seu próprio notebook, a equipe de desenvolvimento necessita de máquinas que sejam capazes de suportar o seu ambiente de desenvolvimento com pelo menos os requisitos mínimos para desenvolver aplicativos na plataforma Android, os gestores e coaches também necessitam de notebooks compatíveis com suas responsabilidades. Dadas as necessidades dos notebooks um preço médio foi levantado de R$ 2.000,00
+</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Descrição</strong></th>
+<th><strong>Unidade de Medida</strong></th>
+<th><strong>Quantidade</strong></th>
+<th><strong>Custo Unitário (R$)</strong></th>
+<th><strong>Subtotal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computador/Notebook</td>
+<td>Unidade</td>
+<td>12</td>
+<td>R$ 2.000,00</td>
+<td>R$ 24.000,00</td>
+</tr>
+<tr>
+<td>Internet 25 Mbps</td>
+<td>Mês</td>
+<td>4</td>
+<td>R$ 115,00</td>
+<td>R$ 460,00</td>
+</tr>
+<tr>
+<td>Hospedagem de Aplicação</td>
+<td>Mês</td>
+<td>12</td>
+<td>R$ 38,00</td>
+<td>R$ 456,00</td>
+</tr>
+<tr>
+<td>Membro da Equipe</td>
+<td>Pessoa</td>
+<td>10</td>
+<td>R$ 3.200,00</td>
+<td>R$ 32.000,00</td>
+</tr>
+<tr>
+<td>Coach</td>
+<td>Pessoa</td>
+<td>2</td>
+<td>R$ 640,00</td>
+<td>R$ 1.280,00</td>
+</tr>
+<tr>
+<td><strong>Total de Aquisição</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>R$ 58.196,00</strong></td>
+</tr>
+<tr>
+<td><strong>Reserva (15%)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>R$ 8.729,40</strong></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>R$ 66.925,40</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-lista-das-partes-interessadas">9. Lista das Partes Interessadas</h2>
+<ul>
+<li>Vitor Nere.</li>
+<li>Cliente e voluntário no Laços.</li>
+<li>Voluntários do Laços.</li>
+<li>Equipe de Gerência de Projetos e Portfólios de <i>Software</i>.</li>
+<li>A equipe de Engenharia de Produto de Software (EPS) é composta por alunos da disciplina de mesmo nome da Universidade de Brasília campus gama, responsáveis pela gerência do projeto.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Membro</th>
+<th align="center">E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Cauê Mateus Oliveira</td>
+<td align="center">cauemateus@hotmail.com</td>
+</tr>
+<tr>
+<td align="center">Julliana do Couto Almeida</td>
+<td align="center">julliana.coutoalmeida@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Lucas Oliveira</td>
+<td align="center">lucasoliveira2306@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Luiz Guilherme Santos da Silva</td>
+<td align="center">do.guilherme@hotmail.com</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equipe de Desenvolvimento de Software.</li>
+<li>A equipe de desenvolvimento de software é composta pelos alunos da disciplina Métodos de Desenvolvimento de Software da Universidade de Brasília campus Gama.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Membro</th>
+<th align="center">E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">João Vítor Morandi</td>
+<td align="center">joao.lemos4000@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Luciano dos Santos Silva</td>
+<td align="center">lucianosz.ls3@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Rafael Makaha Gomes Ferreira</td>
+<td align="center">rafael.makaha@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Renan Schadt</td>
+<td align="center">renanschadt@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Rômulo Vinícius de Souza</td>
+<td align="center">romulovinicius10@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Sara Silva</td>
+<td align="center">saracsas2@gmail.com</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-requisitos-para-a-aprovacao-do-projeto">10. Requisitos para a aprovação do projeto</h2>
+<p>Para aprovação do projeto todos os requisitos levantados devem ser finalizados de acordo com os critérios de aceitação e mostrado a versão final da aplicação para validação final com o cliente.</p>
+<h2 id="11-gerencia-do-projeto">11. Gerência do projeto</h2>
+<p align = "justify">O projeto será gerido pela equipe de Engenharia de Produto de Software, disciplina do curso de Engenharia de Software da Faculdade UnB do Gama (FGA), os integrantes da equipe são:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Membro</th>
+<th align="center">E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Cauê Mateus Oliveira</td>
+<td align="center">cauemateus@hotmail.com</td>
+</tr>
+<tr>
+<td align="center">Julliana do Couto Almeida</td>
+<td align="center">julliana.coutoalmeida@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Lucas Oliveira</td>
+<td align="center">lucasoliveira2306@gmail.com</td>
+</tr>
+<tr>
+<td align="center">Luiz Guilherme Santos da Silva</td>
+<td align="center">do.guilherme@hotmail.com</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-referencias-do-projeto">12. Referências do Projeto</h2>
+<blockquote>
+<p><p align = "justify"> PMI. Um guia do conhecimento em gerenciamento de projetos. Guia PMBOK 5a. ed. - EUA: Project Management Institute, 2013.</p></p>
+<p><p align = "justify"> Relatório de Gestão 2016, Universidade de Brasília. Disponível em <a href="http://www.dpo.unb.br/index.php?option=com_phocadownload&view=category&download=558:relatorio-2016&id=1:relatorio-de-gestao&Itemid=675"> http://www.dpo.unb.br/index.php?option=com_phocadownload&amp;view=category&amp;download=558:relatorio-2016&amp;id=1:relatorio-de-gestao&amp;Itemid=675</a>. Acesso em 21 de agosto de 2017 às 22:13.</p></p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pull_request_template/" class="btn btn-neutral float-right" title="Template de Pull Requests">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../methodology_document/" class="btn btn-neutral" title="Documento de Metodologia"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../methodology_document/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pull_request_template/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Documento de Metodologia - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documento de Metodologia";
+    var mkdocs_page_input_path = "methodology_document.md";
+    var mkdocs_page_url = "/methodology_document/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Documento de Metodologia</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#historico-de-revisao">Histórico de Revisão</a></li>
+    
+
+    <li class="toctree-l2"><a href="#sumario">Sumário</a></li>
+    
+
+    <li class="toctree-l2"><a href="#1-introducao">1. Introdução</a></li>
+    
+
+    <li class="toctree-l2"><a href="#2-papeis">2. Papéis</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#21-scrum-master">2.1 Scrum Master</a></li>
+        
+            <li><a class="toctree-l3" href="#22-product-owner-po">2.2 Product Owner (PO)</a></li>
+        
+            <li><a class="toctree-l3" href="#23-time-de-desenvolvimento">2.3 Time de Desenvolvimento</a></li>
+        
+            <li><a class="toctree-l3" href="#24-arquiteto">2.4 Arquiteto</a></li>
+        
+            <li><a class="toctree-l3" href="#25-devops">2.5 DevOps</a></li>
+        
+            <li><a class="toctree-l3" href="#22-eventos">2.2 Eventos</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#3-eventos">3. Eventos</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#31-sprint">3.1 Sprint</a></li>
+        
+            <li><a class="toctree-l3" href="#32-encontros-diarios">3.2 Encontros Diários</a></li>
+        
+            <li><a class="toctree-l3" href="#33-planejamento-da-sprint">3.3 Planejamento da Sprint</a></li>
+        
+            <li><a class="toctree-l3" href="#34-revisao-da-sprint">3.4 Revisão da Sprint</a></li>
+        
+            <li><a class="toctree-l3" href="#35-retrospectiva-da-sprint">3.5 Retrospectiva da Sprint</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#4-artefatos">4. Artefatos</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#41-backlog-do-produto">4.1 Backlog do Produto</a></li>
+        
+            <li><a class="toctree-l3" href="#42-backlog-da-sprint">4.2 Backlog da Sprint</a></li>
+        
+            <li><a class="toctree-l3" href="#43-incremento">4.3 Incremento</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Documento de Metodologia</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/methodology_document.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="historico-de-revisao">Histórico de Revisão</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Data</th>
+<th align="left">Versão</th>
+<th align="left">Descrição</th>
+<th align="left">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">21/03/2018</td>
+<td align="left">0.1</td>
+<td align="left">Adicionado documento de metodologia</td>
+<td align="left">Lucas</td>
+</tr>
+<tr>
+<td align="left">01/04/2018</td>
+<td align="left">0.2</td>
+<td align="left">Refatorado documento</td>
+<td align="left">Lucas</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sumario">Sumário</h1>
+<p><a href="#1-introdução">1. Introdução</a></p>
+<p><a href="#2-papéis">2. Papéis</a></p>
+<p><a href="#3-eventos">3. Eventos</a></p>
+<p><a href="#4-artefatos">4. Artefatos</a></p>
+<h1 id="1-introducao">1. Introdução</h1>
+<p>Este documento tem como objetivo definir e explicitar a metodologia utilizada para o desenvolvimento do aplicativo Intra Laços.
+Serão utilizadas práticas do Framework Scrum com adaptações para incorporar outros papéis e práticas do Extreme Programming (XP) e Kanban.</p>
+<h1 id="2-papeis">2. Papéis</h1>
+<h2 id="21-scrum-master">2.1 Scrum Master</h2>
+<p>O Scrum Master será assumido pelo Lucas Oliveira e possui as seguintes responsabilidades:</p>
+<ul>
+<li>[ ] Gerenciar Riscos;</li>
+<li>[ ] Garantir que os membros sigam a metodologia;</li>
+<li>[ ] Conduzir as reuniões e;</li>
+<li>[ ] Fazer o controle de qualidade.</li>
+</ul>
+<h2 id="22-product-owner-po">2.2 Product Owner (PO)</h2>
+<p>O papel de PO é responsabilidade de todos os membros da gerência, cuja tarefas são:</p>
+<ul>
+<li>[ ] Gerenciar Backlog;</li>
+<li>[ ] Priorizar itens do Backlog;</li>
+<li>[ ] Garantir que o Backlog do Produto é visível, transparente e claro para todos os membros do time;</li>
+<li>[ ] Elaborar Estrutura Analitica do Projeto (EAP) e a Análise de Valor Agregado (EVM).</li>
+<li>[ ] Garantir que o Time de Desenvolvimento entende os itens do Backlog do Produto e;</li>
+<li>[ ] Elaborar o Roadmap do projeto.</li>
+</ul>
+<h2 id="23-time-de-desenvolvimento">2.3 Time de Desenvolvimento</h2>
+<p>O Time de Desenvolvimento é composto pelos membros Renan Schadt, João Vítor Morandi, Luciano dos Santos Silva   ,
+Rafael Makaha Gomes, Rômulo Vinícius e Sara Silva. Esses membros possuem a responsabilidade de:</p>
+<ul>
+<li>[ ]  Elaborar documento de visão;</li>
+<li>[ ]  Elaborar documento de arquitetura;</li>
+<li>[ ]  Elaborar documento de especificação suplementar;</li>
+<li>[ ]  Elaborar documento de guia de estilo;</li>
+<li>[ ]  Elaborar protótipos;</li>
+<li>[ ]  Entregar incrementos do produto;</li>
+<li>[ ]  Montar o Backlog da Sprint e;</li>
+<li>[ ]  Testar funcionalidades desenvolvidas.</li>
+</ul>
+<h2 id="24-arquiteto">2.4 Arquiteto</h2>
+<p>O papel de arquitetura é assumido pela Julliana do Couto, que deverá:</p>
+<ul>
+<li>[ ] Garantir que o time de desenvolvimento siga a arquitetura definida;</li>
+<li>[ ] Treinar time de desenvolvimento;</li>
+<li>[ ] Auxiliar time na modelagem do banco de dados;</li>
+<li>[ ] Auxiliar time na modelagem do diagrama de classes;</li>
+<li>[ ] Implementar o benchmark;</li>
+<li>[ ] Garantir que o código reflete os diagramas propostos e;</li>
+<li>[ ]  Prever possíveis mudanças arquiteturais.</li>
+</ul>
+<h2 id="25-devops">2.5 DevOps</h2>
+<p>Os DevOps serão os membros Cauê Mateus e Luiz Guilherme. Estes terão as seguites responsabilidades:</p>
+<ul>
+<li>[ ] Instalar e configurar o ambiente;</li>
+<li>[ ] Auxiliar a equipe de desenvolvimento;</li>
+<li>[ ] Monitorar testes;</li>
+<li>[ ] Monitorar integração e deploy contínuo;</li>
+<li>[ ] Analisar Pull Requests e;</li>
+<li>[ ] Analisar Pull Requests;</li>
+</ul>
+<h2 id="22-eventos">2.2 Eventos</h2>
+<p>Ocorrem cinco eventos durante o desenvolvimento do projeto. São eles: Sprint, Encontros Diários e Planejamento, Revisão e Retrospectiva da Sprint.
+Todos os eventos possuem um timebox, isto é, um tempo definido para que os eventos ocorram, que não deve ser ultrapassado e é gerenciado pelo Scrum Master.</p>
+<h1 id="3-eventos">3. Eventos</h1>
+<h3 id="31-sprint">3.1 Sprint</h3>
+<p>A Sprint é um período de uma semana, iniciada nas quartas-feiras, em que um incremento de produto é criado.
+Uma nova Sprint e logo após uma ser terminada.</p>
+<p>Uma Sprint consiste de e contém Encontros Diários e Planejamento, Revisão e Retrospectiva da Sprint.</p>
+<p>Uma Sprint pode ser cancelada antes de seu timebox, mas somente o PO tem autoridade para cancelar uma Sprint e isso ocorre quando seu objetivo se torna obsoleto.
+Quando uma Sprint é cancelada todos os produtos "prontos" são revisados e se eles forem entregáveis, o PO pode aceitá-las.
+As que não forem retornam para o Backlog do Produto.</p>
+<h3 id="32-encontros-diarios">3.2 Encontros Diários</h3>
+<p>Este é um evento com timebox de até 15 minutos em que cada membro do time deve responder três perguntas:</p>
+<ul>
+<li>O que eu fiz ontem que ajudou o time a cumprir o objetivo da Sprint?</li>
+<li>O que eu farei hoje para ajudar o time a cumprir o objetivo da Sprint?</li>
+<li>Existe algum problema me impedindo de alcançar o objetivo da Sprint?</li>
+</ul>
+<p>Esses encontros têm o objetivo de alinhar a equipe sobre o andamento da Sprint e remover possíveis impedimentos e acontece nos seguintes horários:</p>
+<ul>
+<li>Segunda, terça, quinta e sexta-feiras às 22hrs via Discord;</li>
+<li>Sábados e domingos via GeekBot no Slack.</li>
+</ul>
+<h3 id="33-planejamento-da-sprint">3.3 Planejamento da Sprint</h3>
+<p>O Planejamento da Sprint é quando o trabalho a ser elaborado na Sprint é definido.
+O planejamento é feito por todos os membros em conjunto e possui um timebox de até uma hora.</p>
+<p>Durante este evento o PO apresenta o objetivo da Sprint e os itens do Backlog do Produto que, se forem entregues, alcançará esse objetivo.
+O número de itens selecionados é definido pelo Time de Desenvolvimento e somente ele pode avaliar o que pode ser completado na próxima Sprint.</p>
+<p>No final do Planejamento da Sprint, o Time de Desenvolvimento deve ser capaz de explicar ao PO e ao Scrum Master como pretende trabalhar para cumprir o planejado.</p>
+<p>Essa reunião ocorre às quarta-feiras 23hrs via Discord.</p>
+<h3 id="34-revisao-da-sprint">3.4 Revisão da Sprint</h3>
+<p>A Revisão da Sprint é realizada ao final da Sprint para inspecionar o incremento.
+Durante essa reunião é discutido o que foi feito na Sprint, quais problemas ocorreram e como foram resolvidos, o que foi bem e o PO esclarece quais itens foram "prontos". A reunião tem duração máxima de 20 minutos e ocorre às quarta-feiras 22hrs.</p>
+<h3 id="35-retrospectiva-da-sprint">3.5 Retrospectiva da Sprint</h3>
+<p>Ocorre após a Revisão da Sprint e tem como objetivo a auto avaliação do time e a criação de um plano de melhorias para a próxima reunião.
+A Retrospectiva tem timebox de até 25 minutos e durante esse tempo o time aponta os pontos positivos, negativos e melhorias a serem aplicadas na próxima Sprint.</p>
+<h1 id="4-artefatos">4. Artefatos</h1>
+<h3 id="41-backlog-do-produto">4.1 Backlog do Produto</h3>
+<p>O Backlog do Produto é uma lista de tudo que deve constar no produto.
+Ela é mantida e ordenada pelo PO e este também é responsável pela clareza e entendimento de cada item.</p>
+<h3 id="42-backlog-da-sprint">4.2 Backlog da Sprint</h3>
+<p>O Backlog da Sprint é o conjunto de itens derivados do Backlog do Produto que vão juntos irão alcançar o objetivo da Sprint.
+Sempre que um tarefa precisa ser realizada, esta é acrescentada ao Backlog da Sprint pelo Time de Desenvolvimento.</p>
+<h3 id="43-incremento">4.3 Incremento</h3>
+<p>O Incremento é a soma de todos os itens da Sprints definidos como "pronto" e o incremento das Sprints anteriores.
+Ao término de uma Sprint um Incremento deve ser entregue, o que significa que ele é utilizável e atende a definição de pronto.</p>
+<h4 id="431-significado-de-pronto">4.3.1 Significado de Pronto</h4>
+<p>Uma história é considerada concluída (ou pronta) quando ela é testada, obedece as métricas definidas e a integração não traz prejuízos ao que já foi desenvolvido anteriormente.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project_charter/" class="btn btn-neutral float-right" title="Termo de Abertura do Projeto">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../meeting_record/" class="btn btn-neutral" title="Atas de Reuniões"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../meeting_record/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../project_charter/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

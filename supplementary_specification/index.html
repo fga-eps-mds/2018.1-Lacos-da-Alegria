@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Documento de Especificação Suplementar - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documento de Especifica\u00e7\u00e3o Suplementar";
+    var mkdocs_page_input_path = "supplementary_specification.md";
+    var mkdocs_page_url = "/supplementary_specification/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../benchmark/">Relatório de Benchmarking</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Documento de Especificação Suplementar</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#documento-de-especificacao-suplementar">Documento de Especificação Suplementar</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#historico-de-versao">Histórico de Versão</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#sumario">Sumário</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-introducao">1. Introdução</a></li>
+        
+            <li><a class="toctree-l3" href="#2-usabilidade">2. Usabilidade</a></li>
+        
+            <li><a class="toctree-l3" href="#3-confiabilidade">3. Confiabilidade</a></li>
+        
+            <li><a class="toctree-l3" href="#4-desempenho">4. Desempenho</a></li>
+        
+            <li><a class="toctree-l3" href="#5-suportabilidade">5. Suportabilidade</a></li>
+        
+            <li><a class="toctree-l3" href="#6-restricoes-de-design">6. Restrições de Design</a></li>
+        
+            <li><a class="toctree-l3" href="#7-requisitos-de-sistema-de-ajuda-e-de-documentacao-de-usuario-on-line">7. Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line</a></li>
+        
+            <li><a class="toctree-l3" href="#8-componentes-comprados">8. Componentes Comprados</a></li>
+        
+            <li><a class="toctree-l3" href="#9-interfaces">9. Interfaces</a></li>
+        
+            <li><a class="toctree-l3" href="#10-requisitos-de-licenciamento">10. Requisitos de Licenciamento</a></li>
+        
+            <li><a class="toctree-l3" href="#11-observacoes-legais-de-direitos-autorais-etc">11. Observações Legais, de Direitos Autorais etc</a></li>
+        
+            <li><a class="toctree-l3" href="#12-padroes-aplicaveis">12. Padrões Aplicáveis</a></li>
+        
+            <li><a class="toctree-l3" href="#13-referencias">13. Referências</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Documento de Especificação Suplementar</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/supplementary_specification.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="documento-de-especificacao-suplementar">Documento de Especificação Suplementar</h1>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Data</th>
+<th align="left">Versão</th>
+<th align="left">Descrição</th>
+<th align="left">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25/03</td>
+<td align="left">0.1</td>
+<td align="left">Adicionados tópicos 1, 3 e 4</td>
+<td align="left">Renan Schadt</td>
+</tr>
+<tr>
+<td align="left">25/03</td>
+<td align="left">0.2</td>
+<td align="left">Adicionados tópicos de 5 à 8</td>
+<td align="left">Sara Silva</td>
+</tr>
+<tr>
+<td align="left">25/03</td>
+<td align="left">0.3</td>
+<td align="left">Adicionados tópicos de 9 à 13</td>
+<td align="left">Luciano Dos Santos</td>
+</tr>
+<tr>
+<td align="left">26/03</td>
+<td align="left">0.4</td>
+<td align="left">Revisão tópicos 1 à 13</td>
+<td align="left">Julliana do Couto Almeida e Cauê Mateus</td>
+</tr>
+<tr>
+<td align="left">27/03</td>
+<td align="left">0.5</td>
+<td align="left">Correção de erros ortográficos e expansão do tópico 1.3</td>
+<td align="left">Renan Schadt</td>
+</tr>
+<tr>
+<td align="left">27/03</td>
+<td align="left">0.6</td>
+<td align="left">Complemento dos tópicos 10 e 11</td>
+<td align="left">Luciano Dos Santos</td>
+</tr>
+<tr>
+<td align="left">28/03</td>
+<td align="left">0.7</td>
+<td align="left">Revisão tópicos 5 e 7</td>
+<td align="left">Sara Silva</td>
+</tr>
+<tr>
+<td align="left">28/03</td>
+<td align="left">1.0</td>
+<td align="left">Revisão final</td>
+<td align="left">Renan Schadt</td>
+</tr>
+<tr>
+<td align="left">04/04</td>
+<td align="left">1.1</td>
+<td align="left">Adicionados requisitos tópicos 2, 3 e 4</td>
+<td align="left">Renan Schadt</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sumario">Sumário</h1>
+<p><a href="#1-introdução">1. Introdução</a></p>
+<ul>
+<li><a href="#11-finalidade">1.1 Finalidade</a></li>
+<li><a href="#12-escopo">1.2 Escopo</a></li>
+<li><a href="#13-definições-acrônimos-e-abreviações">1.3 Definições, Acrônimos e Abreviações</a></li>
+</ul>
+<p><a href="#2-usabilidade">2. Usabilidade</a></p>
+<ul>
+<li><a href="#21-requisitos-de-usabilidade">2.1 Requisitos de Usabilidade</a></li>
+</ul>
+<p><a href="#3-confiabilidade">3. Confiabilidade</a></p>
+<ul>
+<li><a href="#31-requisitos-de-confiabilidade">3.1 Requisitos de Confiabilidade</a></li>
+</ul>
+<p><a href="#4-desempenho">4. Desempenho</a></p>
+<ul>
+<li><a href="#41-requisitos-de-desempenho">4.1 Requisitos de Desempenho</a></li>
+</ul>
+<p><a href="#5-suportabilidade">5. Suportabilidade</a></p>
+<p><a href="#6-restrições-de-design">6. Restrições de Design</a></p>
+<p><a href="#7-requisitos-de-sistema-de-ajuda-e-de-documentação-de-usuário-on-line">7. Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line</a></p>
+<p><a href="#8-componentes-comprados">8. Componentes Comprados</a></p>
+<p><a href="#9-interfaces">9. Interfaces</a></p>
+<ul>
+<li><a href="#91-interfaces-com-o-usuário">9.1 Interfaces com o Usuário</a></li>
+<li><a href="#92-interfaces-de-hardware">9.2 Interfaces de Hardware</a></li>
+<li><a href="#93-interface-de-software">9.3 Interface de Software</a></li>
+<li><a href="#94-interfaces-de-comunicação">9.4 Interfaces de Comunicação</a></li>
+</ul>
+<p><a href="#10-requisitos-de-licenciamento">10. Requisitos de Licenciamento</a></p>
+<p><a href="#11-observações-legais-de-direitos-autorais-etc">11. Observações Legais, de Direitos Autorais etc</a></p>
+<p><a href="#12-padrões-aplicáveis">12. Padrões Apicáveis</a></p>
+<p><a href="#13-referências">13. Referências</a></p>
+<h2 id="1-introducao">1. Introdução</h2>
+<h3 id="11-finalidade">1.1 Finalidade</h3>
+<p>De acordo com Luiz Cysneiros e Julio Leite, requisitos não funcionais (RNFs) são obrigatórios para a construção de um software de qualidade; entre eles estão: facilidade de uso, desempenho, clareza de informações e outros. Este documento tem por função capturar os requisitos mencionados acima, relacionados ao aplicativo Laços da Alegria a ser desenvolvido pelo grupo.</p>
+<h3 id="12-escopo">1.2 Escopo</h3>
+<p>Este artefato abrange requisitos de usabilidade, confiabilidade, desempenho e suportabilidade. Além disso, apresenta as interfaces do sistema, restrições de design, requisitos de licenciamento, observações legais e padrões aplicáveis.</p>
+<h3 id="13-definicoes-acronimos-e-abreviacoes">1.3 Definições, Acrônimos e Abreviações</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Nome</th>
+<th align="left">Noção</th>
+<th align="left">Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Hardware</td>
+<td align="left">Componentes físicos de um eletrônico</td>
+<td align="left">Determina o desempenho de um dispositivo</td>
+</tr>
+<tr>
+<td align="left">API</td>
+<td align="left">Interface de Programação de Aplicativos</td>
+<td align="left">Auxilia no desenvolvimento através do fornecimento de padrões e rotinas de programação, permitindo a construção de aplicativos</td>
+</tr>
+<tr>
+<td align="left">Android</td>
+<td align="left">Sistema Operacional Mobile da Google</td>
+<td align="left">Fornece um conjunto de funcionalidades e ferramentas úteis ao desenvolvimento, integração completa do Android com o aplicativo é fundamental para o seu funcionamento</td>
+</tr>
+<tr>
+<td align="left">IOS</td>
+<td align="left">Sistema Operacional Mobile da Apple</td>
+<td align="left">Fornece um conjunto de funcionalidades e ferramentas úteis ao desenvolvimento, integração completa do IOS com o aplicativo é fundamental para o seu funcionamento</td>
+</tr>
+<tr>
+<td align="left">Interface</td>
+<td align="left">Ambiente virtual gráfico</td>
+<td align="left">Fundamental para a interação do usuário com o aplicativo</td>
+</tr>
+<tr>
+<td align="left">Material Design</td>
+<td align="left">Linguagem de Design Google</td>
+<td align="left">Utiliza animações, transições responsivas e preenchimentos com o objetivo de dar uma identidade visual elegante e minimalista a um aplicativo</td>
+</tr>
+<tr>
+<td align="left">HTML</td>
+<td align="left">HyperText Markup Language</td>
+<td align="left">Linguagem de marcação usada como base na construção de interfaces web</td>
+</tr>
+<tr>
+<td align="left">CSS</td>
+<td align="left">Cascading Style Sheets</td>
+<td align="left">Adicionar refinamento visual a páginas HTML</td>
+</tr>
+<tr>
+<td align="left">Ionic</td>
+<td align="left">Framework open-source para frontend</td>
+<td align="left">Entrega ferramentas e serviços para a criação de aplicativos híbridos (mobile-web)</td>
+</tr>
+<tr>
+<td align="left">JavaScript</td>
+<td align="left">Linguagem de programação interpretada baseada em ECMAScript</td>
+<td align="left">Fundamental para a criação da interface de interação com o usuário</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-usabilidade">2. Usabilidade</h2>
+<h3 id="21-requisitos-de-usabilidade">2.1 Requisitos de Usabilidade</h3>
+<p><strong>[RU01] Interface simples e minimalista</strong>
+O sistema deverá prover uma interface simples e minimalista, com design intuitivo e sem excesso de comandos, sendo fácil de ser utilizado e reduzindo o tempo necessário para realizar qualquer tarefa dentro da aplicação. Os princípios da interface seguirão os padrões Material Design da Google, cuja maioria dos usuários estão familiarizados.</p>
+<p><strong>Importância:</strong> Essencial.</p>
+<p><strong>[RU02] Pequena curva de aprendizado</strong>
+Ao entrar pela primeira vez, o sistema irá mostrar uma tela ao usuário dando dicas e falando sobre as funcionalidades principais do aplicativo, para aumentar a velocidade do usuário ao utilizar a aplicação.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<h2 id="3-confiabilidade">3. Confiabilidade</h2>
+<h3 id="31-requisitos-de-confiabilidade">3.1 Requisitos de Confiabilidade</h3>
+<p><strong>[RC01] Disponibilidade ampla</strong>
+O aplicativo deverá funcionar corretamente por 95% do tempo, nos 7 dias da semana. Suportando uma grande quantidade de usuários logados e evitando qualquer tipo de mau funcionamento, como o fechamento abrupto do aplicativo, ou atraso no processamento das tarefas.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<p><strong>[RC02] Informações pessoais seguras</strong>
+Como as posições das filas de espera e as informações pessoais do usuário não podem ser perdidas, as informações privadas do usuário devem ser inacessíveis por terceiros. Somente o nome, "nome de palhaço" e o telefone do usuário serão exibidos, para comunicação entre os participantes.</p>
+<p><strong>Importância:</strong> Essencial.</p>
+<p><strong>[RC03] Confiabilidade das informações</strong>
+Os dados providos pelo aplicativo (como notificações e posição na fila) devem ser confiáveis e corretos.</p>
+<p><strong>Importância:</strong> Essencial.</p>
+<p><strong>[RC04] Tempo Médio Entre Falhas (MTBF)</strong>
+O tempo médio entre falhas, é um cálculo realizado utilizando o tempo total do funcionamento, o tempo total sem funcionamento e o número de falhas. Só é possível ter valores exatos quando a aplicação já está quase lançada. Atualizaremos com os dados no pré-lançamento.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<p><strong>[RC05] Tempo Médio Para Reparo (MTTR)</strong>
+O tempo médio para reparo se assemelha ao MTBF, porém o intuito é entender quanto tempo será necessário para reparar os erros encontrados no sistema. O cálculo utiliza o total de horas do sistema sem funcionamento e o número de falhas encontradas. Atualizaremos com os dados no pré-lançamento.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<p><strong>[RC06] Taxa máxima de erros ou defeitos</strong>
+Todo o processo de desenvolvimento é testado para evitar qualquer falha e exterminar erros fatais para o maior número de aparelhos compatíveis com o sistema, apesar dos esforços para combatê-los, erros existem. A taxa máxima de erros no nosso projeto é de 5%, com uma margem de erro de 2%, possuindo assim, uma taxa máxima de 7% do tempo total de execução indisponível.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<h2 id="4-desempenho">4. Desempenho</h2>
+<h3 id="41-requisitos-de-desempenho">4.1 Requisitos de Desempenho</h3>
+<p><strong>[RD01] Acesso constante a internet</strong>
+O aplicativo precisa de acesso constante a internet, suportando apenas quedas rápidas, pois a autenticação é feita a cada requisição do usuário.</p>
+<p><strong>Importância:</strong> Essencial.</p>
+<p><strong>[RD02] Armazenamento interno disponível</strong>
+O usuário precisa de armazenamento na memória interna do celular e conexão com a internet para poder baixar o aplicativo.</p>
+<p><strong>Importância:</strong> Essencial.</p>
+<p><strong>[RD03] Tempo de resposta de uma transação</strong>
+O tempo de resposta a uma transição tem muita dependência da conexão do usuário à Internet, além das características de hardware do dispositivo usado. Outra influência é a quantidade de acessos simultâneos ao aplicativo e o tráfego de requisições à API que o alimenta. Devido à variabilidade das influências acima, não é possível estipular uma janela de tempo curta para as transações, o ideal é que o tempo de resposta fique abaixo de 2 segundos.</p>
+<p><strong>Importância:</strong> Relevante.</p>
+<h2 id="5-suportabilidade">5. Suportabilidade</h2>
+<p>O Laços da Alegria terá suporte apenas em dispositivos com versões superiores a 5.0 do Android ou 9.0 do IOS e que tenham acesso à internet, essa restrição é baseada nos requerimentos das tecnologias usadas para o desenvolvimento do projeto.</p>
+<h2 id="6-restricoes-de-design">6. Restrições de Design</h2>
+<p>A aplicação mobile deverá ser responsiva, ou seja, seu design deve se adaptar ao tamanho da tela do dispositivo que o usuário estiver utilizando.</p>
+<p>A escolha de cores para aplicação tem o objetivo de proporcionar emoções positivas ao usuário para ir de acordo com a visão e o objetivo da Laços da Alegria, descritos no Documento de Visão.</p>
+<p>A  disposição dos elementos e funcionalidades nas telas  do aplicativo foram feitas de uma forma que o usuário tenha facilidade de usá-lo e tenha clareza da utilidade de cada elemento.</p>
+<h2 id="7-requisitos-de-sistema-de-ajuda-e-de-documentacao-de-usuario-on-line">7. Requisitos de Sistema de Ajuda e de Documentação de Usuário On-line</h2>
+<p>O aplicativo terá ferramentas de ajuda ao usuário como cards ou mensagens auxiliares contendo instruções ou dicas de uso. Esse sistema de ajuda será critério de aceitação nas histórias de usuário.</p>
+<h2 id="8-componentes-comprados">8. Componentes Comprados</h2>
+<p>Para o desenvolvimento do software não será adquirido nenhum componente.</p>
+<h2 id="9-interfaces">9. Interfaces</h2>
+<h3 id="91-interfaces-com-o-usuario">9.1 Interfaces com o Usuário</h3>
+<p>O usuário irá visualizar a interface a partir do aplicativo mobile.</p>
+<h3 id="92-interfaces-de-hardware">9.2 Interfaces de Hardware</h3>
+<p>O hardware deve ser capaz de utilizar a conexão com a internet para atender as necessidades de um software online.</p>
+<h3 id="93-interface-de-software">9.3 Interface de Software</h3>
+<p>A interface do software será desenvolvida com base em HTML/CSS e JavaScript.</p>
+<h3 id="94-interfaces-de-comunicacao">9.4 Interfaces de Comunicação</h3>
+<p>A comunicação com o usuário será feita através de notificações.</p>
+<h2 id="10-requisitos-de-licenciamento">10. Requisitos de Licenciamento</h2>
+<p>A licença é um documento que define algumas ações autorizadas ou proibidas. Dentro do projeto é utilizado a Licença MIT, que é uma licença permissiva, ou seja que concede permissões para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e vender.</p>
+<h2 id="11-observacoes-legais-de-direitos-autorais-etc">11. Observações Legais, de Direitos Autorais etc</h2>
+<p>Os usuários do software deverão concordar com a licença MIT que concede uma série de permissões sobre o aplicativo para uso de terceiros. Além de concorda com o termo de aceitação da ONG Laços da Alegria para utilizar o serviço do aplicativo.</p>
+<h2 id="12-padroes-aplicaveis">12. Padrões Aplicáveis</h2>
+<p>Os padrões utilizados no projeto serão um guia de estilo para a padronização e qualidade, arquitetura do Django Rest e Ionic para modularização e o UML para Modelagem.</p>
+<h2 id="13-referencias">13. Referências</h2>
+<p>CYSNEIROS, Luiz Mareio; LEITE, Julio Cesar. Definindo Requisitos Não Funcionais. Disponível em: http://www.lbd.dcc.ufmg.br/colecoes/sbes/1997/004.pdf. Acesso em: 25 mar. 2018.</p>
+<p>TEMPLATE UTILIZADO PARA ELABORAÇÃO DO DOCUMENTO. Disponível em: http://www.funpar.ufpr.br:8080/rup/webtmpl/templates/req/rup_sspec.htm. Acesso em: 24 mar. 2018.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../training_record/" class="btn btn-neutral float-right" title="Atas de Treinamentos">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../style_guide/" class="btn btn-neutral" title="Guia de Estilo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../style_guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../training_record/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

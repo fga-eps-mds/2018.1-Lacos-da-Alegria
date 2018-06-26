@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Relatório de Benchmarking - Laços de Alegria</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Relat\u00f3rio de Benchmarking";
+    var mkdocs_page_input_path = "benchmark.md";
+    var mkdocs_page_url = "/benchmark/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Laços de Alegria</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Início</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vision_document/">Documento de Visão</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture_document/">Documento de Arquitetura</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../roadmap/">Documento de Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Relatório de Benchmarking</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#relatorio-gqm">Relatório GQM</a></li>
+    
+
+    <li class="toctree-l2"><a href="#gqm">GQM</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-objetivos">1. Objetivos</a></li>
+        
+            <li><a class="toctree-l3" href="#2-questoes">2. Questões</a></li>
+        
+            <li><a class="toctree-l3" href="#3-metricas">3. Métricas</a></li>
+        
+            <li><a class="toctree-l3" href="#4-dados-coletados-e-resultados">4. Dados Coletados e resultados</a></li>
+        
+            <li><a class="toctree-l3" href="#41-ferramenta">4.1. Ferramenta</a></li>
+        
+            <li><a class="toctree-l3" href="#42-resultados">4.2 Resultados</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../branch_policy/">Política de Branches</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../code_quality_plan/">Plano de Qualidade de Código</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../evolve_prototype/">Evolução do Protótipo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../issue_template/">Template de Issue</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../meeting_record/">Atas de Reuniões</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology_document/">Documento de Metodologia</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_charter/">Termo de Abertura do Projeto</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pull_request_template/">Template de Pull Requests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../style_guide/">Guia de Estilo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../supplementary_specification/">Documento de Especificação Suplementar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../training_record/">Atas de Treinamentos</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Laços de Alegria</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Relatório de Benchmarking</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/edit/master/docs/benchmark.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="relatorio-gqm">Relatório GQM</h2>
+<p>Esse documento tem objetivo de descrever medições do projeto “Laços da Alegria” segundo a método GQM(Goal-Question-Metric). O foco desse trabalho é  de performance e desempenho apresentados pela ferramenta disposta no android studio.</p>
+<h1 id="gqm">GQM</h1>
+<h2 id="1-objetivos">1. Objetivos</h2>
+<p>O projeto Laços da alegria é um projeto voluntariado, por isso o objetivo escolhido como prioritário é a usabilidade, afinal um software mais fácil de usar gera interesse na comunidade de conhecer o trabalho da ONG, e assim a comunidade cresce cada vez mais. Pensando nisso, foi analisado o grafo de transparência de software de Claudia Cappelli e visto a complexidade do mesmo ao tratar de usabilidade, foi escolhido atacar o nó de desempenho como ilustra a tabela 1.</p>
+<table>
+<thead>
+<tr>
+<th>Analisar</th>
+<th>o software Laços da Alegria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De forma a</td>
+<td>Melhorar</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Desempenho</td>
+</tr>
+<tr>
+<td>Do ponto de vista do</td>
+<td>Usuário</td>
+</tr>
+<tr>
+<td>No contexto da</td>
+<td>ONG Laços da Alegria</td>
+</tr>
+<tr>
+<td><center>Tabela 1 - Objetivo desempenho de software</td>
+<td></td>
+</tr>
+<tr>
+<td></center></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-questoes">2. Questões</h2>
+<p>Com intuito de esclarecer as medições a serem utilizadas, seguindo o objetivo descrito no tópico anterior que a ONG deseja alcançar, foram definidas as seguintes questões:<br />
+Qual é a qualidade da experiência de usuário?
+Qual é o tempo de carregamento das páginas? 
+Como evitar travamentos e falhas ?
+Quais elementos fazem o aplicativo gastar bateria?</p>
+<h2 id="3-metricas">3. Métricas</h2>
+<table>
+  <tbody><tr>
+    <th colspan="4">Tabela de Métricas</th>
+  </tr>
+
+ <tr>
+ </tr>
+<tr>
+    <th colspan="1">Principal</th>
+   <td colspan="2"> Nome 
+  </td>
+  <td colspan="2"> Objetivos 
+  </td>
+</tr>
+<tr>
+    <th >Desempenho</th>
+   <td  center> 
+      <li> Tempo de resposta </li>
+      <li> Travamento do software </li>
+      <li> Monitorar uso da bateria</li>
+  </td>
+
+  <th ></th>
+   <td  center> 
+      <li> Medir o tempo para completar uma tarefa em específico. </li>
+      <li> Inspecionar o consumo da CPU </li>
+      <li> Coletar dados da bateria no dispositivo android</li>
+  </td>
+</tr>
+
+</table>
+
+<h2 id="4-dados-coletados-e-resultados">4. Dados Coletados e resultados</h2>
+<h2 id="41-ferramenta">4.1. Ferramenta</h2>
+<p>Benchmark tem papel de estimular mudanças organizacionais para melhorar o desempenho do projeto através dos resultados dos indicadores. Nesse contexto, foi utilizado a IDE android-studio, trata-se de um ambiente integrado para desenvolvimento de software. A ferramenta android studio possui o recurso de gerar indicadores de performance e desempenho, e é sobre indicadores como esses que trataremos neste documento. </p>
+<h2 id="42-resultados">4.2 Resultados</h2>
+<p><h2><center>Funcionalidade: Login</center></h2></p>
+<table>
+<thead>
+<tr>
+<th>Medição</th>
+<th>Tempo Inicial</th>
+<th>Tempo Final</th>
+<th>Tempo de Execução</th>
+<th>Dados Recebidos (KB/s)</th>
+<th>Dados Enviados (KB/s)</th>
+<th>Uso de Memória (em MB)</th>
+<th>Consumo de CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>00:01:46</td>
+<td>00:01:48</td>
+<td>0:00:02</td>
+<td>3.4</td>
+<td>2.7</td>
+<td>178.2</td>
+<td>11,00%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>00:00:27</td>
+<td>00:00:28</td>
+<td>0:00:01</td>
+<td>2.7</td>
+<td>3.7</td>
+<td>178.1</td>
+<td>13,50%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>00:00:35</td>
+<td>00:00:36</td>
+<td>0:00:01</td>
+<td>2.8</td>
+<td>3.5</td>
+<td>183.3</td>
+<td>7,80%</td>
+</tr>
+</tbody>
+</table>
+<h2><center>Funcionalidade: Câmera</center></h2>
+
+<table>
+<thead>
+<tr>
+<th>Medição</th>
+<th>Tempo Inicial</th>
+<th>Tempo Final</th>
+<th>Tempo de Execução</th>
+<th>Dados Recebidos (KB/s)</th>
+<th>Dados Enviados (KB/s)</th>
+<th>Uso de Memória (em MB)</th>
+<th>Consumo de CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0:00:44</td>
+<td>0:00:47</td>
+<td>0:00:03</td>
+<td>-</td>
+<td>-</td>
+<td>256.4</td>
+<td>15,90%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>00:03:04</td>
+<td>00:03:08</td>
+<td>0:00:04</td>
+<td>-</td>
+<td>-</td>
+<td>258.4</td>
+<td>17,30%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>00:01:51</td>
+<td>00:01:56</td>
+<td>0:00:05</td>
+<td>-</td>
+<td>-</td>
+<td>264.4</td>
+<td>25,60%</td>
+</tr>
+</tbody>
+</table>
+<h2><center>Funcionalidade: Início da Aplicação</center></h2>
+
+<table>
+<thead>
+<tr>
+<th>Medição</th>
+<th>Tempo Inicial</th>
+<th>Tempo Final</th>
+<th>Tempo de Execução</th>
+<th>Dados Recebidos (KB/s)</th>
+<th>Dados Enviados (KB/s)</th>
+<th>Uso de Memória (em MB)</th>
+<th>Consumo de CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0:00:03</td>
+<td>0:00:05</td>
+<td>0:00:02</td>
+<td>-</td>
+<td>-</td>
+<td>145.1</td>
+<td>16,60%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>00:00:01</td>
+<td>00:00:04</td>
+<td>0:00:03</td>
+<td>-</td>
+<td>-</td>
+<td>142.9</td>
+<td>26,00%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>00:00:01</td>
+<td>00:00:04</td>
+<td>0:00:03</td>
+<td>-</td>
+<td>-</td>
+<td>145.2</td>
+<td>22,70%</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../branch_policy/" class="btn btn-neutral float-right" title="Política de Branches">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../roadmap/" class="btn btn-neutral" title="Documento de Roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2016-2018 Bozhidar Batsov, Artur Malabarba and CIDER contributors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/fga-gpp-mds/2018.1-Lacos-da-Alegria/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../branch_policy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
