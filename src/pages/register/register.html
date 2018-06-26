@@ -89,44 +89,6 @@
                     <span *ngIf="errorAddress" class="warning"> Endereço inválido! </span>
 
                     <ion-item>
-                        <ion-label>Cidade</ion-label>
-                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="region" name="region">
-                            <ion-option value="Águas Claras">Águas Claras</ion-option>
-                            <ion-option value="Asa Norte">Asa Norte</ion-option>
-                            <ion-option value="Asa Sul">Asa Sul</ion-option>
-                            <ion-option value="Brazlândia">Brazlândia</ion-option>
-                            <ion-option value="Candangolândia">Candangolândia</ion-option>
-                            <ion-option value="Ceilândia">Ceilândia</ion-option>
-                            <ion-option value="Cruzeiro">Cruzeiro</ion-option>
-                            <ion-option value="Entorno Saída Norte">Entorno Saída Norte</ion-option>
-                            <ion-option value="Entorno Saída Sul">Entorno Saída Sul</ion-option>
-                            <ion-option value="Estrutural">Estrutural</ion-option>
-                            <ion-option value="Fercal">Fercal</ion-option>
-                            <ion-option value="Gama">Gama</ion-option>
-                            <ion-option value="Guará">Guará</ion-option>
-                            <ion-option value="Itapoã">Itapoã</ion-option>
-                            <ion-option value="Jardim Botânico">Jardim Botânico</ion-option>
-                            <ion-option value="Lago Norte">Lago Norte</ion-option>
-                            <ion-option value="Lago Sul">Lago Sul</ion-option>
-                            <ion-option value="Núcleo Bandeirante">Núcleo Bandeirante</ion-option>
-                            <ion-option value="Paranoá">Paranoá</ion-option>
-                            <ion-option value="Park Way">Park Way</ion-option>
-                            <ion-option value="Planaltina">Planaltina</ion-option>
-                            <ion-option value="Recanto das Emas">Recanto das Emas</ion-option>
-                            <ion-option value="Riacho Fundo">Riacho Fundo</ion-option>
-                            <ion-option value="Riacho Fundo 2">Riacho Fundo 2</ion-option>
-                            <ion-option value="Samambaia">Samambaia</ion-option>
-                            <ion-option value="Santa Maria">Santa Maria</ion-option>
-                            <ion-option value="São Sebastião">São Sebastião</ion-option>
-                            <ion-option value="Sobradinho">Sobradinho</ion-option>
-                            <ion-option value="Sobradinho 2">Sobradinho 2</ion-option>
-                            <ion-option value="Taguatinga">Taguatinga</ion-option>
-                            <ion-option value="Varjão">Varjão</ion-option>
-                            <ion-option value="Vicente Pires">Vicente Pires</ion-option>
-                        </ion-select>
-                    </ion-item>
-
-                    <ion-item>
                         <ion-datetime class="data" displayFormat="DD/MM/YYYY" min="1920" max="2000-12-31" formControlName="birth" placeholder="Data de Nascimento"></ion-datetime>
                     </ion-item>
 
@@ -174,6 +136,44 @@
                     <ion-label class="space">
                         do Usuário
                     </ion-label>
+
+                    <ion-item>
+                        <ion-label>Cidade Satélite</ion-label>
+                        <ion-select okText="Ok" cancelText="Cancelar" formControlName="region" name="region">
+                            <ion-option value="Águas Claras">Águas Claras</ion-option>
+                            <ion-option value="Asa Norte">Asa Norte</ion-option>
+                            <ion-option value="Asa Sul">Asa Sul</ion-option>
+                            <ion-option value="Brazlândia">Brazlândia</ion-option>
+                            <ion-option value="Candangolândia">Candangolândia</ion-option>
+                            <ion-option value="Ceilândia">Ceilândia</ion-option>
+                            <ion-option value="Cruzeiro">Cruzeiro</ion-option>
+                            <ion-option value="Entorno Saída Norte">Entorno Saída Norte</ion-option>
+                            <ion-option value="Entorno Saída Sul">Entorno Saída Sul</ion-option>
+                            <ion-option value="Estrutural">Estrutural</ion-option>
+                            <ion-option value="Fercal">Fercal</ion-option>
+                            <ion-option value="Gama">Gama</ion-option>
+                            <ion-option value="Guará">Guará</ion-option>
+                            <ion-option value="Itapoã">Itapoã</ion-option>
+                            <ion-option value="Jardim Botânico">Jardim Botânico</ion-option>
+                            <ion-option value="Lago Norte">Lago Norte</ion-option>
+                            <ion-option value="Lago Sul">Lago Sul</ion-option>
+                            <ion-option value="Núcleo Bandeirante">Núcleo Bandeirante</ion-option>
+                            <ion-option value="Paranoá">Paranoá</ion-option>
+                            <ion-option value="Park Way">Park Way</ion-option>
+                            <ion-option value="Planaltina">Planaltina</ion-option>
+                            <ion-option value="Recanto das Emas">Recanto das Emas</ion-option>
+                            <ion-option value="Riacho Fundo">Riacho Fundo</ion-option>
+                            <ion-option value="Riacho Fundo 2">Riacho Fundo 2</ion-option>
+                            <ion-option value="Samambaia">Samambaia</ion-option>
+                            <ion-option value="Santa Maria">Santa Maria</ion-option>
+                            <ion-option value="São Sebastião">São Sebastião</ion-option>
+                            <ion-option value="Sobradinho">Sobradinho</ion-option>
+                            <ion-option value="Sobradinho 2">Sobradinho 2</ion-option>
+                            <ion-option value="Taguatinga">Taguatinga</ion-option>
+                            <ion-option value="Varjão">Varjão</ion-option>
+                            <ion-option value="Vicente Pires">Vicente Pires</ion-option>
+                        </ion-select>
+                    </ion-item>
 
                     <ion-item>
                         <ion-label>Hospital que Deseja Visitar</ion-label>

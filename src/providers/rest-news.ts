@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RestNewsProvider {
-  apiUrl = 'http://localhost:8000/api';
-  //apiUrl = 'http://178.128.160.80:8000/api';
+  // apiUrl = 'http://localhost:8000/api';
+  apiUrl = 'http://178.128.160.80:8000/api';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');

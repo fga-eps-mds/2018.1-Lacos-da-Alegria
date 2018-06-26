@@ -19,7 +19,7 @@
     </ion-segment-button>
   </ion-segment>
 
-  <div class="divosa" [ngSwitch]="Atividades">
+  <div [ngSwitch]="Atividades">
     <ion-list class="list-hosp" *ngSwitchDefault>
       <ion-item-sliding *ngFor="let activity of hospital_activities">
         <ion-item class="itemActivityList">
@@ -28,7 +28,6 @@
               <div class="title-wrapper">
                 <div class="card-title">{{activity.name}}</div>
                 <div *ngIf="getResp({id: activity.id})" class="card-subtitle">{{resposta}}</div>
-                <!-- *ngIf="getResp({{activity.id}})" -->
               </div>
           </ion-card>
         </ion-item>
@@ -39,7 +38,7 @@
       <ion-item-sliding *ngFor="let activityONG of ngo_activities">
         <ion-item>
           <ion-card class="card-ongs" (click)="openModal({id: activityONG.id, nome:'ong'})">
-            <img class="image" src="{{activityONG.name}}"/>
+            <img class="image" src="{{activityONG.image}}"/>
             <div class="card-title">{{activityONG.name}}</div>
             <div class="card-subtitle">Clique para saber mais</div>
           </ion-card>

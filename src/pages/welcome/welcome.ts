@@ -28,7 +28,7 @@ export class WelcomePage {
   },
 
   {
-    title: 'Tela de Noticias',
+    title: 'Tela de Notícias',
     description: 'Nesta aba você confere as últimas notícias da Laços da Alegria, além de notificações relevantes.',
     image: "assets/imgs/newswelcome.png"
   },

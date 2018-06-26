@@ -38,14 +38,14 @@ page-activities-list {
   }
 
   .card-title {
-    font-size: 1.5em;
-    font-weight: bold;
     color: #fff;
-    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    // word-wrap: break-word;
   }
 
   .card-subtitle {
-    font-size: 1.3em;
+    font-size: 18px;
     color: #fff;
   }
 
