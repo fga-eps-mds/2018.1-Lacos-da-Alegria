@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { RestActivityProvider } from '../providers/rest-activity';
+import { RestNewsProvider } from '../providers/rest-news';
 import { RestUserProvider } from '../providers/rest-user';
 import { StorageService } from '../providers/storage.service';
 import { RoleService } from '../providers/role.service';
@@ -18,8 +19,6 @@ import { AboutPage } from '../pages/about/about';
 import { ActivitiesListPage } from '../pages/activities-list/activities-list';
 import { ActivityDetailsPage } from '../pages/activity-details/activity-details';
 import { HelpPage } from '../pages/help/help';
-import { ListActivityPage } from '../pages/list-activity/list-activity';
-import { ListUserPage } from '../pages/listuser/listuser';
 import { LoginPage } from '../pages/login/login';
 import { MenuAppPage } from '../pages/menu-app/menu-app';
 import { NewsPage } from '../pages/news/news';
@@ -29,16 +28,12 @@ import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
 
-
-
 @NgModule({
   declarations: [
     AboutPage,
     ActivitiesListPage,
     ActivityDetailsPage,
     HelpPage,
-    ListActivityPage,
-    ListUserPage,
     LoginPage,
     MenuAppPage,
     MyApp,
@@ -53,7 +48,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: false, autoFocusAssist: false}),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: true, autoFocusAssist: true}),
     IonicStorageModule.forRoot(),
   ],
 
@@ -64,8 +59,6 @@ import { WelcomePage } from '../pages/welcome/welcome';
     ActivitiesListPage,
     ActivityDetailsPage,
     HelpPage,
-    ListActivityPage,
-    ListUserPage,
     LoginPage,
     MenuAppPage,
     MyApp,
@@ -81,6 +74,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
     Camera,
     PhotoLibrary,
     RestActivityProvider,
+    RestNewsProvider,
     RestUserProvider,
     SplashScreen,
     StatusBar,

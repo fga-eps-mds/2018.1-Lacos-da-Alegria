@@ -53,7 +53,7 @@ export class ProfilePage {
         username: ['', Validators.compose([Validators.minLength(5), Validators.maxLength(20), Validators.pattern('^[a-zA-Z0-9]+([_-]?[a-zA-Z0-9])*$'), Validators.required])],
         email: ['', Validators.compose([Validators.required, EmailValidation.isValid])],
         whatsapp: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(9), Validators.pattern('[0-9]*')])],
-        name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]+([ ]?[a-zA-Z])*$'), Validators.required])],
+        name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(50), Validators.pattern('^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+([ ]?[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ])*$'), Validators.required])],
         cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), CpfValidation.isValid])],
         birth: ['', Validators.compose([Validators.required])],
         address: ['',Validators.compose([Validators.minLength(5), Validators.maxLength(80), Validators.required]) ],
@@ -75,7 +75,6 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListUserPage');
     this.id = this.restProvider.getId();
     this.image = this.storage.getLocalPhoto();
     this.restProvider.getUser(this.id).then ((data) => {
@@ -122,6 +121,9 @@ export class ProfilePage {
 
     return user;
   }
+
+  /* Objective: show the correct error for each validation
+     Parameters: boolean if the form is valid, the prefix of the error */
 
   showError(data, id: string){
     switch (id) {
@@ -186,11 +188,25 @@ export class ProfilePage {
 
   }
 
+  /*  Objective: display the birth date in the correct format 
+      Parameters: string of birth date */
+
   showBirth(data){
     data = data.substr(8,2) + '/' + data.substr(5,2) + '/' + data.substr(0,4);
 
     return data;
   }
+
+  /*  Objective: display the CPF in the correct format 
+      Parameters: string of CPF */
+  showCpf(data){
+    data = (data.substr(0,3) + '.' + data.substr(3,3) + '.' +
+    data.substr(6,3) + '-' + data.substr(9,2));
+
+    return data;
+  }
+
+  /* Objective: put a initial value for the form that edit the profile */
 
   editProfile(){
     this.edit=true;
@@ -214,12 +230,11 @@ export class ProfilePage {
       inscrito: this.user.inscrito
     })
   }
-
+  
   confirmEditPassword(){
     this.restProvider.editPassword(this.restProvider.getId(), this.getForm())
       .subscribe((data)=>{
         this.changePassword= false
-        console.log('data = ',data);
         let alert2 = this.alertCtrl.create({
           title: 'Tudo certo!',
           subTitle: 'Nova senha alterada com sucesso',
@@ -228,7 +243,6 @@ export class ProfilePage {
         alert2.present();
       }, (err)=>{
         if(err.error.error == "A senha nova coincide com a senha antiga"){
-          console.log("deeeu")
           let alert = this.alertCtrl.create({
             title: 'Ops!',
             subTitle: 'Nova senha igual à senha antiga',
@@ -254,18 +268,9 @@ export class ProfilePage {
       .subscribe((data:any) => {
         this.user = data;
         this.edit = false;
-        console.log('put padrao else = ',data);
       }, (error)=>{
         this.edit = false;
-        console.log('Erro put else = ', error);
       })
-  }
-
-  showCpf(data){
-    data = (data.substr(0,3) + '.' + data.substr(3,3) + '.' +
-    data.substr(6,3) + '-' + data.substr(9,2));
-
-    return data;
   }
 
   getUser(id) {
@@ -297,11 +302,9 @@ export class ProfilePage {
         {
           text: 'Confirmar',
           handler: data => {
-            console.log('Saved clicked');
-            console.log("Senha  = ", data);
             this.restProvider.deleteUser(this.id, data)
               .then(response => {
-                this.storage.clearLocalUser();
+                this.storage.setLocalUser(null);
                 console.log(response);
                 this.navCtrl.push(LoginPage);
               }, error => {
@@ -322,8 +325,7 @@ export class ProfilePage {
   }
 
   /* Objective: this method will take a picture with user's camera.
-  Parameters: it does not receive any parameters.
-  Returns: it does not return anything. */
+     Parameters: it does not receive any parameters. */
 
   onTakePicture() {
     const options: CameraOptions = {

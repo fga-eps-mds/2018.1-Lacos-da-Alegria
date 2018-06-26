@@ -2,10 +2,12 @@ import { AlertController, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { RegisterPage } from '../register/register';
+import { TabsPage } from '../tabs/tabs';
+
+import { LocalUser } from '../../models/local-user';
 import { RestUserProvider } from '../../providers/rest-user';
 import { RoleService } from '../../providers/role.service';
 import { StorageService } from '../../providers/storage.service';
-import { TabsPage } from '../tabs/tabs';
 
 
 @Component({
@@ -27,17 +29,17 @@ export class LoginPage {
     this.navController.push(RegisterPage);
   }
 
-  /* Objective: this method will check login validation.
-  Parameters: it does not receive any parameters.
-  Returns: it does not return anything. */
+  /* Objective: this method will check login validation. */
 
   userLogin() {
     this.restProvider.authenticate(this.user)
-      .subscribe(response => {
-        let refreshToken = response.body.substr(11,209);
-        let accessToken = response.body.substr(230,207);
-        let username = this.user.username;
-        this.restProvider.successfulLogin(username,accessToken,refreshToken);
+      .subscribe((response: any) => {
+        let localUser: LocalUser = {
+          accessToken: response.body.access,
+          refreshToken:  response.body.refresh,
+          username: this.user.username
+        };
+        this.restProvider.successfulLogin(localUser);
         this.getUser(this.restProvider.getId());
       },
       error => {
@@ -51,6 +53,9 @@ export class LoginPage {
       });
   }
 
+  /* Objective: get a user to set the local role
+     Parameters: user id */
+     
   getUser(id) {
     this.restProvider.getUser(id)
     .then(data => {

@@ -38,8 +38,6 @@ export class MyApp {
     this.restProvider.getUser(id)
     .then(data => {
       this.user = [data];
-      console.log("mensagem: ",this.user);
-      console.log("role = ", this.user[0].role);
       this.roleService.setLocalRole(this.user[0].role);
     });
   }
@@ -50,20 +48,19 @@ export class MyApp {
       this.splashScreen.hide();
       this.menu.enable(false);
       let refreshToken = {
-        'refresh':''
+        'refresh': ''
       }
-      refreshToken.refresh = this.storage.getLocalRefreshToken();
-      console.log('acesso', this.storage.getLocalAccessToken());
-      console.log('refresh 1 = ',refreshToken);
-      if(refreshToken.refresh){
+
+      let localUser = this.storage.getLocalUser();
+      if(localUser){
+        refreshToken.refresh = localUser.refreshToken
+      }
+      if(refreshToken.refresh != ''){
         this.restProvider.refreshToken(refreshToken).subscribe((data)=>{
-          console.log('refresh = ',data);
           let id = this.restProvider.getId();
           this.user = this.getUser(id);
-          console.log('id = ', id);
           this.rootPage = TabsPage;
         }, (err)=>{
-          //this.rootPage = WelcomePage;
           console.log('erro no refresh = ',err);
         })
       }

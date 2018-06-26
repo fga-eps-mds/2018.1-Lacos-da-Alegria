@@ -7,7 +7,6 @@ import { StorageService } from '../../providers/storage.service';
 
 import { AboutPage } from '../about/about';
 import { HelpPage } from '../help/help';
-import { ListActivityPage } from '../list-activity/list-activity';
 import { LoginPage } from '../login/login';
 import { SettingsPage } from '../settings/settings';
 
@@ -28,10 +27,6 @@ export class MenuAppPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewsPage');
-  }
-
-  listActivitiesBtn() {
-    this.navCtrl.push(ListActivityPage)
   }
   
   helpBtn() {
@@ -60,10 +55,9 @@ export class MenuAppPage {
         {
           text: 'Confirmar',      
           handler: () => {
-            console.log('Before logout: ', this.storage.getLocalAccessToken());
-            this.storage.clearLocalUser(); 
-            this.roleService.clearRole();           
-            console.log('After logout: ', this.storage.getLocalAccessToken());
+            this.storage.setLocalUser(null);
+            this.roleService.clearRole(); 
+            console.log('After logout: ', this.storage.getLocalUser());          
             this.navCtrl.push(LoginPage);
           }
         }

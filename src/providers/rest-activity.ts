@@ -69,4 +69,24 @@ export class RestActivityProvider {
     });
   }
 
+  postNgo(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'ngo-activities/'+id_activity+'/relate_with_ngo/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  cancelNgo(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'ngo-activities/'+id_activity+'/unsubscribe/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
 }

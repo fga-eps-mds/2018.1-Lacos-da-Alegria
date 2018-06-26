@@ -22,8 +22,10 @@ export class ActivitiesListPage {
   role: any;
   id: any;
   resposta: string;
+  respostaNgo: string;
   buttonDisabled: any;
   array = new Array(10);
+  arrayNgo = new Array(10);
   contador = 0;
 
   constructor(
@@ -38,19 +40,15 @@ export class ActivitiesListPage {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
-
-      console.log('iiid = ', this.id);
-      
   }
-    /* Objective: this method will refresh the activities-list on screen.
-       Parameters: it does not receive any parameters.
-       Returns: it does not return anything. */
+  /*Objective: this method will refresh the activities-list on screen.
+    Parameters: it does not receive any parameters.
+    Returns: it does not return anything. */
        
   refresh(){
     this.id = this.restUserProvider.getId();
     this.array = new Array(10);
       this.restUserProvider.getUserActivitiesIds(this.id).subscribe((data: any)=>{
-        console.log('data = ', data);
         for (let index = 0; index < data.aux.length; index++) {
           console.log('data.aux index = ', data.aux[index]);
           this.restUserProvider.searchPosition(this.id, data.aux[index]).subscribe((resp: any)=>{
@@ -67,12 +65,30 @@ export class ActivitiesListPage {
       this.getHospitalActivitiesList();
       this.getNGOActivitiesList();
       this.role = this.roleService.getLocalRole();
+      this.refreshNgo();
       console.log('iiid = ', this.id);
   }
 
-  /* Objective: this method will verify the existance of a value in a list.
-  Parameters: it receives an ID.
-  Returns: it returns a boolean. */
+  refreshNgo(){
+    this.id = this.restUserProvider.getId();
+    this.arrayNgo = new Array(5);
+      this.restUserProvider.getUserNgosIds(this.id).subscribe((data: any)=>{
+        for (let i = 0; i < data.aux.length; i++) {
+          this.restUserProvider.searchPositionNgo(this.id, data.aux[i]).subscribe((resp: any)=>{
+            this.arrayNgo[i] = [data.aux[i],resp.resp];
+          }, (error)=>{
+            console.log('error = ', error);
+          })
+          
+        }
+      }, (err) =>{
+        console.log('erro = ', err);
+      })
+  }
+
+  /*Objective: this method will verify the existance of a value in a list.
+    Parameters: it receives an ID.
+    Returns: it returns a boolean. */
 
   getResp(id){
     for (let index = 0; index < this.array.length; index++) {
@@ -84,14 +100,22 @@ export class ActivitiesListPage {
     return false;
   }
 
-  openModal(index) {
-    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
-    console.log('index = ',index);
-    modal.present();
+  getRespNgo(id){
+    for (let i = 0; i < this.arrayNgo.length; i++) {
+      if(this.arrayNgo[i] && id.id == this.arrayNgo[i][0]){
+        this.respostaNgo = this.arrayNgo[i][1];
+        return true;
+      }
+    }
+    return false;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListUserPage');
+  /*Objective: generate new page based on the activity
+    Parameters: index of the activity */
+
+  openModal(index) {
+    let modal = this.modalCtrl.create(ActivityDetailsPage, index);
+    modal.present();
   }
 
   getHospitalActivitiesList(){
@@ -107,6 +131,5 @@ export class ActivitiesListPage {
       this.ngo_activities = data;
     });
   }
-
   
 }

@@ -7,18 +7,15 @@
 <ion-content text-center>
   <ion-list inset>
     <ion-item *ngFor='let activity of activity'>
-      <h2 class="title" text-center>{{activity.name}} - HRSM</h2>
+      <h2 class="title" text-center><b>{{activity.name}}</b></h2>
       <br>
-      <h5 text-center> Número de Voluntários: {{activity.volunteers}}</h5>
-      <h5 text-center> Localização: Q. E, 56 - Granja do Torto</h5>
-      <h5 text-center> Data: 16/10</h5>
-      <h5 text-center> Duração: {{activity.duration}} horas</h5>
+      <h5 text-center><b>Localização:</b> {{activity.location}}</h5>
+      <h5 text-center><b>Data:</b> {{day}}/{{month}}</h5>
+      <h5 text-center><b>Horário:</b> {{time}}</h5>
+      <h5 text-center><b>Duração:</b> {{activity.duration}} horas</h5>
     </ion-item>
   </ion-list>
       
   <button ion-button class="btnBack" (click)="BtnBackToList()">Voltar</button>
-  <button ion-button color="danger" class="btnParticipate" (click)="postActivity(getId(), activity[0].id)"> {{btnText}} </button>
-<!-- <button [disabled]="buttonDisabled" id="participateId" ion-button block color="orange" (click) = "postActivity(getDecodedAccessToken(token).user_id, activity.id)">
-  Participar
-</button> -->
+  <button ion-button color="danger" [style.backgroundColor]="btnColor" class="btnParticipate" (click)="postActivity(getId(), activity[0].id)"> {{btnText}} </button>
 </ion-content>

@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelper } from 'angular2-jwt';
 
+import { LocalUser } from '../models/local-user';
 import { StorageService } from './storage.service';
 import { reject } from 'q';
 import { User } from '../models/user';
@@ -48,15 +49,9 @@ export class RestUserProvider {
       this.apiUrl+'/token/',
       user,
       {
-        observe: 'response', // Capture the HEADER
-        responseType: 'text' // Avoid parse error about void JSON-body
+        observe: 'response', // Capturar o HEADER
       }
     );
-  }
-
-  userLogout() {
-    this.storage.clearLocalUser();
-    console.log('teste');
   }
 
   refreshToken(token){
@@ -68,33 +63,39 @@ export class RestUserProvider {
         responseType: 'text'
       }
     );
- }
+  }
 
   getId(){
-    let token = this.storage.getLocalAccessToken();
+    let token = this.storage.getLocalUser().accessToken;
     if(token){
-      token = this.jwtHelper.decodeToken(token);
-      return token.user_id;
+      let token2 = this.jwtHelper.decodeToken(token);
+      console.log('token no getId() = ', token)
+      return token2.user_id;
     }
     return null;
   }
 
-  successfulLogin(username: string, access: string, refresh: string) {
-    this.storage.setLocalUser(username, access, refresh);
+  successfulLogin(user: LocalUser) {
+    this.storage.setLocalUser(user);
   }
 
   getUserActivitiesIds(id){
     return this.http.get(this.apiUrl + '/profile/' + id + '/get_user_activities/');
   }
 
+  getUserNgosIds(id){
+    return this.http.get(this.apiUrl + '/profile/' + id + '/get_user_ngos/');
+  }
+
   searchPosition(user_id, activity_id){
     return this.http.get(this.apiUrl + '/hospital-activities/' + activity_id + '/search_user/' + '?user_key=' + user_id);
   }
 
-  deleteUser(id, password) {
-    console.log('Id no delete = ', id);
-    console.log('Password no delete = ',password);
+  searchPositionNgo(user_id, activity_id){
+    return this.http.get(this.apiUrl + '/ngo-activities/' + activity_id + '/search_user_ngo/' + '?user_key=' + user_id);
+  }
 
+  deleteUser(id, password) {
     return new Promise((resolve,reject) => {
       this.http.post(
         this.apiUrl + '/profile/' + id + '/delete_user/',
