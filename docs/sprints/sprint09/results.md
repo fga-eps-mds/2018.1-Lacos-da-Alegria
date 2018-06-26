@@ -43,20 +43,34 @@ Em relação a _Sprint_ passada, o velocity caiu de 29,43 para 26,43.
 
 ![](images/knowledge_framework_sprint9.png)
 
+### 1.7 EVM
+![Imgur](https://i.imgur.com/eLqclm2.png)
 
-### 1.7 Revisão da _Sprint_
+
+#### Valor Planejado x Custo Real x Valor Agregado 
+![Imgur](https://i.imgur.com/Z4dChhN.png)
+
+#### Variação de Custos x Variação de Prazos![Imgur](https://i.imgur.com/xfXQFjj.png)
+
+#### Índices de Desempenho ![Imgur](https://i.imgur.com/SLvcm7m.png)
+
+### 1.8 Análise do Tracker
+Na nona Sprint foram planejados 53 pontos, além dos 23 pontos adicionados, no entanto foram feitos apenas  40 pontos. Na visão do cliente, o projeto deveria estar com 66,67% do projeto inteiro, como não foram entregues todos os pontos, foram entregues apenas 64,69%. Para ver EVM completa acesse o link: [evm](https://docs.google.com/spreadsheets/d/1UhuJbHicONbdPg4TTNmiDS6sEkknskACSvgKSooy36A/edit#gid=0)
+
+### 1.9 Revisão da _Sprint_
 
 Não houve problemas durante a _Sprint_. Quanto às melhorias foi levantado que os _pull requests_ analisados assim que abertos foi positivo e que os pareamentos foram bons com exceção do Luciano.
 
 
-### 1.8 Retrospectiva
+### 2 Retrospectiva
 
 ![](images/retrospective_sprint9.png)
 
-### 2. Análise do _Scrum Master_
+### 2.1 Análise do _Scrum Master_
 
 Essa _Sprint_ foi pouco produtiva da equipe e isso é percebido pela queda do velocity, ainda que pequena, e pela quantidade de horas gastas que foi muito abaixo do esperado. Alguns membros estiveram pouco presentes e o time optou pela demissão do Cauê.
 
 Essa demissão ocorreu por causa da ausência constante nos eventos da _Sprint_, falta de comunicação com o time e falta de produção desde a Release 01. O membro foi comunicado de sua demissão e está de acordo com ela.
 
 No mais, foi uma boa Sprint para o time de desenvolvimento que está cada vez mais maduro e também agora com a responsabilidade de analisar _pull requests_.
+

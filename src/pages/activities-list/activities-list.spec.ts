@@ -8,7 +8,7 @@ import { ModalController } from 'ionic-angular';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { RestApiProvider } from '../../providers/rest-api/rest-api';
+import { RestActivityProvider } from '../../providers/rest-activity';
 
 import { ActivitiesListPage } from './activities-list';
 import {
@@ -32,7 +32,7 @@ describe('Activitie List Page', () => {
       providers: [
         { provide: HttpClient, useClass: HttpClient },
         { provide: NavController, useClass: NavMock },
-        { provide: RestApiProvider, useClass: RestApiProvider },
+        { provide: RestActivityProvider, useClass: RestActivityProvider },
         { provide: StatusBar, useClass: StatusBarMock },
         { provide: SplashScreen, useClass: SplashScreenMock },
         { provide: Platform, useClass: PlatformMock }

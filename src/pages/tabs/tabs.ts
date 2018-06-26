@@ -21,11 +21,4 @@ export class TabsPage {
     NewsRoot = NewsPage;
     MenuRoot = MenuAppPage;
 
-  // role: any;
-
-  // constructor(public roleService: RoleService) {
-  //   this.role = roleService.getLocalRole();
-  //   console.log('ROLE SERVICE = ', this.role);
-  // }
-
 }

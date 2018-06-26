@@ -25,10 +25,6 @@ describe('Activity List tests', () =>{
         goToLoginPage()
         browser.driver.sleep(500);
 
-        // clickSignUpButton();
-        // browser.driver.sleep(500);
-        // signUpUser(user);
-
         signInUser(user);
         browser.driver.sleep(500);
         goToActivityList();
@@ -50,34 +46,4 @@ describe('Activity List tests', () =>{
         var popUpText = element(by.xpath('//*[@id="alert-subhdr-0"]'));
         expect<any>(popUpText.getText()).toEqual('Você entrou na pré-lista, aguarde o resultado do sorteio.');
     });
-
-    // it('Should  do not enroll in two activities', () => {
-    //     var clickEnrollButton = element(by.id('participateId'));
-    //     clickEnrollButton.click();
-    //     browser.driver.sleep(500);
-    //     var popUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
-    //     expect(popUp.isPresent());
-    //     var popUpText = element(by.xpath('//*[@id="alert-subhdr-0"]'));
-    //     expect<any>(popUpText.getText()).toEqual('Conflito de horário com outra atividade que você está participando!');
-    // });
-    //
-    // it('Should  do not enroll on days not allowed', () => {
-    //     var clickEnrollButton = element(by.id('participateId'));
-    //     clickEnrollButton.click();
-    //     browser.driver.sleep(500);
-    //     var popUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
-    //     expect(popUp.isPresent());
-    //     var popUpText = element(by.xpath('//*[@id="alert-subhdr-0"]'));
-    //     expect<any>(popUpText.getText()).toEqual('Você pode entrar na pré-lista apenas na segunda ou terça-feira.');
-    // });
-    //
-    // it('Should  do not register missing 2 hours or less before activity', () => {
-    //     var clickEnrollButton = element(by.id('participateId'));
-    //     clickEnrollButton.click();
-    //     browser.driver.sleep(500);
-    //     var popUp = element(by.xpath('//*[@id="alert-hdr-0"]'));
-    //     expect(popUp.isPresent());
-    //     var popUpText = element(by.xpath('//*[@id="alert-subhdr-0"]'));
-    //     expect<any>(popUpText.getText()).toEqual('Você não pode entrar na pré-lista faltando 2hs ou menos para o início da atividade.');
-    // });
 });

@@ -5,6 +5,10 @@ export class CpfValidation {
 
   }
 
+  /* Objective: this method will verify if the inserted CPF is a valid one.
+  Parameters: it receives the inserted CPF.
+  Returns: it returns a boolean. */
+
   public static isValid(control: AbstractControl): ValidationErrors {
       const cpf = control.value;
 

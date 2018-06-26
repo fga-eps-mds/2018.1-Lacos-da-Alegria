@@ -7,7 +7,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { RestApiProvider } from '../../providers/rest-api/rest-api';
+import { RestActivityProvider } from '../../providers/rest-activity';
 
 import { ActivityDetailsPage } from './activity-details';
 
@@ -33,7 +33,7 @@ describe('ActivityDetails Page', () => {
         { provide: HttpClient, useClass: HttpClient },
         { provide: NavController, useClass: NavMock },
         { provide: NavParams },
-        { provide: RestApiProvider, useClass: RestApiProvider },
+        { provide: RestActivityProvider, useClass: RestActivityProvider },
         { provide: StatusBar, useClass: StatusBarMock },
         { provide: SplashScreen, useClass: SplashScreenMock },
         { provide: Platform, useClass: PlatformMock }

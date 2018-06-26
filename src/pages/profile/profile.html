@@ -6,47 +6,24 @@
 
 <ion-content padding>
         <ion-item *ngIf="user&&!edit&&!changePassword" text-center class="profile">
-          <!-- <ion-avatar class="picture">
-            <img src="../../assets/imgs/logooficial.png">
-          </ion-avatar> -->
+       
           <img class="photo" *ngIf="image" [src]="domSanitizer.bypassSecurityTrustUrl(image)"/>
 
           <br>
-            <button ion-button icon-right (click)="openGallery()">
-              Galeria <ion-icon name="images"></ion-icon>
-            </button>
-            <button ion-button icon-right (click)="onTakePicture()">
-              Tirar Foto <ion-icon name="camera"></ion-icon>
-            </button>
-         
-            <h1> {{user.username}} </h1>
-            <h2> {{user.role}} </h2>
-            <p> {{user.name}} </p>
-            <p> {{user.email}} </p>
-            <p> {{user.ddd}} {{user.whatsapp}} </p>
-        </ion-item>
-        <!-- <button id="edit-btn" full ion-button>Editar Perfil</button> -->
-<!-- </ion-content> -->
 
-<!-- <ion-content padding>
-        <ion-item text-center class="profile" *ngIf="user">
-          <ion-avatar class="picture">
-            <img src="../../assets/imgs/logooficial.png">
-          </ion-avatar>
+          <button ion-button icon-right (click)="openGallery()">
+            Galeria <ion-icon name="images"></ion-icon>
+          </button>
+          <button ion-button icon-right (click)="onTakePicture()">
+            Tirar Foto <ion-icon name="camera"></ion-icon>
+          </button>
+        
+          <h1> {{user.username}} </h1>
+          <h2> {{user.role}} </h2>
+          <p> {{user.name}} </p>
+          <p> {{user.email}} </p>
+          <p> {{user.ddd}} {{user.whatsapp}} </p>
         </ion-item>
-
-        <ion-item *ngIf="user&&!edit&&!changePassword">
-          {{user.username}}
-          <p> Nome: {{user.name}} </p>
-          <p> Email: {{user.email}} </p>
-          <p> Whatsapp: {{user.ddd}} {{user.whatsapp}} </p>
-          <p> CPF: {{showCpf(user.cpf)}} </p>
-          <p> Endereço: {{user.address}} </p>
-          <p> Data de Nascimento: {{showBirth(user.birth)}} </p>
-          <p> Preferência {{user.preference}} </p>
-          <p> Genêro: {{user.genre}} </p>
-          <p> Atividades inscritas: {{user.activities}} </p>
-        </ion-item> -->
 
         <form *ngIf="edit" [formGroup]="editProfileForm">
           <ion-list>
@@ -109,29 +86,14 @@
         <button ion-button *ngIf="changePassword" [disabled]="editPasswordForm.invalid || errorCheckPasswords" (click)="confirmEditPassword()">Alterar Senha</button>
         <button *ngIf="changePassword" ion-button (click)="changePassword=false">Cancelar</button>
         
-        <!-- <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div> -->
-                <div class="edit-profile">
-                  <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>         
-<!-- 
-                </div>
-                <div class="editPassword"> -->
-                  <button  *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>
-                  
-                </div>
-              <!-- </div>
-            </ion-col>
-            <ion-col>
-              <div> -->
-              <!-- </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid> -->
+        
+        <div class="edit-profile">
+          <button *ngIf="!changePassword && !edit" ion-button (click)="editProfile()">Editar Perfil</button>         
+          <button  *ngIf="!changePassword && !edit" ion-button (click)="editPassword()">Editar Senha</button>  
+        </div>
+
         <div class="div-delete">
           <button class="delete-btn" *ngIf="!changePassword && !edit" ion-button (click)="confirmDelete()">Excluir Conta</button>
-
         </div>
 
 </ion-content>
