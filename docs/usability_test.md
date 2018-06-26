@@ -89,7 +89,16 @@ Para validar e ter um feedback da pesquisa foram respondidas 10 perguntas segund
 8. Achei o aplicativo muito complicado de usar.
 9. Senti-me muito confiante usando o aplicativo.
 10. Eu preciso aprender um monte de coisas antes de usar este aplicativo
-
+1. 4
+2. 1
+3. 5
+4. 1
+5. 5
+6. 2
+7. 5
+8. 1
+9. 5
+10. 1
 O resultado foi calculado seguindo a técnica SUS. Para os itens 1, 3, 5, 7, e 9 do questionário (itens formulados
 positivamente) a pontuação atribuida a cada afirmação é a
 posição da escala menos um. Para os itens 2, 4, 6, 8 e 10 (itens
@@ -103,7 +112,26 @@ Essa etapa consiste em entender porque uma funcionalidade foi importante para as
 
 ### 5. Dados Coletados e Resultados
 
+## Critérios
 |Fator              |Método de medição               |Pior caso  |Nível Almejado|Melhor caso  |
 |-------------------|--------------------------------|-----------|--------------|-------------|
 |Taxa de aprendizado|comparação entre 1ª e 2ª medição|mesma coisa|melhor 2ª     |muito melhor |
-|Uso inicial|tempo para realizar..|20 min|2min|0.5 min|
+|Uso inicial|tempo para realizar as atividades propostas|6 min|3min|0.5 min|
+
+## Resultados
+|Nome            |Idade|tempo    |Qtd cliques|Pontuação|
+|----------------|-----|---------|-----------|---------|
+|Maria Júlia     |24   |02:44:27 |26 cliques |39|
+|Maria Júlia     |24   |00:54:47 |20 cliques |39|
+|Vinícius        |21   |04:07:18 |33 cliques |36|
+|Vinícius        |21   |01:07:18 |33 cliques |36|
+|karine          |20   |03:07:18 |36 cliques |38|
+|karine          |20   |01:07:18 |23 cliques |38|
+|Paulo           |22   |02:57:08 |38 cliques |35|
+|Paulo           |22   |01:53:18 |27 cliques |35|
+|Beatriz         |23   |03:17:08 |28 cliques |39|
+|Beatriz         |23   |02:43:18 |27 cliques |39|
+
+## Observações coletadas dos Usuários
+* Não tem corretor
+* Usuário apertou seta de voltar e teve que reiniciar o cadastro.
