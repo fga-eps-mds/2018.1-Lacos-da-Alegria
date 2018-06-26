@@ -89,16 +89,7 @@ Para validar e ter um feedback da pesquisa foram respondidas 10 perguntas segund
 8. Achei o aplicativo muito complicado de usar.
 9. Senti-me muito confiante usando o aplicativo.
 10. Eu preciso aprender um monte de coisas antes de usar este aplicativo
-1. 4
-2. 1
-3. 5
-4. 1
-5. 5
-6. 2
-7. 5
-8. 1
-9. 5
-10. 1
+
 O resultado foi calculado seguindo a técnica SUS. Para os itens 1, 3, 5, 7, e 9 do questionário (itens formulados
 positivamente) a pontuação atribuida a cada afirmação é a
 posição da escala menos um. Para os itens 2, 4, 6, 8 e 10 (itens
