@@ -2,10 +2,12 @@
   <ion-navbar>
     <ion-title>
       Atividades da Semana
-      <button class="refreshButton" ion-button (click)="refresh()">
-        <ion-icon name="md-refresh"></ion-icon>
-      </button>
     </ion-title>
+    <ion-buttons right>
+        <button ion-button (click)="refresh()">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -36,7 +38,7 @@
 
     <ion-list class="list-ngos" *ngSwitchCase="'ongs'">
       <ion-item-sliding *ngFor="let activityONG of ngo_activities">
-        <ion-item>
+        <ion-item class="itemActivityList">
           <ion-card class="card-ongs" (click)="openModal({id: activityONG.id, nome:'ong'})">
             <img class="image" src="{{activityONG.image}}"/>
             <div class="title-wrapper">
