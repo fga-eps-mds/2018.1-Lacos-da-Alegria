@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RestActivityProvider {
-  private apiUrl = 'http://localhost:8000/api/';
+  apiUrl = 'http://178.128.160.80:8000/api/';
+  // private apiUrl = 'http://localhost:8000/api/';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestActivityProvider');
@@ -62,6 +63,26 @@ export class RestActivityProvider {
   cancelActivity(id_user, id_activity){
     return new Promise((resolve,reject) => {
         this.http.get(this.apiUrl+'hospital-activities/'+id_activity+'/unsubscribe/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  postNgo(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'ngo-activities/'+id_activity+'/relate_with_ngo/?user_key='+id_user).subscribe(data => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  cancelNgo(id_user, id_activity){
+    return new Promise((resolve,reject) => {
+        this.http.get(this.apiUrl+'ngo-activities/'+id_activity+'/unsubscribe/?user_key='+id_user).subscribe(data => {
         resolve(data);
       }, (err) => {
         reject(err);

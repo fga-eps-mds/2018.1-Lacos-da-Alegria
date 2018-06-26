@@ -28,19 +28,24 @@ page-activities-list {
     padding-right: 0px;
   }
 
+  img {
+    -webkit-filter: blur(.55px); /* Safari */
+    filter: blur(.55px);
+  }
+
   .label-md {
     margin: 13px -13px 13px -13px;
   }
 
   .card-title {
-    font-size: 1.5em;
-    font-weight: bold;
     color: #fff;
-    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    // word-wrap: break-word;
   }
 
   .card-subtitle {
-    font-size: 1em;
+    font-size: 18px;
     color: #fff;
   }
 

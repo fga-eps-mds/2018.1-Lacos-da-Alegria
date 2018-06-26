@@ -1,49 +1,44 @@
 import { Injectable } from '@angular/core';
+import { LocalUser } from '../models/local-user';
 
 @Injectable()
 
 export class StorageService {
 
-    getLocalUserName() {
-        let username = localStorage.getItem("username");
-
-        if (username == null) {
-            return null;
+    setLocalUser(localUser: LocalUser){
+        if (localUser == null) {
+            localStorage.removeItem("localUser");
         } else {
-            return JSON.parse(username);
+            localStorage.setItem("localUser", JSON.stringify(localUser));
         }
     }
 
-    getLocalAccessToken(){
-        let access = localStorage.getItem("access");
+    getLocalUser(): LocalUser{
+        let localUser = localStorage.getItem("localUser");
 
-        if (access == null) {
-            return null;
+        if(localUser){
+            return JSON.parse(localUser);
         } else {
-            return JSON.parse(access);
+            return null;
         }
     }
 
-    getLocalRefreshToken(){
-        let refresh = localStorage.getItem("refresh");
+    getLocalPhoto() {
+        let photo = localStorage.getItem("photo");
 
-        if (refresh == null) {
+        if (photo == null) {
             return null;
         } else {
-            return JSON.parse(refresh);
+            return photo;
         }
     }
 
-    clearLocalUser(){
-        localStorage.removeItem("access");
-        localStorage.removeItem("refresh");
-        localStorage.removeItem("username");
+    setLocalPhoto(photo: string) {
+        localStorage.setItem("photo", photo);
     }
 
-    setLocalUser(username: string, access: string, refresh: string) {
-        localStorage.setItem("username", username);
-        localStorage.setItem("access", access);
-        localStorage.setItem("refresh", refresh);
+    clearPhoto(){
+        localStorage.removeItem("photo");
     }
 
 }

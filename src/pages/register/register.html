@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content class="register-box">
-   
+
    <form [formGroup]="signupForm">
         <ion-slides pager="false">
             <ion-slide>
                 <ion-list>
                     <ion-label>
-                        Informações Básicas  
-                    </ion-label> 
+                        Informações Básicas
+                    </ion-label>
                     <ion-label class="space">
                         do Usuário
                     </ion-label>
@@ -51,11 +51,11 @@
                     </ion-item >
 
                     <span *ngIf="errorCheckPasswords" class="warning">As senhas não coincidem!</span>
-                  
-                    <button text-center class="btn-next" ion-button (click)="btnNext()" 
-                        [disabled]="signupForm.controls.username.invalid || 
+
+                    <button text-center class="btn-next" ion-button (click)="btnNext()"
+                        [disabled]="signupForm.controls.username.invalid ||
                         signupForm.controls.name.invalid ||
-                        signupForm.controls.email.invalid || 
+                        signupForm.controls.email.invalid ||
                         signupForm.controls.password.invalid ||
                         signupForm.controls.confirmPassword.invalid ||
                         errorCheckPasswords">
@@ -68,7 +68,7 @@
             <ion-slide>
                 <ion-list>
                     <ion-label>
-                        Informações Adicionais 
+                        Informações Adicionais
                     </ion-label>
                     <ion-label class="space">
                         do Usuário
@@ -115,11 +115,11 @@
                     </ion-item>
 
                     <button class="btn-back" ion-button (click)="btnBack()">Anterior</button>
-                    <button ion-button (click)="btnNext()" 
-                        [disabled]="signupForm.controls.cpf.invalid || 
-                        signupForm.controls.address.invalid || 
+                    <button ion-button (click)="btnNext()"
+                        [disabled]="signupForm.controls.cpf.invalid ||
+                        signupForm.controls.address.invalid ||
                         signupForm.controls.birth.invalid ||
-                        signupForm.controls.ddd.invalid || 
+                        signupForm.controls.ddd.invalid ||
                         signupForm.controls.whatsapp.invalid ||
                         signupForm.controls.genre.invalid">
                         Próximo
@@ -131,7 +131,7 @@
             <ion-slide>
                 <ion-list>
                     <ion-label>
-                        Localização e Preferências  
+                        Localização e Preferências
                     </ion-label>
                     <ion-label class="space">
                         do Usuário
@@ -178,13 +178,13 @@
                     <ion-item>
                         <ion-label>Hospital que Deseja Visitar</ion-label>
                         <ion-select okText="Ok" cancelText="Cancelar" formControlName="preference" name="preference">
-                            <ion-option value="Hospital Regional do Gama">Hospital Regional do Gama</ion-option>
-                            <ion-option value="Hospital Regional de Taguatinga">Hospital Regional de Taguatinga</ion-option>
-                            <ion-option value="Hospital Universitário de Brasília">Hospital Universitário de Brasília</ion-option>
-                            <ion-option value="Hospital das Forças Armadas">Hospital das Forças Armadas</ion-option>
-                            <ion-option value="Hospital Regional de Planaltina">Hospital Regional de Planaltina</ion-option>
-                            <ion-option value="Hospital Regional de Sobradinho">Hospital Regional de Sobradinho</ion-option>
-                            <ion-option value="Hospital Regional da Asa Norte">Hospital Regional da Asa Norte</ion-option>
+                            <ion-option value="Hospital Regional do Gama">Hosp. Reg. do Gama</ion-option>
+                            <ion-option value="Hospital Regional de Taguatinga">Hosp. Reg. de Taguatinga</ion-option>
+                            <ion-option value="Hospital Universitário de Brasília">Hosp. Univers. de Brasília</ion-option>
+                            <ion-option value="Hospital das Forças Armadas">Hosp. das Forças Armadas</ion-option>
+                            <ion-option value="Hospital Regional de Planaltina">Hosp. Reg. de Planaltina</ion-option>
+                            <ion-option value="Hospital Regional de Sobradinho">Hosp. Reg. de Sobradinho</ion-option>
+                            <ion-option value="Hospital Regional da Asa Norte">Hosp. Reg. da Asa Norte</ion-option>
                         </ion-select>
                     </ion-item>
 

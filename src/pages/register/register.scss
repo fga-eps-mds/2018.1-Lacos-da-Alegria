@@ -8,57 +8,45 @@ page-register {
   $white-color: #fff;
 
   .label {
-    color: $white-color;
-    font-size: 3.4vh;
+    color: $black-color;
+    font-size: 16px;
     text-align: center;
   }
 
   .space {
-    margin-top: -2vh;
+    margin-top: -6px;
   }
 
   .scroll-content {
     overflow: hidden;
   }
 
-  .register-box {
-    background-color: $blue-color;
-  }
-
-  .img-topo {
-    font-size: 10vh;
-  }
+  // .register-box {
+  //   background-color: $blue-color;
+  // }
 
   .credential-box {
     background-color: transparent;
   }
 
-  .register {
-    margin-top: 2vh;
-    width: 100%;
-  }
-
   .item {
     background-color: $white-color;
+    border: $blue-color groove 1px;
     border-color: $black-color;
     border-radius: 5px;
+    border: $blue-color groove 1px;
     margin: auto;
-    margin-bottom: 2vh;
-    max-height: 2vh;
-    max-width: 47vh;
-
-    .label {
-      font-size: 2.5vh;
-      text-align: start;
-    }
+    margin-bottom: 8px;
+    max-height: 8px;
+    max-width: 260px;
   }
 
   .button {
     background-color: $green-color;
-    border: .2vh groove $black-color;
+    border: .7px groove $black-color;
     border-radius: 6px;
-    height: 7vh;
-    width: 20vh;
+    height: 40px;
+    width: 100px;
   }
 
   .btn-back {
@@ -66,12 +54,12 @@ page-register {
   }
 
   .warning {
-    color: $white-color;
+    color: $red-color;
     display: block;
-    font-size: 2.5vh;
+    font-size: 15px;
     margin: auto;
-    margin-bottom: .5vh;
-    margin-top: -1.8vh;
+    margin-bottom: 2px;
+    margin-top: -5px;
     max-width: 47vh;
     text-align: start;
   }

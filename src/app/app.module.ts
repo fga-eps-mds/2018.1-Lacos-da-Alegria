@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { Camera } from '@ionic-native/camera';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
+import { PhotoLibrary } from '@ionic-native/photo-library';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { RestActivityProvider } from '../providers/rest-activity';
+import { RestNewsProvider } from '../providers/rest-news';
 import { RestUserProvider } from '../providers/rest-user';
 import { StorageService } from '../providers/storage.service';
 import { RoleService } from '../providers/role.service';
@@ -26,8 +29,6 @@ import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
-
-
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: false, autoFocusAssist: false}),
+    IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom',tabsHideOnSubPages: true, scrollAssist: true, autoFocusAssist: true}),
     IonicStorageModule.forRoot(),
   ],
 
@@ -76,7 +77,10 @@ import { WelcomePage } from '../pages/welcome/welcome';
   ],
 
   providers: [
+    Camera,
+    PhotoLibrary,
     RestActivityProvider,
+    RestNewsProvider,
     RestUserProvider,
     SplashScreen,
     StatusBar,
