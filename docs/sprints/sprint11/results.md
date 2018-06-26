@@ -45,6 +45,7 @@
 ### 1.7. Custos
 ![Imgur](https://i.imgur.com/kugRkNy.png)
 
+
 #### Valor Planejado x Custo Real x Valor Agregado
 ![Imgur](https://i.imgur.com/0FKHbW5.png)
 

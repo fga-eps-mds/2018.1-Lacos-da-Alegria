@@ -29,12 +29,11 @@ export class LoginPage {
     this.navController.push(RegisterPage);
   }
 
+  /* Objective: this method will check login validation. */
+
   userLogin() {
     this.restProvider.authenticate(this.user)
       .subscribe((response: any) => {
-        console.log("refresh token response = ",response.body.refresh)
-        console.log("access token response = ",response.body.access)
-
         let localUser: LocalUser = {
           accessToken: response.body.access,
           refreshToken:  response.body.refresh,
@@ -54,6 +53,9 @@ export class LoginPage {
       });
   }
 
+  /* Objective: get a user to set the local role
+     Parameters: user id */
+     
   getUser(id) {
     this.restProvider.getUser(id)
     .then(data => {

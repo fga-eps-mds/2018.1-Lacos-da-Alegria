@@ -94,9 +94,17 @@ export class ActivityDetailsPage {
     });
   }
 
+  /* Objective: this method will make the return to last page.
+  Parameters: it does not receive any parameters.
+  Returns: it does not return anything. */
+
   BtnBackToList(){
     this.navCtrl.pop();
   }
+
+  /* Objective: this method will make the subscription to an activity.
+  Parameters: it receives an user-id and an activity-id.
+  Returns: it does not return anything. */
 
   postActivity(id_user, id_activity){
     let alerta: any;

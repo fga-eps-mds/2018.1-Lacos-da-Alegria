@@ -48,8 +48,8 @@ O Time de Desenvolvimento continua dominando cada vez mais os conhecimentos nece
 ### 1.7 EVM
 ![Imgur](https://i.imgur.com/umb1O8U.png)
 
-#### Valor Planejado x Custo Real x Valor Agregado 
-![Imgur](https://i.imgur.com/3WnDcG8.png)
+#### Valor Planejado x Custo Real x Valor Agregado ![Imgur](https://i.imgur.com/JHe2vzF.png)
+
 #### Variação de Custos x Variação de Prazos ![Imgur](https://i.imgur.com/6HGVCnd.png)
 
 ##### Índices de Desempenho ![Imgur](https://i.imgur.com/eeqIniE.png)

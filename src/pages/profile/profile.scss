@@ -5,10 +5,6 @@ page-profile {
   $light-color: #f4f4f4;
   $color-black: #000;
 
-  // .scroll-content{
-  //     overflow: hidden;
-  // }
-
   .fields{
     font-family: arial;
     font-size: 12px;
@@ -26,20 +22,6 @@ page-profile {
     border: .5px solid $color-black;
     border-radius: 5px;
   }
-
-  // .item-md ion-avatar img {
-  //   border: .4vh solid $lightblue-color;
-  //   border-radius: 50%;
-  //   display: block;
-  //   height: 25vh;
-  //   margin-bottom: 3vh;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   margin-top: 0;
-  //   overflow: hidden;
-  //   position: relative;
-  //   width: 25vh;
-  // }
 
   .profile {
     border: 1px solid $lightblue-color;
@@ -60,44 +42,16 @@ page-profile {
   .button {
     left: 3%;
     width: 45%;
-    // position: relative;
   }
 
-  // .button {
-  //   padding-left: 2vh;
-  //   width: 22vh;
-
-
-  // }
   .edit-profile{
-    // align-self: center
-    // display: inline-block;
-    // position: relative;
     margin: 0 auto;
     width: 100%;
-    // align-items: center;
-    // padding-left: 8.5%
-    // float: left;
-    // width: 80%;
-    // margin: 0 auto;
-    // padding-left: 2vh;
-    // padding-left: 20px
   }
-
-  // .editPassword{
-  //   width: 50%;
-  //   margin: auto;
-  //   float: right;
-  //   // position: relative;
-  //   // right: 0px;
-  // }
 
   .delete-btn {
     background-color: $color-orange;
     width: 60%;
-    // display: block;
-    // position: relative;
-    // margin: auto;
   }
 
   .div-delete {

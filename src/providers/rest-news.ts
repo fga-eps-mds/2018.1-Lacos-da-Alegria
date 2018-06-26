@@ -15,7 +15,6 @@ export class RestNewsProvider {
     return new Promise(resolve => {
       this.http.get(this.apiUrl+'/news').subscribe(data => {
         resolve(data);
-        console.log(data);
       }, err => {
         console.log(err);
       });

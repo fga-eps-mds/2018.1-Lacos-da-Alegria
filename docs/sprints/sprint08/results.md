@@ -49,7 +49,7 @@ O Time de Desenvolvimento continua adquirindo os conhecimentos relevantes para o
 ![Imgur](https://i.imgur.com/fc9OKKL.png)
 
 #### Valor Planejado x Custo Real x Valor Agregado 
-![Imgur](https://i.imgur.com/htsblGc.png)
+![Imgur](https://i.imgur.com/Zrd88fc.png)
 
 #### Variação de Custos x Variação de Prazos 
 ![Imgur](https://i.imgur.com/BDvWAao.png)
